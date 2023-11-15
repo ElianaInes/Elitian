@@ -7,3 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
         wrap: true       // Vuelve al principio después de la última imagen
     });
 });
+
+
+document.querySelector("body > div.js-main-content.main-content")
+
+body > div.js-main-content.main-content
