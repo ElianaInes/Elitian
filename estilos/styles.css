@@ -42,8 +42,13 @@ nav ul li{
     padding: 3px;
 }
 
+.four{
+    border: 2px solid black;
+    padding: 3px;
+}
+
 h1{
-    font-family: 'Tempus Sans ITC', sans-serif;
+    font-family: 'Tempus Sans ITC';
     font-size: 90px;
     text-align: center;
     margin: 200px;
@@ -72,7 +77,7 @@ body {
 }
 
 footer {
-    font-family: 'Tempus Sans ITC', sans-serif;
+    font-family: 'Tempus Sans ITC';
     background-color: #a1dcdc; 
     color: #52a6b2; 
     padding: 15px; 
