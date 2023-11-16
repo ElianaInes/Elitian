@@ -27,22 +27,7 @@ nav ul li{
     outline: 2px;
 }
 
-.one{
-    border: 2px solid black;
-    padding: 3px;
-}
-
-.two{
-    border: 2px solid black;
-    padding: 3px;
-}
-
-.three{
-    border: 2px solid black;
-    padding: 3px;
-}
-
-.four{
+.boton{
     border: 2px solid black;
     padding: 3px;
 }
@@ -94,26 +79,12 @@ footer {
     background-color: #f9f9f9;
 }
 
-/* Estilo de la tabla */
-.table-container {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-/* Estilo de las celdas */
-.table-cell {
-    border: 1px solid #ddd;
-    padding: 10px;
-}
-
-/* Estilo de celda especial */
-.special-cell {
-    background-color: #ffcccb; /* Color de fondo diferente */
-    font-weight: bold;
-}
-
 /* Estilo para el video */
 video {
     width: 100%;
     height: auto;
+}
+
+.textbanner {
+    margin-bottom: 20px;
 }
