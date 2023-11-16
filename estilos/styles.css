@@ -85,3 +85,35 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
+.section {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Estilo de la tabla */
+.table-container {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Estilo de las celdas */
+.table-cell {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Estilo de celda especial */
+.special-cell {
+    background-color: #ffcccb; /* Color de fondo diferente */
+    font-weight: bold;
+}
+
+/* Estilo para el video */
+video {
+    width: 100%;
+    height: auto;
+}
