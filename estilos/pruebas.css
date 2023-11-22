@@ -1,0 +1,79 @@
+@import url(' https://fonts.cdnfonts.com/css/badoga ');
+/* familia de fuentes: 'Badoga', sans-serif; */
+@import url('https://fonts.googleapis.com/css2? family= Montserrat:ital,wght@0,100;0,200;1,200 & family= Roboto:ital,wght@0,100;0,300;0,400;0,500; 1,100;1,500;1,900 & familia= Sofia+Sans+Condensado:ital@1 & display=swap');
+/* familia de fuentes: 'Sofia Sans Condensed', sans-serif; */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+
+nav {
+    background-color: #e9d8c0;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    /* position: relative;
+    position: fixed; */
+    /* z-index: 2; */
+    
+  }
+
+  .enlace {
+    position: absolute;
+    padding: 7px 10px;
+  }
+
+  .logo {
+    height: 65px;
+  }
+
+  
+
+  nav ul {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 50px;
+    justify-content: center;
+
+  }
+
+  nav ul a {
+    font-family: 'Badoga', sans-serif;
+    font-size: 18px;
+    color: black;
+    text-transform: none;
+    
+  }
+
+ 
+
+
+   
+
+  li a.active,
+  li a:hover {
+
+    padding: 7px 13px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+
+  .checkbtn {
+    font-size: 30px;
+    color: rgb(252, 252, 252);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+
+  #check {
+    display: none;
+  }
