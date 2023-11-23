@@ -1,16 +1,20 @@
+@import url(' https://fonts.cdnfonts.com/css/badoga ');
+/* familia de fuentes: 'Badoga', sans-serif; */
+@import url('https://fonts.googleapis.com/css2? family= Montserrat:ital,wght@0,100;0,200;1,200 & family= Roboto:ital,wght@0,100;0,300;0,400;0,500; 1,100;1,500;1,900 & familia= Sofia+Sans+Condensado:ital@1 & display=swap');
+/* familia de fuentes: 'Sofia Sans Condensed', sans-serif; */
+
 *{
     margin: 0;
-    box-sizing: border-box;
     padding: 0;
-}
-
-body{
-    font-family: Arial;
+    box-sizing: border-box;
+    
 }
 
 
 .nav{
-    background-color: #52a6b2;
+    font-family: 'Sofia Sans Condensed', sans-serif;;
+    text-transform:uppercase;
+    background-color: #e9d8c0;
 
     --img1: scale(1);
     --img2: scale(0);
@@ -38,11 +42,6 @@ body{
     overflow: hidden;
 }
 
-.nav__title{
-    color: #fff;
-    grid-area: title;
-}
-
 
 .nav__menu{
     grid-area: img;
@@ -63,7 +62,7 @@ body{
 
 .dropdown{
     position: absolute;
-    background-color: #000;
+    background-color: #ebcba0;
     width: 75%;
     max-width: 300px;
     right: 0;
@@ -87,7 +86,7 @@ body{
 }
 
 .dropdown__link{
-    color: rgb(184, 187, 191);
+    color: rgb(0, 0, 0);
     padding: 1em .7em;
     text-decoration: none;
     
@@ -103,7 +102,7 @@ body{
 .dropdown__list:has( :checked ){
     --rows: 1fr;
     --rotate: rotate(180deg);
-    --bg: #28303B;
+    --bg: #e6b678;
 }
 
 .dropdown__check{
@@ -115,6 +114,7 @@ body{
 }
 
 .dropdown__arrow{
+    height: 15px;
     margin-left: auto;
     transform: var(--rotate, 0);
     transition: .2s transform;
@@ -140,6 +140,33 @@ body{
 .dropdown__anchor{
     padding: 1em 0;
     display: block;
-    color: #B6BABE;
+    color: #000000;
     text-decoration: none;
 }
+
+.dropdown__icon_product{
+    height: 30px;
+}
+.dropdown__icon_recicla{
+    height: 30px;
+}
+
+.dropdown__icon_elitianw{
+    margin: -13px;
+    height: 50px;
+}
+
+.dropdown__icon_house{
+    height: 30px;
+}
+.dropdown__icon_email{
+    height: 25px;
+}
+.enlace {
+    position: absolute;
+    margin: 0;
+  }
+
+  .logo {
+    height: 60px;
+  }
