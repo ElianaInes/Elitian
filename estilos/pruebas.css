@@ -49,7 +49,11 @@ nav {
     color: black;
     text-transform: none;
     padding: 20px;
-    
+  }
+
+  ul a:hover{
+    color: #52a6b2;
+    cursor: pointer;
   }
 
  
@@ -59,6 +63,7 @@ nav {
 
   li a.active,
   li a:hover {
+    background-color: #52a6b2;
 
     padding: 7px 13px;
     border-radius: 5px;
