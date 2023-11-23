@@ -38,8 +38,8 @@ nav {
   nav ul {
     display: inline-block;
     line-height: 80px;
-    margin: 0 50px;
-    justify-content: center;
+    margin: 0 400px;
+    
 
   }
 
@@ -48,6 +48,7 @@ nav {
     font-size: 18px;
     color: black;
     text-transform: none;
+    padding: 20px;
     
   }
 
