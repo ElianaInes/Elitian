@@ -7,7 +7,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 @media (min-width: 320px) {
@@ -258,17 +257,106 @@
             opacity: 1;
         }
     }
-<<<<<<< HEAD
 
     /*Aqui comienzan los estilos de la galeria de imagenes por categorias para celu*/
 
+    .galeria {
+        padding-bottom: 3em;
+        padding-top: 1em;
+        display: grid;
+        grid-template-columns: auto(3, 1fr);
+        grid-auto-rows: 200px;
+        grid-template-areas: 
+        "img1 img2"
+        "img1 img3"
+        "img4 img4"
+        "img5 img6"
+        "img7 img6"
+        "img8 img9"
+        ;
+        gap: .8em;
+    }
 
-@media (min-width: 550px) {}
+    .galeria-imagen{
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+    }
 
-/* A partir de aca seria sitio web para pantalla grande */
-@media (min-width: 700px) {
-=======
+    .galeria-imagen::before{
+        content: "VER MÁS";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #e9d8c0;
+        transform: scaleZ(0);
+        transition: .2s;
+        color: #52a6b2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+
+    .galeria-imagen:hover::before{
+        transform: scaleZ(1);
+
+    }
+
+    .galeria-imagen--g1{
+        grid-area: img1;
+    }
+
+    .galeria-imagen--g2{
+        grid-area: img2;
+    }
+
+    .galeria-imagen--g3{
+        grid-area: img3;
+    }
+
+    .galeria-imagen--g4{
+        grid-area: img4;
+    }
+
+    .galeria-imagen--g5{
+        grid-area: img5;
+    }
+
+    .galeria-imagen--g6{
+        grid-area: img6;
+    }
+
+    .galeria-imagen--g7{
+        grid-area: img7;
+    }
+
+    .galeria-imagen--g8{
+        grid-area: img8;
+    }
+
+    .galeria-imagen--g9{
+        grid-area: img9;
+    }
+
+    .galeria-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
+
+@media (min-width: 550px) {
+
+    /* A partir de aca seria sitio web para pantalla grande */
+
+}
+
+
+@media (min-width: 700px) {}
+
 /* 
 @media (min-width: 550px){
 
@@ -276,7 +364,6 @@
 
 /* A partir de aca seria sitio web para pantalla grande */
 /* @media (min-width: 700px){
->>>>>>> 339fd05f32ee845a0ddb237c34eb4e2977e7a47c
 
     .nav__icon {
         display: none;
@@ -310,7 +397,6 @@
         display: none;
     }
 
-<<<<<<< HEAD
     nav {
         background-color: #e9d8c0;
         font-family: 'Sofia Sans Condensed', sans-serif;
@@ -324,50 +410,49 @@
         position: relative;
         position: fixed;
     } */
-    /* ul{
+/* ul{
         float: right;
         margin: 35px 35px 50px 10px;
     } */
 
-    .logo {
+.logo {
 
-        height: 65px;
-    }
-
-
-
-    .dropdown__list {
-        display: inline-block;
-        font-size: 1rem;
-
-    }
-
-    .dropdown__link {
-        margin: 50px;
-        color: black;
-        text-transform: uppercase;
-    }
+    height: 65px;
 }
-=======
-       
-    .logo{
-        margin-left: -30px;
-        height: 65px;
-    }
-    
-    ul li{
-        position: relative;
-    }
 
-    .dropdown__link{
-        z-index: 10;
-        display: inline-block;
-    }
-  
-    
-} */
 
+
+.dropdown__list {
+    display: inline-block;
+    font-size: 1rem;
+
+}
+
+.dropdown__link {
+    margin: 50px;
+    color: black;
+    text-transform: uppercase;
+}
+}
+
+.logo {
+    margin-left: -30px;
+    height: 65px;
+}
+
+ul li {
+    position: relative;
+}
+
+.dropdown__link {
+    z-index: 10;
+    display: inline-block;
+}
+
+
+}
+
+*/
 /* @media (min-width: 1000px) {
 
 } */
->>>>>>> 339fd05f32ee845a0ddb237c34eb4e2977e7a47c
