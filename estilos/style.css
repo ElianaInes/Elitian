@@ -258,6 +258,7 @@
             opacity: 1;
         }
     }
+<<<<<<< HEAD
 
     /*Aqui comienzan los estilos de la galeria de imagenes por categorias para celu*/
 
@@ -266,6 +267,16 @@
 
 /* A partir de aca seria sitio web para pantalla grande */
 @media (min-width: 700px) {
+=======
+}
+/* 
+@media (min-width: 550px){
+
+} */
+
+/* A partir de aca seria sitio web para pantalla grande */
+/* @media (min-width: 700px){
+>>>>>>> 339fd05f32ee845a0ddb237c34eb4e2977e7a47c
 
     .nav__icon {
         display: none;
@@ -299,6 +310,7 @@
         display: none;
     }
 
+<<<<<<< HEAD
     nav {
         background-color: #e9d8c0;
         font-family: 'Sofia Sans Condensed', sans-serif;
@@ -336,3 +348,26 @@
         text-transform: uppercase;
     }
 }
+=======
+       
+    .logo{
+        margin-left: -30px;
+        height: 65px;
+    }
+    
+    ul li{
+        position: relative;
+    }
+
+    .dropdown__link{
+        z-index: 10;
+        display: inline-block;
+    }
+  
+    
+} */
+
+/* @media (min-width: 1000px) {
+
+} */
+>>>>>>> 339fd05f32ee845a0ddb237c34eb4e2977e7a47c
