@@ -1,90 +1,4 @@
-<main class="galeria">
-    <section class="galeria-contenedor">
-        <figure class="galeria-picture">
-            <img src="img/fondo.jpg" alt="" class="galeria-img">
-        </figure>
-
-        <figure class="galeria-picture">
-            <img src="img/recurso.jab.jpg" alt="" class="galeria-img">
-        </figure>
-
-        <figure class="galeria-picture">
-            <img src="img/recurso.jarron.jpg" alt="" class="galeria-img">
-        </figure>
-
-        <figure class="galeria-picture">
-            <img src="img/recurso.ramita.jpg" alt="" class="galeria-img">
-        </figure>
-
-        <figure class="galeria-picture">
-            <img src="img/fondo.jpg" alt="" class="galeria-img">
-        </figure>
-
-        <figure class="galeria-picture">
-            <img src="img/recurso.jab.jpg" alt="" class="galeria-img">
-        </figure>
-
-        <figure class="galeria-picture">
-            <img src="img/recurso.jarron.jpg" alt="" class="galeria-img">
-        </figure>
-
-        <figure class="galeria-picture">
-            <img src="img/recurso.ramita.jpg" alt="" class="galeria-img">
-        </figure>
-
-        <figure class="galeria-picture">
-            <img src="img/fondo.jpg" alt="" class="galeria-img">
-        </figure>
-    </section>
-
-
-
-    <main class="main">
-        <section class="galeria">
-            <figure class="galeria-imagen galeria-imagen--g1">
-                <img src="img/1.jpg" class="galeria-img">
-                <h3>>VER MÁS 1</h3>
-            </figure>
-            <figure class="imagen2">
-                <!-- <img src="img/2.jpg" alt="" data-img-mostrar="1"> -->
-                <h3>VER MÁS 2</h3>
-            </figure>
-            <figure class="imagen3">
-                <!-- <img src="img/3.jpg" alt="" data-img-mostrar="2"> -->
-                <h3>VER MÁS 3</h3>
-            </figure>
-            <figure class="columna">
-                <figure class="imagen4">
-                    <!-- <img src="img/4.jpg" alt="" data-img-mostrar="3"> -->
-                    <h3>VER MÁS 4</h3>
-                </figure>
-                <figure class="imagen5">
-                    <!-- <img src="img/5.jpg" alt="" data-img-mostrar="4"> -->
-                    <h3>VER MÁS 5</h3>
-                </figure>
-                <figure class="imagen6">
-                    <!-- <img src="img/6.jpg" alt="" data-img-mostrar="5"> -->
-                    <h3>VER MÁS 6</h3>
-                </figure>
-            </figure>
-            <figure class="columna">
-                <figure class="imagen7">
-                    <!-- <img src="img/7.jpg" alt="" data-img-mostrar="6"> -->
-                    <h3>VER MÁS 7</h3>
-                </figure>
-                <figure class="imagen8">
-                    <!-- <img src="img/8.jpg" alt="" data-img-mostrar="7"> -->
-                    <h3>VER MÁS 8</h3>
-                </figure>
-                <figure class="imagen9">
-                    <!-- <img src="img/9.jpg" alt="" data-img-mostrar="8"> -->
-                    <h3>VER MÁS 9</h3>
-                </figure>
-            </figure>
-        </section>
-    </main>
-    
-</main><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -93,106 +7,76 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="nav">
 
-        <div class="nav__container">
+    <header>
+        <nav class="menu">
+            <section class="menu_container">
+                <h1 class="menu_logo">Elitian</h1>
+            </section>
 
-            <a href="#" class="enlace">
-                <img src="img/logos/logo-linkb.png" alt="logo_er" class="logo">
-            </a>
-
-            <a href="#menu" class="nav__menu">
-                <img src="img/icons/menu.svg" class="nav__icon">
-            </a>
-
-            <a href="#" class="nav__menu nav__menu--second">
-                <img src="img/icons/close.svg" class="nav__icon ">
-            </a>
-
-            <ul class="dropdown" id="menu">
-
-                <li class="dropdown__list">
-                    <a href="#" class="dropdown__link">
-                        <img src="img/icons/house.svg" class="dropdown__icon_house">
-                        <span class="dropdown__span">Inicio</span>
-                    </a>
+            <ul class="menu__links">
+                <li class="menu__items">
+                    <a href="#" class="menu__links"> <img src="img/icons/house.svg" class="nav_icon_house"> <span class="dropdown__span">Inicio</span></a>
                 </li>
 
-                <li class="dropdown__list">
-                    <a href="#" class="dropdown__link">
-                        <img src="img/icons/elitianb.svg" class="dropdown__icon_elitianw">
-                        <span class="dropdown__span"> Conocénos</span>
-                    </a>
+                <li class="menu__items">
+                    <a href="#" class="menu__links"> <img src="img/icons/elitianb.svg" class="nav_icon_elitian"> <span class="dropdown__span">Conocenos</span></a>
                 </li>
 
+                <li class="menu__items menu_item--show">
+                    <a href="#" class="menu__links"><img src="img/icons/product.svg" class="nav_icon_product"> <span class="dropdown__span">Productos</span> <img src="img/icons/down.svg" class="menu_arrow"></a>
 
+                    <ul class="menu_nesting">
+                        <li class="menu_inside">
+                            <a href="#" class="menu__link menu__link--inside">Elemento</a>
+                        </li>
 
+                        <li class="menu_inside">
+                            <a href="#" class="menu__link menu__link--inside">Elemento</a>
+                        </li>
 
+                        <li class="menu_inside">
+                            <a href="#" class="menu__link menu__link--inside">Elemento</a>
+                        </li>
 
-                <li class="dropdown__list">
-                    <a href="#" class="dropdown__link">
-                        <img src="img/icons/product.svg" class="dropdown__icon_product">
-                        <span class="dropdown__span">Productos</span>
-                        <img src="img/icons/down.svg" class="dropdown__arrow">
+                        <li class="menu_inside">
+                            <a href="#" class="menu__link menu__link--inside">Elemento</a>
+                        </li>
 
-                        <input type="checkbox" class="dropdown__check">
-                    </a>
+                        <li class="menu_inside">
+                            <a href="#" class="menu__link menu__link--inside">Elemento</a>
+                        </li>
 
-                    <!-- <div class="dropdown__content">
+                        <li class="menu_inside">
+                            <a href="#" class="menu__link menu__link--inside">Elemento</a>
+                        </li>
 
-                        <ul class="dropdown__sub">
+                        <li class="menu_inside">
+                            <a href="#" class="menu__link menu__link--inside">Elemento</a>
+                        </li>
 
-                            <li class="dropdown__li">
-                                <a href="#" class="dropdown__anchor">Acondicionador</a>
-                            </li>
-                            <li class="dropdown__li">
-                                <a href="#" class="dropdown__anchor">Agua de Rosas</a>
-                            </li>
-                            <li class="dropdown__li">
-                                <a href="#" class="dropdown__anchor">Aceites y Serums</a>
-                            </li>
-                            <li class="dropdown__li">
-                                <a href="#" class="dropdown__anchor">Bálsamos</a>
-                            </li>
-                            <li class="dropdown__li">
-                                <a href="#" class="dropdown__anchor">Cremas</a>
-                            </li>
-                            <li class="dropdown__li">
-                                <a href="#" class="dropdown__anchor">Jabones</a>
-                            </li>
-                            <li class="dropdown__li">
-                                <a href="#" class="dropdown__anchor">Higiene Dental</a>
-                            </li>
-                            <li class="dropdown__li">
-                                <a href="#" class="dropdown__anchor">Shampoo</a>
-                            </li>
-                            <li class="dropdown__li">
-                                <a href="#" class="dropdown__anchor">Protección Solar</a>
-                            </li>
+                        <li class="menu_inside">
+                            <a href="#" class="menu__link menu__link--inside">Elemento</a>
+                        </li>
 
-                        </ul>
-
-                    </div> -->
+                        <li class="menu_inside">
+                            <a href="#" class="menu__link menu__link--inside">Elemento</a>
+                        </li>
+                    </ul>
                 </li>
 
-                <li class="dropdown__list">
-                    <a href="#" class="dropdown__link">
-                        <img src="img/icons/recicla.svg" class="dropdown__icon_recicla">
-                        <span class="dropdown__span">Reciclá</span>
-                    </a>
+                <li class="menu__items">
+                    <a href="#" class="menu__links"> <img src="img/icons/recicla.svg" class="nav_icon_recicla"> <span class="dropdown__span">Recicla</span></a>
                 </li>
 
-                <li class="dropdown__list">
-                    <a href="#" class="dropdown__link">
-                        <img src="img/icons/email.svg" class="dropdown__icon_email">
-                        <span class="dropdown__span">Contacto</span>
-                    </a>
+                <li class="menu__items">
+                    <a href="#" class="menu__links"> <img src="img/icons/email.svg" class="nav_icon_house"> <span class="dropdown__span">Contacto</span></a>
                 </li>
-
             </ul>
+        </nav>
+    </header>
 
-        </div>
+    <script src="scripts/prueba.js"></script>
 
-    </nav>
 </body>
 </html>
