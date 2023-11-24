@@ -1,14 +1,36 @@
-// Incluimos el código JavaScript aquí para inicializar el carrusel
-document.addEventListener('DOMContentLoaded', function () {
-    // Inicializamos el carrusel con opciones de autoplay
-    var myCarousel = new bootstrap.Carousel(document.getElementById('carouselExampleAutoplaying'), {
-        interval: 2500,  // Cambia la imagen cada 3 segundos (ajústalo según tus necesidades)
-        pause: 'hover', // Pausa el carrusel cuando el mouse está sobre él
-        wrap: true       // Vuelve al principio después de la última imagen
-    });
-});
+let indice = 1;
+muestraCarrusel(indice);
 
+function avanzaCarrusel(n) {
+    muestraCarrusel(indice += n);
+}
 
-document.querySelector("body > div.js-main-content.main-content")
+function posicionCarrusel(n) {
+    muestraCarrusel(indice = n);
+}
 
-body > div.js-main-content.main-content
+setInterval(function tiempo() {
+    muestraCarrusel(indice += 1);
+}, 3000);
+
+function muestraCarrusel(n) {
+    let i;
+    let carrusel = document.getElementsByClassName('miCarrusel');
+    let barras = document.getElementsByClassName('barra');
+
+    if (n > carrusel.length) {
+        indice = 1;
+    }
+    if (n < 1) {
+        indice = carrusel.length;
+    }
+    for (i = 0; i < carrusel.length; i++) {
+        carrusel[i].style.display = 'none';
+    }
+    for (i = 0; i < barras.length; i++) {
+        barras[i].className = barras[i].className.replace(" active", "");
+    }
+
+    carrusel[indice - 1].style.display = 'block';
+    barras[indice - 1].className += ' active';
+}
