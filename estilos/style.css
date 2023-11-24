@@ -263,13 +263,13 @@
         to{opacity: 1;}
     }
 }
-
+/* 
 @media (min-width: 550px){
 
-}
+} */
 
 /* A partir de aca seria sitio web para pantalla grande */
-@media (min-width: 700px){
+/* @media (min-width: 700px){
 
     .nav__icon{
         display: none;
@@ -295,46 +295,25 @@
     .dropdown__icon_email {
         display: none;
     }
-    
-    nav{
-        background-color: #e9d8c0;
-        font-family: 'Sofia Sans Condensed', sans-serif;
-        color: #000000;
-        width: 100vw;
-        height: 80px;
-        
-    }
-    
-    /* nav{
-        position: relative;
-        position: fixed;
-    } */
-    /* ul{
-        float: right;
-        margin: 35px 35px 50px 10px;
-    } */
-    
+
+       
     .logo{
-        
+        margin-left: -30px;
         height: 65px;
     }
     
-    
-    
-    .dropdown__list{
-        display: inline-block;
-        font-size: 1rem;
-    
-    }   
-    
-    .dropdown__link{
-        margin: 50px;
-        color: black;
-        text-transform: uppercase;
+    ul li{
+        position: relative;
     }
+
+    .dropdown__link{
+        z-index: 10;
+        display: inline-block;
+    }
+  
     
-}
+} */
 
-@media (min-width: 1000px) {
+/* @media (min-width: 1000px) {
 
-}
+} */
