@@ -284,13 +284,15 @@
     }
 
     .galeria-imagen::before {
-        content: "";
+        content:"";
         position: absolute;
-        top: 0;
+        /* top: 0;
         bottom: 0;
         left: 0;
-        right: 0;
+        right: 0;*/
+        inset: 0;
         background-color: #52a6b2;
+        opacity: 50%;
         transform: scaleZ(0);
         transition: .1s;
         color: #e9d8c0;
