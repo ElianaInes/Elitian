@@ -39,8 +39,9 @@ header {
 }
 .enlace{
     position: absolute;
-    margin-top: -38px;
-    margin-left: -300px;
+    margin-top: -40px;
+    margin-right: -500px;
+    
 }
 .logo{
     height: 80px;
@@ -67,6 +68,7 @@ header {
     height: 100%;
     transition: transform .5s;
     display: flex;
+    justify-content: center;
 }
 
 .menu__item{
@@ -91,10 +93,12 @@ header {
     display: flex;
     height: 100%;
     align-items: center;
+    
 }
 
 .menu__link:hover{
     color: #52a6b2;
+    
 }
 
 
