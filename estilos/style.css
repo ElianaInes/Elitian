@@ -177,7 +177,7 @@
         height: auto;
         position: relative;
         overflow: hidden;
-        margin: auto;
+        margin: 0 5px;
     }
 
     /*
@@ -261,9 +261,11 @@
     /*Aqui comienzan los estilos de la galeria de imagenes por categorias para celu*/
 
     .galeria {
-        padding-bottom: 3em;
+        padding-bottom: 1em;
         padding-top: 1em;
         display: grid;
+        margin: 0 5px;
+        gap: .36em;
         grid-template-columns: auto(3, 1fr);
         grid-auto-rows: 160px;
         grid-template-areas:
@@ -274,17 +276,17 @@
             "img7 img6"
             "img8 img9"
         ;
-        gap: .8em;
     }
 
     .galeria-imagen {
         position: relative;
         cursor: pointer;
         overflow: hidden;
+        text-align: center;
     }
 
     .galeria-imagen::before {
-        content:"";
+        content: "";
         position: absolute;
         /* top: 0;
         bottom: 0;
@@ -292,7 +294,7 @@
         right: 0;*/
         inset: 0;
         background-color: #e9d8c0;
-        opacity: 80%;
+        opacity: 75%;
         transform: scaleZ(0);
         transition: .1s;
         /* color: #e9d8c0; */
@@ -304,36 +306,38 @@
 
     .galeria-imagen:hover::before {
         transform: scaleZ(1);
-        
+
     }
 
-
     .ver-mas-btn {
-        font-family: 'Sofia Sans Condensed', sans-serif;
-        padding: 10px;
+        font-family: inherit;
+        width: 8rem;
+        padding: 9px;
         position: absolute;
         top: 60%;
         left: 50%;
         background-color: transparent;
         border: 1px solid #e9d8c0;
         border-radius: 100px;
-        transform: translate(-50%,-50%);
-        letter-spacing: 4px;
+        transform: translate(-50%, -50%);
+        letter-spacing: 2px;
+        font-weight: bolder;
     }
 
-    .ver-mas-btn:hover{
+    .ver-mas-btn:hover {
         background-color: #52a6b2;
-        opacity: 65%;
+        opacity: 50%;
+        transition: 0.5s;
     }
 
     .categoria {
-        font-family: 'Sofia Sans Condensed';
+        font-family: inherit;
         position: absolute;
         top: 40%;
         left: 50%;
-        transform: translate(-50%,-50%);
-        font-style: normal;
-        letter-spacing: 1px;
+        transform: translate(-50%, -50%);
+        letter-spacing: 1.5px;
+        font-weight: lighter;
     }
 
     .galeria-imagen--g1 {
@@ -377,8 +381,113 @@
         height: 100%;
         object-fit: cover;
     }
-}
 
+    /*Aqui comienza el estilo para la seccion de ofertas para celu*/
+
+    .productos .contenedor {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin: 5px 30px;
+    }
+
+    .productos .contenedor .caja {
+        flex: 1 1 30rem;
+        box-shadow: 0 .5rem 1.5rem #e9d8c0;
+        border-radius: .5rem;
+        border: .1rem solid #e9d8c0;
+        position: relative;
+    }
+
+    .productos .contenedor .caja .ofertas {
+        position: absolute;
+        top: 1rem;
+        left: 3rem;
+        padding: .7rem 2rem;
+        font-size: 2.5rem;
+        color: #000000;
+        background: #52a6b2;
+        opacity: 99%;
+        z-index: 1;
+        border-radius: .5rem;
+    }
+
+    .productos .contenedor .caja .imagen {
+        position: relative;
+        text-align: center;
+        padding-top: 2rem;
+        padding-left: 1rem;
+        overflow: hidden;
+        cursor: pointer;
+
+    }
+
+    .productos .contenedor .caja .imagen .img {
+        height: 25rem;
+    }
+
+    .productos .contenedor .caja:hover .imagen .img {
+        transform: scale(1.1);
+    }
+
+    .productos .contenedor .caja .imagen .iconos {
+        position: absolute;
+        bottom: -7rem;
+        left: 0;
+        right: 0;
+        display: flex;
+    }
+
+    .productos .contenedor .caja:hover .imagen .iconos {
+        bottom: 0;
+    }
+
+    .productos .contenedor .caja .imagen .iconos a {
+        height: 5rem;
+        line-height: 5rem;
+        font-size: 2rem;
+        width: 50%;
+        background: #e9d8c0;
+        color: #52a6b2;
+    }
+
+    .productos .contenedor .caja .imagen .iconos .cart-btn {
+        border-left: 1rem solid #e9d8c0;
+        border-right: 0 solid #e9d8c0;
+        width: 100%;
+    }
+
+    .productos .contenedor .caja .imagen .iconos a:hover{
+        background: #e9d8c0;
+    }
+
+    .productos .contenedor .caja .contenido {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .productos .contenedor .caja .contenido h3{
+        font-family: inherit;
+        font-size: 2.3rem;
+        color: #000000;
+    }
+    
+    .productos .contenedor .caja .contenido .precio {
+        font-family: inherit;
+        font-size: 2.5rem;
+        color: #52a6b2;
+        font-weight: bolder;
+        padding-top: 1rem;
+    }
+
+    .productos .contenedor .caja .contenido .precio span {
+        font-family: inherit;
+        font-size: 1.7rem;
+        color: #918e8d;
+        font-weight: lighter;
+        text-decoration: line-through;
+    }
+}
 @media (min-width: 550px) {
 
     /* A partir de aca seria sitio web para pantalla grande */
@@ -388,7 +497,7 @@
 
 @media (min-width: 700px) {}
 
-/* 
+/*
 @media (min-width: 550px){
 
 } */
