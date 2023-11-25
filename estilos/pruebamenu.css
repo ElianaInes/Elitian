@@ -138,7 +138,7 @@ header {
     display: block;
     width: 36px;
 }
-
+/*  
 @media (max-width:800px){
 
     .enlace{
@@ -157,7 +157,7 @@ header {
     height: 30px;
 }
 .dropdown__icon_elitianw {
-    /* margin: -13px; */
+    margin: -13px; 
     height: 50px;
 }
 .dropdown__icon_product {
@@ -244,8 +244,8 @@ header {
         margin-left: auto;
         border-left: 1px solid #798499;
     }
-}
 
+ */
 
 
 /* 
