@@ -291,11 +291,11 @@
         left: 0;
         right: 0;*/
         inset: 0;
-        background-color: #52a6b2;
-        opacity: 50%;
+        background-color: #e9d8c0;
+        opacity: 80%;
         transform: scaleZ(0);
         transition: .1s;
-        color: #e9d8c0;
+        /* color: #e9d8c0; */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -304,6 +304,7 @@
 
     .galeria-imagen:hover::before {
         transform: scaleZ(1);
+        
     }
 
 
@@ -318,6 +319,11 @@
         border-radius: 100px;
         transform: translate(-50%,-50%);
         letter-spacing: 4px;
+    }
+
+    .ver-mas-btn:hover{
+        background-color: #52a6b2;
+        opacity: 65%;
     }
 
     .categoria {
