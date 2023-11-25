@@ -9,10 +9,14 @@
     box-sizing: border-box;
 }
 
+
 header {
     font-family: 'Badoga', sans-serif;
 }
 
+/*Escritorio- listo*/
+@media (min-width: 1199.98px)  {
+    
 .menu__arrow {
     height: 12px;
 }
@@ -45,7 +49,7 @@ header {
 
 .enlace {
     position: absolute;
-    margin: -40px ;
+    margin: -40px -250px;
 
 }
 
@@ -93,9 +97,152 @@ header {
 .menu__link {
     color: #000000;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     text-decoration: none;
     padding: 0 40px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+}
+
+.menu__link:hover {
+    color: #52a6b2;
+
+}
+
+.menu__arrow {
+    transform: var(--transform);
+    transition: transform .3s;
+    display: block;
+    margin-left: 3px;
+}
+
+.menu__nesting {
+    list-style: none;
+    transition: clip-path .3s;
+    clip-path: var(--clip);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: max-content;
+    transform: translateY(100%);
+    background-color: #dfb278;
+}
+
+.menu__link--inside {
+    font-size: 1.3rem;
+    padding: 15px;
+}
+
+.menu__link--inside:hover {
+    background-color: #ebcba0;
+}
+
+.menu__hamburguer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu__img {
+    display: block;
+    width: 36px;
+}
+    body{background: red;}
+}
+/*Fin Escritorio*/
+
+/*Tablet*/
+/*Portrait/ VERTICAL-- LISTOO*/ 
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation:portrait) {
+    
+.menu__arrow {
+    height: 12px;
+}
+
+.dropdown__icon_house {
+    height: 30px;
+    display: none;
+}
+
+.dropdown__icon_elitianw {
+    /* margin: -13px; */
+    height: 50px;
+    display: none;
+}
+
+.dropdown__icon_product {
+    height: 30px;
+    display: none;
+}
+
+.dropdown__icon_recicla {
+    height: 30px;
+    display: none;
+}
+
+.dropdown__icon_email {
+    height: 30px;
+    display: none;
+}
+
+.enlace {
+    position: absolute;
+    margin: -40px 25px;
+
+}
+
+.logo {
+    height: 80px;
+}
+
+
+.menu {
+    background-color: #ebcba0;
+    color: #000000;
+    height: 80px;
+}
+
+.menu__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.menu__links {
+    height: 100%;
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+}
+
+.menu__item {
+    list-style: none;
+    position: relative;
+    height: 100%;
+    --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+    --transform: rotate(-90deg);
+}
+
+.menu__item:hover {
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    --transform: rotate(0);
+}
+
+.menu__link {
+    color: #000000;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0 15px;
     display: flex;
     height: 100%;
     align-items: center;
@@ -148,6 +295,302 @@ header {
     display: block;
     width: 36px;
 }
+    body{background: rgb(209, 124, 124);}
+    body{background: orange;}
+}
+
+/*landscape/ HORIZONTAL-- LISTOO*/
+@media (min-width: 991.98px) and (max-width: 1199.98px)and (orientation:landscape) {
+      
+.menu__arrow {
+    height: 12px;
+}
+
+.dropdown__icon_house {
+    height: 30px;
+    display: none;
+}
+
+.dropdown__icon_elitianw {
+    /* margin: -13px; */
+    height: 50px;
+    display: none;
+}
+
+.dropdown__icon_product {
+    height: 30px;
+    display: none;
+}
+
+.dropdown__icon_recicla {
+    height: 30px;
+    display: none;
+}
+
+.dropdown__icon_email {
+    height: 30px;
+    display: none;
+}
+
+.enlace {
+    position: absolute;
+    margin: -40px 25px;
+
+}
+
+.logo {
+    height: 80px;
+}
+
+
+.menu {
+    background-color: #ebcba0;
+    color: #000000;
+    height: 80px;
+}
+
+.menu__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.menu__links {
+    height: 100%;
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+}
+
+.menu__item {
+    list-style: none;
+    position: relative;
+    height: 100%;
+    --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+    --transform: rotate(-90deg);
+}
+
+.menu__item:hover {
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    --transform: rotate(0);
+}
+
+.menu__link {
+    color: #000000;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0 15px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+}
+
+.menu__link:hover {
+    color: #52a6b2;
+
+}
+
+.menu__arrow {
+    transform: var(--transform);
+    transition: transform .3s;
+    display: block;
+    margin-left: 3px;
+}
+
+.menu__nesting {
+    list-style: none;
+    transition: clip-path .3s;
+    clip-path: var(--clip);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: max-content;
+    transform: translateY(100%);
+    background-color: #dfb278;
+}
+
+.menu__link--inside {
+    font-size: 1rem;
+    padding: 15px;
+}
+
+.menu__link--inside:hover {
+    background-color: #ebcba0;
+}
+
+.menu__hamburguer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu__img {
+    display: block;
+    width: 36px;
+}
+    body{background: blue;}
+}
+/*fin tablet*/
+
+/*movil*/
+/*Portrait*/
+/*Default*/
+@media (max-width: 575.98px)and (orientation:portrait) {
+
+
+    body{background: green;}
+ }
+/*landscape*/
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation:landscape) {
+    
+.menu__arrow {
+    height: 12px;
+}
+
+.dropdown__icon_house {
+    height: 30px;
+    display: none;
+}
+
+.dropdown__icon_elitianw {
+    /* margin: -13px; */
+    height: 50px;
+    display: none;
+}
+
+.dropdown__icon_product {
+    height: 30px;
+    display: none;
+}
+
+.dropdown__icon_recicla {
+    height: 30px;
+    display: none;
+}
+
+.dropdown__icon_email {
+    height: 30px;
+    display: none;
+}
+
+.enlace {
+    position: absolute;
+    margin: -40px 25px;
+
+}
+
+.logo {
+    height: 80px;
+}
+
+
+.menu {
+    background-color: #ebcba0;
+    color: #000000;
+    height: 80px;
+}
+
+.menu__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.menu__links {
+    height: 100%;
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+}
+
+.menu__item {
+    list-style: none;
+    position: relative;
+    height: 100%;
+    --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+    --transform: rotate(-90deg);
+}
+
+.menu__item:hover {
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    --transform: rotate(0);
+}
+
+.menu__link {
+    color: #000000;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0 15px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+}
+
+.menu__link:hover {
+    color: #52a6b2;
+
+}
+
+.menu__arrow {
+    transform: var(--transform);
+    transition: transform .3s;
+    display: block;
+    margin-left: 3px;
+}
+
+.menu__nesting {
+    list-style: none;
+    transition: clip-path .3s;
+    clip-path: var(--clip);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: max-content;
+    transform: translateY(100%);
+    background-color: #dfb278;
+}
+
+.menu__link--inside {
+    font-size: 1rem;
+    padding: 15px;
+}
+
+.menu__link--inside:hover {
+    background-color: #ebcba0;
+}
+
+.menu__hamburguer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu__img {
+    display: block;
+    width: 36px;
+}
+    body{background: rgb(209, 124, 124);}
+}
+/*fin movil*/
+
 
 
 /* @media (min-width: 320px) {
@@ -310,8 +753,8 @@ header {
     }
 
 } */
-
-/* @media (min-width: 700px) {
+/* 
+@media (min-width: 700px) {
 
         .menu {
             background-color: #ebcba0;
@@ -376,4 +819,4 @@ header {
             padding: 15px;
         }
 
-    } */
+    }  */

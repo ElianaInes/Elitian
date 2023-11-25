@@ -34,7 +34,6 @@
         width: 90%;
         margin: 0 auto;
         height: 70px;
-
         display: grid;
         grid-template-columns: max-content max-content;
         grid-template-areas: "title img";
