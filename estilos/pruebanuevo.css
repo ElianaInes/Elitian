@@ -13,47 +13,54 @@ header {
     font-family: 'Badoga', sans-serif;
 }
 
-.menu__arrow{
+.menu__arrow {
     height: 12px;
 }
+
 .dropdown__icon_house {
     height: 30px;
     display: none;
 }
+
 .dropdown__icon_elitianw {
     /* margin: -13px; */
     height: 50px;
     display: none;
 }
+
 .dropdown__icon_product {
     height: 30px;
     display: none;
 }
-.dropdown__icon_recicla{
+
+.dropdown__icon_recicla {
     height: 30px;
     display: none;
 }
-.dropdown__icon_email{
+
+.dropdown__icon_email {
     height: 30px;
     display: none;
 }
-.enlace{
+
+.enlace {
     position: absolute;
-    margin: -40px -50px;
+    margin: -40px ;
 
 }
-.logo{
+
+.logo {
     height: 80px;
 }
 
 
-.menu{
+.menu {
     background-color: #ebcba0;
     color: #000000;
-    height: 90px;
+    height: 85px;
 }
 
-.menu__container{
+.menu__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,14 +70,14 @@ header {
     margin: 0 auto;
 }
 
-.menu__links{
+.menu__links {
     height: 100%;
     transition: transform .5s;
     display: flex;
     justify-content: center;
 }
 
-.menu__item{
+.menu__item {
     list-style: none;
     position: relative;
     height: 100%;
@@ -78,12 +85,12 @@ header {
     --transform: rotate(-90deg);
 }
 
-.menu__item:hover{
+.menu__item:hover {
     --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     --transform: rotate(0);
 }
 
-.menu__link{
+.menu__link {
     color: #000000;
     font-weight: bold;
     font-size: 1.3rem;
@@ -95,21 +102,21 @@ header {
 
 }
 
-.menu__link:hover{
+.menu__link:hover {
     color: #52a6b2;
 
 }
 
-.menu__arrow{
+.menu__arrow {
     transform: var(--transform);
     transition: transform .3s;
     display: block;
     margin-left: 3px;
 }
 
-.menu__nesting{
+.menu__nesting {
     list-style: none;
-    transition:clip-path .3s;
+    transition: clip-path .3s;
     clip-path: var(--clip);
     position: absolute;
     right: 0;
@@ -119,16 +126,16 @@ header {
     background-color: #dfb278;
 }
 
-.menu__link--inside{
+.menu__link--inside {
     font-size: 1rem;
-    padding:15px;
+    padding: 15px;
 }
 
-.menu__link--inside:hover{
+.menu__link--inside:hover {
     background-color: #ebcba0;
 }
 
-.menu__hamburguer{
+.menu__hamburguer {
     height: 100%;
     display: flex;
     align-items: center;
@@ -137,70 +144,236 @@ header {
     display: none;
 }
 
-.menu__img{
+.menu__img {
     display: block;
     width: 36px;
 }
 
 
-@media (min-width: 700px){
+/* @media (min-width: 320px) {
 
-    .menu{
-        background-color: #ebcba0;
-        color: #000000;
-        height: 80px;
+
+    Aqui comienza los estilos para la barra desplegable para celu
+    .nav {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        ;
+        text-transform: uppercase;
+        background-color: #e9d8c0;
+
+        --img1: scale(1);
+        --img2: scale(0);
     }
-    .enlace{
-        position: absolute;
-        margin: -38px 55px;
+
+    .nav:has(.dropdown:target) {
+        --img1: scale(0);
+        --img2: scale(1);
+
+        --clip: inset(0 0 0 0);
     }
-    .logo{
+
+    .nav__container {
+        width: 90%;
+        margin: 0 auto;
         height: 70px;
-    }
 
-    .menu__link{
-        color: #000000;
-        font-weight: bold;
-        font-size: 1rem;
-        text-decoration: none;
-        padding: 0 15px;
-        display: flex;
-        height: 100%;
+        display: grid;
+        grid-template-columns: max-content max-content;
+        grid-template-areas: "title img";
+        justify-content: space-between;
         align-items: center;
+
+        overflow: hidden;
     }
 
-    .menu__link--inside{
-        padding:15px;
+    .nav__menu {
+        grid-area: img;
+        position: relative;
+        z-index: 10;
+        transform: var(--img1);
     }
-}
 
-@media (min-width: 900px){
+    .nav__menu--second {
+        transform: var(--img2);
+    }
 
-        .menu{
+    .nav__icon {
+        width: 30px;
+        display: block;
+    }
+
+    .dropdown {
+        position: absolute;
+        background-color: #ebcba0;
+        width: 75%;
+        max-width: 300px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        padding: 1em;
+        display: grid;
+        align-content: center;
+        gap: 1rem;
+        overflow-y: auto;
+        clip-path: var(--clip, inset(0 0 100% 100%));
+        transition: clip-path .5s;
+        z-index: 3;
+    }
+
+    .dropdown__list {
+        list-style: none;
+    }
+
+    .dropdown__link {
+        color: rgb(0, 0, 0);
+        padding: 1em .7em;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: .6rem;
+        position: relative;
+        background-color: var(--bg, transparent);
+        border-radius: 6px;
+    }
+
+    .dropdown__list:has( :checked) {
+        --rows: 1fr;
+        --rotate: rotate(180deg);
+        --bg: #e6b678;
+    }
+
+    .dropdown__check {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .dropdown__arrow {
+        height: 15px;
+        margin-left: auto;
+        transform: var(--rotate, 0);
+        transition: .2s transform;
+    }
+
+    .dropdown__content {
+        display: grid;
+        grid-template-rows: var(--rows, 0fr);
+        transition: .3s grid-template-rows;
+    }
+
+    .dropdown__sub {
+        overflow: hidden;
+    }
+
+    .dropdown__li {
+        width: 85%;
+        list-style: none;
+        margin-left: auto;
+    }
+
+    .dropdown__anchor {
+        padding: 1em 0;
+        display: block;
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .dropdown__icon_product {
+        height: 30px;
+    }
+
+    .dropdown__icon_recicla {
+        height: 30px;
+    }
+
+    .dropdown__icon_elitianw {
+        margin: -13px;
+        height: 50px;
+    }
+
+    .dropdown__icon_house {
+        height: 30px;
+    }
+
+    .dropdown__icon_email {
+        height: 25px;
+    }
+
+    .enlace {
+        position: absolute;
+        margin: 0;
+    }
+
+    .logo {
+        height: 150px;
+    }
+
+} */
+
+/* @media (min-width: 700px) {
+
+        .menu {
             background-color: #ebcba0;
             color: #000000;
             height: 80px;
         }
-        .enlace{
+
+        .enlace {
             position: absolute;
-            margin: -38px 20px;
-        }
-        .logo{
-            height: 75px;
+            margin: -38px 15px;
         }
 
-        .menu__link{
+        .logo {
+            height: 70px;
+        }
+
+        .menu__link {
             color: #000000;
             font-weight: bold;
             font-size: 1rem;
             text-decoration: none;
-            padding: 0 20px;
+            padding: 0 15px;
             display: flex;
             height: 100%;
             align-items: center;
         }
 
-        .menu__link--inside{
-            padding:15px;
+        .menu__link--inside {
+            padding: 15px;
         }
-}
+    }
+
+    @media (min-width: 900px) {
+
+        .menu {
+            background-color: #ebcba0;
+            color: #000000;
+            height: 90px;
+        }
+
+        .enlace {
+            position: absolute;
+            margin: -4% 5%;
+        }
+
+        .logo {
+            height: 75px;
+        }
+
+        .menu__link {
+            color: #000000;
+            font-weight: bold;
+            font-size: 1.3rem;
+            text-decoration: none;
+            padding: 0 35px;
+            display: flex;
+            height: 100%;
+            align-items: center;
+        }
+
+        .menu__link--inside {
+            padding: 15px;
+        }
+
+    } */
