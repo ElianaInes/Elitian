@@ -140,6 +140,8 @@ header {
         width: max-content;
         transform: translateY(100%);
         background-color: #dfb278;
+
+        z-index: 15; 
     }
 
     .menu__link--inside {
@@ -163,10 +165,6 @@ header {
     .menu__img {
         display: block;
         width: 36px;
-    }
-
-    body {
-        background: red;
     }
 }
 
@@ -295,6 +293,8 @@ header {
         width: max-content;
         transform: translateY(100%);
         background-color: #dfb278;
+
+        z-index: 15;
     }
 
     .menu__link--inside {
@@ -318,14 +318,6 @@ header {
     .menu__img {
         display: block;
         width: 36px;
-    }
-
-    body {
-        background: rgb(209, 124, 124);
-    }
-
-    body {
-        background: orange;
     }
 }
 
@@ -453,6 +445,8 @@ header {
         width: max-content;
         transform: translateY(100%);
         background-color: #dfb278;
+
+        z-index: 15;
     }
 
     .menu__link--inside {
@@ -478,9 +472,6 @@ header {
         width: 36px;
     }
 
-    body {
-        background: blue;
-    }
 }
 
 /*fin tablet*/
@@ -496,7 +487,7 @@ header {
     }
 
     .dropdown__icon_elitianw {
-        /* margin: -13px; */
+        margin: -13px;
         height: 50px;
     }
 
@@ -509,7 +500,7 @@ header {
     }
 
     .dropdown__icon_email {
-        height: 30px;
+        height: 25px;
     }
 
     .logo{
@@ -519,6 +510,7 @@ header {
 
     .nav {
         background-color: #ebcba0;
+        z-index: 15; 
 
         
         --img1: scale(1);
@@ -555,7 +547,7 @@ header {
     .nav__menu{
         grid-area: img;
         position: relative;
-        z-index: 10;
+        z-index: 20;
 
         transform: var(--img1);
     }
@@ -583,6 +575,7 @@ header {
         display: grid;
         align-content: center;
         gap: 1rem;
+        z-index: 15; 
 
         overflow-y: auto;
 
@@ -597,7 +590,7 @@ header {
 
     .menu__link{
         color: black;
-        padding: 1em .7em;
+        padding: 1em .3em;
         text-decoration: none;
 
         display: flex;
@@ -606,7 +599,7 @@ header {
 
         position: relative;
         /* background-color:var(--bg, transparent);
-        border: 6px; */
+        border: 6px;  */
 
     } 
 
@@ -656,177 +649,16 @@ header {
         text-decoration: none;
     }
 
+    }
 
+@media (min-width: 320px) {
 
     
-
-
-
-   
-
-
-
-
-        body {
-            background: green;
-        }
-    }
-
-    /*landscape*/
-    @media (min-width: 576px) and (max-width: 991.98px) and (orientation:landscape) {
-
-        .menu__arrow {
-            height: 12px;
-        }
-
-        .dropdown__icon_house {
-            height: 30px;
-            display: none;
-        }
-
-        .dropdown__icon_elitianw {
-            /* margin: -13px; */
-            height: 50px;
-            display: none;
-        }
-
-        .dropdown__icon_product {
-            height: 30px;
-            display: none;
-        }
-
-        .dropdown__icon_recicla {
-            height: 30px;
-            display: none;
-        }
-
-        .dropdown__icon_email {
-            height: 30px;
-            display: none;
-        }
-
-        .enlace {
-            position: absolute;
-            margin: -40px 25px;
-
-        }
-
-        .logo {
-            height: 80px;
-        }
-
-
-        .menu {
-            background-color: #ebcba0;
-            color: #000000;
-            height: 80px;
-        }
-
-        .menu__container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            max-width: 1200px;
-            height: 100%;
-            margin: 0 auto;
-        }
-
-        .menu__links {
-            height: 100%;
-            transition: transform .5s;
-            display: flex;
-            justify-content: center;
-        }
-
-        .menu__item {
-            list-style: none;
-            position: relative;
-            height: 100%;
-            --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
-            --transform: rotate(-90deg);
-        }
-
-        .menu__item:hover {
-            --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-            --transform: rotate(0);
-        }
-
-        .menu__link {
-            color: #000000;
-            font-weight: bold;
-            font-size: 1rem;
-            text-decoration: none;
-            padding: 0 15px;
-            display: flex;
-            height: 100%;
-            align-items: center;
-
-        }
-
-        .menu__link:hover {
-            color: #52a6b2;
-
-        }
-
-        .menu__arrow {
-            transform: var(--transform);
-            transition: transform .3s;
-            display: block;
-            margin-left: 3px;
-        }
-
-        .menu__nesting {
-            list-style: none;
-            transition: clip-path .3s;
-            clip-path: var(--clip);
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            width: max-content;
-            transform: translateY(100%);
-            background-color: #dfb278;
-        }
-
-        .menu__link--inside {
-            font-size: 1rem;
-            padding: 15px;
-        }
-
-        .menu__link--inside:hover {
-            background-color: #ebcba0;
-        }
-
-        .menu__hamburguer {
-            height: 100%;
-            display: flex;
-            align-items: center;
-            padding: 0 15px;
-            cursor: pointer;
-            display: none;
-        }
-
-        .menu__img {
-            display: block;
-            width: 36px;
-        }
-
-        body {
-            background: rgb(209, 124, 124);
-        }
-    }
-
-    /*fin movil*/
-
-
-
-    /* @media (min-width: 320px) {
-
-
-    Aqui comienza los estilos para la barra desplegable para celu
-    .nav {
+    /*Aqui comienza los estilos para la barra desplegable para celu*/
+    /*Aqui comienza los estilos para la barra desplegable para celu*/
+    /*Aqui comienza los estilos para la barra desplegable para celu*/
+    /* .nav {
         font-family: 'Sofia Sans Condensed', sans-serif;
-        ;
         text-transform: uppercase;
         background-color: #e9d8c0;
 
@@ -845,7 +677,6 @@ header {
         width: 90%;
         margin: 0 auto;
         height: 70px;
-
         display: grid;
         grid-template-columns: max-content max-content;
         grid-template-areas: "title img";
@@ -976,74 +807,405 @@ header {
     }
 
     .logo {
-        height: 150px;
+        height: 55px;
+    } */
+
+
+    /*Aqui comienzan los estilos del carrusel para celu*/
+    /*Aqui comienzan los estilos del carrusel para celu*/
+    /*Aqui comienzan los estilos del carrusel para celu*/
+    .carrusel-contenedor {
+        max-width: 100%;
+        max-height: 100vh;
+        width: 100%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        margin: 0 5px;
     }
+
+    
+    .miCarrusel{
+        display: none;
+        transition: 2s;
+        max-height: 100vh;
+    }
+   
+
+    .miCarrusel img {
+        width: 100%;
+        max-height: 100vh;
+        height: inherit;
+        object-fit: cover;
+        vertical-align: top;
+        transition: 2s;
+    }
+
+    .banner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.1); /* Fondo semi transparente para resaltar el texto */
+        z-index: 2; /* Asegúrate de que el banner esté por encima del carrusel */
+    }
+    .banner-contenido {
+        text-align: center;
+        color: #e9d8c0;
+    }
+
+    .banner-contenido p {
+        font-size: 1rem;
+        margin: 1rem;
+        font-weight: 500;
+    }
+
+    .banner-contenido a {
+        margin-top: 1rem;
+        text-decoration: none;
+        color: #52a6b2;
+        background-color: #e9d8c0;
+        opacity: 70%;
+        display: inline-block;
+        padding: 1rem 1rem;
+        text-transform: uppercase;
+        border-radius: 3rem;
+    }
+
+
+
+    .direcciones {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 20px;
+    }
+
+    .direcciones a {
+        color: #52a6b2;
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+    }
+
+    .direcciones a:hover {
+        background: #e9d8c0;
+        transition: .5s;
+    }
+
+    .barras {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .barra {
+        cursor: pointer;
+        height: 2px;
+        width: 25px;
+        margin: 0 2px;
+        background: #e9d8c0;
+        display: inline-block;
+        margin-left: 3px;
+    }
+
+    .active {
+        background-color: #52a6b2;
+    }
+
+    .fade {
+        animation-name: fade;
+        animation-duration: 1s;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    /*Aqui comienzan los estilos de la galeria de imagenes por categorias para celu*/
+
+    .galeria {
+        padding-bottom: 1em;
+        padding-top: 1em;
+        display: grid;
+        margin: 0 5px;
+        gap: .36em;
+        grid-template-columns: auto(3, 1fr);
+        grid-auto-rows: 160px;
+        grid-template-areas:
+            "img1 img2"
+            "img1 img3"
+            "img4 img4"
+            "img5 img6"
+            "img7 img6"
+            "img8 img9"
+        ;
+    }
+
+    .galeria-imagen {
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .galeria-imagen::before {
+        content: "";
+        position: absolute;
+        /* top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;*/
+        inset: 0;
+        background-color: #e9d8c0;
+        opacity: 50%;
+        transform: scaleZ(0);
+        transition: .1s;
+        /* color: #e9d8c0; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+
+    .galeria-imagen:hover::before {
+        transform: scaleZ(1);
+
+    }
+
+    .ver-mas-btn {
+        font-family: inherit;
+        width: 8rem;
+        padding: 9px;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        background-color: transparent;
+        border: 1px solid #e9d8c0;
+        border-radius: 100px;
+        transform: translate(-50%, -50%);
+        letter-spacing: 2px;
+        font-weight: lighter;
+    }
+
+    .ver-mas-btn:hover {
+        background-color: #52a6b2;
+        opacity: 50%;
+        transition: 0.5s;
+    }
+
+    .categoria {
+        font-family: inherit;
+        font-size: calc(100%);
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        letter-spacing: 1.5px;
+        font-weight: lighter;
+    }
+
+    .galeria-imagen--g1 {
+        grid-area: img1;
+    }
+
+    .galeria-imagen--g2 {
+        grid-area: img2;
+    }
+
+    .galeria-imagen--g3 {
+        grid-area: img3;
+    }
+
+    .galeria-imagen--g4 {
+        grid-area: img4;
+    }
+
+    .galeria-imagen--g5 {
+        grid-area: img5;
+    }
+
+    .galeria-imagen--g6 {
+        grid-area: img6;
+    }
+
+    .galeria-imagen--g7 {
+        grid-area: img7;
+    }
+
+    .galeria-imagen--g8 {
+        grid-area: img8;
+    }
+
+    .galeria-imagen--g9 {
+        grid-area: img9;
+    }
+
+    .galeria-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 90%;
+        transition: transform 0.5s ease;
+    }
+
+    .galeria-img:hover{
+        transform: scale(1.1);
+    }
+
+    /*Aqui comienza el estilo para la seccion de ofertas para celu*/
+
+    .productos {
+        padding: 1.5rem;
+        margin-top: auto;
+    }
+    
+    .titulo {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        position: relative;
+        padding-bottom: 1rem;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .productos .contenedor {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        margin: 5px auto;
+    }
+
+
+    .productos .contenedor .caja {
+        flex: 1 1 calc(75% - 2rem);
+        box-shadow: 0 .5rem 1.5rem #e9d8c0;
+        border-radius: .5rem;
+        border: .1rem solid #e9d8c0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .productos .contenedor .caja .ofertas {
+        position: absolute;
+        top: 1rem;
+        left: 3rem;
+        padding: .7rem 2rem;
+        font-size: 2.5rem;
+        color: #000000;
+        background: #52a6b2;
+        opacity: 99%;
+        z-index: 1;
+        border-radius: .5rem;
+    }
+
+    .productos .contenedor .caja .imagen {
+        flex: 1;
+        position: relative;
+        text-align: center;
+        overflow: hidden;
+        cursor: pointer;
+        
+    }
+
+    .productos .contenedor .caja .imagen .img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: transform 0.5 ease;
+    }
+
+    .productos .contenedor .caja:hover .imagen .img {
+        transform: scale(1.1);
+    }
+
+    .productos .contenedor .caja .imagen .iconos {
+        position: absolute;
+        bottom: -7rem;
+        left: 0;
+        right: 0;
+        display: flex;
+    }
+
+    .productos .contenedor .caja:hover .imagen .iconos {
+        bottom: 0;
+    }
+
+    .productos .contenedor .caja .imagen .iconos a {
+        height: 5rem;
+        line-height: 5rem;
+        font-size: 2rem;
+        width: 50%;
+        background: #e9d8c0;
+        color: #52a6b2;
+    }
+
+    .productos .contenedor .caja .imagen .iconos .cart-btn {
+        border-left: 1rem solid #e9d8c0;
+        border-right: 0 solid #e9d8c0;
+        width: 100%;
+    }
+
+    .productos .contenedor .caja .imagen .iconos a:hover{
+        background: #e9d8c0;
+    }
+
+    .productos .contenedor .caja .contenido {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .productos .contenedor .caja .contenido h3{
+        font-family: inherit;
+        font-size: 2.3rem;
+        color: #000000;
+    }
+    
+    .productos .contenedor .caja .contenido .precio {
+        font-family: inherit;
+        font-size: 2.5rem;
+        color: #52a6b2;
+        font-weight: bolder;
+        padding-top: 1rem;
+    }
+
+    .productos .contenedor .caja .contenido .precio span {
+        font-family: inherit;
+        font-size: 1rem;
+        color: #918e8d;
+        font-weight: bold;
+        text-decoration: line-through;
+    }
+}
+@media (min-width: 550px) {
+
+    /* A partir de aca seria sitio web para pantalla grande */
+
+}
+
+
+@media (min-width: 700px) {}
+
+/*
+@media (min-width: 550px){
 
 } */
-    /* 
-@media (min-width: 700px) {
 
-        .menu {
-            background-color: #ebcba0;
-            color: #000000;
-            height: 80px;
-        }
-
-        .enlace {
-            position: absolute;
-            margin: -38px 15px;
-        }
-
-        .logo {
-            height: 70px;
-        }
-
-        .menu__link {
-            color: #000000;
-            font-weight: bold;
-            font-size: 1rem;
-            text-decoration: none;
-            padding: 0 15px;
-            display: flex;
-            height: 100%;
-            align-items: center;
-        }
-
-        .menu__link--inside {
-            padding: 15px;
-        }
-    }
-
-    @media (min-width: 900px) {
-
-        .menu {
-            background-color: #ebcba0;
-            color: #000000;
-            height: 90px;
-        }
-
-        .enlace {
-            position: absolute;
-            margin: -4% 5%;
-        }
-
-        .logo {
-            height: 75px;
-        }
-
-        .menu__link {
-            color: #000000;
-            font-weight: bold;
-            font-size: 1.3rem;
-            text-decoration: none;
-            padding: 0 35px;
-            display: flex;
-            height: 100%;
-            align-items: center;
-        }
-
-        .menu__link--inside {
-            padding: 15px;
-        }
-
-    }  */
+/* A partir de aca seria sitio web para pantalla grande */
