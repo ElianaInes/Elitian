@@ -192,9 +192,9 @@ header {
         text-decoration: none;
     }
 
+    /* ---------------------------------------------------------- */
     /*Aqui comienzan los estilos del carrusel para celu*/
-    /*Aqui comienzan los estilos del carrusel para celu*/
-    /*Aqui comienzan los estilos del carrusel para celu*/
+    /* ---------------------------------------------------------- */
     .carrusel-contenedor {
         max-width: 100%;
         max-height: 100vh;
@@ -231,10 +231,8 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.1);
-        /* Fondo semi transparente para resaltar el texto */
-        z-index: 2;
-        /* Asegúrate de que el banner esté por encima del carrusel */
+        background-color: rgba(0, 0, 0, 0.1); /* Fondo semi transparente para resaltar el texto */
+        z-index: 2; /* Asegúrate de que el banner esté por encima del carrusel */
     }
 
     .banner-contenido {
@@ -323,8 +321,9 @@ header {
         }
     }
 
-
+    /* --------------------------------------------------------------------------- */
     /*Aqui comienzan los estilos de la galeria de imagenes por categorias para celu*/
+    /* --------------------------------------------------------------------------- */
 
     .galeria {
         padding-bottom: 1em;
@@ -455,8 +454,71 @@ header {
         transform: scale(1.1);
     }
 
+    /* ---------------------------------------------------------- */
+    /* Aqui comienza el estilo para las caracteristicas de ofertas */
+    /* ---------------------------------------------------------- */
 
+    .main-caracteristicas {
+        max-width: fit-content;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .caracteristicas {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+    }
+
+    .caracteristicas-contenido {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .tarjeta-contenido {
+        text-align: center;
+        width: 400px; /* Tamaño deseado para las tarjetas */
+        margin-bottom: 10px;
+        padding: 15px;
+        border: 1px solid #e9d8c0;
+        border-radius: 8px;
+        transition: transform 0.1s ease;
+    }
+
+    .tarjeta-contenido:hover {
+        transform: scale(1.05);
+    }
+
+    .tarjeta-contenido svg {
+        height: 2rem;
+        width: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .contenido-destacado {
+        height: 4px;
+        width: 75px;
+        background-color: #52a6b2;
+        margin: 0 auto 1rem auto;
+    }
+
+    .tarjeta-contenido span {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333;
+        text-transform: uppercase;
+    }
+
+    .tarjeta-contenido p {
+        font-size: 1rem;
+        color: #666;
+    }
+
+    /* ---------------------------------------------------------- */
     /*Aqui comienza el estilo para la seccion de ofertas para celu*/
+    /* ---------------------------------------------------------- */
 
     .productos {
         padding: 1.5rem;
@@ -557,7 +619,8 @@ header {
     }
 
     .productos .contenedor .caja .imagen .iconos a svg {
-        fill: currentColor; /* Utiliza el color del texto como color de relleno del svg */
+        fill: currentColor;
+        /* Utiliza el color del texto como color de relleno del svg */
     }
 
     .productos .contenedor .caja .imagen .iconos a img {
@@ -918,11 +981,11 @@ header {
 @media (min-width: 1199.98px) {
 
 
-    .checkbox{
+    .checkbox {
         display: none;
     }
 
-    .menu__arrow{
+    .menu__arrow {
         height: 12px;
     }
 
@@ -965,7 +1028,7 @@ header {
     }
 
     .logo {
-        
+
         height: 80px;
     }
 
@@ -1041,7 +1104,7 @@ header {
         transform: translateY(100%);
         background-color: #dfb278;
 
-        z-index: 15; 
+        z-index: 15;
     }
 
     .menu__link--inside {
