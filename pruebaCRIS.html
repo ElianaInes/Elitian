@@ -43,7 +43,7 @@
 
 
             .productos .contenedor .caja {
-                flex: 1 1 calc(100% - 2rem);
+                flex: 1 1 calc(75% - 2rem);
                 box-shadow: 0 .5rem 1.5rem #e9d8c0;
                 border-radius: .5rem;
                 border: .1rem solid #e9d8c0;
@@ -65,20 +65,19 @@
             }
 
             .productos .contenedor .caja .imagen {
-                flex: calc(100%);
+                flex: 1;
                 position: relative;
                 text-align: center;
-                padding-top: 2rem;
-                padding-left: 1rem;
                 overflow: hidden;
                 cursor: pointer;
+                max-height: 100vh;
 
             }
 
             .productos .contenedor .caja .imagen .img {
                 height: 100%;
                 width: 100%;
-                object-fit: cover;
+                object-fit: contain;
                 transition: transform 0.5 ease;
             }
 
@@ -161,9 +160,17 @@
                 <div class="imagen">
                     <img src="img/productos/aceite puro de almendras.jpg" alt="">
                     <div class="iconos">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                            viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+                        </svg>
                         <a href="#" class="cart-btn">Lo quiero</a>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M307 34.8c-11.5 5.1-19 16.6-19 29.2v64H176C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96h96v64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                            viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M307 34.8c-11.5 5.1-19 16.6-19 29.2v64H176C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96h96v64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z" />
+                        </svg>
                         <a href="#" class="fas fa-share"></a>
                     </div>
                 </div>
@@ -225,3 +232,154 @@
 </body>
 
 </html>
+
+
+.checkbox{
+display: none;
+}
+
+.menu__arrow{
+height: 12px;
+}
+
+
+.dropdown__icon_house {
+height: 30px;
+display: none;
+}
+
+.dropdown__icon_elitianw {
+/* margin: -13px; */
+height: 50px;
+display: none;
+}
+
+.dropdown__icon_product {
+height: 30px;
+display: none;
+}
+
+.dropdown__icon_recicla {
+height: 30px;
+display: none;
+}
+
+.dropdown__icon_email {
+height: 30px;
+display: none;
+}
+
+.nav__icon {
+display: none;
+}
+
+.enlace {
+position: absolute;
+margin-top: 10px;
+margin-left: -250px;
+
+}
+
+.logo {
+
+height: 80px;
+}
+
+
+.nav {
+background-color: #ebcba0;
+color: #000000;
+height: 85px;
+}
+
+.menu__container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+max-width: 1200px;
+height: 100%;
+margin: 0 auto;
+}
+
+.menu__links {
+height: 100%;
+transition: transform .5s;
+display: flex;
+justify-content: center;
+}
+
+.menu__item {
+list-style: none;
+position: relative;
+height: 100%;
+--clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+--transform: rotate(-90deg);
+}
+
+.menu__item:hover {
+--clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+--transform: rotate(0);
+}
+
+.menu__link {
+color: #000000;
+font-weight: bold;
+font-size: 1.5rem;
+text-decoration: none;
+padding: 0 40px;
+display: flex;
+height: 100%;
+align-items: center;
+
+}
+
+.menu__link:hover {
+color: #52a6b2;
+
+}
+
+.menu__arrow {
+transform: var(--transform);
+transition: transform .3s;
+display: block;
+margin-left: 3px;
+}
+
+.menu__nesting {
+list-style: none;
+transition: clip-path .3s;
+clip-path: var(--clip);
+position: absolute;
+right: 0;
+bottom: 0;
+width: max-content;
+transform: translateY(100%);
+background-color: #dfb278;
+
+z-index: 15;
+}
+
+.menu__link--inside {
+font-size: 1.3rem;
+padding: 15px;
+}
+
+.menu__link--inside:hover {
+background-color: #ebcba0;
+}
+
+.menu__hamburguer {
+height: 100%;
+display: flex;
+align-items: center;
+padding: 0 15px;
+cursor: pointer;
+display: none;
+}
+
+.menu__img {
+display: block;
+width: 36px;
+}
+}
