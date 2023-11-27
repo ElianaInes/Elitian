@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url(' https://fonts.cdnfonts.com/css/badoga ');
+        /* familia de fuentes: 'Badoga', sans-serif; */
+        @import url('https://fonts.googleapis.com/css2? family= Montserrat:ital,wght@0,100;0,200;1,200 & family= Roboto:ital,wght@0,100;0,300;0,400;0,500; 1,100;1,500;1,900 & familia= Sofia+Sans+Condensado:ital@1 & display=swap');
+        /* familia de fuentes: 'Sofia Sans Condensed', sans-serif; */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border - box;
+        }
+
+        @media(min-width: 320px) {
+
+            .productos {
+                padding: 1.5rem;
+                margin-top: auto;
+            }
+
+            .titulo {
+                font-family: 'Sofia Sans Condensed', sans-serif;
+                position: relative;
+                padding-bottom: 1rem;
+                position: relative;
+                overflow: hidden;
+                text-align: center;
+            }
+
+            .productos .contenedor {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 3rem;
+                margin: 5px auto;
+            }
+
+
+            .productos .contenedor .caja {
+                flex: 1 1 calc(100% - 2rem);
+                box-shadow: 0 .5rem 1.5rem #e9d8c0;
+                border-radius: .5rem;
+                border: .1rem solid #e9d8c0;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .productos .contenedor .caja .ofertas {
+                position: absolute;
+                top: 1rem;
+                left: 3rem;
+                padding: .7rem 2rem;
+                font-size: 2.5rem;
+                color: #000000;
+                background: #52a6b2;
+                opacity: 99%;
+                z-index: 1;
+                border-radius: .5rem;
+            }
+
+            .productos .contenedor .caja .imagen {
+                flex: calc(100%);
+                position: relative;
+                text-align: center;
+                padding-top: 2rem;
+                padding-left: 1rem;
+                overflow: hidden;
+                cursor: pointer;
+
+            }
+
+            .productos .contenedor .caja .imagen .img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transition: transform 0.5 ease;
+            }
+
+            .productos .contenedor .caja:hover .imagen .img {
+                transform: scale(1.1);
+            }
+
+            .productos .contenedor .caja .imagen .iconos {
+                position: absolute;
+                bottom: -7rem;
+                left: 0;
+                right: 0;
+                display: flex;
+            }
+
+            .productos .contenedor .caja:hover .imagen .iconos {
+                bottom: 0;
+            }
+
+            .productos .contenedor .caja .imagen .iconos a {
+                height: 5rem;
+                line-height: 5rem;
+                font-size: 2rem;
+                width: 50%;
+                background: #e9d8c0;
+                color: #52a6b2;
+            }
+
+            .productos .contenedor .caja .imagen .iconos .cart-btn {
+                border-left: 1rem solid #e9d8c0;
+                border-right: 0 solid #e9d8c0;
+                width: 100%;
+            }
+
+            .productos .contenedor .caja .imagen .iconos a:hover {
+                background: #e9d8c0;
+            }
+
+            .productos .contenedor .caja .contenido {
+                padding: 2rem;
+                text-align: center;
+            }
+
+            .productos .contenedor .caja .contenido h3 {
+                font-family: inherit;
+                font-size: 2.3rem;
+                color: #000000;
+            }
+
+            .productos .contenedor .caja .contenido .precio {
+                font-family: inherit;
+                font-size: 2.5rem;
+                color: #52a6b2;
+                font-weight: bolder;
+                padding-top: 1rem;
+            }
+
+            .productos .contenedor .caja .contenido .precio span {
+                font-family: inherit;
+                font-size: 1rem;
+                color: #918e8d;
+                font-weight: bold;
+                text-decoration: line-through;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="productos" id="productos">
+
+        <h1 class="titulo"> Ofertas <span>Productos</span> </h1>
+
+        <div class="contenedor">
+
+
+            <!-- Procucto 1 -->
+            <div class="caja">
+                <span class="ofertas">-5%</span>
+                <div class="imagen">
+                    <img src="img/productos/aceite puro de almendras.jpg" alt="">
+                    <div class="iconos">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+                        <a href="#" class="cart-btn">Lo quiero</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M307 34.8c-11.5 5.1-19 16.6-19 29.2v64H176C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96h96v64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z"/></svg>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="contenido">
+                    <h3>Aceite puro de almendras</h3>
+                    <div class="precio"> $1200ARS <span>$1000ARS</span></div>
+                </div>
+            </div>
+
+            <!-- Procucto 2 -->
+            <div class="caja">
+                <span class="ofertas">-10%</span>
+                <div class="imagen">
+                    <img src="img/productos/agua de rosas.jpg" alt="">
+                    <div class="iconos">
+                        <a href="#" class="cart-btn">¡Lo quiero!</a>
+                        <a href="#" class="fasfa-share"></a>
+                    </div>
+                </div>
+                <div class="contenido">
+                    <h3>Agua de rosas</h3>
+                    <div class="precio"> $1850ARS <span>$1400ARS</span></div>
+                </div>
+            </div>
+
+            <!-- Procucto 3 -->
+            <div class="caja">
+                <span class="ofertas">-7%</span>
+                <div class="imagen">
+                    <img src="img/productos/jabon de carbon activado.jpg" alt="">
+                    <div class="iconos">
+                        <a href="#" class="cart-btn">¡Lo quiero!</a>
+                        <a href="#" class="fasfa-share"></a>
+                    </div>
+                </div>
+                <div class="contenido">
+                    <h3>Jabon de carbon activado</h3>
+                    <div class="precio"> $1050ARS <span>$900ARS</span></div>
+                </div>
+            </div>
+
+            <!-- Procucto 4 -->
+            <div class="caja">
+                <span class="ofertas">-13%</span>
+                <div class="imagen">
+                    <img src="img/productos/balsamo labial.jpg" alt="">
+                    <div class="iconos">
+                        <a href="#" class="cart-btn">¡Lo quiero!</a>
+                        <a href="#" class="fasfa-share"></a>
+                    </div>
+                </div>
+                <div class="contenido">
+                    <h3>Balsamo labial</h3>
+                    <div class="precio"> $1050ARS <span>$900ARS</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
