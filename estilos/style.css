@@ -923,7 +923,6 @@ header {
         display: flex;
         height: 100%;
         align-items: center;
-
     }
 
     .menu__link:hover {
