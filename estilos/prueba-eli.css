@@ -2,6 +2,12 @@
 /* familia de fuentes: 'Badoga', sans-serif; */
 @import url('https://fonts.googleapis.com/css2? family= Montserrat:ital,wght@0,100;0,200;1,200 & family= Roboto:ital,wght@0,100;0,300;0,400;0,500; 1,100;1,500;1,900 & familia= Sofia+Sans+Condensado:ital@1 & display=swap');
 /* familia de fuentes: 'Sofia Sans Condensed', sans-serif; */
+@import url(' https://fonts.cdnfonts.com/css/pathway-extreme ');
+/* familia de fuentes: 'Pathway Extreme', sans-serif;*/
+                                                
+                                                
+                                                
+                                                
 
 * {
     margin: 0;
@@ -9,401 +15,24 @@
     box-sizing: border-box;
 }
 
-/*----------------------------------------------------*/
-/* Aca empieza formato boton flotante Whatsapp */
-/*---------------------------------------------------*/
 
-.container_botton {
-    width: 70px;
-    height: 70px;
-    background-color: green;
-    border: solid 1px white;
-    position: fixed;
-    z-index: 999;
-    border-radius: 100%;
-    bottom: 15px;
-    right: 20px;
-    /* text-align: center; */
-    padding: 5px;
-    transition: ease 0.3s;
-
-    animation: whatsapp 1.2s infinite;
-}
-
-.container_botton:hover {
-    transform: scale(1.1);
-    transition: 0.3s;
-}
-
-.icon_wa {
-    width: 55px;
-    transition: ease 1s;
-}
-
-@keyframes whatsapp {
-    0% {
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
-    }
-
-    100% {
-        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-    }
-}
-
-/*----------------------------------------------------*/
-/* Aca empieza formato menu escritorio */
-/*---------------------------------------------------*/
 
 header {
     font-family: 'Badoga', sans-serif;
 }
 
-.checkbox {
-    display: none;
-}
-
-.menu__arrow {
-    height: 12px;
-}
-
-
-.dropdown__icon_house {
-    height: 30px;
-    display: none;
-}
-
-.dropdown__icon_elitianw {
-    /* margin: -13px; */
-    height: 50px;
-    display: none;
-}
-
-.dropdown__icon_product {
-    height: 30px;
-    display: none;
-}
-
-.dropdown__icon_recicla {
-    height: 30px;
-    display: none;
-}
-
-.dropdown__icon_email {
-    height: 30px;
-    display: none;
-}
-
-.nav__icon {
-    display: none;
-}
-
-.enlace {
-    position: absolute;
-    margin-top: 0;
-    margin-left: -50px;
-
-}
-
-.logo {
-
-    height: 78px;
-}
-
-
-.nav {
-    background-color: #ebcba0;
-    color: #000000;
-    height: 85px;
-
-}
-
-.menu__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    height: 100%;
-    margin: 0 auto;
-
-    overflow: visible;
-}
-
-.menu__links {
-    height: 100%;
-    transition: transform .5s;
-    display: flex;
-    justify-content: center;
-}
-
-.menu__item {
-    list-style: none;
-    position: relative;
-    height: 100%;
-    --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
-    --transform: rotate(-90deg);
-}
-
-.menu__item:hover {
-    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    --transform: rotate(0);
-}
-
-.menu__link {
-    color: #000000;
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-decoration: none;
-    padding: 0 40px;
-    margin-top: 10px;
-    display: flex;
-    height: 100%;
-    align-items: center;
-}
-
-.menu__link:hover {
-    color: #52a6b2;
-
-}
-
-.menu__arrow {
-    transform: var(--transform);
-    transition: transform .3s;
-    display: block;
-    margin-left: 3px;
-}
-
-.menu__nesting {
-    list-style: none;
-    transition: clip-path .3s;
-    clip-path: var(--clip);
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: max-content;
-    transform: translateY(100%);
-    background-color: #dfb278;
-
-    z-index: 999;
-}
-
-.menu__link--inside {
-    font-size: 1.3rem;
-    padding: 15px;
-}
-
-.menu__link--inside:hover {
-    background-color: #ebcba0;
-}
-
-.menu__hamburguer {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 15px;
-    cursor: pointer;
-    display: none;
-}
-
-.menu__img {
-    display: block;
-    width: 36px;
-}
-
-/* ---------------------------
-       Aca comienza Seccion 2
-    --------------------------- */
-
-.recicla_container {
-    width: 100vw;
-    height: 70vh;
-    position: relative;
-
-}
-
-.background_recicla {
-    width: 50%;
-    height: 900px;
-    opacity: .1;
-    margin-top: -5px;
-    margin-left: 400px;
-    padding: 35px 25px;
-    overflow: hidden;
-    position: absolute;
-
-}
-
-.title_seccion2 {
-    text-align: center;
-    margin-top: 25px;
-    color: #52a6b2;
-    font-family: 'Badoga', sans-serif;
-    font-size: 3rem;
-    font-weight: bold;
-}
-
-.title_secciondos--second {
-    color: #e9d8c0;
-}
-
-.subtitle_seccion2 {
-    text-align: center;
-    font-family: 'Sofia Sans Condensed', sans-serif;
-
-
-}
-
-.description_seccion2--one {
-    text-align: center;
-    font-family: 'Sofia Sans Condensed', sans-serif;
-    color: #444444;
-    margin: auto;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    width: 70vw;
-    box-shadow: 0 .5rem 1.5rem #e7d9c6;
-    border-radius: .5rem;
-    border: .1rem solid #e9d8c0;
-    padding: 8px;
-}
-
-.description_seccion2--two {
-    font-family: 'Pathway Extreme', sans-serif;
-    margin: 30px 210px;
-    font-size: 1.3rem;
-}
-
-.description_seccion2--three {
-    font-family: 'Pathway Extreme', sans-serif;
-    margin: 20px 210px;
-    font-size: 1.3rem;
-
-}
-
-.description_secciondos--span {
-    font-family: 'Sofia Sans Condensed', sans-serif;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    color: #52a6b2;
-}
-
-.description_seccion2--four {
-    text-align: center;
-    font-family: 'Sofia Sans Condensed', sans-serif;
-    margin: 15px;
-    font-size: 1.4rem;
-    font-weight: bold;
-}
-
-.secciondos_img {
-    height: 35px;
-    padding: 3px 0;
-}
-
-.description_seccion2--tips {
-    font-family: 'Pathway Extreme', sans-serif;
-    margin: 20px 210px;
-    font-size: 1.2rem;
-}
-
-.description_seccion2--reflexion {
-    width: 70vw;
-    text-align: center;
-    font-family: 'Badoga', sans-serif;
-    color: black;
-
-    /* background-color: #52a6b2; */
-    box-shadow: 0 .5rem 1.5rem #e7d9c6;
-    border-radius: .5rem;
-    border: .1rem solid #e9d8c0;
-    margin: 20px 200px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 15px;
-}
-
-.span_medioambiente {
-    font-size: 1.8rem;
-}
-
-.description_seccion2--final {
-    text-align: center;
-    font-family: 'Sofia Sans Condensed', sans-serif;
-    text-decoration: solid;
-    margin-top: 15px;
-    font-size: 1.5rem;
-}
-
-.img {
-    text-align: center;
-    align-items: center;
-}
-
-.manos {
-    height: 75px;
-}
-
-/* ------------------------------- */
-/* Aqui comienza la seccion 3 */
-/* ------------------------------- */
-
-.container_ecoideas {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.tarjeta-ecoidea {
-    text-align: center;
-    width: 400px;
-    /* Tamaño deseado para las tarjetas */
-    margin-bottom: 10px;
-    padding: 15px;
-    border: 1px solid #e9d8c0;
-    border-radius: 8px;
-    transition: transform 0.1s ease;
-}
-
-.tarjeta-ecoidea:hover {
-    transform: scale(1.05);
-}
-
-.ecoidea_img {
-    height: 3rem;
-    width: 3rem;
-    margin-bottom: 1rem;
-}
-
-.ecoideas {
-    height: 4px;
-    width: 75px;
-    background-color: #52a6b2;
-    margin: 0 auto 1rem auto;
-}
-
-.ecoidea_title{
-    font-family: 'Sofia Sans Condensed', sans-serif;
-    font-weight: bold;
-}
-
-.ecoidea_desc{
-    font-family: 'Sofia Sans Condensed', sans-serif;
-}
-
-/*Escritorio- listo*/
 
 /*movil*/
-@media (min-width: 320px) and (max-width: 575px) {
-
+/*Portrait/ VERTICAL*/
+/*Default*/
+@media (min-width: 320px){
 
     /*----------------------------------------------------*/
-    /* Aca empieza formato boton flotante Whatsapp */
+       /* Aca empieza formato boton flotante Whatsapp */
     /*---------------------------------------------------*/
-
-    .container_botton {
-        width: 35px;
-        height: 35px;
+    .container_botton{
+        width: 45px;
+        height: 45px;
         background-color: green;
         border: solid 1px white;
         position: fixed;
@@ -412,36 +41,36 @@ header {
         bottom: 15px;
         right: 10px;
         /* text-align: center; */
-        padding: 3px;
+        padding: 4px;
         transition: ease 0.3s;
 
         animation: whatsapp 1.2s infinite;
     }
 
-    .container_botton:hover {
+    .container_botton:hover{
         transform: scale(1.1);
         transition: 0.3s;
     }
 
-    .icon_wa {
-        width: 25px;
+
+    .icon_wa{
+        width:35px;
         transition: ease 1s;
     }
 
-    @keyframes whatsapp {
-        0% {
+    @keyframes whatsapp{
+        0%{
             box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
         }
-
-        100% {
-            box-shadow: 0 0 0 8px rgba(0, 0, 0, 0);
+        100%{
+            box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
         }
     }
 
+    /* -----------------------------
+     Aca comienza formato menu
+    ----------------------------- */
 
-    /*-------------------------------*/
-    /* Aca empieza formato menu */
-    /*-------------------------------*/
     .dropdown__icon_house {
         height: 30px;
     }
@@ -616,7 +245,6 @@ header {
         text-decoration: none;
     }
 
-    
     /* ---------------------------
        Aca comienza Seccion 2
     --------------------------- */
@@ -624,67 +252,66 @@ header {
     .recicla_container{
         width: 100%;
         position: relative;
+
     }
 
-    .background_recicla {
-        width: 90vw;
-        height: 90vh;
+    .background_recicla{
+        width: 100%;
         opacity: .2;
-        margin-top: auto;
-        margin-left: 25px;
         padding: 35px 25px;
         overflow: hidden;
         position: absolute;
     }
 
-    
     .title_seccion2{
         text-align: center;
         margin-top: 15px;
         color: #52a6b2;
         font-family: 'Badoga', sans-serif;
         text-decoration: dotted;
-        font-weight: bold;
-        font-size: 1.9rem;
+        font-size: 1.8rem;
     }
 
     .title_secciondos--second{
         color: #e9d8c0;
     }
 
+    .subtitle_seccion2{
+        text-align: center;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+
+
+    }
+
     .description_seccion2--one{
-        width: 90vw;
         text-align: center;
         font-family: 'Sofia Sans Condensed', sans-serif;
         color: #444444;
         margin: 15px;
-        font-size: .8rem;
+        font-size: 1rem;
         text-transform: uppercase;
         box-shadow: 0 .5rem 1.5rem #e7d9c6;
         border-radius: .5rem;
         border: .1rem solid #e9d8c0;
-        font-weight: bold;
         padding: 8px;
     }
 
     .description_seccion2--two{
         font-family: 'Pathway Extreme', sans-serif;
         margin: 15px;
-        font-size: 1rem;
-        text-align: justify;
+        font-size: 1.1rem;
     }
 
     .description_seccion2--three{
         font-family:'Pathway Extreme', sans-serif;
-        text-align: justify;
         margin: 15px;
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .description_secciondos--span{
         font-family: 'Sofia Sans Condensed', sans-serif;
         text-transform: uppercase;
-        font-size: .8rem;
+        font-size: 1rem;
         color: #52a6b2;
     }
 
@@ -692,23 +319,21 @@ header {
         text-align: center;
         font-family: 'Sofia Sans Condensed', sans-serif;
         margin: 15px;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .secciondos_img{
-        height: 30px;
+        height: 35px;
         padding: 3px 0;
     }
 
     .description_seccion2--tips{
-        font-family:'Pathway Extreme', sans-serif;
-        text-align: justify;                   
-        margin: 15px;
+        font-family:'Pathway Extreme', sans-serif;                   
+        margin: 10px;
         font-size: 1rem;
     }
 
     .description_seccion2--reflexion{
-        width: 90vw;
         text-align: center;
         font-family: 'Badoga', sans-serif;
         color: #52a6b2;
@@ -728,10 +353,6 @@ header {
         text-decoration: solid;
         margin-top: 15px;
         font-size: 1rem;
-    }
-
-    .span_medioambiente{
-        font-size: 1.2rem;
     }
 
     .img{
@@ -756,7 +377,7 @@ header {
 
    .tarjeta-ecoidea{
     text-align: center;
-    width: 90vw; /* Tamaño deseado para las tarjetas */
+    width: 300px; /* Tamaño deseado para las tarjetas */
     margin-bottom: 10px;
     padding: 15px;
     border: 1px solid #e9d8c0;
@@ -782,14 +403,10 @@ header {
    }
 
    .ecoidea_title{
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: bold;
         color: #333;
         text-transform: uppercase;
-   }
-
-   .ecoidea_desc{
-    font-size: .8rem;
    }
 
 
@@ -799,16 +416,15 @@ header {
 
 /*Tablet*/
 /*Portrait/ VERTICAL-- LISTOO*/
-@media (min-width: 576px) and (max-width: 990px) {
+@media (min-width: 500px) {
 
-
+    
     /*----------------------------------------------------*/
-    /* Aca empieza formato boton flotante Whatsapp */
+       /* Aca empieza formato boton flotante Whatsapp */
     /*---------------------------------------------------*/
-
-    .container_botton {
-        width: 60px;
-        height: 60px;
+    .container_botton{
+        width: 72px;
+        height: 72px;
         background-color: green;
         border: solid 1px white;
         position: fixed;
@@ -817,36 +433,416 @@ header {
         bottom: 15px;
         right: 10px;
         /* text-align: center; */
-        padding: 6px;
+        padding: 5px;
         transition: ease 0.3s;
 
         animation: whatsapp 1.2s infinite;
     }
 
-    .container_botton:hover {
+    .container_botton:hover{
         transform: scale(1.1);
         transition: 0.3s;
     }
 
-    .icon_wa {
-        width: 45px;
+
+    .icon_wa{
+        width:58px;
         transition: ease 1s;
     }
 
-    @keyframes whatsapp {
-        0% {
+    @keyframes whatsapp{
+        0%{
             box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
         }
+        100%{
+            box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+        }
+    }
 
-        100% {
+ /* -----------------------------
+     Aca comienza formato menu
+    ----------------------------- */
+
+    .dropdown__icon_house {
+        height: 35px;
+    }
+
+    .dropdown__icon_elitianw {
+        margin: -13px;
+        height: 55px;
+    }
+
+    .dropdown__icon_product {
+        height: 35px;
+    }
+
+    .dropdown__icon_recicla {
+        height: 35px;
+    }
+
+    .dropdown__icon_email {
+        height: 30px;
+    }
+
+    .logo {
+        height: 60px;
+    }
+
+    .nav {
+        background-color: #ebcba0;
+
+
+        --img1: scale(1);
+        --img2: scale(0);
+    }
+
+    .nav:has(.menu__links:target) {
+        --img1: scale(0);
+        --img2: scale(1);
+
+        --clip: inset(0 0 0 0);
+
+    }
+
+
+    .menu__container {
+        width: 100%;
+        margin: 0 auto;
+        height: 70px;
+
+        display: grid;
+        grid-template-columns: max-content max-content;
+        grid-template-areas: "title img";
+        justify-content: space-between;
+        align-items: center;
+
+        overflow: hidden;
+
+
+    }
+
+    .enlace {
+        margin-top: 5px;
+        margin-left: 10px;
+        grid-area: title;
+    }
+
+    .nav__menu {
+        grid-area: img;
+        position: relative;
+        z-index: 10;
+
+        transform: var(--img1);
+    }
+
+    .nav__menu--second {
+        transform: var(--img2);
+    }
+
+    .nav__icon {
+        width: 35px;
+        display: block;
+        margin-right: 10px;
+    }
+
+    .menu__links {
+        position: absolute;
+        background-color: burlywood;
+        max-width: 300px;
+        width: 70%;
+        height: 70%;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        padding: 5em 1em 1em 1em;
+
+        display: grid;
+        align-content: center;
+        gap: 1rem;
+
+        overflow-y: auto;
+
+        clip-path: var(--clip, inset(0 0 100% 100%));
+        transition: clip-path .5s;
+
+        z-index: 3;
+
+    }
+
+    .menu__item {
+        list-style: none;
+    }
+
+    .menu__link {
+        color: black;
+        font-size: 1.2rem;
+        padding: 1.5em 5px;
+        text-decoration: none;
+
+        display: flex;
+        align-items: center;
+        gap: .6rem;
+
+        position: relative;
+        /* background-color:var(--bg, transparent);
+        border: 6px; */
+
+    }
+
+    .menu__item--show:has( :checked) {
+        --rows: 1fr;
+        --rotate: rotate(180deg);
+        /* --bg: #e6b678; */
+    }
+
+    .checkbox {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .menu__arrow {
+        height: 12px;
+        margin-left: auto;
+        transform: var(--rotate, 0);
+        transition: .2s transform;
+    }
+
+    .list_productos {
+        display: grid;
+        grid-template-rows: var(--rows, 0fr);
+        transition: .3s grid-template-rows;
+
+    }
+
+    .menu__nesting {
+        overflow: hidden;
+    }
+
+    .menu__inside {
+        width: 85%;
+        list-style: none;
+        margin-left: auto;
+
+    }
+
+    .menu__link--inside {
+        padding: 15px 0;
+        display: block;
+        color: black;
+        text-decoration: none;
+    }
+
+    
+    /* ---------------------------
+       Aca comienza Seccion 2
+    --------------------------- */
+
+    .recicla_container{
+        width: 100%;
+        position: relative;
+
+    }
+
+    .background_recicla{
+        width: 100%;
+        opacity: .2;
+        padding: 50px 25px;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    .title_seccion2{
+        text-align: center;
+        margin-top: 15px;
+        color: #52a6b2;
+        font-family: 'Badoga', sans-serif;
+        text-decoration: dotted;
+        font-size: 2.5rem;
+    }
+
+    .title_secciondos--second{
+        color: #e9d8c0;
+    }
+
+    .description_seccion2--one{
+        text-align: center;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        color: #444444;
+        margin: 20px;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        box-shadow: 0 .5rem 1.5rem #e7d9c6;
+        border-radius: .5rem;
+        border: .1rem solid #e9d8c0;
+        padding: 8px;
+    }
+
+    .description_seccion2--two{
+        font-family: 'Pathway Extreme', sans-serif;
+        margin: 20px;
+        font-size: 1.5rem;
+    }
+
+    .description_seccion2--three{
+        font-family:'Pathway Extreme', sans-serif;
+        margin: 20px;
+        font-size: 1.5rem;
+    }
+
+    .description_secciondos--span{
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        color: #52a6b2;
+    }
+
+    .description_seccion2--four{
+        text-align: center;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        font-size: 1.5rem;
+    }
+
+    .secciondos_img{
+        height: 40px;
+        padding: 8px 0;
+    }
+
+    .description_seccion2--tips{
+        font-family:'Pathway Extreme', sans-serif;                   
+        margin: 10px;
+        font-size: 1.3rem;
+        padding: 15px;
+    }
+
+    .description_seccion2--reflexion{
+        text-align: center;
+        font-family: 'Badoga', sans-serif;
+        color: #52a6b2;
+        font-weight: bold;
+        /* background-color: #52a6b2; */
+        box-shadow: 0 .5rem 1.5rem #e7d9c6;
+        border-radius: .5rem;
+        border: .1rem solid #e9d8c0;
+        margin: 20px 15px;
+        font-size: 1.8rem;
+        padding: 10px;
+    }
+
+    .description_seccion2--final{
+        text-align: center;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        text-decoration: solid;
+        margin-top: 15px;
+        font-size: 1.5rem;
+    }
+
+    .img{
+       text-align: center;
+       align-items: center;
+    }
+
+    .manos{
+        height: 80px;
+    }
+
+    /* ------------------------------- */
+     /* Aqui comienza la seccion 3 */
+    /* ------------------------------- */
+
+    .container_ecoideas{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+   .tarjeta-ecoidea{
+    text-align: center;
+    width: 300px; /* Tamaño deseado para las tarjetas */
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #e9d8c0;
+    border-radius: 8px;
+    transition: transform 0.1s ease;
+   }
+
+   .tarjeta-ecoidea:hover {
+    transform: scale(1.05);
+}
+
+   .ecoidea_img{
+    height: 4rem;
+    width: 4rem;
+    margin-bottom: 1rem;
+   }
+
+   .ecoideas{
+        height: 4px;
+        width: 80px;
+        background-color: #52a6b2;
+        margin: 0 auto 1rem auto;
+   }
+
+   .ecoidea_title{
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+        text-transform: uppercase;
+   }
+
+
+
+}
+
+/*landscape/ HORIZONTAL-- LISTOO*/
+@media (min-width: 991px){     
+   
+    /*----------------------------------------------------*/
+       /* Aca empieza formato boton flotante Whatsapp */
+    /*---------------------------------------------------*/
+
+    .container_botton{
+        width: 35px;
+        height: 35px;
+        background-color: green;
+        border: solid 1px white;
+        position: fixed;
+        z-index: 999;
+        border-radius: 100%;
+        bottom: 15px;
+        right: 10px;
+        /* text-align: center; */
+        padding: 4px;
+        transition: ease 0.3s;
+
+        animation: whatsapp 1.2s infinite;
+    }
+
+    .container_botton:hover{
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+
+    .icon_wa{
+            width:25px;
+            transition: ease 1s;
+    }
+
+    @keyframes whatsapp{
+        0%{
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
+        }
+        100%{
             box-shadow: 0 0 0 8px rgba(0, 0, 0, 0);
         }
     }
 
     /*----------------------------------------------------*/
-    /* Aca empieza formato boton flotante Whatsapp */
+       /* Aca empieza formato boton flotante Whatsapp */
     /*---------------------------------------------------*/
-
 
     .checkbox {
         display: none;
@@ -855,6 +851,7 @@ header {
     .menu__arrow {
         height: 12px;
     }
+
 
     .dropdown__icon_house {
         height: 30px;
@@ -887,13 +884,14 @@ header {
     }
 
     .enlace {
-        padding: 100px 65px;
         position: absolute;
+        margin-top: 10px;
+        margin-left: 50px;
 
     }
 
     .logo {
-   
+
         height: 70px;
     }
 
@@ -901,7 +899,8 @@ header {
     .nav {
         background-color: #ebcba0;
         color: #000000;
-        height: 80px;
+        height: 85px;
+        overflow: hidden;
     }
 
     .menu__container {
@@ -916,7 +915,6 @@ header {
 
     .menu__links {
         height: 100%;
-        margin-top: 10px;
         transition: transform .5s;
         display: flex;
         justify-content: center;
@@ -928,6 +926,8 @@ header {
         height: 100%;
         --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
         --transform: rotate(-90deg);
+        z-index: 1000;
+        display: block;
     }
 
     .menu__item:hover {
@@ -938,13 +938,12 @@ header {
     .menu__link {
         color: #000000;
         font-weight: bold;
-        font-size: 1rem;
+        font-size: 1.5rem;
         text-decoration: none;
-        padding: 0 12px;
+        padding: 0 40px;
         display: flex;
         height: 100%;
         align-items: center;
-
     }
 
     .menu__link:hover {
@@ -969,18 +968,18 @@ header {
         width: max-content;
         transform: translateY(100%);
         background-color: #dfb278;
-
     }
 
     .menu__link--inside {
-        font-size: 1rem;
-        padding: 15px 10px;
+        font-size: 1.3rem;
+        padding: 15px;
     }
 
     .menu__link--inside:hover {
         background-color: #ebcba0;
-        color: #52a6b2;
     }
+
+
     
     /* ---------------------------
        Aca comienza Seccion 2
@@ -989,28 +988,24 @@ header {
     .recicla_container{
         width: 100%;
         position: relative;
+
     }
 
-    .background_recicla {
-        width: 90vw;
-        height: 90vh;
+    .background_recicla{
+        width: 100%;
         opacity: .2;
-        margin-top: auto;
-        margin-left: 25px;
-        padding: 35px 25px;
+        padding: 50px 25px;
         overflow: hidden;
         position: absolute;
     }
 
-    
     .title_seccion2{
         text-align: center;
         margin-top: 15px;
         color: #52a6b2;
         font-family: 'Badoga', sans-serif;
         text-decoration: dotted;
-        font-weight: bold;
-        font-size: 1.9rem;
+        font-size: 2.5rem;
     }
 
     .title_secciondos--second{
@@ -1018,62 +1013,56 @@ header {
     }
 
     .description_seccion2--one{
-        width: 90vw;
         text-align: center;
         font-family: 'Sofia Sans Condensed', sans-serif;
         color: #444444;
-        margin: 15px;
-        font-size: .8rem;
+        margin: 20px;
+        font-size: 1.8rem;
         text-transform: uppercase;
         box-shadow: 0 .5rem 1.5rem #e7d9c6;
         border-radius: .5rem;
         border: .1rem solid #e9d8c0;
-        font-weight: bold;
         padding: 8px;
     }
 
     .description_seccion2--two{
         font-family: 'Pathway Extreme', sans-serif;
-        margin: 15px;
-        font-size: 1rem;
-        text-align: justify;
+        margin: 20px;
+        font-size: 1.5rem;
     }
 
     .description_seccion2--three{
         font-family:'Pathway Extreme', sans-serif;
-        text-align: justify;
-        margin: 15px;
-        font-size: 1rem;
+        margin: 20px;
+        font-size: 1.5rem;
     }
 
     .description_secciondos--span{
         font-family: 'Sofia Sans Condensed', sans-serif;
         text-transform: uppercase;
-        font-size: .8rem;
+        font-size: 1.3rem;
         color: #52a6b2;
     }
 
     .description_seccion2--four{
         text-align: center;
         font-family: 'Sofia Sans Condensed', sans-serif;
-        margin: 15px;
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
 
     .secciondos_img{
-        height: 30px;
-        padding: 3px 0;
+        height: 40px;
+        padding: 8px 0;
     }
 
     .description_seccion2--tips{
-        font-family:'Pathway Extreme', sans-serif;
-        text-align: justify;                   
-        margin: 15px;
-        font-size: 1rem;
+        font-family:'Pathway Extreme', sans-serif;                   
+        margin: 10px;
+        font-size: 1.3rem;
+        padding: 15px;
     }
 
     .description_seccion2--reflexion{
-        width: 90vw;
         text-align: center;
         font-family: 'Badoga', sans-serif;
         color: #52a6b2;
@@ -1083,7 +1072,7 @@ header {
         border-radius: .5rem;
         border: .1rem solid #e9d8c0;
         margin: 20px 15px;
-        font-size: 1rem;
+        font-size: 1.8rem;
         padding: 10px;
     }
 
@@ -1092,11 +1081,7 @@ header {
         font-family: 'Sofia Sans Condensed', sans-serif;
         text-decoration: solid;
         margin-top: 15px;
-        font-size: 1rem;
-    }
-
-    .span_medioambiente{
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .img{
@@ -1105,7 +1090,7 @@ header {
     }
 
     .manos{
-        height: 75px;
+        height: 80px;
     }
 
     /* ------------------------------- */
@@ -1116,12 +1101,12 @@ header {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
    .tarjeta-ecoidea{
     text-align: center;
-    width: 60vw; /* Tamaño deseado para las tarjetas */
+    width: 300px;
     margin-bottom: 10px;
     padding: 15px;
     border: 1px solid #e9d8c0;
@@ -1131,83 +1116,89 @@ header {
 
    .tarjeta-ecoidea:hover {
     transform: scale(1.05);
-}
+    }
 
-   .ecoidea_img{
-    height: 3rem;
-    width: 3rem;
+   .ecoidea_img {
+    height: 4rem;
+    width: 4rem;
     margin-bottom: 1rem;
    }
 
    .ecoideas{
         height: 4px;
-        width: 75px;
+        width: 80px;
         background-color: #52a6b2;
         margin: 0 auto 1rem auto;
    }
 
    .ecoidea_title{
-        font-size: 1rem;
+        font-size: 1.5rem;
         font-weight: bold;
         color: #333;
         text-transform: uppercase;
    }
 
-   .ecoidea_desc{
-    font-size: .8rem;
-   }
 
-}
+    body {
+        background: blue;
+    }
 
-/*landscape/ HORIZONTAL-- LISTOO*/
-@media (min-width: 991px) and (max-width: 1199.98px) {
+ }
 
+/*fin tablet*/
 
-    /*----------------------------------------------------*/
-    /* Aca empieza formato boton flotante Whatsapp */
+/*Escritorio- listo*/
+@media (min-width: 1199.98px) {
+    
+     /*----------------------------------------------------*/
+       /* Aca empieza formato boton flotante Whatsapp */
     /*---------------------------------------------------*/
-
-    .container_botton {
-        width: 60px;
-        height: 60px;
+    .container_botton{
+        width: 45px;
+        height: 45px;
         background-color: green;
         border: solid 1px white;
         position: fixed;
         z-index: 999;
         border-radius: 100%;
-        bottom: 20px;
-        right: 15px;
+        bottom: 15px;
+        right: 10px;
         /* text-align: center; */
-        padding: 5px;
+        padding: 4px;
         transition: ease 0.3s;
 
         animation: whatsapp 1.2s infinite;
     }
 
-    .container_botton:hover {
+    .container_botton:hover{
         transform: scale(1.1);
         transition: 0.3s;
     }
 
-    .icon_wa {
-        width: 45px;
+
+    .icon_wa{
+        width:35px;
         transition: ease 1s;
     }
 
-    @keyframes whatsapp {
-        0% {
+    @keyframes whatsapp{
+        0%{
             box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
         }
-
-        100% {
+        100%{
             box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
         }
     }
 
 
-    /*----------------------------------------------------*/
-    /* Aca empieza formato menu */
-    /*---------------------------------------------------*/
+    
+
+
+
+
+
+
+
 
     .checkbox {
         display: none;
@@ -1250,14 +1241,14 @@ header {
 
     .enlace {
         position: absolute;
-        margin-top: 0;
-        margin-left: 40px;
+        margin-top: 10px;
+        margin-left: -250px;
 
     }
 
     .logo {
 
-        height: 75px;
+        height: 80px;
     }
 
 
@@ -1302,11 +1293,11 @@ header {
         font-weight: bold;
         font-size: 1.5rem;
         text-decoration: none;
-        margin-top: 12px;
-        padding: 0 30px;
+        padding: 0 40px;
         display: flex;
         height: 100%;
         align-items: center;
+
     }
 
     .menu__link:hover {
@@ -1331,6 +1322,8 @@ header {
         width: max-content;
         transform: translateY(100%);
         background-color: #dfb278;
+
+        z-index: 15;
     }
 
     .menu__link--inside {
@@ -1355,181 +1348,6 @@ header {
         display: block;
         width: 36px;
     }
+} 
 
-    /* ---------------------------
-       Aca comienza Seccion 2
-    --------------------------- */
-
-    .recicla_container{
-        width: 100%;
-        position: relative;
-    }
-
-    .background_recicla {
-        width: 90vw;
-        height: 90vh;
-        opacity: .2;
-        margin-top: auto;
-        margin-left: 25px;
-        padding: 35px 25px;
-        overflow: hidden;
-        position: absolute;
-    }
-
-    
-    .title_seccion2{
-        text-align: center;
-        margin-top: 20px;
-        color: #52a6b2;
-        font-family: 'Badoga', sans-serif;
-        text-decoration: dotted;
-        font-weight: bold;
-        font-size: 2.5rem;
-    }
-
-    .title_secciondos--second{
-        color: #e9d8c0;
-    }
-
-    .description_seccion2--one{
-        width: 70vw;
-        text-align: center;
-        font-family: 'Sofia Sans Condensed', sans-serif;
-        color: #444444;
-        margin: 20px 170px;
-        font-size: 1.2rem;
-        text-transform: uppercase;
-        box-shadow: 0 .5rem 1.5rem #e7d9c6;
-        border-radius: .5rem;
-        border: .1rem solid #e9d8c0;
-        font-weight: bold;
-        padding: 8px;
-    }
-
-    .description_seccion2--two{
-        font-family: 'Pathway Extreme', sans-serif;
-        margin: 20px 170px;
-        font-size: 1.2rem;
-        text-align: justify;
-    }
-
-    .description_seccion2--three{
-        font-family:'Pathway Extreme', sans-serif;
-        text-align: justify;
-        margin: 10px 170px;
-        font-size: 1.2rem;
-    }
-
-    .description_secciondos--span{
-        font-family: 'Sofia Sans Condensed', sans-serif;
-        text-transform: uppercase;
-        font-size: 1rem;
-        color: #52a6b2;
-    }
-
-    .description_seccion2--four{
-        text-align: center;
-        font-family: 'Sofia Sans Condensed', sans-serif;
-        margin: 15px;
-        font-size: 1.3rem;
-    }
-
-    .secciondos_img{
-        height: 30px;
-        padding: 3px 0;
-    }
-
-    .description_seccion2--tips{
-        font-family:'Pathway Extreme', sans-serif;
-        text-align: justify;                   
-        margin: 20px 170px;
-        font-size: 1.2rem;
-    }
-
-    .description_seccion2--reflexion{
-        width: 60vw;
-        text-align: center;
-        font-family: 'Badoga', sans-serif;
-        color: #52a6b2;
-        font-weight: bold;
-        /* background-color: #52a6b2; */
-        box-shadow: 0 .5rem 1.5rem #e7d9c6;
-        border-radius: .5rem;
-        border: .1rem solid #e9d8c0;
-        margin: 20px 210px;
-        font-size: 1.3rem;
-        padding: 10px;
-    }
-
-    .description_seccion2--final{
-        text-align: center;
-        font-family: 'Sofia Sans Condensed', sans-serif;
-        text-decoration: solid;
-        margin-top: 15px;
-        font-size: 1.1rem;
-    }
-
-    .span_medioambiente{
-        font-size: 1.2rem;
-    }
-
-    .img{
-       text-align: center;
-       align-items: center;
-    }
-
-    .manos{
-        height: 75px;
-    }
-
-    /* ------------------------------- */
-     /* Aqui comienza la seccion 3 */
-    /* ------------------------------- */
-
-    .container_ecoideas{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin-top: 20px;
-    }
-
-   .tarjeta-ecoidea{
-    text-align: center;
-    width: 40vw; /* Tamaño deseado para las tarjetas */
-    margin-bottom: 10px;
-    padding: 15px;
-    border: 1px solid #e9d8c0;
-    border-radius: 8px;
-    transition: transform 0.1s ease;
-   }
-
-   .tarjeta-ecoidea:hover {
-    transform: scale(1.05);
-}
-
-   .ecoidea_img{
-    height: 3rem;
-    width: 3rem;
-    margin-bottom: 1rem;
-   }
-
-   .ecoideas{
-        height: 4px;
-        width: 75px;
-        background-color: #52a6b2;
-        margin: 0 auto 1rem auto;
-   }
-
-   .ecoidea_title{
-        font-size: 1rem;
-        font-weight: bold;
-        color: #333;
-        text-transform: uppercase;
-   }
-
-   .ecoidea_desc{
-    font-size: .8rem;
-   }
-}
-
-/*fin tablet*/
+/*Fin Escritorio*/
