@@ -1089,7 +1089,7 @@ header {
     .productos .contenedor {
         display: flex;
         flex-wrap: wrap;
-        gap: 3rem;
+        gap: 2rem;
         margin: 5px auto;
     }
 
