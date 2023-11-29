@@ -20,23 +20,51 @@ header {
 /*Default*/
 @media (min-width: 320px) and (max-width: 575.98px)and (orientation:portrait) {
 
-    .botton_flotante{
-        position: relative;
+    
+    /*----------------------------------------------------*/
+       /* Aca empieza formato boton flotante Whatsapp */
+    /*---------------------------------------------------*/
+
+    .container_botton{
+        width: 35px;
+        height: 35px;
+        background-color: green;
+        border: solid 1px white;
+        position: fixed;
+        z-index: 999;
+        border-radius: 100%;
+        bottom: 15px;
+        right: 10px;
+        /* text-align: center; */
+        padding: 4px;
+        transition: ease 0.3s;
+
+        animation: whatsapp 1.2s infinite;
     }
 
-    .botton{
-        position: absolute;
-        margin-bottom: 5px;
-        z-index: 4;
+    .container_botton:hover{
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+
+    .icon_wa{
+            width:25px;
+            transition: ease 1s;
+    }
+
+    @keyframes whatsapp{
+        0%{
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
+        }
+        100%{
+            box-shadow: 0 0 0 8px rgba(0, 0, 0, 0);
+        }
     }
 
 
-
-
-
-
-
-
+    /*-------------------------------*/
+      /* Aca empieza formato menu */
+    /*-------------------------------*/
     .dropdown__icon_house {
         height: 30px;
     }
