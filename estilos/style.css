@@ -52,7 +52,7 @@
     /*----------------------------------------------------*/
        /* Aca empieza formato menu escritorio */
     /*---------------------------------------------------*/
-    
+
     header {
     font-family: 'Badoga', sans-serif;
     }
@@ -872,10 +872,10 @@
         transition: background-color 0.5s ease;
     }
 
-    .productos .contenedor .caja .imagen .iconos a svg {
+    /* .productos .contenedor .caja .imagen .iconos a svg {
         fill: currentColor;
         /* Utiliza el color del texto como color de relleno del svg */
-    }
+    } */
 
     .productos .contenedor .caja .imagen .iconos a img {
         max-width: 100%;
@@ -916,12 +916,89 @@
 
 
     /* <----------------------------------- */
-    /*   Aqui comienza el footer */
-    /*  ------------------------------  */
+    /*   Aqui comienza el footer para celu */
+    /*  ----------------------------------  */
+    
     .footer {
         background-color: #52a6b2;
+        color: #fff;
+    }
+
+    .contenedor-footer {
+        max-width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .social-icons,
+    .contacto-info,
+    .informacion,
+    .copyright {
+        flex: 0 0 100%;
+        margin-bottom: 5px;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .social-icons img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .social-icons a {
+        text-decoration: none;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .titulo-footer {
+        font-family: 'Badoga', sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .contacto-info ul,
+    .informacion ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .contacto-info li,
+    .informacion li {
+        margin-bottom: 2px;
+    }
+
+    .informacion a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .copyright {
+        text-align: center;
+        background-color: #e9d8c0;
+        padding: 10px;
+        margin: 0;
+        width: 100%;
+    }
+
+    .copyright img {
+        width: 13px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .copyright p {
+        color: #52a6b2;
     }
 }
+
 
 /*fin movil*/
 
@@ -929,7 +1006,7 @@
 /*Portrait/ VERTICAL-- LISTOO*/
 @media (min-width: 576px) and (max-width: 990px){
 
-    
+
     /*----------------------------------------------------*/
        /* Aca empieza formato boton flotante Whatsapp */
     /*---------------------------------------------------*/
@@ -1125,7 +1202,7 @@
 /*landscape/ HORIZONTAL-- LISTOO*/
 @media (min-width: 991px) and (max-width: 1199.98px) {
 
-    
+
     /*----------------------------------------------------*/
        /* Aca empieza formato boton flotante Whatsapp */
     /*---------------------------------------------------*/
