@@ -20,12 +20,12 @@ header {
 /*Default*/
 @media (min-width: 320px) and (max-width: 575.98px)and (orientation:portrait) {
 
-    
+
     /*----------------------------------------------------*/
-       /* Aca empieza formato boton flotante Whatsapp */
+    /* Aca empieza formato boton flotante Whatsapp */
     /*---------------------------------------------------*/
 
-    .container_botton{
+    .container_botton {
         width: 35px;
         height: 35px;
         background-color: green;
@@ -42,28 +42,29 @@ header {
         animation: whatsapp 1.2s infinite;
     }
 
-    .container_botton:hover{
+    .container_botton:hover {
         transform: scale(1.1);
         transition: 0.3s;
     }
 
-    .icon_wa{
-            width:25px;
-            transition: ease 1s;
+    .icon_wa {
+        width: 25px;
+        transition: ease 1s;
     }
 
-    @keyframes whatsapp{
-        0%{
+    @keyframes whatsapp {
+        0% {
             box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
         }
-        100%{
+
+        100% {
             box-shadow: 0 0 0 8px rgba(0, 0, 0, 0);
         }
     }
 
 
     /*-------------------------------*/
-      /* Aca empieza formato menu */
+    /* Aca empieza formato menu */
     /*-------------------------------*/
     .dropdown__icon_house {
         height: 30px;
@@ -280,8 +281,10 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.1); /* Fondo semi transparente para resaltar el texto */
-        z-index: 2; /* Asegúrate de que el banner esté por encima del carrusel */
+        background-color: rgba(0, 0, 0, 0.1);
+        /* Fondo semi transparente para resaltar el texto */
+        z-index: 2;
+        /* Asegúrate de que el banner esté por encima del carrusel */
     }
 
     .banner-contenido {
@@ -378,9 +381,9 @@ header {
         display: grid;
         margin: 0 10px;
         gap: 10px;
-        /* grid-template-columns: auto(3, 1fr); */
-        grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
-        grid-auto-rows: 160px;
+        grid-template-columns: auto(3, 1fr);
+        /* grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr)); */
+        grid-auto-rows: 200px;
         grid-template-areas:
             "img1 img2"
             "img1 img3"
@@ -401,16 +404,12 @@ header {
     .galeria-imagen::before {
         content: "";
         position: absolute;
-        /* top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;*/
         inset: 0;
         background-color: #e9d8c0;
-        opacity: 50%;
-        transform: scaleZ(0);
-        transition: .1s;
-        /* color: #e9d8c0; */
+        /* opacity: 70%; */
+        transform: scale(0);
+        transition: background-color 0.3, opacity 0.3;
+        color: #e9d8c0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -418,18 +417,19 @@ header {
     }
 
     .galeria-imagen:hover::before {
-        transform: scaleZ(1);
-
+        transform: scale(1);
+        background-color: #e9d8c0;
+        opacity: 50%;
     }
 
     .ver-mas-btn {
-        font-family: inherit;
-        width: 8rem;
-        padding: 9px;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        width: 7rem;
+        padding: 2px;
         position: absolute;
         top: 60%;
         left: 50%;
-        background-color: transparent;
+        /* background-color: transparent; */
         border: 1px solid #e9d8c0;
         border-radius: 100px;
         transform: translate(-50%, -50%);
@@ -438,20 +438,20 @@ header {
     }
 
     .ver-mas-btn:hover {
-        background-color: #52a6b2;
-        opacity: 50%;
+        background-color: #e9d8c0;
+        opacity: 70%;
         transition: 0.5s;
     }
 
     .categoria {
-        font-family: inherit;
+        font-family: 'Sofia Sans Condensed', sans-serif;
         font-size: calc(100%);
         position: absolute;
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
-        letter-spacing: 1.5px;
-        font-weight: lighter;
+        letter-spacing: 1px;
+        font-weight: bolder;
     }
 
     .galeria-imagen--g1 {
@@ -495,13 +495,13 @@ header {
         height: 100%;
         object-fit: cover;
         opacity: 90%;
-        transition: transform 0.5s ease;
+        /* transition: transform 0.5s ease; */
         opacity: 80%;
     }
 
-    .galeria-img:hover {
+    /* .galeria-img:hover {
         transform: scale(1.1);
-    }
+    } */
 
     /* ---------------------------------------------------------- */
     /* Aqui comienza el estilo para las caracteristicas de ofertas */
@@ -528,7 +528,8 @@ header {
 
     .tarjeta-contenido {
         text-align: center;
-        width: 400px; /* Tamaño deseado para las tarjetas */
+        width: 400px;
+        /* Tamaño deseado para las tarjetas */
         margin-bottom: 10px;
         padding: 15px;
         border: 1px solid #e9d8c0;
@@ -551,6 +552,8 @@ header {
         width: 75px;
         background-color: #52a6b2;
         margin: 0 auto 1rem auto;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        font-weight: bolder;
     }
 
     .tarjeta-contenido span {
@@ -563,6 +566,8 @@ header {
     .tarjeta-contenido p {
         font-size: 1rem;
         color: #666;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        font-weight: normal;
     }
 
     /* ---------------------------------------------------------- */
@@ -586,14 +591,14 @@ header {
     .productos .contenedor {
         display: flex;
         flex-wrap: wrap;
-        gap: 3rem;
-        margin: 5px auto;
+        gap: 1rem;
+        margin: 1rem auto;
     }
 
 
     .productos .contenedor .caja {
-        flex: 1 1 calc(75% - 2rem);
-        box-shadow: 0 .5rem 1.5rem #e9d8c0;
+        flex: 1 1 calc(65% - 1rem);
+        box-shadow: 0.8rem 0.5rem #e9d8c0;
         border-radius: .5rem;
         border: .1rem solid #e9d8c0;
         position: relative;
@@ -604,14 +609,22 @@ header {
         position: absolute;
         top: 1rem;
         left: 1rem;
-        padding: .7rem 2rem;
+        padding: .3rem 1rem;
         font-size: 2.5rem;
-        color: #000000;
-        background: #52a6b2;
-        opacity: 98%;
+        color: #e9d8c0;
+        background-color: #52a6b2;
+        opacity: 95%;
         z-index: 1;
         border-radius: .4rem;
+        transform: scaleZ(0);
+        transition: transform 0.3 ease;
     }
+
+    .productos .contenedor:hover .caja .ofertas {
+        transform: scaleZ(1.1);
+
+    }
+
 
     .productos .contenedor .caja .imagen {
         flex: 1;
@@ -620,12 +633,13 @@ header {
         overflow: hidden;
         cursor: pointer;
         max-height: 100vh;
+        min-width: 100v;
     }
 
     .productos .contenedor .caja .imagen .img {
         height: 100%;
         width: 100%;
-        max-height:  100vh;
+        max-height: 100vh;
         min-width: 100vh;
         object-fit: cover;
         transition: transform 0.5 ease;
@@ -688,28 +702,35 @@ header {
         text-align: center;
     }
 
-    .productos .contenedor .caja .contenido h3 {
-        font-family: inherit;
-        font-size: 2.3rem;
+    .productos .contenedor .caja .contenido h1 {
+        font-family: 'Badoga', sans-serif;
+        font-size: 1.2rem;
         color: #000000;
     }
 
     .productos .contenedor .caja .contenido .precio {
-        font-family: inherit;
-        font-size: 2.5rem;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        font-size: 2rem;
         color: #52a6b2;
-        font-weight: bolder;
+        font-weight: lighter;
         padding-top: 1rem;
     }
 
     .productos .contenedor .caja .contenido .precio span {
-        font-family: inherit;
+        font-family: 'Sofia Sans Condensed', sans-serif;
         font-size: 1rem;
         color: #918e8d;
         font-weight: bold;
         text-decoration: line-through;
     }
 
+
+    /* <----------------------------------- */
+    /*   Aqui comienza el footer */
+    /*  ------------------------------  */
+    .footer {
+        background-color: #52a6b2;
+    }
 }
 
 /*fin movil*/
