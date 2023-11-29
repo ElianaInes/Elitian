@@ -288,6 +288,7 @@ header {
         color: #444444;
         margin: 15px;
         font-size: 1rem;
+        text-transform: uppercase;
         box-shadow: 0 .5rem 1.5rem #e7d9c6;
         border-radius: .5rem;
         border: .1rem solid #e9d8c0;
@@ -308,6 +309,8 @@ header {
 
     .description_secciondos--span{
         font-family: 'Sofia Sans Condensed', sans-serif;
+        text-transform: uppercase;
+        font-size: 1rem;
         color: #52a6b2;
     }
 
