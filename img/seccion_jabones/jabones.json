@@ -1,0 +1,25 @@
+[
+    {
+        "id":1,
+        "name": "Jabon Palta y Limón",
+        "price": 200,
+        "image": "img/seccion_jabones/1.jpg",
+        "description": "Este jabón está indicado para todo tipo de pieles, en especial secas."
+    },
+
+    {
+        "id":2,
+        "name": "Jabon Avena, Almendras y Miel",
+        "price": 200,
+        "image": "img/seccion_jabones/2.jpg",
+        "description": "Esta variedad es excelente para pieles sensibles y reactivas."
+    },
+
+    {
+        "id":3,
+        "name": "Jabon Carbon Activado",
+        "price": 200,
+        "image": "img/seccion_jabones/3.jpg",
+        "description": "Este jabón favorece procesos de desintoxicación y purificación de la piel."
+    }
+]
