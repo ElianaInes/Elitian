@@ -16,6 +16,7 @@
 }
 
 
+
 header {
     font-family: 'Badoga', sans-serif;
 }
@@ -797,7 +798,8 @@ header {
 }
 
 /*landscape/ HORIZONTAL-- LISTOO*/
-@media (min-width: 991px) {
+@media (min-width: 991px){     
+   
     /*----------------------------------------------------*/
        /* Aca empieza formato boton flotante Whatsapp */
     /*---------------------------------------------------*/
@@ -808,7 +810,7 @@ header {
         background-color: green;
         border: solid 1px white;
         position: fixed;
-        z-index: ;
+        z-index: 999;
         border-radius: 100%;
         bottom: 15px;
         right: 10px;
@@ -839,9 +841,8 @@ header {
     }
 
     /*----------------------------------------------------*/
-       /* Aca empieza formato menu */
+       /* Aca empieza formato boton flotante Whatsapp */
     /*---------------------------------------------------*/
-
 
     .checkbox {
         display: none;
@@ -885,21 +886,21 @@ header {
     .enlace {
         position: absolute;
         margin-top: 10px;
-        margin-left: 25px;
+        margin-left: 50px;
 
     }
 
     .logo {
 
-        height: 85px;
+        height: 70px;
     }
 
 
     .nav {
         background-color: #ebcba0;
         color: #000000;
-        height: 90px;
-        
+        height: 85px;
+        overflow: hidden;
     }
 
     .menu__container {
@@ -913,11 +914,10 @@ header {
     }
 
     .menu__links {
-        height: 300%;
+        height: 100%;
         transition: transform .5s;
         display: flex;
         justify-content: center;
-
     }
 
     .menu__item {
@@ -926,7 +926,8 @@ header {
         height: 100%;
         --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
         --transform: rotate(-90deg);
-        
+        z-index: 1000;
+        display: block;
     }
 
     .menu__item:hover {
@@ -937,13 +938,12 @@ header {
     .menu__link {
         color: #000000;
         font-weight: bold;
-        font-size: 10rem;
+        font-size: 1.5rem;
         text-decoration: none;
-        padding: 0px;
+        padding: 0 40px;
         display: flex;
         height: 100%;
         align-items: center;
-
     }
 
     .menu__link:hover {
@@ -968,8 +968,6 @@ header {
         width: max-content;
         transform: translateY(100%);
         background-color: #dfb278;
-
-        
     }
 
     .menu__link--inside {
@@ -982,8 +980,7 @@ header {
     }
 
 
-   
-
+    
     /* ---------------------------
        Aca comienza Seccion 2
     --------------------------- */
@@ -1109,7 +1106,7 @@ header {
 
    .tarjeta-ecoidea{
     text-align: center;
-    width: 300px; /* Tamaño deseado para las tarjetas */
+    width: 300px;
     margin-bottom: 10px;
     padding: 15px;
     border: 1px solid #e9d8c0;
@@ -1119,9 +1116,9 @@ header {
 
    .tarjeta-ecoidea:hover {
     transform: scale(1.05);
-}
+    }
 
-   .ecoidea_img{
+   .ecoidea_img {
     height: 4rem;
     width: 4rem;
     margin-bottom: 1rem;
@@ -1142,8 +1139,11 @@ header {
    }
 
 
+    body {
+        background: blue;
+    }
 
-}
+ }
 
 /*fin tablet*/
 
@@ -1348,6 +1348,6 @@ header {
         display: block;
         width: 36px;
     }
-}
+} 
 
 /*Fin Escritorio*/

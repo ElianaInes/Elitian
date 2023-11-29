@@ -4,73 +4,164 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tienda Elitian</title>
-  <link rel="icon" type="image/x-icon" href="/img/logos/logo-linkc.png">
-  <link rel="stylesheet" href="estilos/styles.css" />
+  <title>PRUEBA ELI</title>
+ 
+  <link rel="stylesheet" href="estilos/pruebaELI.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body class="container">
+<body>
 
-  <a href="index.html" class="logo-link">
-    <img src="img/logos/logo-linkc.png" alt="index" class="logo-img">
-    </a>
-<div class="mt-4">
-    <section class="page-header" data-store="page-title">
-        <div class="container">
-            <div class="row">
-                <div class="col text-center ">
-                    <h1 class="text-align: center;">Política de reciclaje</h1>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Aca comienza formato boton flotante whatsapp -->
 
-    <section class="user-content pb-5">
-        <div class="container">
-            <div class="row justify-content-md-center">
-                <div class="col-md-10">
-                    <h2 style="text-align: center;">&nbsp;</h2>
+  <div class="container_botton">
+    <a class="botton" href="https://www.whatsapp.com/?lang=es_LA"> <img class="icon_wa" src="img/icons/whatsappw.svg" alt=""></a>
+</div>
 
-                    <h2 style="text-align: center;">Reutilizamos y reciclamos nuestros envases</h2>
+<!-- Aca comienza formato menu -->
+<header>
+    <nav class="nav">
+        <section class="menu__container">
 
-                    <p style="text-align: center;">Desde siempre recibimos los envases de nuestros productos; el
-                        <strong>vidrio se reutiliza</strong> y el <strong>plástico se envía a reciclar</strong>. Ahora
-                        apostamos a reutilizar TODOS los envases.<br>
-                        Pensamos que el cambio debe ser colectivo, por eso les pedimos colaboración con el lavado previo
-                        de los envases, esto nos facilita mucho el proceso de desengrasado y esterilizado para su
-                        reutilización.</p>
+            <a href="index.html" class="enlace">
+                <img src="img/logos/logo-linkb.png" alt="logo_er" class="logo">
+            </a>
 
-                    <p style="text-align: center;">Aquí les dejamos algunos tips, para el lavado que es super simple:
-                    </p>
+            <a href="#menu" class="nav__menu">
+                <img src="img/icons/menu.svg" class="nav__icon">
+            </a>
 
-                    <p>1-&nbsp; &nbsp; &nbsp;Cuando terminaste de usar el producto enjuágalo dos veces con agua
-                        caliente, los oleatos y aceites vegetales no son solubles en agua, pero un aumento en la
-                        temperatura reduce su viscosidad, lo que facilita su remoción durante el lavado. En el caso de
-                        compuestos solubles al agua, la temperatura alta aumenta la solubilidad, por lo que el agua será
-                        capaz de llevarse a más de estos compuestos. Esto también ayudará a remover la etiqueta.</p>
+            <a href="#" class="nav__menu nav__menu--second">
+                <img src="img/icons/close.svg" class="nav__icon">
+            </a>
 
-                    <p>2-&nbsp; &nbsp; &nbsp;Realizá un tercer enjuague con un agente limpiador como jabón o un
-                        detergente y agua caliente, los detergentes son capaces de diluirse en agua y al mismo tiempo
-                        capaces de mezclarse con los lípidos, el tener una alta temperatura y grasas menos viscosas
-                        facilita la labor de estos agentes, dejando los envases súper limpitos.</p>
+            <ul class="menu__links" id="menu">
 
-                    <p>3-&nbsp; &nbsp; &nbsp;Deja secar el envase boca abajo sobre una superficie que respire y listo
-                        para entregar en la siguiente compra!</p>
+                <li class="menu__item">
+                    <a href="index.html" class="menu__link"> <img src="img/icons/house.svg" class="dropdown__icon_house">
+                        <span class="dropdown__span">Inicio</span></a>
+                </li>
 
-                    <p>Este pequeño gesto significa un montón para nosotrxs.&nbsp; El proceso de lavado en el
-                        laboratorio lleva 4 días en total y no es nada rentable (sería mucho más simple seguir
-                        trabajando con plástico o no reutilizar el vidrio).</p>
+                <li class="menu__item">
+                    <a href="#" class="menu__link"><img src="img/icons/elitianb.svg"
+                            class="dropdown__icon_elitianw">
+                        <span class="dropdown__span"> Conocénos</span></a>
+                </li>
 
-                    <p>&nbsp;</p>
+                <li class="menu__item menu__item--show">
+                    <a href="#" class="menu__link"><img src="img/icons/product.svg" class="dropdown__icon_product">
+                        <span class="dropdown__span">Productos</span><img src="img/icons/down.svg"
+                            class="menu__arrow">
 
-                    <h3 style="text-align: center;">&nbsp;¿Nos ayudan lavando sus envases? ¡Gracias!</h3>
+                        <input type="checkbox" class="checkbox">
+
+                    </a>
+
+                    <div class="list_productos">
+
+                        <ul class="menu__nesting">
+                            <li class="menu__inside">
+                                <a href="#" class="menu__link menu__link--inside">Aguas y Tónicos</a>
+                            </li>
+                            <li class="menu__inside">
+                                <a href="#" class="menu__link menu__link--inside">Aceites y Serums</a>
+                            </li>
+                            <li class="menu__inside">
+                                <a href="#" class="menu__link menu__link--inside">Balsamos yCremas</a>
+                            </li>
+                            <li class="menu__inside">
+                                <a href="#" class="menu__link menu__link--inside">Cuidado Capilar</a>
+                            </li>
+                            <li class="menu__inside">
+                                <a href="#" class="menu__link menu__link--inside">Jabones</a>
+                            </li>
+                            <li class="menu__inside">
+                                <a href="#" class="menu__link menu__link--inside">Higiene Dental</a>
+                            </li>
+                            <li class="menu__inside">
+                                <a href="#" class="menu__link menu__link--inside">Protección Solar</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </li>
+
+                <li class="menu__item">
+                    <a href="recicla.html" class="menu__link"> <img src="img/icons/recicla.svg"
+                            class="dropdown__icon_recicla">
+                        <span class="dropdown__span">Reciclá</span></a>
+                </li>
+
+                <li class="menu__item">
+                    <a href="#" class="menu__link"><img src="img/icons/email.svg" class="dropdown__icon_email">
+                        <span class="dropdown__span">Contacto</span></a>
+                </li>
+
+            </ul>
+
+        </section>
+
+    </nav>
+
+    <!------------------------------->
+      <!-- Aca comienza Seccion 2-->
+    <!------------------------------->
+
+    <section class="recicla_container">
+
+      <div>
+          <img class="background_recicla" src="img/logos/logo-linkc.png" alt="">
+      </div>
+
+      
+      <h1 class="title_seccion2">Recicla <span class="title_secciondos--second">&</span> Reutiliza</h1>
+      <!-- <h2 class="subtitle_seccion2">¿Nos Ayudas?</h2> -->
+
+      <h3 class="description_seccion2--one">Recibimos los envases de los productos que vendemos.</h3>
+      <h3 class="description_seccion2--two">El vidrio puede ser reutilizado y los plásticos enviamos a reciclar.</h3>
+
+      <h3 class="description_seccion2--three"> Para colaborar con el reciclado y la reutilizacion de los envases, te pedimos entregarlos <span class="description_secciondos--span"> <b>previamente lavados</b></span>.</h3>
+
+      <h3 class="description_seccion2--four">Tips para el lavado:</h3>
+
+      <h4 class="description_seccion2--tips"> <img class="secciondos_img" src="img/png/eco_check.png"> Cuando terminaste de usar el producto enjuágalo dos veces con agua caliente, esto facilita la remoción de aceites vegetales.Esto también ayudará a remover la etiqueta.
+      </h4>
+
+      <h4 class="description_seccion2--tips"> <img class="secciondos_img" src="img/png/eco_check.png"> Realizá un tercer enjuague con un agente limpiador como jabón o un detergente y agua caliente.</h4>
+
+      <h4 class="description_seccion2--tips"> <img class="secciondos_img" src="img/png/eco_check.png"> Deja secar el envase boca abajo sobre una superficie que respire y listo para entregar en la siguiente compra!</h4>
+
+      <h4 class="description_seccion2--reflexion"><b>Creemos en la importancia de comprometernos activamente en el cuidado del <span class="span_medioambiente">Medio Ambiente</span>.</b></h4>
+
+      <h4 class="description_seccion2--final">¿Te sumás al compromiso?</h4>
+      
+      <div class="img"> <img class="manos" src="img/icons/manosc.svg" alt="">
+      </div>
+
+       <!------------------------------->
+        <!-- Aca comienza Seccion 3-->
+        <!------------------------------->
+
+        <section class="container_ecoideas">
+          <div class="tarjeta-ecoidea">
+              <a href=""><img class="ecoidea_img" src="img/icons/ideaeco.svg" alt=""></a>
+              <div class="ecoideas"></div>
+              <span class="ecoidea_title">ECOIDEAS</span>
+              <p class="ecoidea_desc">Conoce maneras de reciclar tus envases de vidrio</p>
+          </div>
+          
+         </section>
+  
+  
+      </section>
+  
+
+</header>
 
 </body>
 
 
-
+<!-- 
 <footer class="container">
   <div class="footer-container position-relative" data-store="footer">
     <h2>Más info en nuestro instagram</h2>
@@ -101,7 +192,7 @@
       </div>
     </div>
   </div>
-</footer>
+</footer> -->
 
 </html>
 
