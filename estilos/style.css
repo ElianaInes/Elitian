@@ -581,7 +581,7 @@
             "img4 img4"
             "img5 img6"
             "img7 img6"
-            "img8 img9"
+            /* "img8 img9" */
         ;
     }
 
@@ -673,13 +673,13 @@
         grid-area: img7;
     }
 
-    .galeria-imagen--g8 {
+    /* .galeria-imagen--g8 {
         grid-area: img8;
     }
 
     .galeria-imagen--g9 {
         grid-area: img9;
-    }
+    } */
 
     .galeria-img {
         width: 100%;
@@ -771,7 +771,7 @@
     }
 
     .titulo {
-        font-family: 'Sofia Sans Condensed', sans-serif;
+        font-family: 'Badoga', sans-serif;
         position: relative;
         padding-bottom: 1rem;
         position: relative;
@@ -789,7 +789,7 @@
 
     .productos .contenedor .caja {
         flex: 1 1 calc(65% - 1rem);
-        box-shadow: 0.8rem 0.5rem #e9d8c0;
+        box-shadow: 0 .8rem 2rem #e9d8c0;
         border-radius: .5rem;
         border: .1rem solid #e9d8c0;
         position: relative;
@@ -804,18 +804,17 @@
         font-size: 2.5rem;
         color: #e9d8c0;
         background-color: #52a6b2;
-        opacity: 95%;
+        opacity: 0;
         z-index: 1;
         border-radius: .4rem;
         transform: scaleZ(0);
-        transition: transform 0.3 ease;
+        transition: transform 0.3 ease, opacity 0.3s ease;
     }
 
-    .productos .contenedor:hover .caja .ofertas {
+    .productos .contenedor .caja:hover .ofertas {
         transform: scaleZ(1.1);
-
+        opacity: 1;
     }
-
 
     .productos .contenedor .caja .imagen {
         flex: 1;
