@@ -36,8 +36,9 @@
 }
 
 .icon_wa {
-    width: 25px;
-    transition: ease 1s;
+    width: 25px; /*estaba en 25px lo cambie a 100% para verificar como quedaba-cris*/
+    transition: ease 1s;/*lo comente para eliminarlo-cris*/
+    height: auto;/*agregue este atributo completo, para mantener la proporcion*/
 }
 
 @keyframes whatsapp {
@@ -127,7 +128,8 @@ header {
 }
 
 .menu__links {
-    height: 100%;
+    /*height: 100%;  comentado por cris al analizar el menu*/ 
+    height: 100vh; /*agregado por cris reemplazando lo comentado */
     transition: transform .5s;
     display: flex;
     justify-content: center;
@@ -240,8 +242,9 @@ header {
     }
 
     .icon_wa {
-        width: 25px;
-        transition: ease 1s;
+        width: 25px; /*estaba en 25px lo cambie a 100% para verificar como quedaba-cris*/
+        transition: ease 1s; /*lo comente para eliminarlo-cris*/
+        height: auto;/*agregue este atributo completo, para mantener la proporcion*/
     }
 
     @keyframes whatsapp {
@@ -361,7 +364,7 @@ header {
         align-content: center;
         gap: 1rem;
 
-        overflow-y: auto;
+        overflow-y: visible; /*estaba en -auto- lo cambie a visible al verificar el menu -cris*/
 
         clip-path: var(--clip, inset(0 0 100% 100%));
         transition: clip-path .5s;
@@ -930,6 +933,7 @@ header {
     }
 
     .contenedor-footer {
+        font-family: 'Sofia Sans Condensed', sans-serif;
         max-width: 1200px;
         display: flex;
         flex-wrap: wrap;
@@ -979,6 +983,12 @@ header {
     .contacto-info li,
     .informacion li {
         margin-bottom: 2px;
+    }
+
+    .contacto-info img {
+            width: 13px;
+            margin-left: 5px;
+            margin-right: 5px;
     }
 
     .informacion a {
@@ -1040,8 +1050,9 @@ header {
     }
 
     .icon_wa {
-        width: 25px;
-        transition: ease 1s;
+        width: 25px; /*estaba en 25px lo cambie a 100% para verificar como quedaba-cris*/
+        transition: ease 1s;/*lo comente para eliminarlo-cris*/
+        height: auto;/*agregue este atributo completo, para mantener la proporcion*/
     }
 
     @keyframes whatsapp {
@@ -1125,6 +1136,8 @@ header {
         transition: transform .5s;
         display: flex;
         justify-content: center;
+
+        
     }
 
     .menu__item {
@@ -1237,8 +1250,9 @@ header {
     }
 
     .icon_wa {
-        width: 25px;
-        transition: ease 1s;
+        width: 25px; /*estaba en 25px lo cambie a 100% para verificar como quedaba-cris*/
+        transition: ease 1s;/*lo comente para eliminarlo-cris*/
+        height: auto;/*agregue este atributo completo, para mantener la proporcion*/
     }
 
     @keyframes whatsapp {
@@ -1322,7 +1336,8 @@ header {
     }
 
     .menu__links {
-        height: 100%;
+        /*height: 100%;  comentado por cris al analizar el menu*/ 
+        height: 100vh; /*agregado por cris reemplazando lo comentado */
         transition: transform .5s;
         display: flex;
         justify-content: center;
