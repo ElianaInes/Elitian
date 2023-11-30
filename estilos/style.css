@@ -9,202 +9,203 @@
     box-sizing: border-box;
 }
 
-    /*----------------------------------------------------*/
-       /* Aca empieza formato boton flotante Whatsapp */
-    /*---------------------------------------------------*/
+/*----------------------------------------------------*/
+/* Aca empieza formato boton flotante Whatsapp */
+/*---------------------------------------------------*/
 
-    .container_botton{
-        width: 35px;
-        height: 35px;
-        background-color: green;
-        border: solid 1px white;
-        position: fixed;
-        z-index: 999;
-        border-radius: 100%;
-        bottom: 15px;
-        right: 10px;
-        /* text-align: center; */
-        padding: 4px;
-        transition: ease 0.3s;
+.container_botton {
+    width: 35px;
+    height: 35px;
+    background-color: green;
+    border: solid 1px white;
+    position: fixed;
+    z-index: 999;
+    border-radius: 100%;
+    bottom: 15px;
+    right: 10px;
+    /* text-align: center; */
+    padding: 4px;
+    transition: ease 0.3s;
 
-        animation: whatsapp 1.2s infinite;
+    animation: whatsapp 1.2s infinite;
+}
+
+.container_botton:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.icon_wa {
+    width: 25px;
+    transition: ease 1s;
+}
+
+@keyframes whatsapp {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
     }
 
-    .container_botton:hover{
-        transform: scale(1.1);
-        transition: 0.3s;
+    100% {
+        box-shadow: 0 0 0 8px rgba(0, 0, 0, 0);
     }
+}
 
-    .icon_wa{
-            width:25px;
-            transition: ease 1s;
-    }
+/*----------------------------------------------------*/
+/* Aca empieza formato menu escritorio */
+/*---------------------------------------------------*/
 
-    @keyframes whatsapp{
-        0%{
-            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
-        }
-        100%{
-            box-shadow: 0 0 0 8px rgba(0, 0, 0, 0);
-        }
-    }
-
-    /*----------------------------------------------------*/
-       /* Aca empieza formato menu escritorio */
-    /*---------------------------------------------------*/
-
-    header {
+header {
     font-family: 'Badoga', sans-serif;
-    }
+}
 
-    .checkbox {
-        display: none;
-    }
+.checkbox {
+    display: none;
+}
 
-    .menu__arrow {
-        height: 12px;
-    }
-
-
-    .dropdown__icon_house {
-        height: 30px;
-        display: none;
-    }
-
-    .dropdown__icon_elitianw {
-        /* margin: -13px; */
-        height: 50px;
-        display: none;
-    }
-
-    .dropdown__icon_product {
-        height: 30px;
-        display: none;
-    }
-
-    .dropdown__icon_recicla {
-        height: 30px;
-        display: none;
-    }
-
-    .dropdown__icon_email {
-        height: 30px;
-        display: none;
-    }
-
-    .nav__icon {
-        display: none;
-    }
-
-    .enlace {
-        position: absolute;
-        margin-top: 10px;
-        margin-left: 50px;
-
-    }
-
-    .logo {
-
-        height: 70px;
-    }
+.menu__arrow {
+    height: 12px;
+}
 
 
-    .nav {
-        background-color: #ebcba0;
-        color: #000000;
-        height: 85px;
-    }
+.dropdown__icon_house {
+    height: 30px;
+    display: none;
+}
 
-    .menu__container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        max-width: 1200px;
-        height: 100%;
-        margin: 0 auto;
-    }
+.dropdown__icon_elitianw {
+    /* margin: -13px; */
+    height: 50px;
+    display: none;
+}
 
-    .menu__links {
-        height: 100%;
-        transition: transform .5s;
-        display: flex;
-        justify-content: center;
-    }
+.dropdown__icon_product {
+    height: 30px;
+    display: none;
+}
 
-    .menu__item {
-        list-style: none;
-        position: relative;
-        height: 100%;
-        --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
-        --transform: rotate(-90deg);
-    }
+.dropdown__icon_recicla {
+    height: 30px;
+    display: none;
+}
 
-    .menu__item:hover {
-        --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        --transform: rotate(0);
-    }
+.dropdown__icon_email {
+    height: 30px;
+    display: none;
+}
 
-    .menu__link {
-        color: #000000;
-        font-weight: bold;
-        font-size: 1.5rem;
-        text-decoration: none;
-        padding: 0 40px;
-        display: flex;
-        height: 100%;
-        align-items: center;
-    }
+.nav__icon {
+    display: none;
+}
 
-    .menu__link:hover {
-        color: #52a6b2;
+.enlace {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 50px;
 
-    }
+}
 
-    .menu__arrow {
-        transform: var(--transform);
-        transition: transform .3s;
-        display: block;
-        margin-left: 3px;
-    }
+.logo {
 
-    .menu__nesting {
-        list-style: none;
-        transition: clip-path .3s;
-        clip-path: var(--clip);
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: max-content;
-        transform: translateY(100%);
-        background-color: #dfb278;
-    }
+    height: 70px;
+}
 
-    .menu__link--inside {
-        font-size: 1.3rem;
-        padding: 15px;
-    }
 
-    .menu__link--inside:hover {
-        background-color: #ebcba0;
-    }
+.nav {
+    background-color: #ebcba0;
+    color: #000000;
+    height: 85px;
+}
 
-    .menu__hamburguer {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        padding: 0 15px;
-        cursor: pointer;
-        display: none;
-    }
+.menu__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
 
-    .menu__img {
-        display: block;
-        width: 36px;
-    }
+.menu__links {
+    height: 100%;
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+}
 
-    /*Escritorio- listo*/
-    /* finaliza el formato menu para escritorio */
+.menu__item {
+    list-style: none;
+    position: relative;
+    height: 100%;
+    --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+    --transform: rotate(-90deg);
+}
+
+.menu__item:hover {
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    --transform: rotate(0);
+}
+
+.menu__link {
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 0 40px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.menu__link:hover {
+    color: #52a6b2;
+
+}
+
+.menu__arrow {
+    transform: var(--transform);
+    transition: transform .3s;
+    display: block;
+    margin-left: 3px;
+}
+
+.menu__nesting {
+    list-style: none;
+    transition: clip-path .3s;
+    clip-path: var(--clip);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: max-content;
+    transform: translateY(100%);
+    background-color: #dfb278;
+}
+
+.menu__link--inside {
+    font-size: 1.3rem;
+    padding: 15px;
+}
+
+.menu__link--inside:hover {
+    background-color: #ebcba0;
+}
+
+.menu__hamburguer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu__img {
+    display: block;
+    width: 36px;
+}
+
+/*Escritorio- listo*/
+/* finaliza el formato menu para escritorio */
 
 /*movil*/
 /*Portrait/ VERTICAL*/
@@ -259,23 +260,28 @@
     /*-------------------------------*/
     .dropdown__icon_house {
         height: 30px;
+        display: flex;
     }
 
     .dropdown__icon_elitianw {
         margin: -13px;
         height: 50px;
+        display: flex;
     }
 
     .dropdown__icon_product {
         height: 30px;
+        display: flex;
     }
 
     .dropdown__icon_recicla {
         height: 30px;
+        display: flex;
     }
 
     .dropdown__icon_email {
         height: 27px;
+        display: flex;
     }
 
     .logo {
@@ -580,9 +586,8 @@
             "img1 img3"
             "img4 img4"
             "img5 img6"
-            "img7 img6"
-            /* "img8 img9" */
-        ;
+            "img7 img6";
+        /* "img8 img9" */
     }
 
     .galeria-imagen {
@@ -875,7 +880,7 @@
     /* .productos .contenedor .caja .imagen .iconos a svg {
         fill: currentColor;
         /* Utiliza el color del texto como color de relleno del svg */
-    } */
+
 
     .productos .contenedor .caja .imagen .iconos a img {
         max-width: 100%;
@@ -918,7 +923,7 @@
     /* <----------------------------------- */
     /*   Aqui comienza el footer para celu */
     /*  ----------------------------------  */
-    
+
     .footer {
         background-color: #52a6b2;
         color: #fff;
@@ -994,6 +999,7 @@
         margin-left: 5px;
         margin-right: 5px;
     }
+
     .copyright p {
         color: #52a6b2;
     }
@@ -1004,14 +1010,14 @@
 
 /*Tablet*/
 /*Portrait/ VERTICAL-- LISTOO*/
-@media (min-width: 576px) and (max-width: 990px){
+@media (min-width: 576px) and (max-width: 990px) {
 
 
     /*----------------------------------------------------*/
-       /* Aca empieza formato boton flotante Whatsapp */
+    /* Aca empieza formato boton flotante Whatsapp */
     /*---------------------------------------------------*/
 
-    .container_botton{
+    .container_botton {
         width: 35px;
         height: 35px;
         background-color: green;
@@ -1028,21 +1034,22 @@
         animation: whatsapp 1.2s infinite;
     }
 
-    .container_botton:hover{
+    .container_botton:hover {
         transform: scale(1.1);
         transition: 0.3s;
     }
 
-    .icon_wa{
-            width:25px;
-            transition: ease 1s;
+    .icon_wa {
+        width: 25px;
+        transition: ease 1s;
     }
 
-    @keyframes whatsapp{
-        0%{
+    @keyframes whatsapp {
+        0% {
             box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
         }
-        100%{
+
+        100% {
             box-shadow: 0 0 0 8px rgba(0, 0, 0, 0);
         }
     }
@@ -1204,10 +1211,10 @@
 
 
     /*----------------------------------------------------*/
-       /* Aca empieza formato boton flotante Whatsapp */
+    /* Aca empieza formato boton flotante Whatsapp */
     /*---------------------------------------------------*/
 
-    .container_botton{
+    .container_botton {
         width: 35px;
         height: 35px;
         background-color: green;
@@ -1224,21 +1231,22 @@
         animation: whatsapp 1.2s infinite;
     }
 
-    .container_botton:hover{
+    .container_botton:hover {
         transform: scale(1.1);
         transition: 0.3s;
     }
 
-    .icon_wa{
-            width:25px;
-            transition: ease 1s;
+    .icon_wa {
+        width: 25px;
+        transition: ease 1s;
     }
 
-    @keyframes whatsapp{
-        0%{
+    @keyframes whatsapp {
+        0% {
             box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
         }
-        100%{
+
+        100% {
             box-shadow: 0 0 0 8px rgba(0, 0, 0, 0);
         }
     }
@@ -1397,4 +1405,3 @@
 }
 
 /*fin tablet*/
-
