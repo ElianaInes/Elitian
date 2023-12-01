@@ -1,11 +1,25 @@
-- Categorías
-Aguas y Tónicos
-Aceites y Serums
-Balsamos y Cremas
-Cuidado Capilar
-Jabones
-Higiene Dental
-Protección Solar
-
-- Productos
-- Ofertas
+INDEX
+    -Menu
+    -Carrusel
+    -Categoría
+        Aguas y Tónicos
+        Aceites y Serums
+        Balsamos y Cremas
+        Cuidado Capilar
+        Jabones
+        Higiene Dental
+        Protección Solar
+    -Ofertas
+CONOCENOS (cris)
+PRODUCTOS (eli)
+        Aguas y Tónicos
+    -producto (cris)
+        Aceites y Serums
+        Balsamos y Cremas
+        Cuidado Capilar
+        Jabones y Desodorantes
+        Higiene Dental
+        Protección Solar
+RECICLA
+CONTACTO (eli)
+    -Footer
