@@ -59,3 +59,6 @@ function reiniciarIntervalo() {
     detenerCarrusel();
     reanudarCarrusel();
 }
+
+
+
