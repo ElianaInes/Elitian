@@ -9,6 +9,15 @@
 </head>
 <body>
 
+    <div class="container_jabonesydesodorantes">
+        <div class="title_jabonesydesorantes">Jabones y Desodorantes</div>
+        <div class="ListaJabonesyDesodorantes"></div>
+
+
+    </div>
+
+
+
 
 
 
@@ -21,7 +30,23 @@
         .then(data =>{
             jabones = data;
             console.log(jabones);
+            addDataToHTML();
         })
+
+        //add data to products to HTML
+        let ListaJabonesyDesodorantes = document.queryselector('.ListaJabonesyDesodorantes');
+        function addDataToHTML(){
+            jabones.forEach(jabones => {
+                //crear un nuevo item
+                let nuevoProducto = document.createElement('a');
+                nuevoProducto.href= '/detail.html?id' = jabones.id;
+                //agregar este elemento a ListaJabonesyDesodorantes
+                ListaJabonesyDesodorantes.appendChild(nuevoProducto);
+
+
+                
+            });
+        }
 
     </script>
     
