@@ -8,11 +8,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
-                        /*                        INDEX                       */
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
+
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*                        INDEX                       */
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
 
 /*----------------------------------------------------*/
 /* Aca empieza formato boton flotante Whatsapp */
@@ -139,283 +140,283 @@
 
 
 
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
-                        /*                       CONOCENOS                    */
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*                       CONOCENOS                    */
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
 
 
 
 
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
-                        /*                       PRODUCTOS                    */
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*                       PRODUCTOS                    */
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
 
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                      Sec. AGUAS Y TONICOS                     */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-
-
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*                      Sec. AGUAS Y TONICOS                     */
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
 
 
 
 
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                    Sec. ACEITES Y SERUMS                      */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*                    Sec. ACEITES Y SERUMS                      */
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
 
 
 
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                   Sec. BALSAMOS Y CREMAS                      */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*                   Sec. BALSAMOS Y CREMAS                      */
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
 
 
 
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*               Sec. JABONES Y DESODORANTES                     */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-
-
-
-
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                      Sec. CUIDADO CAPILAR                     */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-
-
-
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*               Sec. JABONES Y DESODORANTES                     */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-
-
-
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                     Sec. HIGIENE DENTAL                       */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*               Sec. JABONES Y DESODORANTES                     */
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
 
 
 
 
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                    Sec. CUIDADO SOLAR                         */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*                      Sec. CUIDADO CAPILAR                     */
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
 
 
 
-                           
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
-                        /*                        RECICLA                     */
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*               Sec. JABONES Y DESODORANTES                     */
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*                     Sec. HIGIENE DENTAL                       */
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+
+
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*                    Sec. CUIDADO SOLAR                         */
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+
+
+
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*                        RECICLA                     */
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
 
 /* ---------------------------
        Aca comienza Seccion 2
     --------------------------- */
 
-    .container_recicla{
-        width: 100vw;
-        height: 70vh;
-        position: relative;
-    
-    }
-    
-    .background_recicla {
-        width: 50%;
-        height: 900px;
-        opacity: .1;
-        margin-top: -5px;
-        margin-left: 400px;
-        padding: 35px 25px;
-        overflow: hidden;
-        position: absolute;
-    
-    }
-    
-    .title_seccion_recicla{
-        text-align: center;
-        margin-top: 25px;
-        color: #52a6b2;
-        font-family: 'Badoga', sans-serif;
-        font-size: 3rem;
-        font-weight: bold;
-    }
-    
-    .title_seccion_recicla--second{
-        color: #e9d8c0;
-    }
-    
-    
-    .description_seccion_recicla--one{
-        text-align: center;
-        font-family: 'Sofia Sans Condensed', sans-serif;
-        color: #444444;
-        margin: 20px 300px;
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        width: 70vw;
-        box-shadow: 0 .5rem 1.5rem #e7d9c6;
-        border-radius: .5rem;
-        border: .1rem solid #e9d8c0;
-        padding: 8px;
-    }
-    
-    .description_seccion_recicla--two{
-        font-family: 'Pathway Extreme', sans-serif;
-        margin: 30px 300px;
-        font-size: 1.3rem;
-    }
-    
-    .description_seccion_recicla--three {
-        font-family: 'Pathway Extreme', sans-serif;
-        margin: 20px 300px;
-        font-size: 1.3rem;
-    
-    }
-    
-    .description_three--span {
-        font-family: 'Sofia Sans Condensed', sans-serif;
-        text-transform: uppercase;
-        font-size: 1.2rem;
-        color: #52a6b2;
-    }
-    
-    .description_seccion_recicla--four {
-        text-align: center;
-        font-family: 'Sofia Sans Condensed', sans-serif;
-        margin: 15px;
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
-    
-    .secciondos_img {
-        height: 35px;
-        padding: 3px 0;
-    }
-    
-    .description_seccion_recicla--tips {
-        font-family: 'Pathway Extreme', sans-serif;
-        margin: 20px 300px;
-        font-size: 1.2rem;
-    }
-    
-    .description_seccion_recicla--reflexion {
-        width: 70vw;
-        text-align: center;
-        font-family: 'Badoga', sans-serif;
-        color: black;
-    
-        /* background-color: #52a6b2; */
-        box-shadow: 0 .5rem 1.5rem #e7d9c6;
-        border-radius: .5rem;
-        border: .1rem solid #e9d8c0;
-        margin: 20px 300px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        padding: 15px;
-    }
-    
-    .span_medioambiente {
-        font-size: 1.8rem;
-    }
-    
-    .description_seccion2--final {
-        text-align: center;
-        font-family: 'Sofia Sans Condensed', sans-serif;
-        text-decoration: solid;
-        margin-top: 15px;
-        font-size: 1.5rem;
-    }
-    
-    .img {
-        text-align: center;
-        align-items: center;
-    }
-    
-    .manos {
-        height: 75px;
-    }
-    
-    /* ------------------------------- */
-    /* Aqui comienza la seccion 3 */
-    /* ------------------------------- */
-    
-    .container_ecoideas {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin-top: 20px;
-    }
-    
-    .tarjeta-ecoidea {
-        text-align: center;
-        width: 400px;
-        /* Tamaño deseado para las tarjetas */
-        margin-bottom: 10px;
-        padding: 15px;
-        border: 1px solid #e9d8c0;
-        border-radius: 8px;
-       
-    }
+.container_recicla {
+    width: 100vw;
+    height: 70vh;
+    position: relative;
 
-    .container_ecoideas{
-        transition: transform 0.1s ease;
-    }
-    
-    .container_ecoideas:hover {
-        transform: scale(1.05);
-    }
-    
-    .ecoidea_img {
-        height: 3rem;
-        width: 3rem;
-        margin-bottom: 1rem;
-    }
-    
-    .ecoideas {
-        height: 4px;
-        width: 75px;
-        background-color: #52a6b2;
-        margin: 0 auto 1rem auto;
-    }
-    
-    .ecoidea_title{
-        font-family: 'Sofia Sans Condensed', sans-serif;
-        font-weight: bold;
-    }
-    
-    .ecoidea_desc{
-        font-family: 'Sofia Sans Condensed', sans-serif;
-    }
+}
+
+.background_recicla {
+    width: 50%;
+    height: 900px;
+    opacity: .1;
+    margin-top: -5px;
+    margin-left: 400px;
+    padding: 35px 25px;
+    overflow: hidden;
+    position: absolute;
+
+}
+
+.title_seccion_recicla {
+    text-align: center;
+    margin-top: 25px;
+    color: #52a6b2;
+    font-family: 'Badoga', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.title_seccion_recicla--second {
+    color: #e9d8c0;
+}
 
 
-                        
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
-                        /*                        CONTACTO                    */
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
+.description_seccion_recicla--one {
+    text-align: center;
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    color: #444444;
+    margin: 20px 300px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    width: 70vw;
+    box-shadow: 0 .5rem 1.5rem #e7d9c6;
+    border-radius: .5rem;
+    border: .1rem solid #e9d8c0;
+    padding: 8px;
+}
+
+.description_seccion_recicla--two {
+    font-family: 'Pathway Extreme', sans-serif;
+    margin: 30px 300px;
+    font-size: 1.3rem;
+}
+
+.description_seccion_recicla--three {
+    font-family: 'Pathway Extreme', sans-serif;
+    margin: 20px 300px;
+    font-size: 1.3rem;
+
+}
+
+.description_three--span {
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #52a6b2;
+}
+
+.description_seccion_recicla--four {
+    text-align: center;
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    margin: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.secciondos_img {
+    height: 35px;
+    padding: 3px 0;
+}
+
+.description_seccion_recicla--tips {
+    font-family: 'Pathway Extreme', sans-serif;
+    margin: 20px 300px;
+    font-size: 1.2rem;
+}
+
+.description_seccion_recicla--reflexion {
+    width: 70vw;
+    text-align: center;
+    font-family: 'Badoga', sans-serif;
+    color: black;
+
+    /* background-color: #52a6b2; 
+    box-shadow: 0 .5rem 1.5rem #e7d9c6;
+    border-radius: .5rem;
+    border: .1rem solid #e9d8c0;
+    margin: 20px 300px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 15px;*/
+}
+
+.span_medioambiente {
+    font-size: 1.8rem;
+}
+
+.description_seccion2--final {
+    text-align: center;
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    text-decoration: solid;
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+.img {
+    text-align: center;
+    align-items: center;
+}
+
+.manos {
+    height: 75px;
+}
+
+/* ------------------------------- */
+/* Aqui comienza la seccion 3 */
+/* ------------------------------- */
+
+.container_ecoideas {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.tarjeta-ecoidea {
+    text-align: center;
+    width: 400px;
+    /* Tamaño deseado para las tarjetas 
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #e9d8c0;
+    border-radius: 8px;*/
+
+}
+
+.container_ecoideas {
+    transition: transform 0.1s ease;
+}
+
+.container_ecoideas:hover {
+    transform: scale(1.05);
+}
+
+.ecoidea_img {
+    height: 3rem;
+    width: 3rem;
+    margin-bottom: 1rem;
+}
+
+.ecoideas {
+    height: 4px;
+    width: 75px;
+    background-color: #52a6b2;
+    margin: 0 auto 1rem auto;
+}
+
+.ecoidea_title {
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    font-weight: bold;
+}
+
+.ecoidea_desc {
+    font-family: 'Sofia Sans Condensed', sans-serif;
+} 
+
+
+
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*                        CONTACTO                    */
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
 
 
 
@@ -441,11 +442,11 @@
 @media (min-width: 320px) and (max-width: 575px) {
 
 
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
-                        /*                        INDEX                       */
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                        INDEX                       */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
 
 
     /*----------------------------------------------------*/
@@ -497,7 +498,7 @@
     /*-------------------------------*/
     /* Aca empieza formato menu */
     /*-------------------------------*/
-    
+
 
 
 
@@ -510,9 +511,8 @@
 
     .carrusel-contenedor {
         max-width: 100%;
-        max-height: 100vh;
-        width: 100%;
-        height: auto;
+        max-height: 63vh;
+        height: 100vh;
         position: relative;
         overflow: hidden;
         margin: 0;
@@ -529,6 +529,7 @@
     .miCarrusel img {
         width: 100%;
         max-height: 100vh;
+        height: 100%;
         height: inherit;
         object-fit: cover;
         vertical-align: top;
@@ -545,7 +546,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.1);
+        /* background-color: rgba(0, 0, 0, 0.1); */
         /* Fondo semi transparente para resaltar el texto */
         z-index: 2;
         /* Asegúrate de que el banner esté por encima del carrusel */
@@ -557,21 +558,24 @@
     }
 
     .banner-contenido p {
-        font-size: 1.2rem;
-        margin: 1rem;
+        font-size: 1em;
+        /* margin: 1rem; */
         font-weight: 500;
     }
 
     .banner-contenido a {
         margin-top: 0.5rem;
         text-decoration: none;
-        color: #52a6b2;
+        color: #000000;
         background-color: #e9d8c0;
         opacity: 80%;
         display: inline-block;
         padding: 0.5rem 0.6rem;
         text-transform: uppercase;
-        border-radius: 3rem;
+        /* border-radius: 3rem;
+        border: 1px #52a6b2; */
+        border: 1px solid #52a6b2;
+        border-radius: 100px;
     }
 
     .direcciones {
@@ -640,12 +644,10 @@
     /* --------------------------------------------------------------------------- */
 
     .galeria {
-        padding-bottom: 10px;
-        padding-top: 10px;
         display: grid;
-        margin: 0 10px;
+        margin: 10px;
         gap: 10px;
-        grid-template-columns: auto(3, 1fr);
+        grid-template-columns: 1fr 1fr;
         /* grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr)); */
         grid-auto-rows: 200px;
         grid-template-areas:
@@ -676,7 +678,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.5rem;
+        font-size: 1em;
     }
 
     .galeria-imagen:hover::before {
@@ -693,7 +695,7 @@
         top: 60%;
         left: 50%;
         /* background-color: transparent; */
-        border: 1px solid #e9d8c0;
+        border: 1px solid #52a6b2;
         border-radius: 100px;
         transform: translate(-50%, -50%);
         letter-spacing: 2px;
@@ -708,7 +710,7 @@
 
     .categoria {
         font-family: 'Sofia Sans Condensed', sans-serif;
-        font-size: calc(100%);
+        font-size: 1em;
         position: absolute;
         top: 40%;
         left: 50%;
@@ -757,14 +759,16 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        opacity: 90%;
+        /* opacity: 90%; */
         /* transition: transform 0.5s ease; */
-        opacity: 80%;
+        transform: transition(-50%, -50%);
     }
 
-    /* .galeria-img:hover {
-        transform: scale(1.1);
-    } */
+    .galeria-img:hover {
+        background-color: #e9d8c0;
+        opacity: 30%;
+        transition: 0.1s;
+    }
 
     /* ---------------------------------------------------------- */
     /* Aqui comienza el estilo para las caracteristicas de ofertas */
@@ -772,31 +776,35 @@
 
     .main-caracteristicas {
         max-width: fit-content;
-        margin: 0 auto;
+        margin: auto auto;
         padding: 10px;
     }
 
     .caracteristicas {
-        display: flex;
+        /* display: flex;
         justify-content: space-around;
+        margin: 0; */
+        display: grid;
+        grid-template-columns: repeat(auto-fit) 1fr 1fr;
+        grid-template-rows: 150px;
         align-items: center;
-        margin: 0;
     }
 
     .caracteristicas-contenido {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        display: grid;
+        /* flex-wrap: wrap; */
+        justify-content: space-evenly;
     }
 
     .tarjeta-contenido {
         text-align: center;
-        width: 400px;
+        /* width: 400px;
+        height: auto; */
         /* Tamaño deseado para las tarjetas */
         margin-bottom: 10px;
         padding: 15px;
         border: 1px solid #e9d8c0;
-        border-radius: 8px;
+        border-radius: 10px;
         transition: transform 0.1s ease;
     }
 
@@ -804,10 +812,10 @@
         transform: scale(1.05);
     }
 
-    .tarjeta-contenido svg {
-        height: 2rem;
-        width: 2rem;
-        margin-bottom: 1rem;
+    .tarjeta-contenido img {
+        height: 30px;
+        width: 30px;
+        margin-bottom: 10px;
     }
 
     .contenido-destacado {
@@ -820,14 +828,14 @@
     }
 
     .tarjeta-contenido span {
-        font-size: 1.2rem;
+        font-size: 1.1em;
         font-weight: bold;
         color: #333;
         text-transform: uppercase;
     }
 
     .tarjeta-contenido p {
-        font-size: 1rem;
+        font-size: 1em;
         color: #666;
         font-family: 'Sofia Sans Condensed', sans-serif;
         font-weight: normal;
@@ -838,14 +846,16 @@
     /* ---------------------------------------------------------- */
 
     .productos {
-        padding: 1.5rem;
-        margin-top: auto;
+        /* padding: 1.5rem;
+        margin-top: auto; */
+        text-align: center;
+        margin: 15px 0;
     }
 
     .titulo {
         font-family: 'Badoga', sans-serif;
         position: relative;
-        padding-bottom: 1rem;
+        padding: 10px 10px 10px 10px;
         position: relative;
         overflow: hidden;
         text-align: center;
@@ -855,7 +865,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
-        margin: 1rem auto;
+        margin: auto;
     }
 
 
@@ -888,7 +898,23 @@
         opacity: 1;
     }
 
-    .productos .contenedor .caja .imagen {
+
+    .productos .contenedor .caja .imagen img {
+        max-height: 100vh;
+        max-width: 100vw;
+        height: inherit;
+        object-fit: cover;
+        vertical-align: top;
+        height: 100%;
+        width: 100%;
+        transition: transform 1 ease;
+    }
+
+    .productos .contenedor .caja .imagen img:hover {
+        transform: scale(1.1);
+    }
+
+    /* .productos .contenedor .caja .iconos {
         flex: 1;
         position: relative;
         text-align: center;
@@ -896,40 +922,56 @@
         cursor: pointer;
         max-height: 100vh;
         min-width: 100v;
-    }
+    } 
+    */
 
-    .productos .contenedor .caja .imagen .img {
-        height: 100%;
-        width: 100%;
-        max-height: 100vh;
-        min-width: 100vh;
-        object-fit: cover;
-        transition: transform 0.5 ease;
-    }
-
-    .productos .contenedor .caja .imagen .img:hover {
-        transform: scale(1.1);
-    }
-
-    .productos .contenedor .caja .imagen .iconos {
+    .productos .contenedor .caja .iconos {
         position: absolute;
-        bottom: -7rem;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #e9d8c0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+        transform: translateY(100%);
+        transition: transform 0.3s;
+    }
+
+    .productos .contenedor .caja:hover .iconos {
+        transform: translateY(0);
+    }
+
+    .productos .contenedor .caja .imagen .iconos img {
+        width: 24px;
+        margin-bottom: 5px;
+        
+        /* position: absolute;
+        bottom: 0;
         left: 0;
         right: 0;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
         background-color: #52a6b2;
-        padding: 1rem;
-        transition: botton 0.5s ease;
+        padding: 10px;
+        transform: bottom(1%);
+        transition: transform 0.3s ease; */
     }
 
-    .productos .contenedor .caja:hover .imagen .iconos {
+    /* .productos .contenedor .caja:hover .imagen .iconos {
         bottom: 0;
-    }
+    } */
 
-    .productos .contenedor .caja .imagen .iconos a {
-        max-width: 100%;
+    .productos .contenedor .caja .iconos a {
+        text-decoration: none;
+        color: #52a6b2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        /* max-width: 100%;
         max-height: 100%;
         height: 1.9rem;
         line-height: 1.4rem;
@@ -941,7 +983,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        transition: background-color 0.5s ease;
+        transition: background-color 0.5s ease; */
     }
 
     /* .productos .contenedor .caja .imagen .iconos a svg {
@@ -949,15 +991,15 @@
         /* Utiliza el color del texto como color de relleno del svg */
 
 
-    .productos .contenedor .caja .imagen .iconos a img {
+    /* .productos .contenedor .caja .imagen .iconos a img {
         max-width: 100%;
         max-height: 100%;
-    }
+    } */
 
-    .productos .contenedor .caja .imagen .iconos a:hover {
+    /* .productos .contenedor .caja .imagen .iconos a:hover {
         background-color: #52a6b2;
         color: #e9d8c0;
-    }
+    } */
 
     .productos .contenedor .caja .contenido {
         padding: 2rem;
@@ -1078,208 +1120,280 @@
         color: #52a6b2;
     }
 
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
-                        /*                       CONOCENOS                    */
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                       CONOCENOS                    */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
 
 
 
 
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
-                        /*                       PRODUCTOS                    */
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                       PRODUCTOS                    */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
 
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                      Sec. AGUAS Y TONICOS                     */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-
-
-
-
-
-
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                    Sec. ACEITES Y SERUMS                      */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-
-
-
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                   Sec. BALSAMOS Y CREMAS                      */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-
-
-
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*               Sec. JABONES Y DESODORANTES                     */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-
-
-
-
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                      Sec. CUIDADO CAPILAR                     */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-
-
-
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*               Sec. JABONES Y DESODORANTES                     */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-
-
-
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                     Sec. HIGIENE DENTAL                       */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-
-
-
-
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                    Sec. CUIDADO SOLAR                         */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-
-
-
-                           
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
-                        /*                        RECICLA                     */
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
-
-
-/* ---------------------------
-       Aca comienza Seccion 2
-    --------------------------- */
-
-    .container_recicla{}
-
-                        
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
-                        /*                        CONTACTO                    */
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                      Sec. AGUAS Y TONICOS                     */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
 
 
 
 
 
 
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                    Sec. ACEITES Y SERUMS                      */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
 
 
-    /* <----------------------------------- */
-    /*   Aqui comienza el footer para celu */
-    /*  ----------------------------------  */
 
-    .footer {
-        background-color: #52a6b2;
-        color: #fff;
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                   Sec. BALSAMOS Y CREMAS                      */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*               Sec. JABONES Y DESODORANTES                     */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                      Sec. CUIDADO CAPILAR                     */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*               Sec. JABONES Y DESODORANTES                     */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                     Sec. HIGIENE DENTAL                       */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                    Sec. CUIDADO SOLAR                         */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                        RECICLA                     */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+
+    .container_recicla {
+        width: 100vw;
+        height: 70vh;
+        position: relative;
+    
     }
-
-    .contenedor-footer {
-        font-family: 'Sofia Sans Condensed', sans-serif;
-        max-width: 1200px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
+    
+    .background_recicla {
+        width: 50%;
+        height: 900px;
+        opacity: .1;
+        margin-top: -5px;
+        margin-left: 400px;
+        padding: 35px 25px;
+        overflow: hidden;
+        position: absolute;
+    
     }
-
-    .social-icons,
-    .contacto-info,
-    .informacion,
-    .copyright {
-        flex: 0 0 100%;
-        margin-bottom: 5px;
-        margin-top: 1rem;
+    
+    .title_seccion_recicla {
         text-align: center;
-    }
-
-    .social-icons img {
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
-    }
-
-    .social-icons a {
-        text-decoration: none;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-
-    .titulo-footer {
+        margin-top: 25px;
+        color: #52a6b2;
         font-family: 'Badoga', sans-serif;
-        font-size: 20px;
+        font-size: 3rem;
         font-weight: bold;
-        margin-bottom: 5px;
     }
-
-    .contacto-info ul,
-    .informacion ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+    
+    .title_seccion_recicla--second {
+        color: #e9d8c0;
     }
-
-    .contacto-info li,
-    .informacion li {
-        margin-bottom: 2px;
-    }
-
-    .contacto-info img {
-        width: 13px;
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-
-    .informacion a {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .copyright {
+    
+    
+    .description_seccion_recicla--one {
         text-align: center;
-        background-color: #e9d8c0;
-        padding: 10px;
-        margin: 0;
-        width: 100%;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        color: #444444;
+        margin: 20px 300px;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        width: 70vw;
+        box-shadow: 0 .5rem 1.5rem #e7d9c6;
+        border-radius: .5rem;
+        border: .1rem solid #e9d8c0;
+        padding: 8px;
     }
-
-    .copyright img {
-        width: 13px;
-        margin-left: 5px;
-        margin-right: 5px;
+    
+    .description_seccion_recicla--two {
+        font-family: 'Pathway Extreme', sans-serif;
+        margin: 30px 300px;
+        font-size: 1.3rem;
     }
-
-    .copyright p {
+    
+    .description_seccion_recicla--three {
+        font-family: 'Pathway Extreme', sans-serif;
+        margin: 20px 300px;
+        font-size: 1.3rem;
+    
+    }
+    
+    .description_three--span {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        text-transform: uppercase;
+        font-size: 1.2rem;
         color: #52a6b2;
     }
+    
+    .description_seccion_recicla--four {
+        text-align: center;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        margin: 15px;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    .secciondos_img {
+        height: 35px;
+        padding: 3px 0;
+    }
+    
+    .description_seccion_recicla--tips {
+        font-family: 'Pathway Extreme', sans-serif;
+        margin: 20px 300px;
+        font-size: 1.2rem;
+    }
+    
+    .description_seccion_recicla--reflexion {
+        width: 70vw;
+        text-align: center;
+        font-family: 'Badoga', sans-serif;
+        color: black;
+    
+        /* background-color: #52a6b2; */
+        box-shadow: 0 .5rem 1.5rem #e7d9c6;
+        border-radius: .5rem;
+        border: .1rem solid #e9d8c0;
+        margin: 20px 300px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 15px;
+    }
+    
+    .span_medioambiente {
+        font-size: 1.8rem;
+    }
+    
+    .description_seccion2--final {
+        text-align: center;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        text-decoration: solid;
+        margin-top: 15px;
+        font-size: 1.5rem;
+    }
+    
+    .img {
+        text-align: center;
+        align-items: center;
+    }
+    
+    .manos {
+        height: 75px;
+    }
+    
+
+    
+    .container_ecoideas {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    .tarjeta-ecoidea {
+        text-align: center;
+        width: 400px;
+        /* Tamaño deseado para las tarjetas */
+        margin-bottom: 10px;
+        padding: 15px;
+        border: 1px solid #e9d8c0;
+        border-radius: 8px;
+    
+    }
+    
+    .container_ecoideas {
+        transition: transform 0.1s ease;
+    }
+    
+    .container_ecoideas:hover {
+        transform: scale(1.05);
+    }
+    
+    .ecoidea_img {
+        height: 3rem;
+        width: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .ecoideas {
+        height: 4px;
+        width: 75px;
+        background-color: #52a6b2;
+        margin: 0 auto 1rem auto;
+    }
+    
+    .ecoidea_title {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        font-weight: bold;
+    }
+    
+    .ecoidea_desc {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+    }
+
+
+
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                        CONTACTO                    */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+
+
+
 }
 
 
@@ -1317,9 +1431,12 @@
     }
 
     .icon_wa {
-        width: 25px; /*estaba en 25px lo cambie a 100% para verificar como quedaba-cris*/
-        transition: ease 1s;/*lo comente para eliminarlo-cris*/
-        height: auto;/*agregue este atributo completo, para mantener la proporcion*/
+        width: 25px;
+        /*estaba en 25px lo cambie a 100% para verificar como quedaba-cris*/
+        transition: ease 1s;
+        /*lo comente para eliminarlo-cris*/
+        height: auto;
+        /*agregue este atributo completo, para mantener la proporcion*/
     }
 
     @keyframes whatsapp {
@@ -1333,16 +1450,16 @@
     }
 
 
-    
+
     /*-------------------------------*/
     /* Aca empieza formato menu */
     /*-------------------------------*/
-    
 
 
 
 
-    
+
+
 
     /* ---------------------------------------------------------- */
     /*       Aqui comienzan los estilos del carrusel              */
@@ -1380,104 +1497,104 @@
     /*   Aqui comienza el footer para celu */
     /*  ----------------------------------  */
 
-    
-
-                            /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
-                        /*                       CONOCENOS                    */
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
 
 
-
-
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
-                        /*                       PRODUCTOS                    */
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
-
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                      Sec. AGUAS Y TONICOS                     */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                       CONOCENOS                    */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
 
 
 
 
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                       PRODUCTOS                    */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
 
-
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                    Sec. ACEITES Y SERUMS                      */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-
-
-
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                   Sec. BALSAMOS Y CREMAS                      */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-
-
-
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*               Sec. JABONES Y DESODORANTES                     */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                      Sec. AGUAS Y TONICOS                     */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
 
 
 
 
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                      Sec. CUIDADO CAPILAR                     */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                    Sec. ACEITES Y SERUMS                      */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
 
 
 
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*               Sec. JABONES Y DESODORANTES                     */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                   Sec. BALSAMOS Y CREMAS                      */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
 
 
 
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                     Sec. HIGIENE DENTAL                       */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*               Sec. JABONES Y DESODORANTES                     */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
 
 
 
 
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                    Sec. CUIDADO SOLAR                         */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                      Sec. CUIDADO CAPILAR                     */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
 
 
 
-                           
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
-                        /*                        RECICLA                     */
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*               Sec. JABONES Y DESODORANTES                     */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                     Sec. HIGIENE DENTAL                       */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                    Sec. CUIDADO SOLAR                         */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                        RECICLA                     */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
 
     /* ---------------------------
        Aca comienza Seccion 2
     --------------------------- */
 
-    .recicla_container{
+    .recicla_container {
         width: 100%;
         position: relative;
     }
@@ -1493,8 +1610,8 @@
         position: absolute;
     }
 
-    
-    .title_seccion2{
+
+    .title_seccion2 {
         text-align: center;
         margin-top: 15px;
         color: #52a6b2;
@@ -1504,11 +1621,11 @@
         font-size: 1.9rem;
     }
 
-    .title_secciondos--second{
+    .title_secciondos--second {
         color: #e9d8c0;
     }
 
-    .description_seccion2--one{
+    .description_seccion2--one {
         width: 90vw;
         text-align: center;
         font-family: 'Sofia Sans Condensed', sans-serif;
@@ -1523,47 +1640,47 @@
         padding: 8px;
     }
 
-    .description_seccion2--two{
+    .description_seccion2--two {
         font-family: 'Pathway Extreme', sans-serif;
         margin: 15px;
         font-size: 1rem;
         text-align: justify;
     }
 
-    .description_seccion2--three{
-        font-family:'Pathway Extreme', sans-serif;
+    .description_seccion2--three {
+        font-family: 'Pathway Extreme', sans-serif;
         text-align: justify;
         margin: 15px;
         font-size: 1rem;
     }
 
-    .description_secciondos--span{
+    .description_secciondos--span {
         font-family: 'Sofia Sans Condensed', sans-serif;
         text-transform: uppercase;
         font-size: .8rem;
         color: #52a6b2;
     }
 
-    .description_seccion2--four{
+    .description_seccion2--four {
         text-align: center;
         font-family: 'Sofia Sans Condensed', sans-serif;
         margin: 15px;
         font-size: 1.1rem;
     }
 
-    .secciondos_img{
+    .secciondos_img {
         height: 30px;
         padding: 3px 0;
     }
 
-    .description_seccion2--tips{
-        font-family:'Pathway Extreme', sans-serif;
-        text-align: justify;                   
+    .description_seccion2--tips {
+        font-family: 'Pathway Extreme', sans-serif;
+        text-align: justify;
         margin: 15px;
         font-size: 1rem;
     }
 
-    .description_seccion2--reflexion{
+    .description_seccion2--reflexion {
         width: 90vw;
         text-align: center;
         font-family: 'Badoga', sans-serif;
@@ -1578,7 +1695,7 @@
         padding: 10px;
     }
 
-    .description_seccion2--final{
+    .description_seccion2--final {
         text-align: center;
         font-family: 'Sofia Sans Condensed', sans-serif;
         text-decoration: solid;
@@ -1586,79 +1703,80 @@
         font-size: 1rem;
     }
 
-    .span_medioambiente{
+    .span_medioambiente {
         font-size: 1.2rem;
     }
 
-    .img{
-       text-align: center;
-       align-items: center;
+    .img {
+        text-align: center;
+        align-items: center;
     }
 
-    .manos{
+    .manos {
         height: 75px;
     }
 
     /* ------------------------------- */
-     /* Aqui comienza la seccion 3 */
+    /* Aqui comienza la seccion 3 */
     /* ------------------------------- */
 
-    .container_ecoideas{
+    .container_ecoideas {
         display: flex;
         justify-content: space-around;
         align-items: center;
         margin-top: 20px;
     }
 
-   .tarjeta-ecoidea{
-    text-align: center;
-    width: 60vw; /* Tamaño deseado para las tarjetas */
-    margin-bottom: 10px;
-    padding: 15px;
-    border: 1px solid #e9d8c0;
-    border-radius: 8px;
-    transition: transform 0.1s ease;
-   }
+    .tarjeta-ecoidea {
+        text-align: center;
+        width: 60vw;
+        /* Tamaño deseado para las tarjetas */
+        margin-bottom: 10px;
+        padding: 15px;
+        border: 1px solid #e9d8c0;
+        border-radius: 8px;
+        transition: transform 0.1s ease;
+    }
 
-   .tarjeta-ecoidea:hover {
-    transform: scale(1.05);
-}
+    .tarjeta-ecoidea:hover {
+        transform: scale(1.05);
+    }
 
-   .ecoidea_img{
-    height: 3rem;
-    width: 3rem;
-    margin-bottom: 1rem;
-   }
+    .ecoidea_img {
+        height: 3rem;
+        width: 3rem;
+        margin-bottom: 1rem;
+    }
 
-   .ecoideas{
+    .ecoideas {
         height: 4px;
         width: 75px;
         background-color: #52a6b2;
         margin: 0 auto 1rem auto;
-   }
+    }
 
-   .ecoidea_title{
+    .ecoidea_title {
         font-size: 1rem;
         font-weight: bold;
         color: #333;
         text-transform: uppercase;
-   }
+    }
 
-   .ecoidea_desc{
-    font-size: .8rem;
-   }
-
-
-                        
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
-                        /*                        CONTACTO                    */
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
+    .ecoidea_desc {
+        font-size: .8rem;
+    }
 
 
 
-       
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                        CONTACTO                    */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+
+
+
+
 
 
     body {
@@ -1717,16 +1835,16 @@
 
 
 
-    
+
     /*-------------------------------*/
     /* Aca empieza formato menu */
     /*-------------------------------*/
-    
 
 
 
 
-    
+
+
 
     /* ---------------------------------------------------------- */
     /*       Aqui comienzan los estilos del carrusel              */
@@ -1764,101 +1882,101 @@
     /*   Aqui comienza el footer para celu */
     /*  ----------------------------------  */
 
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
-                        /*                       CONOCENOS                    */
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                       CONOCENOS                    */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
 
 
 
 
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
-                        /*                       PRODUCTOS                    */
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                       PRODUCTOS                    */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
 
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                      Sec. AGUAS Y TONICOS                     */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-
-
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                      Sec. AGUAS Y TONICOS                     */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
 
 
 
 
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                    Sec. ACEITES Y SERUMS                      */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                    Sec. ACEITES Y SERUMS                      */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
 
 
 
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                   Sec. BALSAMOS Y CREMAS                      */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                   Sec. BALSAMOS Y CREMAS                      */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
 
 
 
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*               Sec. JABONES Y DESODORANTES                     */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-
-
-
-
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                      Sec. CUIDADO CAPILAR                     */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-
-
-
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*               Sec. JABONES Y DESODORANTES                     */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-
-
-
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                     Sec. HIGIENE DENTAL                       */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*               Sec. JABONES Y DESODORANTES                     */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
 
 
 
 
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
-                    /*                    Sec. CUIDADO SOLAR                         */
-                    /*---------------------------------------------------------------*/
-                    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                      Sec. CUIDADO CAPILAR                     */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
 
 
 
-                           
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
-                        /*                        RECICLA                     */
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
- /* ---------------------------
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*               Sec. JABONES Y DESODORANTES                     */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                     Sec. HIGIENE DENTAL                       */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                    Sec. CUIDADO SOLAR                         */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                        RECICLA                     */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /* ---------------------------
        Aca comienza Seccion 2
     --------------------------- */
 
-    .recicla_container{
+    .recicla_container {
         width: 100%;
         position: relative;
     }
@@ -1874,8 +1992,8 @@
         position: absolute;
     }
 
-    
-    .title_seccion2{
+
+    .title_seccion2 {
         text-align: center;
         margin-top: 20px;
         color: #52a6b2;
@@ -1885,11 +2003,11 @@
         font-size: 2.5rem;
     }
 
-    .title_secciondos--second{
+    .title_secciondos--second {
         color: #e9d8c0;
     }
 
-    .description_seccion2--one{
+    .description_seccion2--one {
         width: 70vw;
         text-align: center;
         font-family: 'Sofia Sans Condensed', sans-serif;
@@ -1904,47 +2022,47 @@
         padding: 8px;
     }
 
-    .description_seccion2--two{
+    .description_seccion2--two {
         font-family: 'Pathway Extreme', sans-serif;
         margin: 20px 170px;
         font-size: 1.2rem;
         text-align: justify;
     }
 
-    .description_seccion2--three{
-        font-family:'Pathway Extreme', sans-serif;
+    .description_seccion2--three {
+        font-family: 'Pathway Extreme', sans-serif;
         text-align: justify;
         margin: 10px 170px;
         font-size: 1.2rem;
     }
 
-    .description_secciondos--span{
+    .description_secciondos--span {
         font-family: 'Sofia Sans Condensed', sans-serif;
         text-transform: uppercase;
         font-size: 1rem;
         color: #52a6b2;
     }
 
-    .description_seccion2--four{
+    .description_seccion2--four {
         text-align: center;
         font-family: 'Sofia Sans Condensed', sans-serif;
         margin: 15px;
         font-size: 1.3rem;
     }
 
-    .secciondos_img{
+    .secciondos_img {
         height: 30px;
         padding: 3px 0;
     }
 
-    .description_seccion2--tips{
-        font-family:'Pathway Extreme', sans-serif;
-        text-align: justify;                   
+    .description_seccion2--tips {
+        font-family: 'Pathway Extreme', sans-serif;
+        text-align: justify;
         margin: 20px 170px;
         font-size: 1.2rem;
     }
 
-    .description_seccion2--reflexion{
+    .description_seccion2--reflexion {
         width: 60vw;
         text-align: center;
         font-family: 'Badoga', sans-serif;
@@ -1959,7 +2077,7 @@
         padding: 10px;
     }
 
-    .description_seccion2--final{
+    .description_seccion2--final {
         text-align: center;
         font-family: 'Sofia Sans Condensed', sans-serif;
         text-decoration: solid;
@@ -1967,75 +2085,76 @@
         font-size: 1.1rem;
     }
 
-    .span_medioambiente{
+    .span_medioambiente {
         font-size: 1.2rem;
     }
 
-    .img{
-       text-align: center;
-       align-items: center;
+    .img {
+        text-align: center;
+        align-items: center;
     }
 
-    .manos{
+    .manos {
         height: 75px;
     }
 
     /* ------------------------------- */
-     /* Aqui comienza la seccion 3 */
+    /* Aqui comienza la seccion 3 */
     /* ------------------------------- */
 
-    .container_ecoideas{
+    .container_ecoideas {
         display: flex;
         justify-content: space-around;
         align-items: center;
         margin-top: 20px;
     }
 
-   .tarjeta-ecoidea{
-    text-align: center;
-    width: 40vw; /* Tamaño deseado para las tarjetas */
-    margin-bottom: 10px;
-    padding: 15px;
-    border: 1px solid #e9d8c0;
-    border-radius: 8px;
-    transition: transform 0.1s ease;
-   }
+    .tarjeta-ecoidea {
+        text-align: center;
+        width: 40vw;
+        /* Tamaño deseado para las tarjetas */
+        margin-bottom: 10px;
+        padding: 15px;
+        border: 1px solid #e9d8c0;
+        border-radius: 8px;
+        transition: transform 0.1s ease;
+    }
 
-   .tarjeta-ecoidea:hover {
-    transform: scale(1.05);
-}
+    .tarjeta-ecoidea:hover {
+        transform: scale(1.05);
+    }
 
-   .ecoidea_img{
-    height: 3rem;
-    width: 3rem;
-    margin-bottom: 1rem;
-   }
+    .ecoidea_img {
+        height: 3rem;
+        width: 3rem;
+        margin-bottom: 1rem;
+    }
 
-   .ecoideas{
+    .ecoideas {
         height: 4px;
         width: 75px;
         background-color: #52a6b2;
         margin: 0 auto 1rem auto;
-   }
+    }
 
-   .ecoidea_title{
+    .ecoidea_title {
         font-size: 1rem;
         font-weight: bold;
         color: #333;
         text-transform: uppercase;
-   }
+    }
 
-   .ecoidea_desc{
-    font-size: .8rem;
-   }
+    .ecoidea_desc {
+        font-size: .8rem;
+    }
 
 
-                        
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
-                        /*                        CONTACTO                    */
-                        /*----------------------------------------------------*/
-                        /*----------------------------------------------------*/
+
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                        CONTACTO                    */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
 
 
 
