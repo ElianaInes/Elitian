@@ -327,7 +327,7 @@
     font-family: 'Badoga', sans-serif;
     color: black;
 
-    /* background-color: #52a6b2; 
+    /* background-color: #52a6b2;
     box-shadow: 0 .5rem 1.5rem #e7d9c6;
     border-radius: .5rem;
     border: .1rem solid #e9d8c0;
@@ -372,7 +372,7 @@
 .tarjeta-ecoidea {
     text-align: center;
     width: 400px;
-    /* Tamaño deseado para las tarjetas 
+    /* Tamaño deseado para las tarjetas
     margin-bottom: 10px;
     padding: 15px;
     border: 1px solid #e9d8c0;
@@ -408,7 +408,7 @@
 
 .ecoidea_desc {
     font-family: 'Sofia Sans Condensed', sans-serif;
-} 
+}
 
 
 
@@ -922,10 +922,10 @@
         cursor: pointer;
         max-height: 100vh;
         min-width: 100v;
-    } 
+    }
     */
 
-    .productos .contenedor .caja .iconos {
+    .productos .contenedor .caja .imagen .iconos {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -937,16 +937,17 @@
         padding: 10px;
         transform: translateY(100%);
         transition: transform 0.3s;
+        overflow: hidden;
     }
 
-    .productos .contenedor .caja:hover .iconos {
+    .productos .contenedor .caja .imagen:hover .iconos {
         transform: translateY(0);
     }
 
     .productos .contenedor .caja .imagen .iconos img {
         width: 24px;
         margin-bottom: 5px;
-        
+
         /* position: absolute;
         bottom: 0;
         left: 0;
@@ -959,6 +960,13 @@
         transform: bottom(1%);
         transition: transform 0.3s ease; */
     }
+
+    a .whatsapp-btn,
+    img .compartir-btn {
+        display: block;
+        margin-top: 10px;
+    }
+
 
     /* .productos .contenedor .caja:hover .imagen .iconos {
         bottom: 0;
@@ -1212,24 +1220,21 @@
     /*----------------------------------------------------*/
 
     .container_recicla {
-        width: 100vw;
-        height: 70vh;
+        width: 100%;
+        height: 100%;
         position: relative;
-    
+        text-align: justify;
     }
-    
+
     .background_recicla {
-        width: 50%;
-        height: 900px;
+        width: 90vw;
+        /* height: 100vh; */
         opacity: .1;
-        margin-top: -5px;
-        margin-left: 400px;
-        padding: 35px 25px;
         overflow: hidden;
         position: absolute;
-    
+        margin: auto 30px;
     }
-    
+
     .title_seccion_recicla {
         text-align: center;
         margin-top: 25px;
@@ -1238,46 +1243,46 @@
         font-size: 3rem;
         font-weight: bold;
     }
-    
+
     .title_seccion_recicla--second {
         color: #e9d8c0;
     }
-    
-    
+
+
     .description_seccion_recicla--one {
         text-align: center;
         font-family: 'Sofia Sans Condensed', sans-serif;
         color: #444444;
-        margin: 20px 300px;
-        font-size: 1.5rem;
+        margin: auto;
+        font-size: 1.4em;
         text-transform: uppercase;
-        width: 70vw;
-        box-shadow: 0 .5rem 1.5rem #e7d9c6;
+        width: 90vw;
+        box-shadow: 0 .7rem 1.5rem #e7d9c6;
         border-radius: .5rem;
         border: .1rem solid #e9d8c0;
-        padding: 8px;
+        padding: 9px;
     }
-    
+
     .description_seccion_recicla--two {
         font-family: 'Pathway Extreme', sans-serif;
-        margin: 30px 300px;
+        margin: 30px 30px;
         font-size: 1.3rem;
     }
-    
+
     .description_seccion_recicla--three {
         font-family: 'Pathway Extreme', sans-serif;
-        margin: 20px 300px;
+        margin: 20px 30px;
         font-size: 1.3rem;
-    
+
     }
-    
+
     .description_three--span {
         font-family: 'Sofia Sans Condensed', sans-serif;
         text-transform: uppercase;
         font-size: 1.2rem;
         color: #52a6b2;
     }
-    
+
     .description_seccion_recicla--four {
         text-align: center;
         font-family: 'Sofia Sans Condensed', sans-serif;
@@ -1285,38 +1290,38 @@
         font-size: 1.5rem;
         font-weight: bold;
     }
-    
+
     .secciondos_img {
         height: 35px;
         padding: 3px 0;
     }
-    
+
     .description_seccion_recicla--tips {
         font-family: 'Pathway Extreme', sans-serif;
-        margin: 20px 300px;
+        margin: 20px 30px;
         font-size: 1.2rem;
     }
-    
+
     .description_seccion_recicla--reflexion {
-        width: 70vw;
+        width: 90vw;
         text-align: center;
         font-family: 'Badoga', sans-serif;
         color: black;
-    
+
         /* background-color: #52a6b2; */
         box-shadow: 0 .5rem 1.5rem #e7d9c6;
         border-radius: .5rem;
         border: .1rem solid #e9d8c0;
-        margin: 20px 300px;
-        font-size: 1.5rem;
+        margin: 20px 30px;
+        font-size: 1.3em;
         font-weight: bold;
         padding: 15px;
     }
-    
+
     .span_medioambiente {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
-    
+
     .description_seccion2--final {
         text-align: center;
         font-family: 'Sofia Sans Condensed', sans-serif;
@@ -1324,25 +1329,16 @@
         margin-top: 15px;
         font-size: 1.5rem;
     }
-    
+
     .img {
         text-align: center;
         align-items: center;
     }
-    
+
     .manos {
         height: 75px;
     }
-    
 
-    
-    .container_ecoideas {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin-top: 20px;
-    }
-    
     .tarjeta-ecoidea {
         text-align: center;
         width: 400px;
@@ -1351,35 +1347,39 @@
         padding: 15px;
         border: 1px solid #e9d8c0;
         border-radius: 8px;
-    
     }
-    
+
     .container_ecoideas {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
         transition: transform 0.1s ease;
     }
-    
+
     .container_ecoideas:hover {
         transform: scale(1.05);
     }
-    
+
     .ecoidea_img {
         height: 3rem;
         width: 3rem;
         margin-bottom: 1rem;
     }
-    
+
     .ecoideas {
         height: 4px;
         width: 75px;
         background-color: #52a6b2;
         margin: 0 auto 1rem auto;
     }
-    
+
     .ecoidea_title {
         font-family: 'Sofia Sans Condensed', sans-serif;
         font-weight: bold;
     }
-    
+
     .ecoidea_desc {
         font-family: 'Sofia Sans Condensed', sans-serif;
     }
