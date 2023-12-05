@@ -22,11 +22,11 @@
 .container_botton {
     width: 35px;
     height: 35px;
-    background-color: green;
-    border: solid 1px white;
+    background-color: #25d366;
+    border: solid 1px #dcf8c6;
     position: fixed;
     z-index: 999;
-    border-radius: 100%;
+    border-radius: 50%;
     bottom: 15px;
     right: 10px;
     /* text-align: center; */
@@ -898,7 +898,6 @@
         opacity: 1;
     }
 
-
     .productos .contenedor .caja .imagen img {
         max-height: 100vh;
         max-width: 100vw;
@@ -966,7 +965,6 @@
         display: block;
         margin-top: 10px;
     }
-
 
     /* .productos .contenedor .caja:hover .imagen .iconos {
         bottom: 0;
@@ -1134,7 +1132,9 @@
     /*----------------------------------------------------*/
     /*----------------------------------------------------*/
 
-
+    .contenedor-conocenos {
+        position: relative;
+    }
 
 
     /*----------------------------------------------------*/
