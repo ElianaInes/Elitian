@@ -1146,7 +1146,8 @@
 
 
     }
-    .item_jabonesydesodorantes{
+
+    .item_jabonesydesodorantes {
         text-align: center;
         text-decoration: none;
         color: #52a6b2;
@@ -1155,9 +1156,9 @@
         margin: 10px;
     }
 
-   .name_jabonesydesodorantes{
-    padding: 20px;
-   }
+    .name_jabonesydesodorantes {
+        padding: 20px;
+    }
 
     .img_jabonesydesodorantes {
         width: 200px;
@@ -1165,36 +1166,36 @@
 
     }
 
-    .title_jabonesydesodorantes{
+    .title_jabonesydesodorantes {
         font-size: xx-large;
         padding: 20px 0;
 
     }
 
-    .jabonesydesodorantes .item_jabonesydesodorantes .img_jabonesydesodorantes{
+    .jabonesydesodorantes .item_jabonesydesodorantes .img_jabonesydesodorantes {
         width: 90%;
         filter: drop-shadow(0 5px 5px black);
     }
 
-    .jabonesydesodorantes{
+    .jabonesydesodorantes {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
     }
 
-    .jabonesydesodorantes .item_jabonesydesodorantes{
+    .jabonesydesodorantes .item_jabonesydesodorantes {
         background-color: #e9d8c0;
         padding: 20px;
         border-radius: 20px;
     }
 
-    .jabonesydesodorantes .item_jabonesydesodorantes .name_jabonesydesodorantes{
+    .jabonesydesodorantes .item_jabonesydesodorantes .name_jabonesydesodorantes {
         font-size: large;
         font-weight: 500;
 
     }
 
-    .jabonesydesodorantes .item_jabonesydesodorantes .price{
+    .jabonesydesodorantes .item_jabonesydesodorantes .price {
         letter-spacing: 7px;
         font-size: small;
     }
