@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/estilos/style.css">
+    <!-- Configuración de la Política de Contenidos -->
+    <meta http-equiv="Content-Security-Policy" content="img-src 'self' data:">
+
     <title>Document</title>
 </head>
 <body>
@@ -31,8 +35,9 @@
                 //crear un nuevo elemento
                 let nuevoproducto = document.createElement('a');
                 nuevoproducto.href ='/templates/detalles.html?id='+ productos.id;
-                nuevoproducto.classList.add('item');
-                nuevoproducto.innerHTML = '<img src="${productos.image}">';
+                nuevoproducto.classList.add('item_jabonesydesodorantes');
+                nuevoproducto.innerHTML = `<img class="img_jabonesydesodorantes" src="${productos.image}"> <h2 class="name_jabonesydesodorantes">${productos.name}</h2> <div class="price">${productos.price}</div>`;
+                
                 
 
                 //agregar este elemento en jabonesydesodorantes class

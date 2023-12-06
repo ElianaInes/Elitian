@@ -3,70 +3,70 @@
         "id": 1,
         "name": "Aceite de Almendras",
         "price": 200,
-        "image": "img/productos/AceitedeAlemendras1.jpg",
+        "image": "/img/productos/2.jpg",
         "description": "Uno de los aceites básicos e indispensables."
     },
     {
         "id": 2,
         "name": "Acondicionador Sólido",
         "price": 200,
-        "image": "img/productos/Acondicionador1.jpg",
+        "image": "/img/productos/4.jpg",
         "description": "Nuestro acondicionador sólido aporta suavidad, hidratación y nutrición profunda."
     },
     {
         "id": 3,
         "name": "Agua de Rosas",
         "price": 200,
-        "image": "img/productos/AguadeRosas1.jpg",
+        "image": "/img/productos/6.jpg",
         "description": "El agua de rosas hidrata, suaviza y calma la piel, ayuda a equilibrar el pH y la producción de grasa."
     },
     {
         "id": 4,
         "name": "Balsamo Labial",
         "price": 200,
-        "image": "img/productos/BalsamoLabial1.jpg",
+        "image": "/img/productos/8.jpg",
         "description": "Cuida tus labios de manera natural."
     },
     {
         "id": 5,
         "name": "Crema Facial Hidratante",
         "price": 200,
-        "image": "img/productos/CremaHidratante1.jpg",
+        "image": "/img/productos/10.jpg",
         "description": "Una fórmula muy ligera, de rápida absorción y sensación sedosa. "
     },
     {
         "id": 6,
         "name": "Jabon Avena, Almendras y Miel",
         "price": 200,
-        "image": "img/productos/JabonAvenaAlmendrasyMiel1.jpg",
+        "image": "/img/productos/12.jpg",
         "description": "Esta variedad es excelente para pieles sensibles y reactivas."
     },
     {
         "id": 7,
         "name": "Jabon Palta y Limón",
         "price": 200,
-        "image": "img/productos/JabonPaltayLimon1.jpg",
+        "image": "/img/productos/14.jpg",
         "description": "Este jabón está indicado para todo tipo de pieles, en especial secas."
     },
     {
         "id": 8,
         "name": "Jabon Carbon Activado",
         "price": 200,
-        "image": "img/productos/JabonCarbonActivado1.jpg",
+        "image": "/img/productos/16.jpg",
         "description": "Este jabón favorece procesos de desintoxicación y purificación de la piel. "
     },
     {
         "id": 9,
         "name": "Pasta Dental",
         "price": 200,
-        "image": "img/productos/PastaDental1.jpg",
+        "image": "/img/productos/18.jpg",
         "description": "Elaborada con ingredientes de origen natural y sin químicos agresivos."
     },
     {
         "id": 10,
         "name": "Protector Solar",
         "price": 200,
-        "image": "img/productos/Protector_Solar_1.jpg",
+        "image": "/img/productos/20.jpg",
         "description": "Es una crema bloqueadora que protege de los rayos del sol gracias a sus filtros minerales."
     }
 ]
