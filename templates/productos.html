@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container_jabonesydesodorantes">
+        <div class="title_jabonesydesodorantes">Jabones y Desodorantes</div>
+        <div class="jabonesydesodorantes"></div>
+    </div>
+
+
+
+    <script>
+        //obtener datos de productos.json
+        let productos = null;
+        fetch('/datos/productos.json')
+        .then(response => response.json())
+        .then(data =>{
+             productos = data;
+             console.log(productos);
+             addDataToHTML();
+        })
+
+        //agregar datos de productos to html
+        let jabonesydesodorantes = document.querySelector('.jabonesydesodorantes');
+        function addDataToHTML(){
+            productos.forEach(productos=>{
+                //crear un nuevo elemento
+                let nuevoproducto = document.createElement('a');
+                nuevoproducto.href ='/templates/detalles.html?id='+ productos.id;
+                nuevoproducto.classList.add('item');
+                nuevoproducto.innerHTML = '<img src="${productos.image}">';
+                
+
+                //agregar este elemento en jabonesydesodorantes class
+                jabonesydesodorantes.appendChild(nuevoproducto);
+            });
+
+        }
+
+     </script>
+</body>
+</html>
