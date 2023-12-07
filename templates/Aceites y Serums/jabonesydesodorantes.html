@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/estilos/style.css">
+</head>
+
+<body>
+<div class="container_jyd">
+    <div class="title_jyd">Jabones y Desodorantes</div>
+    <div class="ListaJyD"></div>
+</div>
+
+
+
+
+
+    <script>
+        //importar informacion desde jabonesydesodorantes.json
+        let jabonesydesodorantes = null
+        fetch('/datos/jabonesydesodorantes.json')
+        .then(response => response.json())
+        .then(data =>{
+            jabonesydesodorantes = data;
+            console.log(jabonesydesodorantes);
+            addDataToHTML();
+        })
+
+        //agregar datos de productos en HTML
+        let ListaJyD = document.querySelector('.ListaJyD');
+        function addDataToHTML(){
+            jabonesydesodorantes.forEach(jabonesydesodorantes =>{
+                //crear item de nuevo producto
+                let nuevoProducto = document.createElement('a');
+                nuevoProducto.href = '/templates/detalles_jyd.html?id=' + jabonesydesodorantes.id;
+                nuevoProducto.classList.add('item_jyd');
+                nuevoProducto.innerHTML = `<img class="img_jyd" src="${jabonesydesodorantes.image}">
+                <h2 class="name_jyd">${jabonesydesodorantes.name}</h2>
+                <div class="price_jyd">${jabonesydesodorantes.price}</div>`;
+
+
+                //agregar este elemento en la clase lista_jyd
+                ListaJyD.appendChild(nuevoProducto);
+
+            })
+
+        }
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

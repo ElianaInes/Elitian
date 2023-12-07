@@ -1139,67 +1139,6 @@
     /*---------------------------------------------------------------*/
     /*                      Sec. AGUAS Y TONICOS                     */
     /*---------------------------------------------------------------*/
-    .container_productos {
-        width: 90vw;
-        padding-top: 10px;
-
-
-
-    }
-
-    .item_jabonesydesodorantes {
-        text-align: center;
-        text-decoration: none;
-        color: #52a6b2;
-        font-size: 1em;
-        padding: 10px;
-        margin: 10px;
-    }
-
-    .name_jabonesydesodorantes {
-        padding: 20px;
-    }
-
-    .img_jabonesydesodorantes {
-        width: 200px;
-        height: 250px;
-
-    }
-
-    .title_jabonesydesodorantes {
-        font-size: xx-large;
-        padding: 20px 0;
-
-    }
-
-    .jabonesydesodorantes .item_jabonesydesodorantes .img_jabonesydesodorantes {
-        width: 90%;
-        filter: drop-shadow(0 5px 5px black);
-    }
-
-    .jabonesydesodorantes {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 20px;
-    }
-
-    .jabonesydesodorantes .item_jabonesydesodorantes {
-        background-color: #e9d8c0;
-        padding: 20px;
-        border-radius: 20px;
-    }
-
-    .jabonesydesodorantes .item_jabonesydesodorantes .name_jabonesydesodorantes {
-        font-size: large;
-        font-weight: 500;
-
-    }
-
-    .jabonesydesodorantes .item_jabonesydesodorantes .price {
-        letter-spacing: 7px;
-        font-size: small;
-    }
-
 
 
 
@@ -1232,7 +1171,52 @@
     /*---------------------------------------------------------------*/
     /*---------------------------------------------------------------*/
 
+.item_jyd{
+    color: black;
+    text-decoration: none;
+    
+}
 
+.img_jyd{
+    width: 250px;
+    height: 300px;
+    filter: drop-shadow(0 10px 10px black);
+}
+
+.container_jyd{
+    width: 100vw;
+    margin: auto;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.title_jyd{
+    font-size: xx-large;
+    padding: 20px 10px;
+}
+
+.Lista_JyD{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+}
+
+.name_jyd{
+    font-size: large;
+    font-weight: 500;
+    padding: 15px;
+}
+
+.price_jyd{
+    letter-spacing: 5px;
+    font-size: small;
+}
+
+.Lista_JyD {
+    background-color: #52a6b2;
+    padding: 20px;
+    border-radius: 20px;
+}
 
 
     /*---------------------------------------------------------------*/
