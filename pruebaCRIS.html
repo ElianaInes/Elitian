@@ -2,307 +2,414 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PRUEBA</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+    <title>PRUEBA</title>
+    <link rel="icon" type="image/x-icon" href="/img/logos/logo-linkc.png">
 
-  <style>
-    @import url(' https://fonts.cdnfonts.com/css/badoga ');
-    /* familia de fuentes: 'Badoga', sans-serif; */
-    @import url('https://fonts.googleapis.com/css2? family= Montserrat:ital,wght@0,100;0,200;1,200 & family= Roboto:ital,wght@0,100;0,300;0,400;0,500; 1,100;1,500;1,900 & familia= Sofia+Sans+Condensado:ital@1 & display=swap');
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        @media (min-width: 320px) and (max-width: 575px) {
+            .container_recicla {
+                width: 100vw;
+                height: 70vh;
+                position: relative;
+                overflow: hidden;
 
-    @media (min-width: 320px) and (max-width: 575px) {
-      .productos {
-        /* padding: 1.5rem;
-        margin-top: auto; */
-        text-align: center;
-        margin: 15px 0;
-      }
+            }
 
-      .titulo {
-        font-family: 'Badoga', sans-serif;
-        position: relative;
-        padding: 10px 10px 10px 10px;
-        position: relative;
-        overflow: hidden;
-        text-align: center;
-      }
+            .background_recicla {
+                width: 50%;
+                height: 100%;
+                opacity: .1;
+                margin-top: -5px;
+                margin-left: 400px;
+                padding: 35px 25px;
+                position: relative;
+            }
 
-      .productos .contenedor {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        margin: auto;
-      }
+            .title_seccion_recicla {
+                text-align: center;
+                margin-top: 25px;
+                color: #52a6b2;
+                font-family: 'Badoga', sans-serif;
+                font-size: 3rem;
+                font-weight: bold;
+            }
 
+            .title_seccion_recicla--second {
+                color: #e9d8c0;
+            }
 
-      .productos .contenedor .caja {
-        flex: 1 1 calc(65% - 1rem);
-        box-shadow: 0 .8rem 2rem #e9d8c0;
-        border-radius: .5rem;
-        border: .1rem solid #e9d8c0;
-        position: relative;
-        overflow: hidden;
-      }
+            .description_seccion_recicla--one {
+                text-align: center;
+                font-family: 'Sofia Sans Condensed', sans-serif;
+                color: #444444;
+                margin: 20px 300px;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                width: 70vw;
+                box-shadow: 0 .5rem 1.5rem #e7d9c6;
+                border-radius: .5rem;
+                border: .1rem solid #e9d8c0;
+                padding: 8px;
+            }
 
-      .productos .contenedor .caja .ofertas {
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-        padding: .3rem 1rem;
-        font-size: 2.5rem;
-        color: #e9d8c0;
-        background-color: #52a6b2;
-        opacity: 0;
-        z-index: 1;
-        border-radius: .4rem;
-        transform: scaleZ(0);
-        transition: transform 0.3 ease, opacity 0.3s ease;
-      }
+            .description_seccion_recicla--two {
+                font-family: 'Pathway Extreme', sans-serif;
+                margin: 30px 300px;
+                font-size: 1.3rem;
+            }
 
-      .productos .contenedor .caja:hover .ofertas {
-        transform: scaleZ(1.1);
-        opacity: 1;
-      }
+            .description_seccion_recicla--three {
+                font-family: 'Pathway Extreme', sans-serif;
+                margin: 20px 300px;
+                font-size: 1.3rem;
 
+            }
 
-      .productos .contenedor .caja .imagen img {
-        max-height: 100vh;
-        max-width: 100vw;
-        height: inherit;
-        object-fit: cover;
-        vertical-align: top;
-        height: 100%;
-        width: 100%;
-        transition: transform 1 ease;
-      }
+            .description_three--span {
+                font-family: 'Sofia Sans Condensed', sans-serif;
+                text-transform: uppercase;
+                font-size: 1.2rem;
+                color: #52a6b2;
+            }
 
-      .productos .contenedor .caja .imagen img:hover {
-        transform: scale(1.1);
-      }
+            .description_seccion_recicla--four {
+                text-align: center;
+                font-family: 'Sofia Sans Condensed', sans-serif;
+                margin: 15px;
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
 
-      /* 
-      .productos .contenedor .caja .iconos {
-        flex: 1;
-        position: relative;
-        text-align: center;
-        overflow: hidden;
-        cursor: pointer;
-        max-height: 100vh;
-        min-width: 100v;*/
+            .secciondos_img {
+                height: 35px;
+                padding: 3px 0;
+            }
 
-      .productos .contenedor .caja .iconos {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: #e9d8c0;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 10px;
-        transform: translateY(100%);
-        transition: transform 0.3s;
-      }
+            .description_seccion_recicla--tips {
+                font-family: 'Pathway Extreme', sans-serif;
+                margin: 20px 300px;
+                font-size: 1.2rem;
+            }
 
-      .productos .contenedor .caja:hover .iconos {
-        transform: translateY(0);
-      }
+            .description_seccion_recicla--reflexion {
+                width: 70vw;
+                text-align: center;
+                font-family: 'Badoga', sans-serif;
+                color: black;
+                box-shadow: 0 .5rem 1.5rem #e7d9c6;
+                border-radius: .5rem;
+                border: .1rem solid #e9d8c0;
+                margin: 20px 300px;
+                font-size: 1.5rem;
+                font-weight: bold;
+                padding: 15px;
+            }
 
-      .productos .contenedor .caja .imagen .iconos img {
-        width: 24px;
-        margin-bottom: 5px;
+            .span_medioambiente {
+                font-size: 1.8rem;
+            }
 
-        /* position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        background-color: #52a6b2;
-        padding: 10px;
-        transform: bottom(1%);
-        transition: transform 0.3s ease; */
-      }
+            .description_seccion2--final {
+                text-align: center;
+                font-family: 'Sofia Sans Condensed', sans-serif;
+                text-decoration: solid;
+                margin-top: 15px;
+                font-size: 1.5rem;
+            }
 
-      /* .productos .contenedor .caja:hover .imagen .iconos {
-        bottom: 0; }*/
+            .container_recicla img {
+                text-align: center;
+                align-items: center;
+            }
 
+            .manos {
+                height: 75px;
+            }
 
-      .productos .contenedor .caja .iconos a {
-        text-decoration: none;
-        color: #52a6b2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+            .container_ecoideas {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 20px;
+            }
 
-        /* max-width: 100%;
-        max-height: 100%;
-        height: 1.9rem;
-        line-height: 1.4rem;
-        font-size: 1.6rem;
-        width: 50%;
-        color: #52a6b2;
-        text-decoration: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: background-color 0.5s ease; */
-      }
+            .tarjeta-ecoidea {
+                text-align: center;
+                width: 400px;
+                /* Tamaño deseado para las tarjetas */
+                margin-bottom: 10px;
+                padding: 15px;
+                border: 1px solid #e9d8c0;
+                border-radius: 8px;
 
-      /* .productos .contenedor .caja .imagen .iconos a svg {
-        fill: currentColor;
-        /* Utiliza el color del texto como color de relleno del svg */
+            }
 
+            .container_ecoideas {
+                transition: transform 0.1s ease;
+            }
 
-      /* .productos .contenedor .caja .imagen .iconos a img {
-        max-width: 100%;
-        max-height: 100%;
-       } */
+            .container_ecoideas:hover {
+                transform: scale(1.05);
+            }
 
-      /* .productos .contenedor .caja .imagen .iconos a:hover {
-        background-color: #52a6b2;
-        color: #e9d8c0;
-        } */
+            .ecoidea_img {
+                height: 3rem;
+                width: 3rem;
+                margin-bottom: 1rem;
+            }
 
-      .productos .contenedor .caja .contenido {
-        padding: 2rem;
-        text-align: center;
-      }
+            .ecoideas {
+                height: 4px;
+                width: 75px;
+                background-color: #52a6b2;
+                margin: 0 auto 1rem auto;
+            }
 
-      .productos .contenedor .caja .contenido h1 {
-        font-family: 'Badoga', sans-serif;
-        font-size: 1.2rem;
-        color: #000000;
-      }
+            .ecoidea_title {
+                font-family: 'Sofia Sans Condensed', sans-serif;
+                font-weight: bold;
+            }
 
-      .productos .contenedor .caja .contenido .precio {
-        font-family: 'Sofia Sans Condensed', sans-serif;
-        font-size: 2rem;
-        color: #52a6b2;
-        font-weight: lighter;
-        padding-top: 1rem;
-      }
-
-      .productos .contenedor .caja .contenido .precio span {
-        font-family: 'Sofia Sans Condensed', sans-serif;
-        font-size: 1rem;
-        color: #918e8d;
-        font-weight: bold;
-        text-decoration: line-through;
-      }
-    }
-  </style>
+            .ecoidea_desc {
+                font-family: 'Sofia Sans Condensed', sans-serif;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <header>
+        <!-- Contenido del encabezado si es necesario -->
+    </header>
 
-  <section class="productos">
-    <h1 class="titulo"> Ofertas exclusivas </h1>
-    <div class="contenedor">
+    <section class="container_recicla">
 
-      <!-- Procucto 1 -->
-      <div class="caja">
-        <div class="ofertas">-5%</div>
-        <div class="imagen">
-          <img src="img/productos/Acon.1.jpg" alt="ofertas-img">
-          <div class="iconos">
-            <a href="https://wa.me/123456789" target="_blank">
-              <img src="img/icons/whatsappw.svg" alt="WhatsApp Icon">
-              <span>¡Lo quiero!</span>
-            </a>
-            <a href="#" class="cart-btn">
-              <img src="img/icons/share-solid.svg" alt="Share Icon">
-              <span>Compartir</span>
-            </a>
-          </div>
+        <div>
+            <img class="background_recicla" src="img/logos/logo-linkc.png" alt="logo grafico de elitian" loading="lazy">
         </div>
-        <div class="contenido">
-          <h1>Aceite puro de almendras</h1>
-          <div class="precio"> $1200AR <span>$1000AR</span></div>
-        </div>
-      </div>
 
-      <!-- Procucto 2 -->
-      <div class="caja">
-        <div class="ofertas">-10%</div>
-        <div class="imagen">
-          <img src="img/productos/Ag. Rosa 1.jpg" alt="ofertas-img">
-          <div class="iconos">
-            <a href="https://wa.me/123456789" target="_blank">
-              <img src="img/icons/whatsapp.svg" alt="WhatsApp Icon">
-              <span>¡Lo quiero!</span>
-            </a>
-            <a href="#" class="cart-btn">
-              <img src="img/icons/share-solid.svg" alt="Share Icon">
-              <span>Compartir</span>
-            </a>
-          </div>
-        </div>
-        <div class="contenido">
-          <h1>Agua de rosas</h1>
-          <div class="precio"> $1850AR <span>$1400AR</span></div>
-        </div>
-      </div>
+        <h1 class="title_seccion_recicla">Recicla <span class="title_seccion_recicla--second">&</span> Reutiliza</h1>
+        <!-- <h2 class="subtitle_seccion2">¿Nos Ayudas?</h2> -->
 
-      <!-- Procucto 3 -->
-      <div class="caja">
-        <div class="ofertas">-7%</div>
-        <div class="imagen">
-          <img src="img/productos/balsamo 1.jpg" alt="ofertas-img">
-          <div class="iconos">
-            <a href="https://wa.me/123456789" target="_blank">
-              <img src="img/icons/whatsapp.svg" alt="WhatsApp Icon">
-              <span>¡Lo quiero!</span>
-            </a>
-            <a href="#" class="cart-btn">
-              <img src="img/icons/share-solid.svg" alt="Share Icon">
-              <span>Compartir</span>
-            </a>
-          </div>
-        </div>
-        <div class="contenido">
-          <h1>Jabon de carbon activado</h1>
-          <div class="precio"> $1050AR <span>$900AR</span></div>
-        </div>
-      </div>
+        <h3 class="description_seccion_recicla--one">Recibimos los envases de los productos que vendemos.</h3>
+        <h3 class="description_seccion_recicla--two">El vidrio puede ser reutilizado y los plásticos enviamos a
+            reciclar.
+        </h3>
 
-      <!-- Procucto 4 -->
-      <div class="caja">
-        <div class="ofertas">-13%</div>
-        <div class="imagen">
-          <img src="img/productos/balsamo labial.jpg" alt="">
-          <div class="iconos">
-            <a href="https://wa.me/123456789" target="_blank">
-              <img src="img/icons/whatsapp.svg" alt="WhatsApp Icon">
-              <span>¡Lo quiero!</span>
-            </a>
-            <a href="#" class="cart-btn">
-              <img src="img/icons/share-solid.svg" alt="Share Icon">
-              <span>Compartir</span>
-            </a>
-          </div>
+        <h3 class="description_seccion_recicla--three"> Para colaborar con el reciclado y la reutilizacion de los
+            envases,
+            te
+            pedimos entregarlos <span class="description_three--span"> <b>previamente lavados</b></span>.</h3>
+
+        <h3 class="description_seccion_recicla--four">Tips para el lavado:</h3>
+
+        <h4 class="description_seccion_recicla--tips"> <img class="secciondos_img" src="img/icons/png/eco-check.png">
+            Cuando
+            terminaste
+            de usar el producto enjuágalo dos veces con agua caliente, esto facilita la remoción de aceites
+            vegetales.Esto
+            también ayudará a remover la etiqueta.
+        </h4>
+
+        <h4 class="description_seccion_recicla--tips"> <img class="secciondos_img" src="img/icons/png/eco-check.png">
+            Realizá un tercer
+            enjuague con un agente limpiador como jabón o un detergente y agua caliente.</h4>
+
+        <h4 class="description_seccion_recicla--tips"> <img class="secciondos_img" src="img/icons/png/eco-check.png">
+            Deja
+            secar el
+            envase boca abajo sobre una superficie que respire y listo para entregar en la siguiente compra!</h4>
+
+        <h4 class="description_seccion_recicla--reflexion"><b>Creemos en la importancia de comprometernos activamente en
+                el
+                cuidado del <span class="span_medioambiente">Medio Ambiente</span>.</b></h4>
+
+        <h4 class="description_seccion2--final">¿Te sumás al compromiso?</h4>
+
+        <div class="img"> <img class="manos" src="img/icons/manosc.svg" alt="">
         </div>
-        <div class="contenido">
-          <h1>Balsamo labial</h1>
-          <div class="precio"> $1050AR <span>$900AR</span></div>
+
+        <!------------------------------------------>
+        <!-- Aca comienza Seccion tarjeta ecoideas-->
+        <!------------------------------------------>
+
+        <section class="container_ecoideas">
+            <div class="tarjeta-ecoidea">
+                <a href=""><img class="ecoidea_img" src="img/icons/ideaeco.svg" alt="ecoidea.svg"></a>
+                <div class="ecoideas"></div>
+                <span class="ecoidea_title">ECOIDEAS</span>
+                <p class="ecoidea_desc">Conoce maneras de reciclar tus envases de vidrio</p>
+            </div>
+
+        </section>
+
+
+    </section>
+
+
+    <footer class="footer">
+        <div class="contenedor contenedor-footer">
+            <div class="social-icons">
+                <p class="titulo-footer">Seguinos en Instagram</p>
+                <a href="https://www.instagram.com/tienda.elitian/" target="_blank">
+                    <img src="img/icons/instagram.svg" alt="Perfil de instagram de nuestra tienda">
+                    <span>ELITIAN</span>
+                </a>
+            </div>
+            <div class="informacion">
+                <ul>
+                    <a href="#">Conocénos</a> |
+                    <a href="#">Productos</a> |
+                    <a href="#">Reciclá</a> |
+                    <a href="#">Contacto</a>
+                </ul>
+            </div>
+            <div class="contacto-info">
+                <ul>
+                    <img src="img/icons/whatsapp.svg" alt="contacto de whatsapp elitian"> 3624000000
+                    <img src="img/icons/email.svg" alt="contacto de gmail elitian"> elitian.proyectos@gmail.com
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>
+                    <span>Desarrollado con <img src="img/icons/heart-regular.svg" alt="Heart"> por Elitian &copy;
+                        2023</span>
+                </p>
+            </div>
         </div>
-      </div>
+    </footer>
+</body>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+    <title>PRUEBA</title>
+    <link rel="icon" type="image/x-icon" href="/img/logos/logo-linkc.png">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main-container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px; /* Ajusta el espacio interno según tus necesidades */
+        }
+
+        @media (min-width: 320px) and (max-width: 575px) {
+            .container_recicla {
+                width: 100vw;
+                height: 70vh;
+                position: relative;
+                overflow: hidden;
+            }
+
+            /* ... (resto de estilos) */
+
+            .footer {
+                padding: 20px; /* Ajusta el espacio interno según tus necesidades */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <header>
+            <!-- Contenido del encabezado si es necesario -->
+        </header>
+
+        <section class="container_recicla">
+            <!-- Contenido de la sección reciclaje y reutilización -->
+        </section>
+
+        <footer class="footer">
+            <!-- Contenido del pie de página -->
+        </footer>
     </div>
-  </section>
-  </main>
+</body>
 
-  <!--Link al archivo script. para que funcione la SECCION 2-->
+</html>
 
-  <script src="scripts/scripts.js"></script>
+
+
+<!-- ------------------------------------------------- -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+    <title>PRUEBA</title>
+    <link rel="icon" type="image/x-icon" href="/img/logos/logo-linkc.png">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main-container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px; /* Ajusta el espacio interno según tus necesidades */
+        }
+
+        @media (min-width: 320px) and (max-width: 575px) {
+            .container_recicla {
+                width: 100vw;
+                height: 70vh;
+                position: relative;
+                overflow: hidden;
+            }
+
+            /* ... (resto de estilos) */
+
+            .footer {
+                padding: 20px; /* Ajusta el espacio interno según tus necesidades */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <header>
+            <!-- Contenido del encabezado si es necesario -->
+        </header>
+
+        <section class="container_recicla">
+            <!-- Contenido de la sección reciclaje y reutilización -->
+        </section>
+
+        <footer class="footer">
+            <!-- Contenido del pie de página -->
+        </footer>
+    </div>
 </body>
 
 </html>
