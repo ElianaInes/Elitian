@@ -819,10 +819,19 @@
         text-align: center;
     }
 
+    .social-icons a:hover {
+        color: #e9d8c0;
+    }
+
+    .informacion a:hover {
+        color: #e9d8c0;
+    }
+
     .social-icons img {
         width: 30px;
         height: 30px;
         margin-right: 10px;
+        background-color: #52a6b2;
     }
 
     .social-icons a {
@@ -1091,6 +1100,7 @@
         overflow: hidden;
         align-items: center;
         justify-content: center;
+        color: #52a6b2;
 
     }
 
@@ -1098,7 +1108,7 @@
         max-width: 100%;
         height: 100%;
         margin: 0;
-        opacity: .2;
+        opacity: 15%;
         /* margin-top: -5px;
         margin-left: 200px; */
         padding: 35px 25px;
@@ -1123,7 +1133,7 @@
     .description_seccion_recicla--one {
         text-align: center;
         font-family: 'Sofia Sans Condensed', sans-serif;
-        color: #444444;
+        color: #e9d8c0;
         margin: 20px auto;
         font-size: 1.2rem;
         text-transform: uppercase;
@@ -1153,15 +1163,15 @@
         font-family: 'Sofia Sans Condensed', sans-serif;
         text-transform: uppercase;
         font-size: 1.1rem;
-        color: #52a6b2;
+        color: #444444;
         text-align: center;
     }
 
     .description_seccion_recicla--four {
         text-align: center;
-        font-family: 'Sofia Sans Condensed', sans-serif;
+        font-family: 'Badoga', sans-serif;
         margin: 30px;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         font-weight: bold;
     }
 
@@ -1173,7 +1183,7 @@
     .description_seccion_recicla--tips {
         font-family: 'Pathway Extreme', sans-serif;
         margin: 20px 30px;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         text-align: justify;
 
     }
@@ -1182,26 +1192,27 @@
         width: 70vw;
         text-align: center;
         font-family: 'Badoga', sans-serif;
-        color: black;
+        color: #e9d8c0;
         box-shadow: 0 .5rem 1.5rem #e7d9c6;
         border-radius: .5rem;
         border: .1rem solid #e9d8c0;
         margin: 20px auto;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         font-weight: bold;
         padding: 15px;
     }
 
     .span_medioambiente {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+        color: #52a6b2;
     }
 
     .description_seccion2--final {
         text-align: center;
-        font-family: 'Sofia Sans Condensed', sans-serif;
+        font-family: 'Badoga', sans-serif;
         text-decoration: solid;
-        margin-top: 20px;
-        font-size: 1.5rem;
+        margin-top: 50px;
+        font-size: 1.3rem;
     }
 
     .manos {
@@ -1262,17 +1273,18 @@
     /*----------------------------------------------------*/
 
     .contenedor-contacto {
-        color: #e9d8c0;
+        color: #52a6b2;
         margin: 10px;
         position: relative;
         overflow: hidden;
+        align-items: center;
     }
 
     .contenedor-contacto img {
         padding: 50px;
         width: 100vw;
         height: 100%;
-        opacity:20%;
+        opacity: 15%;
         position: absolute;
         object-fit: cover;
         z-index: 10;
@@ -1281,12 +1293,7 @@
     .contenedor-contacto--p {
         padding: 50px;
         text-align: center;
-    }
-
-    .img-redes {
-        width: 30px;
-        height: 30px;
-        background-color: #000000;
+        position: relative;
     }
 
     .titulo-contacto {
@@ -1311,22 +1318,40 @@
         font-family: 'Sofia Sans Condensed', sans-serif;
     }
 
-    .contenedor-contacto h3 {
-        margin-top: 50px;
+    .contenedor-contacto--p h3 {
+        margin-top: 70px;
         text-align: center;
         font-family: 'Sofia Sans Condensed', sans-serif;
     }
 
     .contenedor-contacto--p span {
+        position: relative;
         line-height: 2;
+    } 
+
+    .img-redes {
+        align-items: center;
     }
 
-    a {
+    .img-redes a {
+        color: #e9d8c0;
+        text-align: center;
+        text-decoration: none;
+        margin-right: 20px;
+    }
+
+    .img-redes a:hover {
         color: #52a6b2;
     }
 
-    a:hover {
-        text-decoration: underline;
+    .img-redes img {
+        align-items: center;
+        max-width: 210px;
+        max-height: 1px;
+    }
+
+    .img-redes span {
+        font-size: 1.1em;
     }
 }
 
