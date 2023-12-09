@@ -732,17 +732,6 @@
         transform: scale(1.1);
     }
 
-    /* .productos .contenedor .caja .iconos {
-        flex: 1;
-        position: relative;
-        text-align: center;
-        overflow: hidden;
-        cursor: pointer;
-        max-height: 100vh;
-        min-width: 100v;
-    }
-    */
-
     .productos .contenedor .caja .iconos {
         position: absolute;
         bottom: 0;
@@ -764,23 +753,7 @@
     .productos .contenedor .caja .imagen .iconos img {
         width: 24px;
         margin-bottom: 5px;
-
-        /* position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        background-color: #52a6b2;
-        padding: 10px;
-        transform: bottom(1%);
-        transition: transform 0.3s ease; */
     }
-
-    /* .productos .contenedor .caja:hover .imagen .iconos {
-        bottom: 0;
-    } */
 
     .productos .contenedor .caja .iconos a {
         text-decoration: none;
@@ -788,36 +761,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        /* max-width: 100%;
-        max-height: 100%;
-        height: 1.9rem;
-        line-height: 1.4rem;
-        font-size: 1.6rem;
-        width: 50%;
-        color: #52a6b2;
-        text-decoration: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: background-color 0.5s ease; */
     }
-
-    /* .productos .contenedor .caja .imagen .iconos a svg {
-        fill: currentColor;
-        /* Utiliza el color del texto como color de relleno del svg */
-
-
-    /* .productos .contenedor .caja .imagen .iconos a img {
-        max-width: 100%;
-        max-height: 100%;
-    } */
-
-    /* .productos .contenedor .caja .imagen .iconos a:hover {
-        background-color: #52a6b2;
-        color: #e9d8c0;
-    } */
 
     .productos .contenedor .caja .contenido {
         padding: 2rem;
@@ -947,23 +891,22 @@
 
     .contenedor-conocenos {
         color: #52a6b2;
+        margin: 10px;
         position: relative;
         overflow: hidden;
+        align-items: center;
     }
 
     .contenedor-conocenos img {
-        max-width: 100%;
+        width: 100%;
         height: 100%;
-        margin: 10px;
-        padding: 10px auto;
         opacity: 18%;
+        object-fit: cover;
         position: absolute;
-        background-size: auto;
     }
 
     .contenedor-conocenos--p {
         padding: 50px;
-        /* overflow: hidden; */
     }
 
     .contenedor-conocenos h1,
@@ -997,13 +940,6 @@
 
 
     /*---------------------------------------------------------------*/
-
-
-
-
-
-
-    /*---------------------------------------------------------------*/
     /*---------------------------------------------------------------*/
     /*                    Sec. ACEITES Y SERUMS                      */
     /*---------------------------------------------------------------*/
@@ -1024,6 +960,8 @@
     /*               Sec. JABONES Y DESODORANTES                     */
     /*---------------------------------------------------------------*/
     /*---------------------------------------------------------------*/
+
+
     .container_jyd {
         width: 100vw;
         background-image: url(/img/seccion_jabones/jabones\ naturales.jpg);
@@ -1044,12 +982,10 @@
         padding: 20px;
         font-family: 'Badoga', sans-serif;
         font-weight: bolder;
-
     }
 
     .ListaJyD .item_jyd .img_jyd {
         width: 80%;
-
     }
 
     .ListaJyD {
@@ -1325,8 +1261,73 @@
     /*----------------------------------------------------*/
     /*----------------------------------------------------*/
 
+    .contenedor-contacto {
+        color: #e9d8c0;
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .contenedor-contacto img {
+        padding: 50px;
+        width: 100vw;
+        height: 100%;
+        opacity:20%;
+        position: absolute;
+        object-fit: cover;
+        z-index: 10;
+    }
+
+    .contenedor-contacto--p {
+        padding: 50px;
+        text-align: center;
+    }
+
+    .img-redes {
+        width: 30px;
+        height: 30px;
+        background-color: #000000;
+    }
+
+    .titulo-contacto {
+        font-family: 'Badoga', sans-serif;
+        color: #52a6b2;
+        font-size: 1.4em;
+        text-align: center;
+        line-height: 3;
+    }
+
+    .subtitulo-contacto {
+        color: #52a6b2;
+        font-size: 1.2em;
+        margin-top: 20px;
+        font-family: 'Badoga', sans-serif;
+        text-align: center;
+    }
 
 
+    .contenedor-contacto p {
+        text-align: justify;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+    }
+
+    .contenedor-contacto h3 {
+        margin-top: 50px;
+        text-align: center;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+    }
+
+    .contenedor-contacto--p span {
+        line-height: 2;
+    }
+
+    a {
+        color: #52a6b2;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
 }
 
 
