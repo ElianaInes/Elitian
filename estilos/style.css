@@ -595,34 +595,24 @@
     /* ---------------------------------------------------------- */
 
     .main-caracteristicas {
-        max-width: fit-content;
-        margin: auto auto;
-        padding: 10px;
-    }
-
-    .caracteristicas {
-        /* display: flex;
-        justify-content: space-around;
-        margin: 0; */
-        display: grid;
-        grid-template-columns: repeat(auto-fit) 1fr 1fr;
-        grid-template-rows: 150px;
-        align-items: center;
+        object-fit: cover;
+        /* max-width: fit-content; */
+        margin-bottom: 10px;
     }
 
     .caracteristicas-contenido {
         display: grid;
-        /* flex-wrap: wrap; */
+        grid-template-columns: repeat(auto-fit) 1fr 1fr;
+        grid-template-rows: 170px;
+        align-items: center;
         justify-content: space-evenly;
+        font-size: .9em;
     }
 
     .tarjeta-contenido {
+        margin: 10px;
+        padding: 10px;
         text-align: center;
-        /* width: 400px;
-        height: auto; */
-        /* Tamaño deseado para las tarjetas */
-        margin-bottom: 10px;
-        padding: 15px;
         border: 1px solid #e9d8c0;
         border-radius: 10px;
         transition: transform 0.1s ease;
@@ -640,7 +630,7 @@
 
     .contenido-destacado {
         height: 4px;
-        width: 75px;
+        width: 80px;
         background-color: #52a6b2;
         margin: 0 auto 1rem auto;
         font-family: 'Sofia Sans Condensed', sans-serif;
@@ -656,7 +646,7 @@
 
     .tarjeta-contenido p {
         font-size: 1em;
-        color: #666;
+        color: #444444;
         font-family: 'Sofia Sans Condensed', sans-serif;
         font-weight: normal;
     }
@@ -665,39 +655,34 @@
     /*Aqui comienza el estilo para la seccion de ofertas para celu*/
     /* ---------------------------------------------------------- */
 
-    .productos {
-        /* padding: 1.5rem;
-        margin-top: auto; */
-        text-align: center;
-        margin: 15px 0;
+    .seccion-ofertas {
+        position: relative;
+        align-items: center;
+        display: grid;
     }
 
-    .titulo {
+    .titulo-ofertas {
         font-family: 'Badoga', sans-serif;
-        position: relative;
         padding: 10px 10px 10px 10px;
-        position: relative;
-        overflow: hidden;
         text-align: center;
+        font-size: 1.3em;
     }
 
-    .productos .contenedor {
-        display: flex;
+    .contenedor-ofertas {
         flex-wrap: wrap;
-        gap: 1rem;
-        margin: auto;
+        margin: 0 25px;
     }
 
-    .productos .contenedor .caja {
-        flex: 1 1 calc(65% - 1rem);
+    .caja-ofertas {
         box-shadow: 0 .8rem 2rem #e9d8c0;
-        border-radius: .5rem;
+        border-radius: .7rem;
         border: .1rem solid #e9d8c0;
-        position: relative;
+        height: 300px;
         overflow: hidden;
+        /* flex: 1 1 calc(65% - 1rem);*/
     }
 
-    .productos .contenedor .caja .ofertas {
+    .oferta-porcentaje {
         position: absolute;
         top: 1rem;
         left: 1rem;
@@ -712,83 +697,87 @@
         transition: transform 0.3 ease, opacity 0.3s ease;
     }
 
-    .productos .contenedor .caja:hover .ofertas {
+    .oferta-porcentaje:hover {
         transform: scaleZ(1.1);
         opacity: 1;
     }
 
-    .productos .contenedor .caja .imagen img {
-        max-height: 100vh;
-        max-width: 100vw;
-        height: inherit;
+    .oferta-imagen img {
+        overflow: hidden;
         object-fit: cover;
         vertical-align: top;
-        height: 100%;
+        height: 230px;
         width: 100%;
-        transition: transform 1 ease;
     }
 
-    .productos .contenedor .caja .imagen img:hover {
-        transform: scale(1.1);
+    .oferta-imagen {
+        background-image: url(/img/productos/8.jpg);
+        background-position: center;
+        background-size: cover;
     }
 
-    .productos .contenedor .caja .iconos {
-        position: absolute;
+    .oferta-imagen img:hover {
+        opacity: 0;
+    }
+
+    .oferta-iconos {
+        background-color: red;
+        height: 50px;
+        /* 
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: #e9d8c0;
+        
         display: flex;
         justify-content: space-around;
         align-items: center;
-        padding: 10px;
+        margin-top: -50px;
         transform: translateY(100%);
-        transition: transform 0.3s;
+        transition: transform 0.3s; */
+    }
+ 
+    .oferta-iconos:hover {
+        /* transform: translateY(0); */
     }
 
-    .productos .contenedor .caja:hover .iconos {
-        transform: translateY(0);
+    .oferta-iconos img {
+        /* width: 5px;
+        margin-bottom: 5px; */
     }
 
-    .productos .contenedor .caja .imagen .iconos img {
-        width: 24px;
-        margin-bottom: 5px;
-    }
-
-    .productos .contenedor .caja .iconos a {
-        text-decoration: none;
+    .compartir-btn {
+        /* text-decoration: none;
         color: #52a6b2;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center; */
     }
 
-    .productos .contenedor .caja .contenido {
-        padding: 2rem;
-        text-align: center;
+    .oferta-contenido {
+        /* text-align: center; */
     }
 
-    .productos .contenedor .caja .contenido h1 {
-        font-family: 'Badoga', sans-serif;
-        font-size: 1.2rem;
-        color: #000000;
+    .oferta-contenido h1 {
+        /* font-family: 'Badoga', sans-serif;
+        font-size: 1.1rem;
+        color: #000000; */
     }
 
-    .productos .contenedor .caja .contenido .precio {
-        font-family: 'Sofia Sans Condensed', sans-serif;
-        font-size: 2rem;
+    .oferta-precio {
+        /* font-family: 'Sofia Sans Condensed', sans-serif;
+        font-size: .5em;
         color: #52a6b2;
         font-weight: lighter;
-        padding-top: 1rem;
+        padding-top: 1rem; */
     }
 
-    .productos .contenedor .caja .contenido .precio span {
-        font-family: 'Sofia Sans Condensed', sans-serif;
+    .oferta-contenido span {
+        /* font-family: 'Sofia Sans Condensed', sans-serif;
         font-size: 1rem;
         color: #918e8d;
         font-weight: bold;
-        text-decoration: line-through;
-    }
+        text-decoration: line-through; */
+    } 
 
 
     /* <----------------------------------- */

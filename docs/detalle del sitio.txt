@@ -10,7 +10,7 @@ INDEX
         Higiene Dental
         Protección Solar
     -Ofertas
-CONOCENOS (cris)
+CONOCENOS (cris) LISTO
 PRODUCTOS (eli)
         Aguas y Tónicos
     -producto (cris)
@@ -20,6 +20,6 @@ PRODUCTOS (eli)
         Jabones y Desodorantes
         Higiene Dental
         Protección Solar
-RECICLA
-CONTACTO (eli)
+RECICLA (eli) LISTO
+CONTACTO (eli) LISTO
     -Footer
