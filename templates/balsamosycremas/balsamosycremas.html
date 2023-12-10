@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/estilos/style.css">
+</head>
+<body>
+    <div class="container_byc">
+        <div class="title_byc">Balsamos y Cremas</div>
+        <div class="ListaByC"></div>
+    </div>
+
+    <script>
+        //importar informacion desde balsamosycremas.json
+        let balsamosycremas = null
+        fetch('/datos/balsamosycremas.json')
+            .then(response => response.json())
+            .then(data => {
+                balsamosycremas = data;
+                console.log(balsamosycremas);
+                addDataToHTML();
+            })
+
+        //agregar datos de productos en HTML
+        let ListaByC = document.querySelector('.ListaByC');
+        function addDataToHTML() {
+            balsamosycremas.forEach(balsamosycremas => {
+                //crear item de nuevo producto
+                let nuevoProducto = document.createElement('a');
+                nuevoProducto.href = '/templates/balsamosycremas/detalles_byc.html?id=' + balsamosycremas.id;
+                nuevoProducto.classList.add('item_byc');
+                nuevoProducto.innerHTML = `<img class="img_byc" src="${balsamosycremas.image}">
+            <h2 class="name_byc">${balsamosycremas.name}</h2>
+            <div class="price_byc">${balsamosycremas.price}</div>`;
+
+
+                //agregar este elemento en la clase lista_jyd
+                ListaByC.appendChild(nuevoProducto);
+
+            })
+        }
+    </script>
+
+
+</body>
+</html>

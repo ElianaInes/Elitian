@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "Protector Solar",
+        "price": 200,
+        "image": "/img/seccion_proteccionsolar/protector_solar.jpg",
+        "description": "Esta variedad es excelente para pieles sensibles y reactivas. Calma irritaciones y es altamente eficaz contra el acné. Indicado para todo tipo de pieles, especialmente sensibles o secas.",
+        "ingredientes": "Ingredientes: Aceite de oliva de primera prensada en frio, aceite de coco, aceite de almendras orgánico, manteca de karité, cera de abejas de producción local, leche de avena."
+    },
+    {
+        "id": 2,
+        "name": "Gel Post Solar",
+        "price": 200,
+        "image": "/img/seccion_proteccionsolar/gel_postsolar.jpg",
+        "description": "Esta variedad es excelente para pieles sensibles y reactivas. Calma irritaciones y es altamente eficaz contra el acné. Indicado para todo tipo de pieles, especialmente sensibles o secas.",
+        "ingredientes": "Ingredientes: Aceite de oliva de primera prensada en frio, aceite de coco, aceite de almendras orgánico, manteca de karité, cera de abejas de producción local, leche de avena."
+    }
+]

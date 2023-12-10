@@ -1,0 +1,10 @@
+[
+    {
+        "id": 1,
+        "name": "Aceite de Almendras",
+        "price": 200,
+        "image": "/img/seccion_aceitesyserums/Aceite_Almendras.jpg",
+        "description": "Uno de los aceites básicos e indispensables, el aceite de almendras es ligero, súper hidratante, no deja sensación grasosa y es de rápida absorción. Es rico en ácidos grasos esenciales y vitamina E, favorece la prevención de arrugas, la regeneración de la piel frente a irritaciones, cicatrices, estrías y marcas de acné.Utilizado en el cabello le aporta hidratación, brillo, suavidad y ayuda a reducir el frizz.",
+        "ingredientes": "Ingredientes: Aceite de oliva de primera prensada en frio, aceite de coco, aceite de almendras orgánico, manteca de karité, cera de abejas de producción local, leche de avena."
+    }
+]
