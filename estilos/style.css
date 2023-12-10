@@ -899,23 +899,27 @@
 
 
     .contenedor-conocenos {
-        color: #52a6b2;
-        margin: 10px;
-        position: relative;
-        overflow: hidden;
+        color: #444444;
         align-items: center;
+        position: relative;
     }
 
-    .contenedor-conocenos img {
-        width: 100%;
-        height: 100%;
-        opacity: 18%;
-        object-fit: cover;
+    .contenedor-conocenos::before {
+        content: "";
         position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url(/img/conocenos/vertical.png);
+        background-position: right;
+        background-size: cover;
+        opacity: 0.15;
+        z-index: -1;
     }
 
     .contenedor-conocenos--p {
-        padding: 50px;
+        padding: 30px;
     }
 
     .contenedor-conocenos h1,
@@ -923,6 +927,7 @@
         font-family: 'Badoga', sans-serif;
         text-align: center;
         line-height: 2;
+        color: #52a6b2;
     }
 
     .contenedor-conocenos p {
@@ -1100,30 +1105,31 @@
         overflow: hidden;
         align-items: center;
         justify-content: center;
-        color: #52a6b2;
-
+        color: #444444;
     }
 
-    .background_recicla {
-        max-width: 100%;
-        height: 100%;
-        margin: 0;
-        opacity: 15%;
-        /* margin-top: -5px;
-        margin-left: 200px; */
-        padding: 35px 25px;
+    .container_recicla::before {
+        content: "";
         position: absolute;
-        overflow: hidden;
-        background-size: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url(/img/logos/logo-linkc.png);
+        background-position: center;
+        background-size: cover;
+        opacity: 0.15;
+        z-index: -1;
     }
+
 
     .title_seccion_recicla {
         text-align: center;
-        margin-top: 25px;
+        margin-top: 30px;
         color: #52a6b2;
         font-family: 'Badoga', sans-serif;
-        font-size: 2em;
-        font-weight: bold;
+        font-size: 1.5em;
+        line-height: 3;
     }
 
     .title_seccion_recicla span {
@@ -1133,78 +1139,74 @@
     .description_seccion_recicla--one {
         text-align: center;
         font-family: 'Sofia Sans Condensed', sans-serif;
-        color: #e9d8c0;
+        color: #52a6b2;
         margin: 20px auto;
-        font-size: 1.2rem;
+        font-size: 1.2em;
         text-transform: uppercase;
         width: 80vw;
         box-shadow: 0 .5rem 1.5rem #e7d9c6;
         border-radius: .5rem;
         border: .1rem solid #e9d8c0;
-        padding: 9px;
+        padding: 8px;
     }
 
     .description_seccion_recicla--two {
-        font-family: 'Pathway Extreme', sans-serif;
+        font-family: 'Sofia Sans Condensed', sans-serif;
         margin: 30px;
-        text-align: center;
-        font-size: 1.1rem;
+        text-align: justify;
+        font-size: 1.1em;
     }
 
     .description_seccion_recicla--three {
-        font-family: 'Pathway Extreme', sans-serif;
-        text-align: center;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        text-align: justify;
         margin: 30px;
-        font-size: 1.1rem;
-
+        font-size: 1.1em;
     }
 
     .description_three--span {
         font-family: 'Sofia Sans Condensed', sans-serif;
-        text-transform: uppercase;
-        font-size: 1.1rem;
-        color: #444444;
+        font-size: 1.1em;
+        color: #52a6b2;
         text-align: center;
+        font-weight: bold;
     }
 
     .description_seccion_recicla--four {
         text-align: center;
         font-family: 'Badoga', sans-serif;
         margin: 30px;
-        font-size: 1.2rem;
-        font-weight: bold;
+        font-size: 1.2em;
     }
 
     .secciondos_img {
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
     }
 
     .description_seccion_recicla--tips {
-        font-family: 'Pathway Extreme', sans-serif;
-        margin: 20px 30px;
-        font-size: 1.1rem;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        margin: 30px 30px;
+        font-size: 1.1em;
         text-align: justify;
-
     }
 
     .description_seccion_recicla--reflexion {
         width: 70vw;
         text-align: center;
         font-family: 'Badoga', sans-serif;
-        color: #e9d8c0;
+        color: #52a6b2;
         box-shadow: 0 .5rem 1.5rem #e7d9c6;
         border-radius: .5rem;
         border: .1rem solid #e9d8c0;
         margin: 20px auto;
-        font-size: 1.2rem;
-        font-weight: bold;
+        font-size: 1.2em;
         padding: 15px;
     }
 
     .span_medioambiente {
         font-size: 1.3rem;
-        color: #52a6b2;
+        color: #e9d8c0;
     }
 
     .description_seccion2--final {
@@ -1215,9 +1217,21 @@
         font-size: 1.3rem;
     }
 
+    /* .manos {
+        margin: 0;
+        width: 50px;
+        align-items: center;
+    } */
+
+    .recicla-img {
+        text-align: center;
+        align-items: center;
+    }
+
     .manos {
         height: 75px;
     }
+
 
     .container_ecoideas {
         display: flex;
@@ -1273,25 +1287,29 @@
     /*----------------------------------------------------*/
 
     .contenedor-contacto {
-        color: #52a6b2;
+        color: #444444;
         margin: 10px;
         position: relative;
         overflow: hidden;
         align-items: center;
     }
 
-    .contenedor-contacto img {
-        padding: 50px;
-        width: 100vw;
-        height: 100%;
-        opacity: 15%;
+    .contenedor-contacto::before {
+        content: "";
         position: absolute;
-        object-fit: cover;
-        z-index: 10;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url(/img/logos/logo-linkc.png);
+        background-position: center;
+        background-size: cover;
+        opacity: 0.15;
+        z-index: -1;
     }
 
     .contenedor-contacto--p {
-        padding: 50px;
+        padding: 30px;
         text-align: center;
         position: relative;
     }
@@ -1334,7 +1352,7 @@
     }
 
     .img-redes a {
-        color: #e9d8c0;
+        color: #444444;
         text-align: center;
         text-decoration: none;
         margin-right: 20px;
