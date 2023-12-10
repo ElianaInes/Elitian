@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "Pasta Dental",
+        "price": 200,
+        "image": "/img/seccion_higienedental/pasta_dental.jpg",
+        "description": "Esta variedad es excelente para pieles sensibles y reactivas. Calma irritaciones y es altamente eficaz contra el acné. Indicado para todo tipo de pieles, especialmente sensibles o secas.",
+        "ingredientes": "Ingredientes: Aceite de oliva de primera prensada en frio, aceite de coco, aceite de almendras orgánico, manteca de karité, cera de abejas de producción local, leche de avena."
+    },
+    {
+        "id": 2,
+        "name": "Cepillo de Banbú",
+        "price": 200,
+        "image": "/img/seccion_higienedental/cepillo_bambu.jpg",
+        "description": "Esta variedad es excelente para pieles sensibles y reactivas. Calma irritaciones y es altamente eficaz contra el acné. Indicado para todo tipo de pieles, especialmente sensibles o secas.",
+        "ingredientes": "Ingredientes: Aceite de oliva de primera prensada en frio, aceite de coco, aceite de almendras orgánico, manteca de karité, cera de abejas de producción local, leche de avena."
+    }
+]

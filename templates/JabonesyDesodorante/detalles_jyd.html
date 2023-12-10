@@ -12,7 +12,7 @@
     <div class="container_detalles_jyd">
         <div class="title_detalles_jyd">Detalles del Producto</div>
         <div class="detalles_jyd">
-            <div class="image_jaam">
+            <div class="image">
                 <img src="" alt="">
             </div>
             <div class="contenido_jyd">
@@ -42,7 +42,7 @@
     <script>
         // Importar datos de productos de jabonesydesodorantes.json
         let jabonesydesodorantes = null;
-    
+
         fetch('/datos/jabonesydesodorantes.json')
             .then(response => response.json())
             .then(data => {
@@ -66,7 +66,7 @@
             }
     
             // Si hay un producto, agregar datos del producto en HTML
-            detalles_jyd.querySelector('.image_jaam img').src = thisProduct.image;
+            detalles_jyd.querySelector('.image img').src = thisProduct.image;
             detalles_jyd.querySelector('.name').innerText = thisProduct.name;
             detalles_jyd.querySelector('.price').innerText = `$${thisProduct.price}`;
             detalles_jyd.querySelector('.descripcion_jyd').innerText = thisProduct.description;
