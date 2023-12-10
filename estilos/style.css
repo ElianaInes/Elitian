@@ -732,17 +732,6 @@
         transform: scale(1.1);
     }
 
-    /* .productos .contenedor .caja .iconos {
-        flex: 1;
-        position: relative;
-        text-align: center;
-        overflow: hidden;
-        cursor: pointer;
-        max-height: 100vh;
-        min-width: 100v;
-    }
-    */
-
     .productos .contenedor .caja .iconos {
         position: absolute;
         bottom: 0;
@@ -764,23 +753,7 @@
     .productos .contenedor .caja .imagen .iconos img {
         width: 24px;
         margin-bottom: 5px;
-
-        /* position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        background-color: #52a6b2;
-        padding: 10px;
-        transform: bottom(1%);
-        transition: transform 0.3s ease; */
     }
-
-    /* .productos .contenedor .caja:hover .imagen .iconos {
-        bottom: 0;
-    } */
 
     .productos .contenedor .caja .iconos a {
         text-decoration: none;
@@ -788,36 +761,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        /* max-width: 100%;
-        max-height: 100%;
-        height: 1.9rem;
-        line-height: 1.4rem;
-        font-size: 1.6rem;
-        width: 50%;
-        color: #52a6b2;
-        text-decoration: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: background-color 0.5s ease; */
     }
-
-    /* .productos .contenedor .caja .imagen .iconos a svg {
-        fill: currentColor;
-        /* Utiliza el color del texto como color de relleno del svg */
-
-
-    /* .productos .contenedor .caja .imagen .iconos a img {
-        max-width: 100%;
-        max-height: 100%;
-    } */
-
-    /* .productos .contenedor .caja .imagen .iconos a:hover {
-        background-color: #52a6b2;
-        color: #e9d8c0;
-    } */
 
     .productos .contenedor .caja .contenido {
         padding: 2rem;
@@ -875,10 +819,19 @@
         text-align: center;
     }
 
+    .social-icons a:hover {
+        color: #e9d8c0;
+    }
+
+    .informacion a:hover {
+        color: #e9d8c0;
+    }
+
     .social-icons img {
         width: 30px;
         height: 30px;
         margin-right: 10px;
+        background-color: #52a6b2;
     }
 
     .social-icons a {
@@ -946,24 +899,27 @@
 
 
     .contenedor-conocenos {
-        color: #52a6b2;
+        color: #444444;
+        align-items: center;
         position: relative;
-        overflow: hidden;
     }
 
-    .contenedor-conocenos img {
-        max-width: 100%;
-        height: 100%;
-        margin: 10px;
-        padding: 10px auto;
-        opacity: 18%;
+    .contenedor-conocenos::before {
+        content: "";
         position: absolute;
-        background-size: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url(/img/conocenos/vertical.png);
+        background-position: right;
+        background-size: cover;
+        opacity: 0.15;
+        z-index: -1;
     }
 
     .contenedor-conocenos--p {
-        padding: 50px;
-        /* overflow: hidden; */
+        padding: 30px;
     }
 
     .contenedor-conocenos h1,
@@ -971,6 +927,7 @@
         font-family: 'Badoga', sans-serif;
         text-align: center;
         line-height: 2;
+        color: #52a6b2;
     }
 
     .contenedor-conocenos p {
@@ -997,13 +954,6 @@
 
 
     /*---------------------------------------------------------------*/
-
-
-
-
-
-
-    /*---------------------------------------------------------------*/
     /*---------------------------------------------------------------*/
     /*                    Sec. ACEITES Y SERUMS                      */
     /*---------------------------------------------------------------*/
@@ -1024,6 +974,8 @@
     /*               Sec. JABONES Y DESODORANTES                     */
     /*---------------------------------------------------------------*/
     /*---------------------------------------------------------------*/
+
+
     .container_jyd {
         width: 100vw;
         background-image: url(/img/seccion_jabones/jabones\ naturales.jpg);
@@ -1044,12 +996,10 @@
         padding: 20px;
         font-family: 'Badoga', sans-serif;
         font-weight: bolder;
-
     }
 
     .ListaJyD .item_jyd .img_jyd {
         width: 80%;
-
     }
 
     .ListaJyD {
@@ -1155,29 +1105,31 @@
         overflow: hidden;
         align-items: center;
         justify-content: center;
-
+        color: #444444;
     }
 
-    .background_recicla {
-        max-width: 100%;
-        height: 100%;
-        margin: 0;
-        opacity: .2;
-        /* margin-top: -5px;
-        margin-left: 200px; */
-        padding: 35px 25px;
+    .container_recicla::before {
+        content: "";
         position: absolute;
-        overflow: hidden;
-        background-size: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url(/img/logos/logo-linkc.png);
+        background-position: center;
+        background-size: cover;
+        opacity: 0.15;
+        z-index: -1;
     }
+
 
     .title_seccion_recicla {
         text-align: center;
-        margin-top: 25px;
+        margin-top: 30px;
         color: #52a6b2;
         font-family: 'Badoga', sans-serif;
-        font-size: 2em;
-        font-weight: bold;
+        font-size: 1.5em;
+        line-height: 3;
     }
 
     .title_seccion_recicla span {
@@ -1187,92 +1139,99 @@
     .description_seccion_recicla--one {
         text-align: center;
         font-family: 'Sofia Sans Condensed', sans-serif;
-        color: #444444;
+        color: #52a6b2;
         margin: 20px auto;
-        font-size: 1.2rem;
+        font-size: 1.2em;
         text-transform: uppercase;
         width: 80vw;
         box-shadow: 0 .5rem 1.5rem #e7d9c6;
         border-radius: .5rem;
         border: .1rem solid #e9d8c0;
-        padding: 9px;
+        padding: 8px;
     }
 
     .description_seccion_recicla--two {
-        font-family: 'Pathway Extreme', sans-serif;
+        font-family: 'Sofia Sans Condensed', sans-serif;
         margin: 30px;
-        text-align: center;
-        font-size: 1.1rem;
+        text-align: justify;
+        font-size: 1.1em;
     }
 
     .description_seccion_recicla--three {
-        font-family: 'Pathway Extreme', sans-serif;
-        text-align: center;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        text-align: justify;
         margin: 30px;
-        font-size: 1.1rem;
-
+        font-size: 1.1em;
     }
 
     .description_three--span {
         font-family: 'Sofia Sans Condensed', sans-serif;
-        text-transform: uppercase;
-        font-size: 1.1rem;
+        font-size: 1.1em;
         color: #52a6b2;
         text-align: center;
+        font-weight: bold;
     }
 
     .description_seccion_recicla--four {
         text-align: center;
-        font-family: 'Sofia Sans Condensed', sans-serif;
+        font-family: 'Badoga', sans-serif;
         margin: 30px;
-        font-size: 1.3rem;
-        font-weight: bold;
+        font-size: 1.2em;
     }
 
     .secciondos_img {
-        width: 20px;
-        height: 20px;
-
-        align-items: ;
+        width: 15px;
+        height: 15px;
     }
 
     .description_seccion_recicla--tips {
-        font-family: 'Pathway Extreme', sans-serif;
-        margin: 20px 30px;
-        font-size: 1.2rem;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        margin: 30px 30px;
+        font-size: 1.1em;
         text-align: justify;
-
     }
 
     .description_seccion_recicla--reflexion {
         width: 70vw;
         text-align: center;
         font-family: 'Badoga', sans-serif;
-        color: black;
+        color: #52a6b2;
         box-shadow: 0 .5rem 1.5rem #e7d9c6;
         border-radius: .5rem;
         border: .1rem solid #e9d8c0;
         margin: 20px auto;
-        font-size: 1.3rem;
-        font-weight: bold;
+        font-size: 1.2em;
         padding: 15px;
     }
 
     .span_medioambiente {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+        color: #e9d8c0;
     }
 
     .description_seccion2--final {
         text-align: center;
-        font-family: 'Sofia Sans Condensed', sans-serif;
+        font-family: 'Badoga', sans-serif;
         text-decoration: solid;
-        margin-top: 20px;
-        font-size: 1.5rem;
+        margin-top: 50px;
+        font-size: 1.3rem;
+    }
+
+    /* .manos {
+        margin: 0;
+        width: 50px;
+        align-items: center;
+    } */
+
+    .recicla-img {
+        text-align: center;
+        align-items: center;
     }
 
     .manos {
         height: 75px;
     }
+
 
     .container_ecoideas {
         display: flex;
@@ -1327,8 +1286,91 @@
     /*----------------------------------------------------*/
     /*----------------------------------------------------*/
 
+    .contenedor-contacto {
+        color: #444444;
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+        align-items: center;
+    }
+
+    .contenedor-contacto::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url(/img/logos/logo-linkc.png);
+        background-position: center;
+        background-size: cover;
+        opacity: 0.15;
+        z-index: -1;
+    }
+
+    .contenedor-contacto--p {
+        padding: 30px;
+        text-align: center;
+        position: relative;
+    }
+
+    .titulo-contacto {
+        font-family: 'Badoga', sans-serif;
+        color: #52a6b2;
+        font-size: 1.4em;
+        text-align: center;
+        line-height: 3;
+    }
+
+    .subtitulo-contacto {
+        color: #52a6b2;
+        font-size: 1.2em;
+        margin-top: 20px;
+        font-family: 'Badoga', sans-serif;
+        text-align: center;
+    }
 
 
+    .contenedor-contacto p {
+        text-align: justify;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+    }
+
+    .contenedor-contacto--p h3 {
+        margin-top: 70px;
+        text-align: center;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+    }
+
+    .contenedor-contacto--p span {
+        position: relative;
+        line-height: 2;
+    } 
+
+    .img-redes {
+        align-items: center;
+    }
+
+    .img-redes a {
+        color: #444444;
+        text-align: center;
+        text-decoration: none;
+        margin-right: 20px;
+    }
+
+    .img-redes a:hover {
+        color: #52a6b2;
+    }
+
+    .img-redes img {
+        align-items: center;
+        max-width: 210px;
+        max-height: 1px;
+    }
+
+    .img-redes span {
+        font-size: 1.1em;
+    }
 }
 
 
