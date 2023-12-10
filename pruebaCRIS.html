@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/menu.css">
     <title>PRUEBA</title>
     <link rel="icon" type="image/x-icon" href="/img/logos/logo-linkc.png">
 
@@ -16,171 +16,178 @@
         }
 
         @media (min-width: 320px) and (max-width: 575px) {
-            .container_recicla {
-                width: 100vw;
-                height: 70vh;
-                position: relative;
+            .dropdown__icon_house {
+                height: 30px;
+            }
+
+            .dropdown__icon_elitianw {
+                margin: -13px;
+                height: 50px;
+            }
+
+            .dropdown__icon_product {
+                height: 30px;
+            }
+
+            .dropdown__icon_recicla {
+                height: 30px;
+            }
+
+            .dropdown__icon_email {
+                height: 27px;
+            }
+
+            .logo {
+                height: 60px;
+            }
+
+
+            .nav {
+                background-color: #ebcba0;
+
+
+                --img1: scale(1);
+                --img2: scale(0);
+            }
+
+            .nav:has(.menu__links:target) {
+                --img1: scale(0);
+                --img2: scale(1);
+
+                --clip: inset(0 0 0 0);
+
+            }
+
+
+            .menu__container {
+                width: 100%;
+                margin: 0 auto;
+                height: 70px;
+
+                display: grid;
+                grid-template-columns: max-content max-content;
+                grid-template-areas: "title img";
+                justify-content: space-between;
+                align-items: center;
+
                 overflow: hidden;
 
+
             }
 
-            .background_recicla {
-                width: 50%;
-                height: 100%;
-                opacity: .1;
-                margin-top: -5px;
-                margin-left: 400px;
-                padding: 35px 25px;
+            .enlace {
+                margin-top: 5px;
+                margin-left: 10px;
+                grid-area: title;
+            }
+
+            .nav__menu {
+                grid-area: img;
                 position: relative;
+                z-index: 10;
+
+                transform: var(--img1);
             }
 
-            .title_seccion_recicla {
-                text-align: center;
-                margin-top: 25px;
-                color: #52a6b2;
-                font-family: 'Badoga', sans-serif;
-                font-size: 3rem;
-                font-weight: bold;
+            .nav__menu--second {
+                transform: var(--img2);
             }
 
-            .title_seccion_recicla--second {
-                color: #e9d8c0;
+            .nav__icon {
+                width: 30px;
+                display: block;
+                margin-right: 10px;
             }
 
-            .description_seccion_recicla--one {
-                text-align: center;
-                font-family: 'Sofia Sans Condensed', sans-serif;
-                color: #444444;
-                margin: 20px 300px;
-                font-size: 1.5rem;
-                text-transform: uppercase;
-                width: 70vw;
-                box-shadow: 0 .5rem 1.5rem #e7d9c6;
-                border-radius: .5rem;
-                border: .1rem solid #e9d8c0;
-                padding: 8px;
-            }
 
-            .description_seccion_recicla--two {
-                font-family: 'Pathway Extreme', sans-serif;
-                margin: 30px 300px;
-                font-size: 1.3rem;
-            }
+            .menu__links {
+                position: absolute;
+                background-color: burlywood;
+                max-width: 300px;
+                width: 70%;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                padding: 1em;
 
-            .description_seccion_recicla--three {
-                font-family: 'Pathway Extreme', sans-serif;
-                margin: 20px 300px;
-                font-size: 1.3rem;
+                display: grid;
+                align-content: center;
+                gap: 1rem;
+
+                overflow-y: auto;
+
+                clip-path: var(--clip, inset(0 0 100% 100%));
+                transition: clip-path .5s;
+
+                z-index: 3;
 
             }
 
-            .description_three--span {
-                font-family: 'Sofia Sans Condensed', sans-serif;
-                text-transform: uppercase;
-                font-size: 1.2rem;
-                color: #52a6b2;
+            .menu__item {
+                list-style: none;
             }
 
-            .description_seccion_recicla--four {
-                text-align: center;
-                font-family: 'Sofia Sans Condensed', sans-serif;
-                margin: 15px;
-                font-size: 1.5rem;
-                font-weight: bold;
-            }
 
-            .secciondos_img {
-                height: 35px;
-                padding: 3px 0;
-            }
 
-            .description_seccion_recicla--tips {
-                font-family: 'Pathway Extreme', sans-serif;
-                margin: 20px 300px;
-                font-size: 1.2rem;
-            }
-
-            .description_seccion_recicla--reflexion {
-                width: 70vw;
-                text-align: center;
-                font-family: 'Badoga', sans-serif;
+            .menu__link {
                 color: black;
-                box-shadow: 0 .5rem 1.5rem #e7d9c6;
-                border-radius: .5rem;
-                border: .1rem solid #e9d8c0;
-                margin: 20px 300px;
-                font-size: 1.5rem;
-                font-weight: bold;
-                padding: 15px;
-            }
+                padding: 1em 5px;
+                text-decoration: none;
 
-            .span_medioambiente {
-                font-size: 1.8rem;
-            }
-
-            .description_seccion2--final {
-                text-align: center;
-                font-family: 'Sofia Sans Condensed', sans-serif;
-                text-decoration: solid;
-                margin-top: 15px;
-                font-size: 1.5rem;
-            }
-
-            .container_recicla img {
-                text-align: center;
-                align-items: center;
-            }
-
-            .manos {
-                height: 75px;
-            }
-
-            .container_ecoideas {
                 display: flex;
-                justify-content: space-around;
                 align-items: center;
-                margin-top: 20px;
-            }
+                gap: .6rem;
 
-            .tarjeta-ecoidea {
-                text-align: center;
-                width: 400px;
-                /* Tamaño deseado para las tarjetas */
-                margin-bottom: 10px;
-                padding: 15px;
-                border: 1px solid #e9d8c0;
-                border-radius: 8px;
+                position: relative;
+                /* background-color:var(--bg, transparent);
+        border: 6px; */
 
             }
 
-            .container_ecoideas {
-                transition: transform 0.1s ease;
+            .menu__item--show:has(:checked) {
+                --rows: 1fr;
+                --rotate: rotate(180deg);
+                /* --bg: #e6b678; */
             }
 
-            .container_ecoideas:hover {
-                transform: scale(1.05);
+            .checkbox {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                cursor: pointer;
             }
 
-            .ecoidea_img {
-                height: 3rem;
-                width: 3rem;
-                margin-bottom: 1rem;
+            .menu__arrow {
+                height: 12px;
+                margin-left: auto;
+                transform: var(--rotate, 0);
+                transition: .2s transform;
             }
 
-            .ecoideas {
-                height: 4px;
-                width: 75px;
-                background-color: #52a6b2;
-                margin: 0 auto 1rem auto;
+            .list_productos {
+                display: grid;
+                grid-template-rows: var(--rows, 0fr);
+                transition: .3s grid-template-rows;
+
             }
 
-            .ecoidea_title {
-                font-family: 'Sofia Sans Condensed', sans-serif;
-                font-weight: bold;
+            .menu__nesting {
+                overflow: hidden;
             }
 
-            .ecoidea_desc {
-                font-family: 'Sofia Sans Condensed', sans-serif;
+            .menu__inside {
+                width: 85%;
+                list-style: none;
+                margin-left: auto;
+
+            }
+
+            .menu__link--inside {
+                padding: 10px 0;
+                display: block;
+                color: black;
+                text-decoration: none;
             }
         }
     </style>
@@ -188,72 +195,92 @@
 
 <body>
     <header>
-        <!-- Contenido del encabezado si es necesario -->
+        <nav class="nav">
+            <section class="menu__container">
+
+                <a href="index.html" class="enlace">
+                    <img src="img/logos/logo-linkb.png" alt="logo" class="logo">
+                </a>
+
+                <a href="#menu" class="nav__menu">
+                    <img src="img/icons/menu.svg" class="nav__icon">
+                </a>
+
+                <a href="#" class="nav__menu nav__menu--second">
+                    <img src="img/icons/close.svg" class="nav__icon">
+                </a>
+
+                <ul class="menu__links" id="menu">
+
+                    <li class="menu__item">
+                        <a href="index.html" class="menu__link"> <img src="img/icons/house.svg"
+                                class="dropdown__icon_house">
+                            <span class="dropdown__span">Inicio</span></a>
+                    </li>
+
+                    <li class="menu__item">
+                        <a href="#" class="menu__link"><img src="img/icons/elitianb.svg"
+                                class="dropdown__icon_elitianw">
+                            <span class="dropdown__span"> Conocénos</span></a>
+                    </li>
+
+                    <li class="menu__item menu__item--show">
+                        <a href="#" class="menu__link"><img src="img/icons/product.svg" class="dropdown__icon_product">
+                            <span class="dropdown__span">Productos</span><img src="img/icons/down.svg"
+                                class="menu__arrow">
+
+                            <input type="checkbox" class="checkbox">
+
+                        </a>
+
+                        <div class="list_productos">
+
+                            <ul class="menu__nesting">
+                                <li class="menu__inside">
+                                    <a href="#" class="menu__link menu__link--inside">Aguas y Tónicos</a>
+                                </li>
+                                <li class="menu__inside">
+                                    <a href="#" class="menu__link menu__link--inside">Aceites y Serums</a>
+                                </li>
+                                <li class="menu__inside">
+                                    <a href="#" class="menu__link menu__link--inside">Balsamos y Cremas</a>
+                                </li>
+                                <li class="menu__inside">
+                                    <a href="#" class="menu__link menu__link--inside">Cuidado Capilar</a>
+                                </li>
+                                <li class="menu__inside">
+                                    <a href="#" class="menu__link menu__link--inside">Jabones y Desodorantes</a>
+                                </li>
+                                <li class="menu__inside">
+                                    <a href="#" class="menu__link menu__link--inside">Higiene Dental</a>
+                                </li>
+                                <li class="menu__inside">
+                                    <a href="#" class="menu__link menu__link--inside">Protección Solar</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </li>
+
+                    <li class="menu__item">
+                        <a href="recicla.html" class="menu__link"> <img src="img/icons/recicla.svg"
+                                class="dropdown__icon_recicla">
+                            <span class="dropdown__span">Reciclá</span></a>
+                    </li>
+
+                    <li class="menu__item">
+                        <a href="#" class="menu__link"><img src="img/icons/email.svg" class="dropdown__icon_email">
+                            <span class="dropdown__span">Contacto</span></a>
+                    </li>
+
+                </ul>
+
+            </section>
+
+        </nav>
     </header>
 
-    <section class="container_recicla">
 
-        <div>
-            <img class="background_recicla" src="img/logos/logo-linkc.png" alt="logo grafico de elitian" loading="lazy">
-        </div>
-
-        <h1 class="title_seccion_recicla">Recicla <span class="title_seccion_recicla--second">&</span> Reutiliza</h1>
-        <!-- <h2 class="subtitle_seccion2">¿Nos Ayudas?</h2> -->
-
-        <h3 class="description_seccion_recicla--one">Recibimos los envases de los productos que vendemos.</h3>
-        <h3 class="description_seccion_recicla--two">El vidrio puede ser reutilizado y los plásticos enviamos a
-            reciclar.
-        </h3>
-
-        <h3 class="description_seccion_recicla--three"> Para colaborar con el reciclado y la reutilizacion de los
-            envases,
-            te
-            pedimos entregarlos <span class="description_three--span"> <b>previamente lavados</b></span>.</h3>
-
-        <h3 class="description_seccion_recicla--four">Tips para el lavado:</h3>
-
-        <h4 class="description_seccion_recicla--tips"> <img class="secciondos_img" src="img/icons/png/eco-check.png">
-            Cuando
-            terminaste
-            de usar el producto enjuágalo dos veces con agua caliente, esto facilita la remoción de aceites
-            vegetales.Esto
-            también ayudará a remover la etiqueta.
-        </h4>
-
-        <h4 class="description_seccion_recicla--tips"> <img class="secciondos_img" src="img/icons/png/eco-check.png">
-            Realizá un tercer
-            enjuague con un agente limpiador como jabón o un detergente y agua caliente.</h4>
-
-        <h4 class="description_seccion_recicla--tips"> <img class="secciondos_img" src="img/icons/png/eco-check.png">
-            Deja
-            secar el
-            envase boca abajo sobre una superficie que respire y listo para entregar en la siguiente compra!</h4>
-
-        <h4 class="description_seccion_recicla--reflexion"><b>Creemos en la importancia de comprometernos activamente en
-                el
-                cuidado del <span class="span_medioambiente">Medio Ambiente</span>.</b></h4>
-
-        <h4 class="description_seccion2--final">¿Te sumás al compromiso?</h4>
-
-        <div class="img"> <img class="manos" src="img/icons/manosc.svg" alt="">
-        </div>
-
-        <!------------------------------------------>
-        <!-- Aca comienza Seccion tarjeta ecoideas-->
-        <!------------------------------------------>
-
-        <section class="container_ecoideas">
-            <div class="tarjeta-ecoidea">
-                <a href=""><img class="ecoidea_img" src="img/icons/ideaeco.svg" alt="ecoidea.svg"></a>
-                <div class="ecoideas"></div>
-                <span class="ecoidea_title">ECOIDEAS</span>
-                <p class="ecoidea_desc">Conoce maneras de reciclar tus envases de vidrio</p>
-            </div>
-
-        </section>
-
-
-    </section>
 
 
     <footer class="footer">
@@ -287,129 +314,6 @@
             </div>
         </div>
     </footer>
-</body>
-
-</html>
-
-
-
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/style.css">
-    <title>PRUEBA</title>
-    <link rel="icon" type="image/x-icon" href="/img/logos/logo-linkc.png">
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .main-container {
-            max-width: 100%;
-            margin: 0 auto;
-            padding: 20px; /* Ajusta el espacio interno según tus necesidades */
-        }
-
-        @media (min-width: 320px) and (max-width: 575px) {
-            .container_recicla {
-                width: 100vw;
-                height: 70vh;
-                position: relative;
-                overflow: hidden;
-            }
-
-            /* ... (resto de estilos) */
-
-            .footer {
-                padding: 20px; /* Ajusta el espacio interno según tus necesidades */
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <div class="main-container">
-        <header>
-            <!-- Contenido del encabezado si es necesario -->
-        </header>
-
-        <section class="container_recicla">
-            <!-- Contenido de la sección reciclaje y reutilización -->
-        </section>
-
-        <footer class="footer">
-            <!-- Contenido del pie de página -->
-        </footer>
-    </div>
-</body>
-
-</html>
-
-
-
-<!-- ------------------------------------------------- -->
-
-
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/style.css">
-    <title>PRUEBA</title>
-    <link rel="icon" type="image/x-icon" href="/img/logos/logo-linkc.png">
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .main-container {
-            max-width: 100%;
-            margin: 0 auto;
-            padding: 20px; /* Ajusta el espacio interno según tus necesidades */
-        }
-
-        @media (min-width: 320px) and (max-width: 575px) {
-            .container_recicla {
-                width: 100vw;
-                height: 70vh;
-                position: relative;
-                overflow: hidden;
-            }
-
-            /* ... (resto de estilos) */
-
-            .footer {
-                padding: 20px; /* Ajusta el espacio interno según tus necesidades */
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <div class="main-container">
-        <header>
-            <!-- Contenido del encabezado si es necesario -->
-        </header>
-
-        <section class="container_recicla">
-            <!-- Contenido de la sección reciclaje y reutilización -->
-        </section>
-
-        <footer class="footer">
-            <!-- Contenido del pie de página -->
-        </footer>
-    </div>
 </body>
 
 </html>

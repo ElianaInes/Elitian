@@ -1,6 +1,6 @@
 INDEX
     -Menu
-    -Carrusel
+    -Carrusel (cris) LISTO
     -Categoría
         Aguas y Tónicos
         Aceites y Serums
@@ -9,7 +9,7 @@ INDEX
         Jabones
         Higiene Dental
         Protección Solar
-    -Ofertas
+    -Ofertas (cris) LISTO
 CONOCENOS (cris) LISTO
 PRODUCTOS (eli)
         Aguas y Tónicos
@@ -22,4 +22,4 @@ PRODUCTOS (eli)
         Protección Solar
 RECICLA (eli) LISTO
 CONTACTO (eli) LISTO
-    -Footer
+    -Footer (cris) LISTO

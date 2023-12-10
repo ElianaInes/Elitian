@@ -10,7 +10,7 @@
 }
 
 
-header {
+/* header {
     font-family: 'Badoga', sans-serif;
 }
 
@@ -29,7 +29,7 @@ header {
 }
 
 .dropdown__icon_elitianw {
-    /* margin: -13px; */
+    margin: -13px;
     height: 50px;
     display: none;
 }
@@ -164,7 +164,7 @@ header {
 .menu__img {
     display: block;
     width: 36px;
-}
+} */
 
 @media (min-width: 320px) and (max-width: 575px){
     .dropdown__icon_house {
@@ -201,14 +201,11 @@ header {
         --img2: scale(0);
     }
 
-    .nav:has(.menu__links:target) {
+    .nav:target .menu__links {
         --img1: scale(0);
         --img2: scale(1);
-
         --clip: inset(0 0 0 0);
-
-    }
-
+    }    
 
     .menu__container {
         width: 100%;
