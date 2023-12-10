@@ -31,6 +31,15 @@
                     </button>
                 </div>
                 <div class="descripcion_ays"></div>
+                <div class="ingredientes"></div>
+                <div class="usos"></div>
+                <div class="uso_item-1"></div>
+                <div class="uso_item-2"></div>
+                <div class="uso_item-3"></div>
+                <div class="conservacion_ays"></div>
+                <div class="cantidad_ays"></div>
+                <div class="productos-naturales"></div>
+                <div class="stock_ays"></div>
             </div>
         </div>
         <div class="title_similar">Productos similares</div>
@@ -68,6 +77,18 @@
             detalles_ays.querySelector('.name').innerText = thisProduct.name;
             detalles_ays.querySelector('.price').innerText = `$${thisProduct.price}`;
             detalles_ays.querySelector('.descripcion_ays').innerText = thisProduct.description;
+            detalles_ays.querySelector('.ingredientes').innerText = thisProduct.ingredientes;
+            detalles_ays.querySelector('.usos') .innerText = thisProduct.uso;
+            detalles_ays.querySelector('.uso_item-1').innerText = thisProduct.uso1;
+            detalles_ays.querySelector('.uso_item-2').innerText = thisProduct.uso2;
+            detalles_ays.querySelector('.uso_item-3').innerText = thisProduct.uso3;
+            detalles_ays.querySelector('.conservacion_ays').innerText = thisProduct.conservacion;
+            detalles_ays.querySelector('.cantidad_ays').innerText = thisProduct.cantidad;
+            detalles_ays.querySelector('.productos-naturales').innerText = thisProduct.producto;
+            detalles_ays.querySelector('.stock_ays').innerText = thisProduct.stock;
+            
+
+
         }
 
         // Productos similares
@@ -77,7 +98,7 @@
 
 
             // Filtrar productos similares
-            let productosSimilares = aceitesyserumsfilter(value => value.id != aceitesyserumsid);
+            let productosSimilares = aceitesyserums.filter(value => value.id != aceitesyserumsid);
 
             // Mostrar productos similares en HTML
             productosSimilares.forEach(productoSimilar => {
