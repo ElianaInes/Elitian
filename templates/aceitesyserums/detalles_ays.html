@@ -37,6 +37,62 @@
         <div class="ListaAyS"></div>
     </div>
 
+    <script>
+        // Importar datos de productos de aceitesyserums.json
+        let aceitesyserums = null;
+
+        fetch('/datos/aceitesyserums.json')
+            .then(response => response.json())
+            .then(data => {
+                aceitesyserums = data;
+                showDetail();
+                showSimilarProducts();
+            })
+            .catch(error => {
+                console.error('Error al cargar los datos:', error);
+            });
+
+        // Encontrar este producto
+        function showDetail() {
+            let detalles_ays = document.querySelector('.detalles_ays');
+            let aceitesyserumsid = new URLSearchParams(window.location.search).get('id');
+            let thisProduct = aceitesyserums.find(value => value.id == aceitesyserumsid);
+
+            // Si no hay producto con el ID, redirigir al inicio
+            if (!thisProduct) {
+                window.location.href = "/";
+            }
+
+            // Si hay un producto, agregar datos del producto en HTML
+            detalles_ays.querySelector('.image img').src = thisProduct.image;
+            detalles_ays.querySelector('.name').innerText = thisProduct.name;
+            detalles_ays.querySelector('.price').innerText = `$${thisProduct.price}`;
+            detalles_ays.querySelector('.descripcion_ays').innerText = thisProduct.description;
+        }
+
+        // Productos similares
+        function showSimilarProducts() {
+            let ListaAyS = document.querySelector('.ListaAyS');
+            let aceitesyserumsid = new URLSearchParams(window.location.search).get('id');
+
+
+            // Filtrar productos similares
+            let productosSimilares = aceitesyserumsfilter(value => value.id != aceitesyserumsid);
+
+            // Mostrar productos similares en HTML
+            productosSimilares.forEach(productoSimilar => {
+                let nuevoProducto = document.createElement('a');
+                nuevoProducto.href = `/templates/aceitesyserums/detalles_ays.html?id=${productoSimilar.id}`;
+                nuevoProducto.classList.add('item');
+                nuevoProducto.innerHTML = `
+                <img src="${productoSimilar.image}">
+                <h2>${productoSimilar.name}</h2>
+                <div class="price">${productoSimilar.price}</div>`;
+                ListaAyS.appendChild(nuevoProducto);
+            });
+        }
+    </script>
+
 
 </body>
 
