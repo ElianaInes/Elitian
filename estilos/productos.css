@@ -4,9 +4,28 @@
     box-sizing: border-box;
 }
 
+.contenedor-conocenos {
+    color: #444444;
+    align-items: center;
+    position: relative;
+}
+
+.contenedor-conocenos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(/img/conocenos/vertical.png);
+    background-position: right;
+    background-size: cover;
+    opacity: 0.15;
+    z-index: -1;
+}
 
 
-.container_jyd {
+/* .container_jyd {
     width: 100vw;
     background-image: url(/img/seccion_jabones/jabones\ naturales.jpg);
     background-position: center;
@@ -87,4 +106,4 @@
 .image_jaam {
     width: 90vw;
     height: 50vh;
-}
+} */
