@@ -74,9 +74,11 @@
                 let nuevoProducto = document.createElement('a');
                 nuevoProducto.href = '/templates/JabonesyDesodorante/detalles_jyd.html?id=' + jabonesydesodorantes.id;
                 nuevoProducto.classList.add('item_jyd');
-                nuevoProducto.innerHTML = `<img class="img_jyd" src="${jabonesydesodorantes.image}">
+                nuevoProducto.innerHTML = `
+                <img class="img_jyd" src="${jabonesydesodorantes.image}">
                 <h2 class="name_jyd">${jabonesydesodorantes.name}</h2>
-                <div class="price_jyd">${jabonesydesodorantes.price}</div>`;
+                <div class="price_jyd">${jabonesydesodorantes.price}</div>
+                <div class="stock">${jabonesydesodorantes.stock}</div>`;
 
 
                 //agregar este elemento en la clase lista_jyd

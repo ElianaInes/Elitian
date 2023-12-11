@@ -1,109 +1,177 @@
-*{
+@import url(' https://fonts.cdnfonts.com/css/badoga ');
+/* familia de fuentes: 'Badoga', sans-serif; */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.contenedor-conocenos {
-    color: #444444;
-    align-items: center;
-    position: relative;
-}
-
-.contenedor-conocenos::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url(/img/conocenos/vertical.png);
-    background-position: right;
-    background-size: cover;
-    opacity: 0.15;
-    z-index: -1;
-}
+@media (min-width: 320px) and (max-width: 575px) {
 
 
-/* .container_jyd {
-    width: 100vw;
-    background-image: url(/img/seccion_jabones/jabones\ naturales.jpg);
-    background-position: center;
-    background-size: cover;
-    margin: auto;
-    padding-top: 15px;
-    padding-bottom: 50px;
-    text-align: center;
-}
+    .container_jyd {
+        align-items: center;
+        position: relative;
+        width: 100vw;
+        padding: 20px 0;
+    }
 
-.item_jyd {
-    text-decoration: none;
-}
+    .container_jyd::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /* background-image: url(/img/logos/logo-linkc.png);
+        background-position: center;
+        background-size: cover;
+        opacity: 0.3; */
+        z-index: -1;
+    }
 
-.title_jyd {
-    font-size: 1.5em;
-    padding: 20px;
-    font-family: 'Badoga', sans-serif;
-    font-weight: bolder;
-}
+    .item_jyd {
+        text-decoration: none;
+        font-family: 'Badoga', sans-serif;
+    }
 
-.ListaJyD .item_jyd .img_jyd {
-    width: 80%;
-}
+    .title_jyd {
+        font-family: 'Badoga', sans-serif;
+        text-align: center;
+        font-size: 1.3em;
+        line-height: 2.5;
+        font-weight: bold;
+    }
 
-.ListaJyD {
-    display: grid;
-    grid-auto-columns: repeat(1, 1fr);
-    gap: 20px;
-}
+    .ListaJyD .item_jyd .img_jyd {
+        width: 100%;
+        object-fit: contain;
+        object-position: top;
+        z-index: 1; /* Asegura que img_jyd esté detrás de otros elementos */
+    }
 
-.ListaJyD .item_jyd {
-    width: 250px;
-    height: 250px;
-    margin: auto;
-    background-color: #e9d8c079;
-    padding: 15px;
-    border: solid 1px black;
-    filter: drop-shadow(0 5px 5px rgb(177, 173, 173));
-    border-radius: 20px;
-}
+    .ListaJyD {
+        display: grid;
+        grid-auto-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
 
-.img_jyd {
-    width: 250px;
-    height: 150px;
-    border: solid .3px black;
-    border-radius: 20px;
-    filter: drop-shadow(0 5px 5px rgb(177, 173, 173));
-}
+    .ListaJyD .item_jyd {
+        position: relative; /* Añade posición relativa para que z-index funcione */
+        width: 250px;
+        height: 250px;
+        margin: auto;
+        border: solid 1px white;
+        box-shadow: 0 .8rem 2rem #e9d8c0;
+        text-align: center;
+        z-index: 2; /* Asegura que .item_jyd esté detrás de .stock */
+    }
 
-.name_jyd {
-    color: #000000;
-    font-family: 'Sofia Sans Condensed', sans-serif;
-    font-size: 1em;
-    padding: 8px;
-}
+    .name_jyd {
+        font-family: 'Badoga', sans-serif;
+        font-weight: bolder;
+        color: black;
+        font-size: 1em;
+        letter-spacing: 1px;
+    }
+    
+
+    .price_jyd {
+        font-family: 'Badoga', sans-serif;
+        color: black;
+        font-size: 1.2em;
+        letter-spacing: 2px;
+        text-align: center;
+        padding: 10px;
+    }
 
 
-.price_jyd {
-    color: black;
-    font-weight: bolder;
-    font-size: 1.3em;
-    letter-spacing: 2px;
-}
 
-.ListaJyD .item_jyd:hover {
-    background-color: #e9d8c0;
-}
+    .ListaJyD .item_jyd .img_jyd:hover{
+        background-color: #52a6b2;
+        opacity: 0.5;
+    }
+
+    .ListaJyD .item_jyd:hover {
+        background-color: #52a6b2;
+    }
+
+
+    .stock {
+        position: absolute; /* Añade posición absoluta para que z-index funcione */
+        font-family:  'Sofia Sans Condensed', sans-serif;;
+        margin: -215px 0;
+        padding: 3px;
+        color: white;
+        font-size: 0.8em;
+        font-weight: bold;
+        text-align: center;
+        background-color: #52a6b2;
+        z-index: 3; /* Asegura que .stock esté en la parte superior */
+    }
+
+
+/* DETALLES */
 
 .container_detalles_jyd {
-    width: 100vw;
-    margin: auto;
-    padding-top: 15px;
-    padding-bottom: 50px;
+    overflow-x: hidden; 
+    display: flex;
+    flex-direction: column; /* Cambiado a columna para apilar elementos verticalmente */
+    align-items: center;
     text-align: center;
+    position: relative;
+    width: 100vw;
+    padding: 20px 0;
 }
 
-.image_jaam {
+.title_detalles_jyd {
+    color: #52a6b2;
+    font-family: 'Badoga', sans-serif;
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 2.5;
+    font-weight: bold;
+}
+
+.image_detalles img {
     width: 90vw;
-    height: 50vh;
-} */
+    height: 200px;
+    border-radius: 20px;
+    box-shadow: 0 .5rem 1rem rgb(114, 114, 114);
+}
+
+.contenido_jyd {
+    text-align: left;
+    margin-left: 15px;
+}
+
+.contenido_jyd .name {
+    font-family: 'Badoga', sans-serif;
+    font-size: 1.3em;
+    padding-top: 15px;
+    color: #52a6b2;
+    font-weight: bold;
+}
+
+.contenido_jyd .price {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.contenido_jyd .descripcion,
+.contenido_jyd .ingredientes,
+.contenido_jyd .conservacion,
+.contenido_jyd .cantidad,
+.contenido_jyd .productos-naturales {
+    text-align: justify;
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    margin: 15px;
+}
+
+/* PRODUCTOS SIMILARES */
+
+/* PRODUCTOS SIMILARES */
+
+
+}

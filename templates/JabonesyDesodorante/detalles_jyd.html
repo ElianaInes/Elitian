@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/estilos/style.css">
+    <link rel="stylesheet" href="/estilos/productos.css">
 </head>
 
 <body>
     <div class="container_detalles_jyd">
         <div class="title_detalles_jyd">Detalles del Producto</div>
         <div class="detalles_jyd">
-            <div class="image">
+            <div class="image_detalles">
                 <img src="" alt="">
             </div>
             <div class="contenido_jyd">
                 <h1 class="name"></h1>
                 <div class="price"></div>
                 <div class="button_jyd">
-                    <button>check Out</button>
+
                     <button>Comprar
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" height="16" width="18"
@@ -30,7 +30,7 @@
                         </span>
                     </button>
                 </div>
-                <div class="descripcion_jyd"></div>
+                <div class="descripcion"></div>
                 <div class="ingredientes"></div>
                 <div class="usos"></div>
                 <div class="uso_item-1"></div>
@@ -75,10 +75,10 @@
             }
     
             // Si hay un producto, agregar datos del producto en HTML
-            detalles_jyd.querySelector('.image img').src = thisProduct.image;
+            detalles_jyd.querySelector('.image_detalles img').src = thisProduct.image;
             detalles_jyd.querySelector('.name').innerText = thisProduct.name;
             detalles_jyd.querySelector('.price').innerText = `$${thisProduct.price}`;
-            detalles_jyd.querySelector('.descripcion_jyd').innerText = thisProduct.description;
+            detalles_jyd.querySelector('.descripcion').innerText = thisProduct.description;
             detalles_jyd.querySelector('.ingredientes').innerText = thisProduct.ingredientes;
             detalles_jyd.querySelector('.usos').innerText = thisProduct.uso;
             detalles_jyd.querySelector('.uso_item-1').innerText = thisProduct.uso1;
@@ -106,7 +106,7 @@
                 nuevoProducto.innerHTML = `
                     <img src="${productoSimilar.image}">
                     <h2>${productoSimilar.name}</h2>
-                    <div class="price">${productoSimilar.price}</div>`;
+                    <div class="price_similares">${productoSimilar.price}</div>`;
                 ListaJyD.appendChild(nuevoProducto);
             });
         }
