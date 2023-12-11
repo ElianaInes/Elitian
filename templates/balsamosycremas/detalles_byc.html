@@ -30,6 +30,15 @@
                     </button>
                 </div>
                 <div class="descripcion_byc"></div>
+                <div class="ingredientes"></div>
+                <div class="usos"></div>
+                <div class="uso_item-1"></div>
+                <div class="uso_item-2"></div>
+                <div class="uso_item-3"></div>
+                <div class="conservacion"></div>
+                <div class="cantidad"></div>
+                <div class="productos-naturales"></div>
+                <div class="stock"></div>
             </div>
         </div>
         <div class="title_similar">Productos Similares</div>
@@ -69,6 +78,15 @@
             detalles_byc.querySelector('.name').innerText = thisProduct.name;
             detalles_byc.querySelector('.price').innerText = `$${thisProduct.price}`;
             detalles_byc.querySelector('.descripcion_byc').innerText = thisProduct.description;
+            detalles_byc.querySelector('.ingredientes').innerText = thisProduct.ingredientes;
+            detalles_byc.querySelector('.usos').innerText = thisProduct.uso;
+            detalles_byc.querySelector('.uso_item-1').innerText = thisProduct.uso1;
+            detalles_byc.querySelector('.uso_item-2').innerText = thisProduct.uso2;
+            detalles_byc.querySelector('.uso_item-3').innerText = thisProduct.uso3;
+            detalles_byc.querySelector('.conservacion').innerText = thisProduct.conservacion;
+            detalles_byc.querySelector('.cantidad').innerText = thisProduct.cantidad;
+            detalles_byc.querySelector('.productos-naturales').innerText = thisProduct.producto;
+            detalles_byc.querySelector('.stock').innerText = thisProduct.stock;
         }
     
         // Productos similares

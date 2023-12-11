@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/estilos/style.css">
 </head>
+
 <body>
     <div class="container_detalles_ayt">
         <div class="title_detalles_ayt">Detalles de Producto</div>
@@ -29,6 +31,15 @@
                     </button>
                 </div>
                 <div class="descripcion_ayt"></div>
+                <div class="ingredientes"></div>
+                <div class="usos"></div>
+                <div class="uso_item-1"></div>
+                <div class="uso_item-2"></div>
+                <div class="uso_item-3"></div>
+                <div class="conservacion"></div>
+                <div class="cantidad"></div>
+                <div class="productos-naturales"></div>
+                <div class="stock"></div>
             </div>
         </div>
         <div class="title_similar">Productos Similares</div>
@@ -37,60 +48,70 @@
     </div>
 
     <script>
-                // Importar datos de productos de aguasytonicos.json
-                let aguasytonicos = null;
+        // Importar datos de productos de aguasytonicos.json
+        let aguasytonicos = null;
 
-fetch('/datos/aguasytonicos.json')
-    .then(response => response.json())
-    .then(data => {
-        aguasytonicos = data;
-        showDetail();
-        showSimilarProducts();
-    })
-    .catch(error => {
-        console.error('Error al cargar los datos:', error);
-    });
+        fetch('/datos/aguasytonicos.json')
+            .then(response => response.json())
+            .then(data => {
+                aguasytonicos = data;
+                showDetail();
+                showSimilarProducts();
+            })
+            .catch(error => {
+                console.error('Error al cargar los datos:', error);
+            });
 
-// Encontrar este producto
-function showDetail() {
-    let detalles_ayt = document.querySelector('.detalles_ayt');
-    let aguasytonicosid = new URLSearchParams(window.location.search).get('id');
-    let thisProduct = aguasytonicos.find(value => value.id == aguasytonicosid);
+        // Encontrar este producto
+        function showDetail() {
+            let detalles_ayt = document.querySelector('.detalles_ayt');
+            let aguasytonicosid = new URLSearchParams(window.location.search).get('id');
+            let thisProduct = aguasytonicos.find(value => value.id == aguasytonicosid);
 
-    // Si no hay producto con el ID, redirigir al inicio
-    if (!thisProduct) {
-        window.location.href = "/";
-    }
+            // Si no hay producto con el ID, redirigir al inicio
+            if (!thisProduct) {
+                window.location.href = "/";
+            }
 
-    // Si hay un producto, agregar datos del producto en HTML
-    detalles_ayt.querySelector('.image img').src = thisProduct.image;
-    detalles_ayt.querySelector('.name').innerText = thisProduct.name;
-    detalles_ayt.querySelector('.price').innerText = `$${thisProduct.price}`;
-    detalles_ayt.querySelector('.descripcion_ayt').innerText = thisProduct.description;
-}
+            // Si hay un producto, agregar datos del producto en HTML
+            detalles_ayt.querySelector('.image img').src = thisProduct.image;
+            detalles_ayt.querySelector('.name').innerText = thisProduct.name;
+            detalles_ayt.querySelector('.price').innerText = `$${thisProduct.price}`;
+            detalles_ayt.querySelector('.descripcion_ayt').innerText = thisProduct.description;
+            detalles_ayt.querySelector('.ingredientes').innerText = thisProduct.ingredientes;
+            detalles_ayt.querySelector('.usos').innerText = thisProduct.uso;
+            detalles_ayt.querySelector('.uso_item-1').innerText = thisProduct.uso1;
+            detalles_ayt.querySelector('.uso_item-2').innerText = thisProduct.uso2;
+            detalles_ayt.querySelector('.uso_item-3').innerText = thisProduct.uso3;
+            detalles_ayt.querySelector('.conservacion').innerText = thisProduct.conservacion;
+            detalles_ayt.querySelector('.cantidad').innerText = thisProduct.cantidad;
+            detalles_ayt.querySelector('.productos-naturales').innerText = thisProduct.producto;
+            detalles_ayt.querySelector('.stock').innerText = thisProduct.stock;
+        }
 
-// Productos similares
-function showSimilarProducts() {
-    let ListaAyT = document.querySelector('.ListaAyT');
-    let aguasytonicosid = new URLSearchParams(window.location.search).get('id');
+        // Productos similares
+        function showSimilarProducts() {
+            let ListaAyT = document.querySelector('.ListaAyT');
+            let aguasytonicosid = new URLSearchParams(window.location.search).get('id');
 
 
-    // Filtrar productos similares
-    let productosSimilares = aguasytonicos.filter(value => value.id != aguasytonicosid);
+            // Filtrar productos similares
+            let productosSimilares = aguasytonicos.filter(value => value.id != aguasytonicosid);
 
-    // Mostrar productos similares en HTML
-    productosSimilares.forEach(productoSimilar => {
-        let nuevoProducto = document.createElement('a');
-        nuevoProducto.href = `/templates/aguasytonicos/detalles_ayt.html?id=${productoSimilar.id}`;
-        nuevoProducto.classList.add('item');
-        nuevoProducto.innerHTML = `
+            // Mostrar productos similares en HTML
+            productosSimilares.forEach(productoSimilar => {
+                let nuevoProducto = document.createElement('a');
+                nuevoProducto.href = `/templates/aguasytonicos/detalles_ayt.html?id=${productoSimilar.id}`;
+                nuevoProducto.classList.add('item');
+                nuevoProducto.innerHTML = `
         <img src="${productoSimilar.image}">
         <h2>${productoSimilar.name}</h2>
         <div class="price">${productoSimilar.price}</div>`;
-        ListaAyT.appendChild(nuevoProducto);
-    });
-}
+                ListaAyT.appendChild(nuevoProducto);
+            });
+        }
     </script>
-    
+
 </body>
+
 </html>

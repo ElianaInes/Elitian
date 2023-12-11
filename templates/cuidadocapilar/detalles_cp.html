@@ -29,6 +29,15 @@
                     </button>
                 </div>
                 <div class="descripcion_cp"></div>
+                <div class="ingredientes"></div>
+                <div class="usos"></div>
+                <div class="uso_item-1"></div>
+                <div class="uso_item-2"></div>
+                <div class="uso_item-3"></div>
+                <div class="conservacion"></div>
+                <div class="cantidad"></div>
+                <div class="productos-naturales"></div>
+                <div class="stock"></div>
             </div>
         </div>
         <div class="title_similar">Productos Similares</div>
@@ -68,6 +77,15 @@
             detalles_cp.querySelector('.name').innerText = thisProduct.name;
             detalles_cp.querySelector('.price').innerText = `$${thisProduct.price}`;
             detalles_cp.querySelector('.descripcion_cp').innerText = thisProduct.description;
+            detalles_cp.querySelector('.ingredientes').innerText = thisProduct.ingredientes;
+            detalles_cp.querySelector('.usos').innerText = thisProduct.uso;
+            detalles_cp.querySelector('.uso_item-1').innerText = thisProduct.uso1;
+            detalles_cp.querySelector('.uso_item-2').innerText = thisProduct.uso2;
+            detalles_cp.querySelector('.uso_item-3').innerText = thisProduct.uso3;
+            detalles_cp.querySelector('.conservacion').innerText = thisProduct.conservacion;
+            detalles_cp.querySelector('.cantidad').innerText = thisProduct.cantidad;
+            detalles_cp.querySelector('.productos-naturales').innerText = thisProduct.producto;
+            detalles_cp.querySelector('.stock').innerText = thisProduct.stock;
         }
     
         // Productos similares

@@ -31,6 +31,15 @@
                     </button>
                 </div>
                 <div class="descripcion_jyd"></div>
+                <div class="ingredientes"></div>
+                <div class="usos"></div>
+                <div class="uso_item-1"></div>
+                <div class="uso_item-2"></div>
+                <div class="uso_item-3"></div>
+                <div class="conservacion"></div>
+                <div class="cantidad"></div>
+                <div class="productos-naturales"></div>
+                <div class="stock"></div>
             </div>
         </div>
         <div class="title_similar">Productos similares</div>
@@ -70,6 +79,15 @@
             detalles_jyd.querySelector('.name').innerText = thisProduct.name;
             detalles_jyd.querySelector('.price').innerText = `$${thisProduct.price}`;
             detalles_jyd.querySelector('.descripcion_jyd').innerText = thisProduct.description;
+            detalles_jyd.querySelector('.ingredientes').innerText = thisProduct.ingredientes;
+            detalles_jyd.querySelector('.usos').innerText = thisProduct.uso;
+            detalles_jyd.querySelector('.uso_item-1').innerText = thisProduct.uso1;
+            detalles_jyd.querySelector('.uso_item-2').innerText = thisProduct.uso2;
+            detalles_jyd.querySelector('.uso_item-3').innerText = thisProduct.uso3;
+            detalles_jyd.querySelector('.conservacion').innerText = thisProduct.conservacion;
+            detalles_jyd.querySelector('.cantidad').innerText = thisProduct.cantidad;
+            detalles_jyd.querySelector('.productos-naturales').innerText = thisProduct.producto;
+            detalles_jyd.querySelector('.stock').innerText = thisProduct.stock;
         }
     
         // Productos similares
