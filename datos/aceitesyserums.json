@@ -112,6 +112,118 @@
         "producto": "Producto 100% artesanal.",
 
         "stock": "Sin Stock"
+    },
+    {
+        "id": 5,
+
+        "name": "Aceite Esencial de Lavanda",
+
+        "price": 200,
+
+        "image": "/img/seccion_aceitesyserums/Aceite_Lavanda.jpg",
+
+        "description": "Destacan sus propiedades relajantes y sedantes. Muy utilizado para calmar y regenerar irritaciones y quemaduras. Es antiséptico y antiinflamatorio.",
+
+        "ingredientes": "",
+
+        "uso": "Modo de Uso:",
+
+        "uso1": "Se puede aplicar directamente en la piel, vehiculizarlo en un aceite vegetal para realizar masajes y poner un par de gotitas en la almohada para un buen descanso.",
+
+        "uso2": "",
+        "uso3": "",
+        
+        "conservacion": "",
+        
+        "cantidad": "Cantidad neta: 10cc.",
+
+        "producto": "Producto 100% artesanal.",
+
+        "stock": "Sin Stock"
+    },
+    {
+        "id": 6,
+
+        "name": "Aceite Esencial de Tea Tree",
+
+        "price": 200,
+
+        "image": "/img/seccion_aceitesyserums/Aceite_TeaTree.jpg",
+
+        "description": "Muy reconocido por sus propiedades antibacterianas, antiséptico, desinfectante, seborregulador y antiinflamatorio.",
+
+        "ingredientes": "",
+
+        "uso": "Modo de Uso:",
+
+        "uso1": "Se puede aplicar directamente en la piel o vehiculizarlo con un aceite vegetal.",
+
+        "uso2": "",
+        "uso3": "",
+        
+        "conservacion": "",
+        
+        "cantidad": "Cantidad neta: 10cc.",
+
+        "producto": "Producto 100% artesanal.",
+
+        "stock": "Sin Stock"
+    },
+    {
+        "id": 7,
+
+        "name": "Aceite Esencial de Eucalipto",
+
+        "price": 200,
+
+        "image": "/img/seccion_aceitesyserums/Aceite_Eucalipto.jpg",
+
+        "description": "Antiinflamatorio, antibacteriano, refrescante, expectorante.",
+
+        "ingredientes": "",
+
+        "uso": "Modo de Uso:",
+
+        "uso1": "Respirar profundamente para un efecto expectorante o vehiculizar en un aceite vegetal. No aplicar directamente en la piel sin aceite portador.",
+
+        "uso2": "",
+        "uso3": "",
+        
+        "conservacion": "",
+        
+        "cantidad": "Cantidad neta: 10cc.",
+
+        "producto": "Producto 100% artesanal.",
+
+        "stock": "Sin Stock"
+    },
+    {
+        "id": 8,
+
+        "name": "Aceite Esencial de Romero",
+
+        "price": 200,
+
+        "image": "/img/seccion_aceitesyserums/Aceite_Romero.jpg",
+
+        "description": "Propiedades astringentes, antiinflamatorias, estimulante de la circulación y la memoria.",
+
+        "ingredientes": "",
+
+        "uso": "Modo de Uso:",
+
+        "uso1": "No aplicar directo en la piel, vehiculizar en un aceite vegetal para realizar masajes o para estimular el crecimiento del cabello.",
+
+        "uso2": "",
+        "uso3": "",
+        
+        "conservacion": "",
+        
+        "cantidad": "Cantidad neta: 10cc.",
+
+        "producto": "Producto 100% artesanal.",
+
+        "stock": "Sin Stock"
     }
 
 ]
