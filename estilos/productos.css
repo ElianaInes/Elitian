@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container_jyd {
+    width: 100vw;
+    background-image: url(/img/seccion_jabones/jabones\ naturales.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.item_jyd {
+    text-decoration: none;
+}
+
+.title_jyd {
+    font-size: 1.5em;
+    padding: 20px;
+    font-family: 'Badoga', sans-serif;
+    font-weight: bolder;
+}
+
+.ListaJyD .item_jyd .img_jyd {
+    width: 80%;
+}
+
+.ListaJyD {
+    display: grid;
+    grid-auto-columns: repeat(1, 1fr);
+    gap: 20px;
+}
+
+.ListaJyD .item_jyd {
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    background-color: #e9d8c079;
+    padding: 15px;
+    border: solid 1px black;
+    filter: drop-shadow(0 5px 5px rgb(177, 173, 173));
+    border-radius: 20px;
+}
+
+.img_jyd {
+    width: 250px;
+    height: 150px;
+    border: solid .3px black;
+    border-radius: 20px;
+    filter: drop-shadow(0 5px 5px rgb(177, 173, 173));
+}
+
+.name_jyd {
+    color: #000000;
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    font-size: 1em;
+    padding: 8px;
+}
+
+
+.price_jyd {
+    color: black;
+    font-weight: bolder;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+}
+
+.ListaJyD .item_jyd:hover {
+    background-color: #e9d8c0;
+}
+
+.container_detalles_jyd {
+    width: 100vw;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.image_jaam {
+    width: 90vw;
+    height: 50vh;
+}
