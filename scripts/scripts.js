@@ -60,33 +60,3 @@ function reiniciarIntervalo() {
     reanudarCarrusel();
 }
 
-
-//importar informacion desde aceitesyserums.json
-let aceitesyserums = null
-fetch('/datos/aceitesyserums.json')
-    .then(response => response.json())
-    .then(data => {
-        aceitesyserums = data;
-        console.log(aceitesyserums);
-        addDataToHTML();
-    })
-
-//agregar datos de productos en HTML
-let ListaAyS = document.querySelector('.ListaAyS');
-function addDataToHTML() {
-    aceitesyserums.forEach(aceitesyserums => {
-        //crear item de nuevo producto
-        let nuevoProducto = document.createElement('a');
-        nuevoProducto.href = '/templates/aceitesyserums/detalles_ays.html?id=' + aceitesyserums.id;
-        nuevoProducto.classList.add('item_ays');
-        nuevoProducto.innerHTML = `<img class="img_ays" src="${aceitesyserums.image}">
-        <h2 class="name_ays">${aceitesyserums.name}</h2>
-        <div class="price_ays">${aceitesyserums.price}</div>`;
-
-
-        //agregar este elemento en la clase lista_jyd
-        ListaAyS.appendChild(nuevoProducto);
-
-    })
-}
-
