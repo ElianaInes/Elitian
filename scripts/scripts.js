@@ -7,7 +7,7 @@ iniciarCarrusel();
 function iniciarCarrusel() {
     intervaloCarrusel = setInterval(function tiempo() {
         muestraCarrusel(indice += 1);
-    }, 3000);
+    }, 3500);
 }
 
 function avanzaCarrusel(n) {

@@ -52,32 +52,29 @@
               <ul class="menu__nesting">
                 <li class="menu__inside">
                 </li>
-                <a href="/templates/aguasytonicos/aguasytonicos.html" class="menu__link menu__link--inside">~ Aguas y
+                <a href="/templates/aguasytonicos/aguasytonicos.html" class="menu__link menu__link--inside">» Aguas y
                   Tónicos</a>
                 <li class="menu__inside">
                 </li>
-                <a href="/templates/aceitesyserums/aceitesyserums.html" class="menu__link menu__link--inside">~ Aceites
+                <a href="/templates/aceitesyserums/aceitesyserums.html" class="menu__link menu__link--inside">» Aceites
                   y Serums</a>
                 <li class="menu__inside">
                 </li>
-                <a href="/templates/balsamosycremas/balsamosycremas.html" class="menu__link menu__link--inside">~
-                  Balsamos y Cremas</a>
+                <a href="/templates/balsamosycremas/balsamosycremas.html" class="menu__link menu__link--inside">» Balsamos y Cremas</a>
                 <li class="menu__inside">
                 </li>
-                <a href="/templates/cuidadocapilar/cuidadocapilar.html" class="menu__link menu__link--inside">~ Cuidado
-                  Capilar</a>
+                <a href="/templates/cuidadocapilar/cuidadocapilar.html" class="menu__link menu__link--inside">» Cuidado Capilar</a>
                 <li class="menu__inside">
                 </li>
                 <a href="templates/JabonesyDesodorante/jabonesydesodorantes.html"
-                  class="menu__link menu__link--inside">~ Jabones y Desodorantes</a>
+                  class="menu__link menu__link--inside">» Jabones y Desodorantes</a>
                 <li class="menu__inside">
                 </li>
-                <a href="/templates/higienedental/higienedental.html" class="menu__link menu__link--inside">~ Higiene
+                <a href="/templates/higienedental/higienedental.html" class="menu__link menu__link--inside">» Higiene
                   Dental</a>
                 <li class="menu__inside">
                 </li>
-                <a href="/templates/proteccionsolar/proteccionsolar.html" class="menu__link menu__link--inside">~
-                  Protección Solar</a>
+                <a href="/templates/proteccionsolar/proteccionsolar.html" class="menu__link menu__link--inside">» Protección Solar</a>
               </ul>
 
             </div>
@@ -107,7 +104,7 @@
 
   <!--Aqui comienza el carrusel. SECCION 2-->
 
-  <div class="carrusel-contenedor">
+  <div class="carrusel-contenedor" onmouseover="detenerCarrusel()" onmouseout="reanudarCarrusel()">
     <div class="miCarrusel fade">
       <img src="img/productos/.jpg" alt="acondicionador" loading="lazy">
 
@@ -130,7 +127,7 @@
     </div>
 
     <div class="direcciones">
-      <a href="#" class="atras" onclick="retrocedeCarrusel(-1)">&#10094</a>
+      <a href="#" class="atras" onclick="retrocedeCarrusel(1)">&#10094</a>
       <a href="#" class="adelante" onclick="avanzaCarrusel(1)">&#10095</a>
     </div>
     <div class="barras">
@@ -239,7 +236,7 @@
                 <img src="img/icons/whatsappw.svg" alt="icono de whatsapp">
                 <span>¡Lo quiero!</span>
               </a>
-              <a class="oferta-enlace" href="#">
+              <a class="oferta-enlace" href="#" target="_blank">
                 <img src="img/icons/share-solid.svg" alt="icono de compartir">
                 <span>Compartir</span>
               </a>
