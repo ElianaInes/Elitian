@@ -10,16 +10,15 @@
 
 <body>
     <div class="container_detalles_jyd">
-        <div class="title_detalles_jyd">Detalles del Producto</div>
+        <div class="title_detalles_jyd">Jabones y Desodorantes</div>
         <div class="detalles_jyd">
             <div class="image_detalles">
                 <img src="" alt="">
             </div>
-            <div class="contenido_jyd">
+            <div class="">
                 <h1 class="name"></h1>
                 <div class="price"></div>
                 <div class="button_jyd">
-
                     <button>Comprar
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" height="16" width="18"
@@ -42,8 +41,8 @@
                 <div class="stock"></div>
             </div>
         </div>
-        <div class="title_similar">Productos similares</div>
-        <div class="ListaJyD"></div>
+        <div class="title_similar">Productos Similares</div>
+        <div class="ListaJyD_detalles"></div>
       
 
     </div>
@@ -92,7 +91,7 @@
     
         // Productos similares
         function showSimilarProducts() {
-            let ListaJyD = document.querySelector('.ListaJyD');
+            let ListaJyD = document.querySelector('.ListaJyD_detalles');
             let jabonesydesodorantesid = new URLSearchParams(window.location.search).get('id');
     
             // Filtrar productos similares
@@ -102,10 +101,10 @@
             productosSimilares.forEach(productoSimilar => {
                 let nuevoProducto = document.createElement('a');
                 nuevoProducto.href = `/templates/JabonesyDesodorante/detalles_jyd.html?id=${productoSimilar.id}`;
-                nuevoProducto.classList.add('item');
+                nuevoProducto.classList.add('item_similares');
                 nuevoProducto.innerHTML = `
-                    <img src="${productoSimilar.image}">
-                    <h2>${productoSimilar.name}</h2>
+                    <img class="img_detalles" src="${productoSimilar.image}">
+                    <h2 class="name_detalles">${productoSimilar.name}</h2>
                     <div class="price_similares">${productoSimilar.price}</div>`;
                 ListaJyD.appendChild(nuevoProducto);
             });

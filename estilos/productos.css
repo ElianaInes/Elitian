@@ -7,124 +7,326 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
+.container_jyd {
+    max-width: 90vw;
+    margin: auto;
+    padding-top: 10px;
+    text-align: center;
+}
+
+
+
+.title_jyd {
+    font-size: 1.5em;
+    font-family: 'Badoga', sans-serif;
+    color: #52a6b2;
+    font-weight: bolder;
+    padding: 2px 0;
+}
+
+.ListaJyD .item_jyd .img_jyd {
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: 70%;
+
+}
+
+
+
+.ListaJyD {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+
+}
+
+.ListaJyD .item_jyd {
+    background-color: white;
+    width: 70vw;
+    height: 200px;
+    border: 1px solid black;
+    filter: drop-shadow(0 5px 5px rgb(109, 106, 106));
+
+}
+
+.ListaJyD .item_jyd .name_jyd {
+    font-family: 'Badoga', sans-serif;
+    font-size: 0.9em;
+    font-weight: bolder;
+    color: black;
+    margin-top: 10px;
+}
+
+.ListaJyD .item_jyd .price_jyd {
+    letter-spacing: 3px;
+    font-size: 0.9em;
+    color: black;
+    font-weight: bold;
+}
+
+.ListaJyD .item_jyd .stock {
+    background-color: #52a6b2;
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    position: absolute;
+    padding: 3px;
+    color: black;
+    font-size: 0.6em;
+    margin-top: -170px;
+}
+
+.item_jyd:hover {
+    background-color: #52a6b2;
+}
+
+/*DETALLES*/
+
+.detalles_jyd {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    text-align: left;
+}
+
+.title_detalles_jyd {
+    font-family: 'Badoga', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    color: #52a6b2;
+    font-weight: bolder;
+    padding: 15px 0;
+}
+
+.detalles_jyd .image_detalles img {
+    width: 100%;
+}
+
+.detalles_jyd .name {
+    font-size: xx-large;
+    padding: 40px 0 0 0;
+    margin: 0 0 10px 0;
+}
+
+.detalles_jyd .price {
+    font-weight: bold;
+    font-size: x-large;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.detalles_jyd .button_jyd {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.detalles_jyd .button_jyd button {
+    background-color: #52a6b2;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 20px;
+    font-size: large;
+}
+
+.detalles_jyd .button_jyd svg {
+    width: 15px;
+}
+
+.detalles_jyd .button_jyd span {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin-left: 20px;
+    color: rgb(231, 231, 231);
+}
+
+.detalles_jyd .button_jyd button:nth-child(2) {
+    background-color: violet;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px blue;
+}
+
+.detalles_jyd .descripcion {
+    font-weight: 300;
+}
+
+.container_detalles_jyd .ListaJyD_detalles {
+    display: flex;
+    overflow-x: auto;
+    /* Agrega desplazamiento horizontal cuando sea necesario */
+    gap: 15px;
+    padding: 10px;
+    /* Añadido para espacio entre el contenido y los bordes */
+}
+
+.container_detalles_jyd .ListaJyD_detalles .img_detalles {
+    width: 130px;
+    height: 130px;
+}
+
 @media (min-width: 320px) and (max-width: 575px) {
-
-
-    .container_jyd {
-        align-items: center;
-        position: relative;
-        width: 100vw;
-        padding: 20px 0;
-    }
-
-    .container_jyd::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        /* background-image: url(/img/logos/logo-linkc.png);
-        background-position: center;
-        background-size: cover;
-        opacity: 0.3; */
-        z-index: -1;
-    }
-
-    .item_jyd {
-        text-decoration: none;
-        font-family: 'Badoga', sans-serif;
-    }
-
-    .title_jyd {
-        font-family: 'Badoga', sans-serif;
-        text-align: center;
-        font-size: 1.3em;
-        line-height: 2.5;
-        font-weight: bold;
-    }
-
-    .ListaJyD .item_jyd .img_jyd {
-        width: 100%;
-        object-fit: contain;
-        object-position: top;
-        z-index: 1; /* Asegura que img_jyd esté detrás de otros elementos */
-    }
-
     .ListaJyD {
         display: grid;
-        grid-auto-columns: repeat(1, 1fr);
-        gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
     }
 
-    .ListaJyD .item_jyd {
-        position: relative; /* Añade posición relativa para que z-index funcione */
-        width: 250px;
-        height: 250px;
-        margin: auto;
-        border: solid 1px white;
-        box-shadow: 0 .8rem 2rem #e9d8c0;
+
+
+    /*DETALLES*/
+
+    .detalles_jyd {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+        text-align: left;
+    }
+
+
+
+    .detalles_jyd .name {
+        font-size: 1.3em;
         text-align: center;
-        z-index: 2; /* Asegura que .item_jyd esté detrás de .stock */
-    }
-
-    .name_jyd {
         font-family: 'Badoga', sans-serif;
-        font-weight: bolder;
-        color: black;
-        font-size: 1em;
-        letter-spacing: 1px;
-    }
-    
-
-    .price_jyd {
-        font-family: 'Badoga', sans-serif;
-        color: black;
-        font-size: 1.2em;
-        letter-spacing: 2px;
-        text-align: center;
+        color: #52a6b2;
+        font-weight: bold;
         padding: 10px;
     }
 
 
 
-    .ListaJyD .item_jyd .img_jyd:hover{
-        background-color: #52a6b2;
-        opacity: 0.5;
-    }
-
-    .ListaJyD .item_jyd:hover {
-        background-color: #52a6b2;
-    }
-
-
-    .stock {
-        position: absolute; /* Añade posición absoluta para que z-index funcione */
-        font-family:  'Sofia Sans Condensed', sans-serif;;
-        margin: -215px 0;
-        padding: 3px;
-        color: white;
-        font-size: 0.8em;
-        font-weight: bold;
+    .detalles_jyd .price {
         text-align: center;
-        background-color: #52a6b2;
-        z-index: 3; /* Asegura que .stock esté en la parte superior */
+        font-size: 1.6em;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
     }
 
 
-/* DETALLES */
+    .detalles_jyd .button_jyd {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
 
+    .detalles_jyd .button_jyd button {
+        background-color: #52a6b2;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 20px;
+        font-size: large;
+    }
+
+    .detalles_jyd .button_jyd svg {
+        width: 15px;
+    }
+
+    .detalles_jyd .button_jyd span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+    }
+
+    .detalles_jyd .button_jyd button:nth-child(2) {
+        background-color: violet;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 10px 20px blue;
+    }
+
+
+    .detalles_jyd .descripcion {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        margin: 15px;
+        text-align: justify;
+        font-weight: bold;
+    }
+
+    .ingredientes,
+    .usos,
+    .uso_item-1,
+    .uso_item-2,
+    .uso_item-3,
+    .conservacion,
+    .cantidad,
+    .productos-naturales {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        margin: 15px;
+        text-align: justify;
+    }
+
+    .detalles_jyd .stock{
+        background-color: #52a6b2;
+        color: #fff;
+        padding: 5px;
+        font-size: 1em;
+        position: absolute;
+        text-align: end;
+        margin-left: 15px;
+    }
+
+    /*SIMILARES*/
+
+    .title_similar{
+        width: 100%;
+        background-color: #52a6b2;
+        text-align: center;
+        color: #fff;
+        padding: 5px;
+        margin-top: 50px;
+        font-size: 1.5em;
+        font-family: 'Badoga', sans-serif;
+    }
+
+    .ListaJyD_detalles {
+        display: flex;
+        gap: 15px;
+        padding: 10px;
+        /* Añadido para espacio entre el contenido y los bordes */
+    }
+
+    .ListaJyD_detalles .name_detalles{
+        font-size: 1em;
+        color: black;
+        text-align: center;
+    }
+
+.price_similares{
+        text-align: center;
+        color: #52a6b2;
+    }
+
+
+}
+
+
+/* 
 .container_detalles_jyd {
     overflow-x: hidden; 
     display: flex;
-    flex-direction: column; /* Cambiado a columna para apilar elementos verticalmente */
-    align-items: center;
+    flex-direction: column;  */
+/* Cambiado a columna para apilar elementos verticalmente */
+/* align-items: center;
     text-align: center;
     position: relative;
     width: 100vw;
-    padding: 20px 0;
-}
+    padding: 20px 0; */
 
+/* 
 .title_detalles_jyd {
     color: #52a6b2;
     font-family: 'Badoga', sans-serif;
@@ -167,7 +369,7 @@
     text-align: justify;
     font-family: 'Sofia Sans Condensed', sans-serif;
     margin: 15px;
-}
+} */
 
 /* PRODUCTOS SIMILARES */
 
