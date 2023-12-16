@@ -60,3 +60,33 @@ function reiniciarIntervalo() {
     reanudarCarrusel();
 }
 
+
+function enviarPorWhatsApp() {
+    // Número de teléfono al que enviar el mensaje
+    let numeroTelefono = '3624527435';
+
+    // Mensaje predefinido
+    let mensaje = '¡Hola! Estoy interesado en el producto Aceite puro de almendras. ¿Puedes darme más información?';
+
+    // Crear el enlace para abrir WhatsApp
+    let enlaceWhatsApp = `https://wa.me/${numeroTelefono}?text=${encodeURIComponent(mensaje)}`;
+
+    // Abrir la aplicación de WhatsApp
+    window.open(enlaceWhatsApp, '_blank');
+}
+
+function compartirProducto() {
+    // Contenido que se compartirá (puedes personalizarlo)
+    let contenidoCompartir = `
+        ¡Descubre esta oferta!
+        Aceite puro de almendras
+        Precio: $1200AR (Antes $1000AR)
+        ¡Aprovecha el descuento!
+    `;
+
+    // Crear enlace para compartir
+    let enlaceCompartir = `whatsapp://send?text=${encodeURIComponent(contenidoCompartir)}`;
+
+    // Abrir la aplicación de WhatsApp para compartir
+    window.location.href = enlaceCompartir;
+}

@@ -836,12 +836,13 @@
         position: absolute;
         margin-top: 10px;
         margin-left: 10px;
-        padding: 5px;
+        padding: 10px;
         font-size: 1.5em;
         color: #e9d8c0;
         background-color: #52a6b2;
         z-index: 100;
-        border-radius: .4rem;
+        border-radius: 10em;
+        border-style: dotted 5px;
     }
 
     .oferta-imagen-1 {
