@@ -63,7 +63,7 @@ function reiniciarIntervalo() {
 
 function enviarPorWhatsApp() {
     // Número de teléfono al que enviar el mensaje
-    let numeroTelefono = '3624527435';
+    let numeroTelefono = '+5493624527435';
 
     // Mensaje predefinido
     let mensaje = '¡Hola! Estoy interesado en el producto Aceite puro de almendras. ¿Puedes darme más información?';

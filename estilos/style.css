@@ -827,7 +827,7 @@
         box-shadow: 1rem 1rem 1rem #e9d8c0;
         border-radius: .7rem;
         border: .1rem solid #e9d8c0;
-        height: 370px;
+        height: 380px;
         overflow: hidden;
         margin: 15px 0;
     }
@@ -842,7 +842,8 @@
         background-color: #52a6b2;
         z-index: 100;
         border-radius: 10em;
-        border-style: dotted 5px;
+        border-style: dotted;
+        border-width: .1em;
     }
 
     .oferta-imagen-1 {
@@ -867,22 +868,22 @@
 
     .oferta-iconos {
         background-color: #52a6b2;
-        height: 60px;
-        padding: 10px;
+        height: 50px;
+        padding: 5px;
         display: flex;
         justify-content: space-around;
         transform: translateY(0);
         /* transition: transform 0.3s; */
-        margin-top: -63px;
-        opacity: 0;
-        transition: .5s;
-    }
-
-    .oferta-iconos:hover {
-        transform: translateY(0);
+        margin-top: -54px;
         opacity: 1;
         transition: .5s;
     }
+
+    /* .oferta-iconos:hover {
+        transform: translateY(0);
+        opacity: 1;
+        transition: .5s;
+    } */
 
     .oferta-iconos img {
         width: 22px;
