@@ -625,7 +625,6 @@
             "img4 img4"
             "img5 img6"
             "img7 img6";
-        /* "img8 img9" */
     }
 
     .galeria-imagen {
@@ -716,19 +715,11 @@
         grid-area: img7;
     }
 
-    /* .galeria-imagen--g8 {
-        grid-area: img8;
-    }
-
-    .galeria-imagen--g9 {
-        grid-area: img9;
-    } */
-
     .galeria-img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        /* opacity: 90%; */
+        opacity: 80%;
         /* transition: transform 0.5s ease; */
         transform: transition(-50%, -50%);
     }
@@ -827,7 +818,7 @@
         box-shadow: 1rem 1rem 1rem #e9d8c0;
         border-radius: .7rem;
         border: .1rem solid #e9d8c0;
-        height: 380px;
+        height: 400px;
         overflow: hidden;
         margin: 15px 0;
     }
@@ -847,18 +838,18 @@
     }
 
     .oferta-imagen-1 {
-        background-image: url(/img/seccion_aceitesyserums/Aceite_Almendras.jpg);
+        background-image: url(/img/ofertas_combos/IMG_3315.jpg);
         background-position: center;
         background-size: cover;
         width: 100%;
-        height: 300px;
+        height: 330px;
         transition: .5s ease;
     }
 
     .ofimg-1 {
         object-fit: cover;
         width: 100%;
-        height: 300px;
+        height: 330px;
     }
 
     .oferta-imagen-1 .ofimg-1:hover {
@@ -891,18 +882,18 @@
     }
 
     .oferta-imagen-2 {
-        background-image: url(/img/seccion_aguasytonicos/AguaRosas.jpg);
+        background-image: url(/img/ofertas_combos/protectorsolar\(1\).jpg);
         background-position: center;
         background-size: cover;
         width: 100%;
-        height: 300px;
+        height: 330px;
         transition: .5s ease;
     }
 
     .ofimg-2 {
         object-fit: cover;
         width: 100%;
-        height: 300px;
+        height: 330px;
     }
 
     .oferta-imagen-2 .ofimg-2:hover {
@@ -911,11 +902,11 @@
     }
 
     .oferta-imagen-3 {
-        background-image: url(/img/seccion_balsamosycremas/balsamo_expectorante.jpg);
+        background-image: url(/img/ofertas_combos/IMG_2739.jpg);
         background-position: center;
         background-size: cover;
         width: 100%;
-        height: 300px;
+        height: 330px;
         transition: .5s ease;
     }
 
@@ -923,7 +914,7 @@
         object-fit: cover;
         object-position: top;
         width: 100%;
-        height: 300px;
+        height: 330px;
     }
 
     .oferta-imagen-3 .ofimg-3:hover {
