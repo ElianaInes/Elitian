@@ -1,0 +1,31 @@
+{% load static %}
+
+<div class="carrusel-contenedor" onmouseover="detenerCarrusel()" onmouseout="reanudarCarrusel()">
+    <div class="miCarrusel fade">
+      <a href="{% url 'tienda_categoria' slug='jabones-y-desodorantes' %}">
+        <img src="{% static 'images/tienda/banners/banner-jaboncitos.png' %}" alt="banner de jaboncitos" loading="lazy">
+      </a>
+    </div>
+<div class="miCarrusel fade">
+  <img src="{% static 'images/tienda/banners/banner-medios.png' %}" alt="banner de medios de pagos" loading="lazy">
+</div>
+<div class="miCarrusel fade">
+  <img src="{% static 'images/tienda/banners/banner-horarios.png' %}" alt="banner de horarios" loading="lazy">
+</div>
+<div class="miCarrusel fade">
+  <a href="{% url 'blog' %}">
+    <img src="{% static 'images/tienda/banners/banner-blog.png' %}" alt="banner del blog" loading="lazy">
+  </a>
+</div>
+
+<div class="direcciones">
+  <a href="#" class="atras" onclick="retrocedeCarrusel(1)">&#10094</a>
+  <a href="#" class="adelante" onclick="avanzaCarrusel(1)">&#10095</a>
+</div>
+<div class="barras">
+  <span class="barra active" onclick="posicionCarrusel(1)"></span>
+  <span class="barra" onclick="posicionCarrusel(2)"></span>
+  <span class="barra" onclick="posicionCarrusel(3)"></span>
+  <span class="barra" onclick="posicionCarrusel(4)"></span>
+</div>
+</div>

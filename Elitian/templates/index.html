@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Tienda Elitian {% endblock title %}
+
+{% block contenido %}
+
+{% include "whatsapp.html" %}
+<!--Aqui comienza el carrusel. SECCION 2-->
+
+{% include "carrusel.html" %}
+
+<!--Aqui comienza la galeria de imágenes por categorías. SECCION 3-->
+
+
+{% include "galeria.html" %}
+
+  
+
+<!--Aqui comienza las ofertas/productos destacados. SECCION 4-->
+
+<main class="main-caracteristicas">
+  <section class="caracteristicas-contenido">
+    <div class="tarjeta-contenido">
+      <img src="{% static 'images/icons/truck-fast-solid.svg' %}" alt="envio gratis condiciones" loading="lazy">
+      <div class="contenido-destacado"></div>
+      <span>Envío gratis</span>
+      <p>En compras superiores a $12000.- <br>(todo Resistencia)</p>
+    </div>
+
+    <div class="tarjeta-contenido">
+      <img src="{% static 'images/icons/leaf-solid.svg' %}" alt="regala ecologia" loading="lazy">
+      <div class="contenido-destacado"></div>
+      <span>Regalá <br>responsabilidad ambiental</span>
+      <p>Todos nuestros productos son respetuoso con el medio ambiente.</p>
+    </div>
+
+    <div class="tarjeta-contenido">
+      <img src="{% static 'images/icons/recycle-solid.svg' %}" alt="estas reciclando" loading="lazy">
+      <div class="contenido-destacado"></div>
+      <span>Ayudanos a cuidar el planeta</span>
+      <p>Recibimos los envases de los productos que vendemos. <a href="{% url 'recicla' %}">Más
+          info</a></p>
+    </div>
+
+    <div class="tarjeta-contenido">
+      <img src="{% static 'images/icons/cart-shopping-solid.svg' %}" alt="como comprar" loading="lazy">
+      <div class="contenido-destacado"></div>
+      <span>¿Cómo comprar?</span>
+      <p>Elegí tus productos y seleccioná "Lo quiero"</p>
+    </div>
+  </section>
+  
+  <br>
+
+  <section class="seccion-ofertas">
+    <h1 class="titulo-ofertas"> Ofertas imperdibles </h1>
+    <div class="contenedor-ofertas">
+
+      <!-- Procucto 1 -->
+      <div class="caja-ofertas">
+        <div class="oferta-porcentaje">-20%</div>
+        <div class="oferta-imagen-1">
+          <img class="ofimg-1" src="{% static 'images/tienda/cuidado-capilar/317.jpg' %}" alt="ofertas-img" loading="lazy">
+          <div class="oferta-iconos">
+            <a class="oferta-enlace" href="https://wa.me/+5493624527435" target="_blank">
+              <img src="static/images/icons/whatsappw.svg" alt="icono de whatsapp">
+              <span>¡Lo quiero!</span>
+            </a>
+            <a class="oferta-enlace" href="#" target="_blank">
+              <img src="{% static 'images/icons/share-solid.svg' %}" alt="icono de compartir">
+              <span>Compartir</span>
+            </a>
+          </div>
+        </div>
+        <div class="oferta-contenido">
+          <h1>Shampoo + Acondicionador</h1>
+          <div class="oferta-precio"> $ 7300 <span>$ 8030</span></div>
+        </div>
+      </div>
+
+      <!-- Procucto 2 -->
+      <div class="caja-ofertas">
+        <div class="oferta-porcentaje">-20%</div>
+        <div class="oferta-imagen-2">
+          <img class="ofimg-2" src="{% static 'images/tienda/protectores-y-repelentes/608.jpg' %}" alt="ofertas-img" loading="lazy">
+          <div class="oferta-iconos">
+            <a class="oferta-enlace" href="https://wa.me/+5493624527435" target="_blank">
+              <img src="{% static 'images/icons/whatsappw.svg' %}" alt="icono de whatsapp">
+              <span>¡Lo quiero!</span>
+            </a>
+            <a class="oferta-enlace" href="#">
+              <img src="{% static 'images/icons/share-solid.svg' %}" alt="icono de compartir">
+              <span>Compartir</span>
+            </a>
+          </div>
+        </div>
+        <div class="oferta-contenido">
+          <h1>Protector Solar</h1>
+          <div class="oferta-precio"> $ 6500 <span>$ 7150</span></div>
+        </div>
+      </div>
+
+      <!-- Procucto 3 -->
+      <div class="caja-ofertas">
+        <div class="oferta-porcentaje">-20%</div>
+        <div class="oferta-imagen-3">
+          <img class="ofimg-3" src="{% static 'images/tienda/aceites-y-serums/108.jpg' %}" alt="ofertas-img" loading="lazy">
+          <div class="oferta-iconos">
+            <a class="oferta-enlace" href="https://wa.me/+5493624527435" target="_blank">
+              <img src="{% static 'images/icons/whatsappw.svg' %}" alt="icono de whatsapp">
+              <span>¡Lo quiero!</span>
+            </a>
+            <a class="oferta-enlace" href="#">
+              <img src="{% static 'images/icons/share-solid.svg' %}" alt="icono de compartir">
+              <span>Compartir</span>
+            </a>
+          </div>
+        </div>
+        <div class="oferta-contenido">
+          <h1>Aceite puro de almendras</h1>
+          <div class="oferta-precio"> $ 2500 <span>$ 2750</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% include "suscripcion.html" %}
+</main>
+
+{% endblock %}

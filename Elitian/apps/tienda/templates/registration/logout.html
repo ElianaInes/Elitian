@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Tienda Elitian | Logout {% endblock title %}
+
+{% block contenido %}
+
+  <h2>Logout</h2>
+  <br>
+  Cerraste sesión correctamente. Elitian agradece tu visita.
+  <br><a href={% url 'login' %}> Aquí podes ingresar nuevamente.</a>
+  <br>
+  <br>
+  <a href={% url 'index' %}>Ir a inicio</a>
+  <br>
+{% endblock %}

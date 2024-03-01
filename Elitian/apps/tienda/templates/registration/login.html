@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Tienda Elitian | Login {% endblock title %}
+
+{% block contenido %}
+    <ul>
+        {% if form.errors %}
+            <p>
+                Tu usuario y contraseña no son correctos. Intentá nuevamente.
+            </p>
+
+        {% else %}
+            <h2>Si deseas comprar debes ingresar con tu usuario primero.</h2>
+            <br>
+                <p>
+                    Si no tenes cuenta podes crearlo <a href="{% url 'tienda' %}">ingresando acá.</a>
+                </p>
+            <br>
+        {% endif %}
+    <ul>
+    <ul>
+        <form method="post" action="">
+            {% csrf_token %}
+            {% load widget_tweaks %}
+            <br>
+            <div class="form-group">
+                <input type="text" name="username" id="" placeholder="Nombre de usuario" class="form-control">
+            </div>
+            <br>
+            <br>
+            <div class="form-group">
+                <input type="password" name="password" id="" placeholder="Contraseña" class="form-control">
+            </div>
+            <br>
+            <br>
+            <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+            <br>
+        </form>
+    </ul>    
+    <br>
+    <li class="menu__item">
+        <a href={% url 'index' %}>Ir a inicio</a>
+        <br>
+{% endblock %}

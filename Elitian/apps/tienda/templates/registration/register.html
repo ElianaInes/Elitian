@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %} Tienda Elitian | Crear usuario {% endblock title %}
+
+{% block contenido %}
+  <h2>Crear usuario</h2>
+  <p>Por favor, crear un usuario en este formulario</p>
+    <form method="POST" action={% url 'register' %}>
+        {% csrf_token %}
+        {% load widget_tweaks %}
+          <br>
+          {{ user_form.username.label_tag }} {% render_field user_form.username class='input mt-2' %}
+          <br>
+          {{ user_form.first_name.label_tag }} {% render_field user_form.first_name class='input mt-2' %}
+          <br>
+          {{ user_form.email.label_tag }} {% render_field user_form.email class='input mt-2' %}
+          <br>
+          {{ user_form.password.label_tag }} {% render_field user_form.password class='input mt-2' %}
+          <br>
+          {{ user_form.password2.label_tag }} {% render_field user_form.password2 class='input mt-2' %}
+          <br>
+          <br>
+        <button type="submit">Crear mi cuenta</button>
+    </form>
+
+  <br>
+  <li>
+    <a href={% url 'index' %}>Ir a inicio</a>
+  </li>
+  <br>
+{% endblock %}
