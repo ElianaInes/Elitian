@@ -1,0 +1,25 @@
+INDEX
+    -Menu
+    -Carrusel (cris) LISTO
+    -Categoría
+        Aguas y Tónicos
+        Aceites y Serums
+        Balsamos y Cremas
+        Cuidado Capilar
+        Jabones y Desodorantes
+        Higiene Dental
+        Protección Solar
+    -Ofertas (cris) LISTO
+CONOCENOS (cris) LISTO
+PRODUCTOS (eli)
+        Aguas y Tónicos
+    -producto (cris)
+        Aceites y Serums
+        Balsamos y Cremas
+        Cuidado Capilar
+        Jabones y Desodorantes
+        Higiene Dental
+        Protección Solar
+RECICLA (eli) LISTO
+CONTACTO (eli) LISTO
+    -Footer (cris) LISTO

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/estilos/style.css">
+</head>
+<body>
+    <div class="container_cp">
+        <div class="title_cp">Balsamos y Cremas</div>
+        <div class="ListaCP"></div>
+    </div>
+
+    <script>
+        //importar informacion desde cuidadocapilar.json
+        let cuidadocapilar = null
+        fetch('/datos/cuidadocapilar.json')
+            .then(response => response.json())
+            .then(data => {
+                cuidadocapilar = data;
+                console.log(cuidadocapilar);
+                addDataToHTML();
+            })
+
+        //agregar datos de productos en HTML
+        let ListaCP = document.querySelector('.ListaCP');
+        function addDataToHTML() {
+            cuidadocapilar.forEach(cuidadocapilar => {
+                //crear item de nuevo producto
+                let nuevoProducto = document.createElement('a');
+                nuevoProducto.href = '/templates/cuidadocapilar/detalles_cp.html?id=' + cuidadocapilar.id;
+                nuevoProducto.classList.add('item_cp');
+                nuevoProducto.innerHTML = `<img class="img_cp" src="${cuidadocapilar.image}">
+            <h2 class="name_cp">${cuidadocapilar.name}</h2>
+            <div class="price_cp">${cuidadocapilar.price}</div>`;
+
+
+                //agregar este elemento en la clase lista_jyd
+                ListaCP.appendChild(nuevoProducto);
+
+            })
+        }
+    </script>
+
+</body>
+</html>

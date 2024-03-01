@@ -1,0 +1,2456 @@
+@import url(' https://fonts.cdnfonts.com/css/badoga ');
+/* familia de fuentes: 'Badoga', sans-serif; */
+@import url('https://fonts.googleapis.com/css2? family= Montserrat:ital,wght@0,100;0,200;1,200 & family= Roboto:ital,wght@0,100;0,300;0,400;0,500; 1,100;1,500;1,900 & familia= Sofia+Sans+Condensado:ital@1 & display=swap');
+/* familia de fuentes: 'Sofia Sans Condensed', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*                        INDEX                       */
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+
+/*----------------------------------------------------*/
+/* Aca empieza formato boton flotante Whatsapp */
+/*---------------------------------------------------*/
+
+.container_botton {
+    width: 35px;
+    height: 35px;
+    background-color: green;
+    border: solid 1px white;
+    position: fixed;
+    z-index: 999;
+    border-radius: 100%;
+    bottom: 15px;
+    right: 10px;
+    /* text-align: center; */
+    padding: 4px;
+    transition: ease 0.3s;
+
+    animation: whatsapp 1.2s infinite;
+}
+
+.container_botton:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.icon_wa {
+    width: 25px;
+    /*estaba en 25px lo cambie a 100% para verificar como quedaba-cris*/
+    transition: ease 1s;
+    /*lo comente para eliminarlo-cris*/
+    height: auto;
+    /*agregue este atributo completo, para mantener la proporcion*/
+}
+
+@keyframes whatsapp {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
+    }
+
+    100% {
+        box-shadow: 0 0 0 8px rgba(0, 0, 0, 0);
+    }
+}
+
+/*----------------------------------------------------*/
+/*       Aca empieza formato menu escritorio */
+/*---------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------*/
+/*           Aca empieza formato carrusel */
+/*---------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------*/
+/*           Aca empieza formato secciones */
+/*---------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------*/
+/*           Aca empieza formato tarjetas */
+/*---------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------*/
+/*           Aca empieza formato ofertas             */
+/*---------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------*/
+/*           Aca empieza formato footer              */
+/*---------------------------------------------------*/
+
+
+
+
+
+
+
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*                       CONOCENOS                    */
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+
+
+
+
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*                       PRODUCTOS                    */
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*                      Sec. AGUAS Y TONICOS                     */
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+
+
+
+
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*                    Sec. ACEITES Y SERUMS                      */
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*                   Sec. BALSAMOS Y CREMAS                      */
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*               Sec. JABONES Y DESODORANTES                     */
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+
+
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*                      Sec. CUIDADO CAPILAR                     */
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*               Sec. JABONES Y DESODORANTES                     */
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*                     Sec. HIGIENE DENTAL                       */
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+
+
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*                    Sec. CUIDADO SOLAR                         */
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+
+
+
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*                        RECICLA                     */
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+
+
+
+
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*                        CONTACTO                    */
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Escritorio- listo*/
+/* finaliza el formato menu para escritorio */
+
+/*movil*/
+/*Portrait/ VERTICAL*/
+/*Default*/
+@media (min-width: 320px) and (max-width: 575px) {
+
+
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                        INDEX                       */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+
+
+    /*----------------------------------------------------*/
+    /* Aca empieza formato boton flotante Whatsapp */
+    /*---------------------------------------------------*/
+
+    .container_botton {
+        width: 35px;
+        height: 35px;
+        background-color: green;
+        border: solid 1px white;
+        position: fixed;
+        z-index: 999;
+        border-radius: 100%;
+        bottom: 15px;
+        right: 10px;
+        padding: 4px;
+        transition: ease 0.3s;
+        animation: whatsapp 1.2s infinite;
+    }
+
+    .container_botton:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+
+    .icon_wa {
+        width: 25px;
+        /*estaba en 25px lo cambie a 100% para verificar como quedaba-cris*/
+        transition: ease 1s;
+        /*lo comente para eliminarlo-cris*/
+        height: auto;
+        /*agregue este atributo completo, para mantener la proporcion*/
+    }
+
+    @keyframes whatsapp {
+        0% {
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
+        }
+
+        100% {
+            box-shadow: 0 0 0 8px rgba(0, 0, 0, 0);
+        }
+    }
+
+
+    /*-------------------------------*/
+    /* Aca empieza formato menu */
+    /*-------------------------------*/
+
+
+    .dropdown__icon_house {
+        height: 30px;
+    }
+
+    .dropdown__icon_elitianw {
+        margin: -13px;
+        height: 50px;
+    }
+
+    .dropdown__icon_product {
+        height: 30px;
+    }
+
+    .dropdown__icon_recicla {
+        height: 30px;
+    }
+
+    .dropdown__icon_email {
+        height: 27px;
+    }
+
+    .logo {
+        height: 55px;
+    }
+
+    .nav {
+        background-color: #a1dcdc;
+        --img1: scale(1);
+        --img2: scale(0);
+    }
+
+    .nav:has(.menu__links:target) {
+        --img1: scale(0);
+        --img2: scale(1);
+        --clip: inset(0 0 0 0);
+    }
+
+    .menu__container {
+        width: 100%;
+        margin: 0 auto;
+        height: 70px;
+        display: grid;
+        grid-template-columns: max-content max-content;
+        grid-template-areas: "title img";
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .enlace {
+        margin: 8px;
+        grid-area: title;
+    }
+
+    .nav__menu {
+        grid-area: img;
+        position: relative;
+        z-index: 500;
+        transform: var(--img1);
+    }
+
+    .nav__menu--second {
+        transform: var(--img2);
+    }
+
+    .nav__icon {
+        width: 30px;
+        display: block;
+        margin-right: 10px;
+    }
+
+    .menu__links {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        position: absolute;
+        /* background-color: burlywood; */
+        background-color: #a1dcdc;
+        max-width: 250px;
+        width: 80%;
+        right: 0;
+        top: 0;
+        bottom: 100px;
+        padding: 1em;
+        display: grid;
+        align-content: center;
+        gap: 1rem;
+        overflow-y: auto;
+        clip-path: var(--clip, inset(0 0 100% 100%));
+        transition: clip-path .5s;
+        z-index: 400;
+    }
+
+    .menu__item {
+        list-style: none;
+    }
+
+    .menu__link {
+        color: #444444;
+        padding: .3em .7em;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 1.3rem;
+        position: relative;
+        background-color: var(--bg, transparent);
+    }
+
+    .menu__item--show:has(:checked) {
+        --rows: 1fr;
+        --rotate: rotate(180deg);
+        --bg: #e9d8c0;
+    }
+
+    .checkbox {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .dropdown__span:hover {
+        color: #52a6b2;
+    }
+
+    .menu__arrow {
+        height: 12px;
+        margin-left: auto;
+        transform: var(--rotate, 0);
+        transition: .2s transform;
+    }
+
+    .list_productos {
+        display: grid;
+        grid-template-rows: var(--rows, 0fr);
+        transition: .3s grid-template-rows;
+    }
+
+    .menu__nesting {
+        overflow: hidden;
+    }
+
+    /* .menu__nesting:hover {
+        color: #e9d8c0;
+    } */
+
+    .menu__inside {
+        width: 85%;
+        list-style: none;
+        margin-left: auto;
+    }
+
+    .menu__link--inside:hover {
+        color: #52a6b2;
+    }
+
+
+
+    /* ---------------------------------------------------------- */
+    /*Aqui comienzan los estilos del carrusel para celu*/
+    /* ---------------------------------------------------------- */
+
+    .carrusel-contenedor {
+        max-width: 100%;
+        max-height: 63vh;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        z-index: 100;
+    }
+
+    .miCarrusel {
+        display: none;
+        transition: opacity 2s;
+        max-height: 100vh;
+        z-index: 200;
+    }
+
+    .miCarrusel img {
+        width: 100%;
+        max-height: 100vh;
+        height: 100%;
+        height: inherit;
+        object-fit: cover;
+        vertical-align: top;
+        transition: 2s;
+        opacity: 80%;
+    }
+
+    .banner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 300;
+    }
+
+    .banner-contenido {
+        text-align: center;
+        color: #000000;
+    }
+
+    .banner-contenido p {
+        font-size: 1em;
+        /* margin: 1rem; */
+        font-weight: 500;
+    }
+
+    .banner-contenido a {
+        margin-top: 0.5rem;
+        text-decoration: none;
+        color: #000000;
+        background-color: #e9d8c0;
+        opacity: 80%;
+        display: inline-block;
+        padding: 0.2rem 0.3rem;
+        text-transform: uppercase;
+        border: 1px solid #52a6b2;
+        border-radius: 100px;
+    }
+
+    .direcciones {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 20px;
+        z-index: 300;
+    }
+
+    .direcciones a {
+        color: #52a6b2;
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+    }
+
+    .direcciones a:hover {
+        background: #e9d8c0;
+        transition: .5s;
+    }
+
+    .barras {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+        z-index: 300;
+    }
+
+    .barra {
+        cursor: pointer;
+        height: 2px;
+        width: 25px;
+        margin: 0 2px;
+        background: #e9d8c0;
+        display: inline-block;
+        margin-left: 3px;
+    }
+
+    .active {
+        background-color: #52a6b2;
+    }
+
+    .fade {
+        animation-name: fade;
+        animation-duration: 1s;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* --------------------------------------------------------------------------- */
+    /*Aqui comienzan los estilos de la galeria de imagenes por categorias para celu*/
+    /* --------------------------------------------------------------------------- */
+
+    .galeria {
+        display: grid;
+        margin: 10px;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        /* grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr)); */
+        grid-auto-rows: 200px;
+        grid-template-areas:
+            "img1 img2"
+            "img1 img3"
+            "img4 img4"
+            "img5 img6"
+            "img7 img6";
+    }
+
+    .galeria-imagen {
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .galeria-imagen::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: #e9d8c0;
+        /* opacity: 70%; */
+        transform: scale(0);
+        transition: background-color 0.3, opacity 0.3;
+        color: #e9d8c0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1em;
+    }
+
+    .galeria-imagen:hover::after {
+        transform: scale(1);
+        background-color: #e9d8c0;
+        opacity: 50%;
+    }
+
+    .ver-mas-btn {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        width: 7rem;
+        padding: 2px;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        /* background-color: transparent; */
+        border: 1px solid #52a6b2;
+        border-radius: 100px;
+        transform: translate(-50%, -50%);
+        letter-spacing: 2px;
+        font-weight: lighter;
+    }
+
+    .ver-mas-btn:hover {
+        background-color: #e9d8c0;
+        opacity: 70%;
+        transition: 0.5s;
+    }
+
+    .categoria {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        font-size: 1em;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        letter-spacing: 1px;
+        font-weight: bolder;
+    }
+
+    .galeria-imagen--g1 {
+        grid-area: img1;
+    }
+
+    .galeria-imagen--g2 {
+        grid-area: img2;
+    }
+
+    .galeria-imagen--g3 {
+        grid-area: img3;
+    }
+
+    .galeria-imagen--g4 {
+        grid-area: img4;
+    }
+
+    .galeria-imagen--g5 {
+        grid-area: img5;
+    }
+
+    .galeria-imagen--g6 {
+        grid-area: img6;
+    }
+
+    .galeria-imagen--g7 {
+        grid-area: img7;
+    }
+
+    .galeria-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 80%;
+        /* transition: transform 0.5s ease; */
+        transform: transition(-50%, -50%);
+    }
+
+    .galeria-img:hover {
+        background-color: #e9d8c0;
+        opacity: 30%;
+        transition: 0.1s;
+    }
+
+    /* ---------------------------------------------------------- */
+    /* Aqui comienza el estilo para las caracteristicas de ofertas */
+    /* ---------------------------------------------------------- */
+
+    .main-caracteristicas {
+        object-fit: cover;
+        /* max-width: fit-content; */
+        margin-bottom: 10px;
+    }
+
+    .caracteristicas-contenido {
+        display: grid;
+        grid-template-columns: repeat(auto-fit) 1fr 1fr;
+        grid-template-rows: 170px;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: .9em;
+    }
+
+    .tarjeta-contenido {
+        margin: 5px 20px;
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #e9d8c0;
+        border-radius: 10px;
+        transition: transform 0.1s ease;
+    }
+
+    .tarjeta-contenido:hover {
+        transform: scale(1.05);
+    }
+
+    .tarjeta-contenido img {
+        height: 30px;
+        width: 30px;
+        margin-bottom: 10px;
+    }
+
+    .contenido-destacado {
+        height: 4px;
+        width: 80px;
+        background-color: #52a6b2;
+        margin: 0 auto 1rem auto;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        font-weight: bolder;
+    }
+
+    .tarjeta-contenido span {
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #333;
+        text-transform: uppercase;
+    }
+
+    .tarjeta-contenido p {
+        font-size: 1em;
+        color: #444444;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        font-weight: normal;
+    }
+
+    /* ---------------------------------------------------------- */
+    /*Aqui comienza el estilo para la seccion de ofertas para celu*/
+    /* ---------------------------------------------------------- */
+
+    .seccion-ofertas {
+        position: relative;
+        align-items: center;
+        display: grid;
+        margin-bottom: 50px;
+    }
+
+    .titulo-ofertas {
+        font-family: 'Badoga', sans-serif;
+        text-align: center;
+        font-size: 1.3em;
+        line-height: 2.5;
+    }
+
+    .contenedor-ofertas {
+        flex-wrap: wrap;
+        margin: 0 25px;
+    }
+
+    .caja-ofertas {
+        box-shadow: 1rem 1rem 1rem #e9d8c0;
+        border-radius: .7rem;
+        border: .1rem solid #e9d8c0;
+        height: 400px;
+        overflow: hidden;
+        margin: 15px 0;
+    }
+
+    .oferta-porcentaje {
+        position: absolute;
+        margin-top: 10px;
+        margin-left: 10px;
+        padding: 10px;
+        font-size: 1.5em;
+        color: #e9d8c0;
+        background-color: #52a6b2;
+        z-index: 100;
+        border-radius: 10em;
+        border-style: dotted;
+        border-width: .1em;
+    }
+
+    .oferta-imagen-1 {
+        background-image: url(/img/ofertas_combos/IMG_3315.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 330px;
+        transition: .5s ease;
+    }
+
+    .ofimg-1 {
+        object-fit: cover;
+        width: 100%;
+        height: 330px;
+    }
+
+    .oferta-imagen-1 .ofimg-1:hover {
+        opacity: 0;
+        transition: .5s;
+    }
+
+    .oferta-iconos {
+        background-color: #52a6b2;
+        height: 50px;
+        padding: 5px;
+        display: flex;
+        justify-content: space-around;
+        transform: translateY(0);
+        /* transition: transform 0.3s; */
+        margin-top: -54px;
+        opacity: 1;
+        transition: .5s;
+    }
+
+    /* .oferta-iconos:hover {
+        transform: translateY(0);
+        opacity: 1;
+        transition: .5s;
+    } */
+
+    .oferta-iconos img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .oferta-imagen-2 {
+        background-image: url(/img/ofertas_combos/protectorsolar\(1\).jpg);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 330px;
+        transition: .5s ease;
+    }
+
+    .ofimg-2 {
+        object-fit: cover;
+        width: 100%;
+        height: 330px;
+    }
+
+    .oferta-imagen-2 .ofimg-2:hover {
+        opacity: 0;
+        transition: .5s;
+    }
+
+    .oferta-imagen-3 {
+        background-image: url(/img/ofertas_combos/IMG_2739.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 330px;
+        transition: .5s ease;
+    }
+
+    .ofimg-3 {
+        object-fit: cover;
+        object-position: top;
+        width: 100%;
+        height: 330px;
+    }
+
+    .oferta-imagen-3 .ofimg-3:hover {
+        opacity: 0;
+        transition: .5s;
+    }
+
+    .oferta-enlace {
+        text-decoration: none;
+        color: #444444;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .oferta-contenido {
+        text-align: center;
+    }
+
+    .oferta-contenido h1 {
+        font-family: 'Badoga', sans-serif;
+        font-size: 1.2rem;
+        color: #52a6b2;
+        margin-top: 10px;
+    }
+
+    .oferta-precio {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        font-size: 1.1em;
+        color: #000000;
+        font-weight: bold;
+    }
+
+    .oferta-contenido span {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        font-size: 1rem;
+        color: #918e8d;
+        font-weight: bold;
+        text-decoration: line-through;
+    }
+
+
+    /* <----------------------------------- */
+    /*   Aqui comienza el footer para celu */
+    /*  ----------------------------------  */
+
+    .footer {
+        background-color: #52a6b2;
+        color: #fff;
+    }
+
+    .contenedor-footer {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        max-width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .social-icons,
+    .contacto-info,
+    .informacion,
+    .copyright {
+        flex: 0 0 100%;
+        margin-bottom: 5px;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .social-icons a:hover {
+        color: #e9d8c0;
+    }
+
+    .informacion a:hover {
+        color: #e9d8c0;
+    }
+
+    .social-icons img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        background-color: #52a6b2;
+    }
+
+    .social-icons a {
+        text-decoration: none;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .titulo-footer {
+        font-family: 'Badoga', sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .contacto-info ul,
+    .informacion ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .contacto-info li,
+    .informacion li {
+        margin-bottom: 2px;
+    }
+
+    .contacto-info img {
+        width: 13px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .informacion a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .copyright {
+        text-align: center;
+        background-color: #e9d8c0;
+        padding: 10px;
+        margin: 0;
+        width: 100%;
+    }
+
+    .copyright img {
+        width: 13px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .copyright p {
+        color: #52a6b2;
+    }
+
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                       CONOCENOS                    */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+
+
+    .contenedor-conocenos {
+        color: #444444;
+        align-items: center;
+        position: relative;
+    }
+
+    .contenedor-conocenos::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: no-repeat right url(/img/conocenos/vertical.jpg);
+        /* background-position: right; */
+        background-size: cover;
+        opacity: 0.15;
+        z-index: 10;
+    }
+
+    .contenedor-conocenos--p {
+        padding: 30px;
+    }
+
+    .contenedor-conocenos h1,
+    section h2 {
+        font-family: 'Badoga', sans-serif;
+        text-align: center;
+        line-height: 2;
+        color: #52a6b2;
+    }
+
+    .contenedor-conocenos p {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        margin-bottom: 30px;
+        text-align: justify;
+    }
+
+    .contenedor-conocenos span {
+        font-weight: bold;
+    }
+
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                       PRODUCTOS                    */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                      Sec. AGUAS Y TONICOS                     */
+    /*---------------------------------------------------------------*/
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                    Sec. ACEITES Y SERUMS                      */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                   Sec. BALSAMOS Y CREMAS                      */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*               Sec. JABONES Y DESODORANTES                     */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+    /*---------------*/
+    /*SECCION GENERAL*/
+    /*---------------*/
+
+    .container_jyd {
+        max-width: 90vw;
+        margin: auto;
+        padding-top: 10px;
+        margin-bottom: 50px;
+        text-align: center;
+
+    }
+
+    .title_jyd {
+        font-size: 1.5em;
+        font-family: 'Badoga', sans-serif;
+        color: #52a6b2;
+        font-weight: bolder;
+        padding: 2px 0;
+    }
+
+    .ListaJyD .item_jyd .img_jyd {
+        object-position: center;
+        object-fit: cover;
+        width: 100%;
+        height: 70%;
+
+    }
+
+
+    .ListaJyD {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+    }
+
+
+    .ListaJyD .item_jyd {
+        background-color: white;
+        width: 70vw;
+        height: 200px;
+        border: 1px solid black;
+        filter: drop-shadow(0 5px 5px rgb(109, 106, 106));
+
+    }
+
+    .ListaJyD .item_jyd .name_jyd {
+        font-family: 'Badoga', sans-serif;
+        font-size: 0.9em;
+        font-weight: bolder;
+        color: black;
+        margin-top: 10px;
+    }
+
+    .ListaJyD .item_jyd .price_jyd {
+        letter-spacing: 3px;
+        font-size: 0.9em;
+        color: black;
+        font-weight: bold;
+    }
+
+    .ListaJyD .item_jyd .stock {
+        background-color: #52a6b2;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        position: absolute;
+        padding: 3px;
+        color: black;
+        font-size: 0.6em;
+        margin-top: -170px;
+    }
+
+    .item_jyd:hover {
+        background-color: #52a6b2;
+    }
+
+    /*DETALLES DE CADA PRODUCTO 'detalles_jyd.html*/
+
+    .title_detalles_jyd {
+        font-family: 'Badoga', sans-serif;
+        font-size: 1.5em;
+        text-align: center;
+        color: #52a6b2;
+        font-weight: bolder;
+        padding: 15px 0;
+    }
+
+    .detalles_jyd {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+        text-align: left;
+    }
+
+    .detalles_jyd .image_detalles img {
+        width: 100%;
+    }
+
+    .detalles_jyd .name {
+        font-size: 1.3em;
+        text-align: center;
+        font-family: 'Badoga', sans-serif;
+        color: #52a6b2;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    .detalles_jyd .price {
+        text-align: center;
+        font-size: 1.6em;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+
+
+    .detalles_jyd .button_jyd {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .detalles_jyd .button_jyd button {
+        background-color: #52a6b2;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 20px;
+        font-size: large;
+    }
+
+    .detalles_jyd .button_jyd svg {
+        width: 15px;
+    }
+
+    .detalles_jyd .button_jyd span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+    }
+
+    .detalles_jyd .button_jyd button:nth-child(2) {
+        background-color: violet;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 10px 20px blue;
+    }
+
+
+    .detalles_jyd .descripcion {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        margin: 15px;
+        text-align: justify;
+        font-weight: bold;
+    }
+
+    .ingredientes,
+    .usos,
+    .uso_item-1,
+    .uso_item-2,
+    .uso_item-3,
+    .conservacion,
+    .cantidad,
+    .productos-naturales {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        margin: 15px;
+        text-align: justify;
+    }
+
+    .detalles_jyd .stock {
+        background-color: #52a6b2;
+        color: #fff;
+        padding: 5px;
+        font-size: 1em;
+        position: absolute;
+        text-align: end;
+        margin-left: 15px;
+    }
+
+    /*SIMILARES*/
+
+    .container_detalles_jyd .ListaJyD_detalles {
+        display: flex;
+        overflow-x: auto;
+        /* Agrega desplazamiento horizontal cuando sea necesario */
+        gap: 15px;
+        padding: 10px;
+        /* Añadido para espacio entre el contenido y los bordes */
+    }
+
+    .container_detalles_jyd .ListaJyD_detalles .img_detalles {
+        width: 130px;
+        height: 130px;
+    }
+
+    .title_similar {
+        width: 100%;
+        background-color: #52a6b2;
+        text-align: center;
+        color: #fff;
+        padding: 5px;
+        margin-top: 50px;
+        font-size: 1.5em;
+        font-family: 'Badoga', sans-serif;
+    }
+
+    .ListaJyD_detalles {
+        display: flex;
+        gap: 15px;
+        padding: 10px;
+        /* Añadido para espacio entre el contenido y los bordes */
+    }
+
+    .ListaJyD_detalles .name_detalles {
+        font-size: 1em;
+        color: black;
+        text-align: center;
+    }
+
+    .price_similares {
+        text-align: center;
+        color: #52a6b2;
+    }
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                      Sec. CUIDADO CAPILAR                     */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*               Sec. JABONES Y DESODORANTES                     */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                     Sec. HIGIENE DENTAL                       */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                    Sec. CUIDADO SOLAR                         */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                        RECICLA                     */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+
+
+    .container_recicla {
+        position: relative;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        color: #444444;
+    }
+
+    .container_recicla::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: no-repeat center url(/img/logos/logo-linkc.png);
+        background-size: cover;
+        opacity: 0.15;
+        z-index: 10;
+    }
+
+
+    .title_seccion_recicla {
+        text-align: center;
+        margin-top: 30px;
+        color: #52a6b2;
+        font-family: 'Badoga', sans-serif;
+        font-size: 1.5em;
+        line-height: 3;
+    }
+
+    .title_seccion_recicla span {
+        color: #e9d8c0;
+    }
+
+    .description_seccion_recicla--one {
+        text-align: center;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        color: #52a6b2;
+        margin: 20px auto;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        width: 80vw;
+        box-shadow: 0 .5rem 1.5rem #e7d9c6;
+        border-radius: .5rem;
+        border: .1rem solid #e9d8c0;
+        padding: 8px;
+    }
+
+    .description_seccion_recicla--two {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        margin: 30px;
+        text-align: justify;
+        font-size: 1.1em;
+    }
+
+    .description_seccion_recicla--three {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        text-align: justify;
+        margin: 30px;
+        font-size: 1.1em;
+    }
+
+    .description_three--span {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        font-size: 1.1em;
+        color: #52a6b2;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .description_seccion_recicla--four {
+        text-align: center;
+        font-family: 'Badoga', sans-serif;
+        margin: 30px;
+        font-size: 1.2em;
+    }
+
+    .secciondos_img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .description_seccion_recicla--tips {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        margin: 30px 30px;
+        font-size: 1.1em;
+        text-align: justify;
+    }
+
+    .description_seccion_recicla--reflexion {
+        width: 70vw;
+        text-align: center;
+        font-family: 'Badoga', sans-serif;
+        color: #52a6b2;
+        box-shadow: 0 .5rem 1.5rem #e7d9c6;
+        border-radius: .5rem;
+        border: .1rem solid #e9d8c0;
+        margin: 20px auto;
+        font-size: 1.2em;
+        padding: 15px;
+    }
+
+    .span_medioambiente {
+        font-size: 1.3rem;
+        color: #e9d8c0;
+    }
+
+    .description_seccion2--final {
+        text-align: center;
+        font-family: 'Badoga', sans-serif;
+        text-decoration: solid;
+        margin-top: 50px;
+        font-size: 1.3rem;
+    }
+
+    /* .manos {
+        margin: 0;
+        width: 50px;
+        align-items: center;
+    } */
+
+    .recicla-img {
+        text-align: center;
+        align-items: center;
+    }
+
+    .manos {
+        height: 75px;
+    }
+
+
+    .container_ecoideas {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .tarjeta-ecoidea {
+        text-align: center;
+        width: 400px;
+        margin-bottom: 10px;
+        padding: 15px;
+        border: 1px solid #e9d8c0;
+        border-radius: 8px;
+    }
+
+    .container_ecoideas {
+        transition: transform 0.1s ease;
+    }
+
+    .container_ecoideas:hover {
+        transform: scale(1.05);
+    }
+
+    .ecoidea_img {
+        height: 3rem;
+        width: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .ecoideas {
+        height: 4px;
+        width: 75px;
+        background-color: #52a6b2;
+        margin: 0 auto 1rem auto;
+    }
+
+    .ecoidea_title {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        font-weight: bold;
+    }
+
+    .ecoidea_desc {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+    }
+
+
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                        CONTACTO                    */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+
+    .contenedor-contacto {
+        color: #444444;
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+        align-items: center;
+    }
+
+    .contenedor-contacto::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url(/img/logos/logo-linkc.png);
+        background-position: center;
+        background-size: cover;
+        opacity: 0.15;
+        z-index: -1;
+    }
+
+    .contenedor-contacto--p {
+        padding: 30px;
+        text-align: center;
+        position: relative;
+    }
+
+    .titulo-contacto {
+        font-family: 'Badoga', sans-serif;
+        color: #52a6b2;
+        font-size: 1.4em;
+        text-align: center;
+        line-height: 3;
+    }
+
+    .subtitulo-contacto {
+        color: #52a6b2;
+        font-size: 1.2em;
+        margin-top: 20px;
+        font-family: 'Badoga', sans-serif;
+        text-align: center;
+    }
+
+
+    .contenedor-contacto p {
+        text-align: justify;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+    }
+
+    .contenedor-contacto--p h3 {
+        margin-top: 70px;
+        text-align: center;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+    }
+
+    .contenedor-contacto--p span {
+        position: relative;
+        line-height: 2;
+    }
+
+    .img-redes {
+        align-items: center;
+    }
+
+    .img-redes a {
+        color: #444444;
+        text-align: center;
+        text-decoration: none;
+        margin-right: 20px;
+    }
+
+    .img-redes a:hover {
+        color: #52a6b2;
+    }
+
+    .img-redes img {
+        align-items: center;
+        max-width: 210px;
+        max-height: 1px;
+    }
+
+    .img-redes span {
+        font-size: 1.1em;
+    }
+
+}
+
+
+/*fin movil*/
+
+/*Tablet*/
+/*Portrait/ VERTICAL-- LISTOO*/
+@media (min-width: 576px) and (max-width: 990px) {
+
+
+    /*----------------------------------------------------*/
+    /* Aca empieza formato boton flotante Whatsapp */
+    /*---------------------------------------------------*/
+
+    .container_botton {
+        width: 35px;
+        height: 35px;
+        background-color: green;
+        border: solid 1px white;
+        position: fixed;
+        z-index: 999;
+        border-radius: 100%;
+        bottom: 15px;
+        right: 10px;
+        /* text-align: center; */
+        padding: 4px;
+        transition: ease 0.3s;
+
+        animation: whatsapp 1.2s infinite;
+    }
+
+    .container_botton:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+
+    .icon_wa {
+        width: 25px;
+        /*estaba en 25px lo cambie a 100% para verificar como quedaba-cris*/
+        transition: ease 1s;
+        /*lo comente para eliminarlo-cris*/
+        height: auto;
+        /*agregue este atributo completo, para mantener la proporcion*/
+    }
+
+    @keyframes whatsapp {
+        0% {
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
+        }
+
+        100% {
+            box-shadow: 0 0 0 8px rgba(0, 0, 0, 0);
+        }
+    }
+
+
+
+    /*-------------------------------*/
+    /* Aca empieza formato menu */
+    /*-------------------------------*/
+
+
+
+
+
+
+
+    /* ---------------------------------------------------------- */
+    /*       Aqui comienzan los estilos del carrusel              */
+    /* ---------------------------------------------------------- */
+
+
+
+
+
+    /* -----------------------------------------------------------------*/
+    /*Aqui comienzan los estilos de la galeria de imagenes por categoria*/
+    /* -----------------------------------------------------------------*/
+
+
+
+
+
+    /* ----------------------------------------------------------- */
+    /* Aqui comienza el estilo para las caracteristicas de ofertas */
+    /* ---------------------------------------------------------- */
+
+
+
+
+
+    /* ---------------------------------------------------------- */
+    /*Aqui comienza el estilo para la seccion de ofertas para celu*/
+    /* ---------------------------------------------------------- */
+
+
+
+
+
+    /* <----------------------------------- */
+    /*   Aqui comienza el footer para celu */
+    /*  ----------------------------------  */
+
+
+
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                       CONOCENOS                    */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+
+
+
+
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                       PRODUCTOS                    */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                      Sec. AGUAS Y TONICOS                     */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                    Sec. ACEITES Y SERUMS                      */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                   Sec. BALSAMOS Y CREMAS                      */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*               Sec. JABONES Y DESODORANTES                     */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                      Sec. CUIDADO CAPILAR                     */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*               Sec. JABONES Y DESODORANTES                     */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                     Sec. HIGIENE DENTAL                       */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                    Sec. CUIDADO SOLAR                         */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                        RECICLA                     */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+
+    /* ---------------------------
+       Aca comienza Seccion 2
+    --------------------------- */
+
+    .recicla_container {
+        width: 100%;
+        position: relative;
+    }
+
+    .background_recicla {
+        width: 90vw;
+        height: 90vh;
+        opacity: .2;
+        margin-top: auto;
+        margin-left: 25px;
+        padding: 35px 25px;
+        overflow: hidden;
+        position: absolute;
+    }
+
+
+    .title_seccion2 {
+        text-align: center;
+        margin-top: 15px;
+        color: #52a6b2;
+        font-family: 'Badoga', sans-serif;
+        text-decoration: dotted;
+        font-weight: bold;
+        font-size: 1.9rem;
+    }
+
+    .title_secciondos--second {
+        color: #e9d8c0;
+    }
+
+    .description_seccion2--one {
+        width: 90vw;
+        text-align: center;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        color: #444444;
+        margin: 15px;
+        font-size: .8rem;
+        text-transform: uppercase;
+        box-shadow: 0 .5rem 1.5rem #e7d9c6;
+        border-radius: .5rem;
+        border: .1rem solid #e9d8c0;
+        font-weight: bold;
+        padding: 8px;
+    }
+
+    .description_seccion2--two {
+        font-family: 'Pathway Extreme', sans-serif;
+        margin: 15px;
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    .description_seccion2--three {
+        font-family: 'Pathway Extreme', sans-serif;
+        text-align: justify;
+        margin: 15px;
+        font-size: 1rem;
+    }
+
+    .description_secciondos--span {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        text-transform: uppercase;
+        font-size: .8rem;
+        color: #52a6b2;
+    }
+
+    .description_seccion2--four {
+        text-align: center;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        margin: 15px;
+        font-size: 1.1rem;
+    }
+
+    .secciondos_img {
+        height: 30px;
+        padding: 3px 0;
+    }
+
+    .description_seccion2--tips {
+        font-family: 'Pathway Extreme', sans-serif;
+        text-align: justify;
+        margin: 15px;
+        font-size: 1rem;
+    }
+
+    .description_seccion2--reflexion {
+        width: 90vw;
+        text-align: center;
+        font-family: 'Badoga', sans-serif;
+        color: #52a6b2;
+        font-weight: bold;
+        /* background-color: #52a6b2; */
+        box-shadow: 0 .5rem 1.5rem #e7d9c6;
+        border-radius: .5rem;
+        border: .1rem solid #e9d8c0;
+        margin: 20px 15px;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .description_seccion2--final {
+        text-align: center;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        text-decoration: solid;
+        margin-top: 15px;
+        font-size: 1rem;
+    }
+
+    .span_medioambiente {
+        font-size: 1.2rem;
+    }
+
+    .img {
+        text-align: center;
+        align-items: center;
+    }
+
+    .manos {
+        height: 75px;
+    }
+
+    /* ------------------------------- */
+    /* Aqui comienza la seccion 3 */
+    /* ------------------------------- */
+
+    .container_ecoideas {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .tarjeta-ecoidea {
+        text-align: center;
+        width: 60vw;
+        /* Tamaño deseado para las tarjetas */
+        margin-bottom: 10px;
+        padding: 15px;
+        border: 1px solid #e9d8c0;
+        border-radius: 8px;
+        transition: transform 0.1s ease;
+    }
+
+    .tarjeta-ecoidea:hover {
+        transform: scale(1.05);
+    }
+
+    .ecoidea_img {
+        height: 3rem;
+        width: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .ecoideas {
+        height: 4px;
+        width: 75px;
+        background-color: #52a6b2;
+        margin: 0 auto 1rem auto;
+    }
+
+    .ecoidea_title {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #333;
+        text-transform: uppercase;
+    }
+
+    .ecoidea_desc {
+        font-size: .8rem;
+    }
+
+
+
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                        CONTACTO                    */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+
+
+
+
+
+
+    body {
+        background: orange;
+    }
+}
+
+/*landscape/ HORIZONTAL-- LISTOO*/
+@media (min-width: 991px) and (max-width: 1199.98px) {
+
+
+    /*----------------------------------------------------*/
+    /* Aca empieza formato boton flotante Whatsapp */
+    /*---------------------------------------------------*/
+
+    .container_botton {
+        width: 35px;
+        height: 35px;
+        background-color: green;
+        border: solid 1px white;
+        position: fixed;
+        z-index: 999;
+        border-radius: 100%;
+        bottom: 15px;
+        right: 10px;
+        /* text-align: center; */
+        padding: 4px;
+        transition: ease 0.3s;
+
+        animation: whatsapp 1.2s infinite;
+    }
+
+    .container_botton:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+
+    .icon_wa {
+        width: 25px;
+        /*estaba en 25px lo cambie a 100% para verificar como quedaba-cris*/
+        transition: ease 1s;
+        /*lo comente para eliminarlo-cris*/
+        height: auto;
+        /*agregue este atributo completo, para mantener la proporcion*/
+    }
+
+    @keyframes whatsapp {
+        0% {
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
+        }
+
+        100% {
+            box-shadow: 0 0 0 8px rgba(0, 0, 0, 0);
+        }
+    }
+
+
+
+
+    /*-------------------------------*/
+    /* Aca empieza formato menu */
+    /*-------------------------------*/
+
+
+
+
+
+
+
+    /* ---------------------------------------------------------- */
+    /*       Aqui comienzan los estilos del carrusel              */
+    /* ---------------------------------------------------------- */
+
+
+
+
+
+    /* -----------------------------------------------------------------*/
+    /*Aqui comienzan los estilos de la galeria de imagenes por categoria*/
+    /* -----------------------------------------------------------------*/
+
+
+
+
+
+    /* ----------------------------------------------------------- */
+    /* Aqui comienza el estilo para las caracteristicas de ofertas */
+    /* ---------------------------------------------------------- */
+
+
+
+
+
+    /* ---------------------------------------------------------- */
+    /*Aqui comienza el estilo para la seccion de ofertas para celu*/
+    /* ---------------------------------------------------------- */
+
+
+
+
+
+    /* <----------------------------------- */
+    /*   Aqui comienza el footer para celu */
+    /*  ----------------------------------  */
+
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                       CONOCENOS                    */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+
+
+
+
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                       PRODUCTOS                    */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                      Sec. AGUAS Y TONICOS                     */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                    Sec. ACEITES Y SERUMS                      */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                   Sec. BALSAMOS Y CREMAS                      */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*               Sec. JABONES Y DESODORANTES                     */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                      Sec. CUIDADO CAPILAR                     */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*               Sec. JABONES Y DESODORANTES                     */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                     Sec. HIGIENE DENTAL                       */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+    /*                    Sec. CUIDADO SOLAR                         */
+    /*---------------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+
+
+
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                        RECICLA                     */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /* ---------------------------
+       Aca comienza Seccion 2
+    --------------------------- */
+
+    .recicla_container {
+        width: 100%;
+        position: relative;
+    }
+
+    .background_recicla {
+        width: 90vw;
+        height: 90vh;
+        opacity: .2;
+        margin-top: auto;
+        margin-left: 25px;
+        padding: 35px 25px;
+        overflow: hidden;
+        position: absolute;
+    }
+
+
+    .title_seccion2 {
+        text-align: center;
+        margin-top: 20px;
+        color: #52a6b2;
+        font-family: 'Badoga', sans-serif;
+        text-decoration: dotted;
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
+
+    .title_secciondos--second {
+        color: #e9d8c0;
+    }
+
+    .description_seccion2--one {
+        width: 70vw;
+        text-align: center;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        color: #444444;
+        margin: 20px 170px;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        box-shadow: 0 .5rem 1.5rem #e7d9c6;
+        border-radius: .5rem;
+        border: .1rem solid #e9d8c0;
+        font-weight: bold;
+        padding: 8px;
+    }
+
+    .description_seccion2--two {
+        font-family: 'Pathway Extreme', sans-serif;
+        margin: 20px 170px;
+        font-size: 1.2rem;
+        text-align: justify;
+    }
+
+    .description_seccion2--three {
+        font-family: 'Pathway Extreme', sans-serif;
+        text-align: justify;
+        margin: 10px 170px;
+        font-size: 1.2rem;
+    }
+
+    .description_secciondos--span {
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        text-transform: uppercase;
+        font-size: 1rem;
+        color: #52a6b2;
+    }
+
+    .description_seccion2--four {
+        text-align: center;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        margin: 15px;
+        font-size: 1.3rem;
+    }
+
+    .secciondos_img {
+        height: 30px;
+        padding: 3px 0;
+    }
+
+    .description_seccion2--tips {
+        font-family: 'Pathway Extreme', sans-serif;
+        text-align: justify;
+        margin: 20px 170px;
+        font-size: 1.2rem;
+    }
+
+    .description_seccion2--reflexion {
+        width: 60vw;
+        text-align: center;
+        font-family: 'Badoga', sans-serif;
+        color: #52a6b2;
+        font-weight: bold;
+        /* background-color: #52a6b2; */
+        box-shadow: 0 .5rem 1.5rem #e7d9c6;
+        border-radius: .5rem;
+        border: .1rem solid #e9d8c0;
+        margin: 20px 210px;
+        font-size: 1.3rem;
+        padding: 10px;
+    }
+
+    .description_seccion2--final {
+        text-align: center;
+        font-family: 'Sofia Sans Condensed', sans-serif;
+        text-decoration: solid;
+        margin-top: 15px;
+        font-size: 1.1rem;
+    }
+
+    .span_medioambiente {
+        font-size: 1.2rem;
+    }
+
+    .img {
+        text-align: center;
+        align-items: center;
+    }
+
+    .manos {
+        height: 75px;
+    }
+
+    /* ------------------------------- */
+    /* Aqui comienza la seccion 3 */
+    /* ------------------------------- */
+
+    .container_ecoideas {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .tarjeta-ecoidea {
+        text-align: center;
+        width: 40vw;
+        /* Tamaño deseado para las tarjetas */
+        margin-bottom: 10px;
+        padding: 15px;
+        border: 1px solid #e9d8c0;
+        border-radius: 8px;
+        transition: transform 0.1s ease;
+    }
+
+    .tarjeta-ecoidea:hover {
+        transform: scale(1.05);
+    }
+
+    .ecoidea_img {
+        height: 3rem;
+        width: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .ecoideas {
+        height: 4px;
+        width: 75px;
+        background-color: #52a6b2;
+        margin: 0 auto 1rem auto;
+    }
+
+    .ecoidea_title {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #333;
+        text-transform: uppercase;
+    }
+
+    .ecoidea_desc {
+        font-size: .8rem;
+    }
+
+
+
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+    /*                        CONTACTO                    */
+    /*----------------------------------------------------*/
+    /*----------------------------------------------------*/
+
+
+
+
+
+
+
+
+    body {
+        background: blue;
+    }
+}
+
+/*fin tablet*/

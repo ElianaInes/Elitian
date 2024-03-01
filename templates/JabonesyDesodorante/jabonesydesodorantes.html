@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/estilos/style.css">
+</head>
+
+<body>
+<div class="container_jyd">
+    <div class="title_jyd">Jabones y Desodorantes</div>
+    <div class="ListaJyD"></div>
+</div>
+</div>
+
+ <!-- ------------------------------ -->
+  <!-- Aqui comienza el footer -->
+  <!-- ------------------------------ -->
+
+  <footer class="footer">
+    <div class="contenedor contenedor-footer">
+      <div class="social-icons">
+        <p class="titulo-footer">Seguinos en Instagram</p>
+        <a href="https://www.instagram.com/moreiracristian/" target="_blank">
+          <img src="img/icons/instagram.svg" alt="Perfil de instagram de nuestra tienda">
+          <span>ELITIAN</span>
+        </a>
+      </div>
+      <div class="informacion">
+        <ul>
+          <a href="#">Conocénos</a> |
+          <a href="#">Productos</a> |
+          <a href="#">Reciclá</a> |
+          <a href="#">Contacto</a>
+        </ul>
+      </div>
+      <div class="contacto-info">
+        <ul>
+          <img src="img/icons/whatsapp.svg" alt="contacto de whatsapp"> 3624000000
+          <img src="img/icons/email.svg" alt="contacto de correo"> elitian.proyectos@gmail.com
+        </ul>
+      </div>
+      <div class="copyright">
+        <p>
+          <span>Desarrollado con <img src="img/icons/heart-regular.svg" alt="Heart"> por Elitian &copy;
+            2023</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+    <script>
+        //importar informacion desde jabonesydesodorantes.json
+        let jabonesydesodorantes = null
+        fetch('/datos/jabonesydesodorantes.json')
+        .then(response => response.json())
+        .then(data =>{
+            jabonesydesodorantes = data;
+            console.log(jabonesydesodorantes);
+            addDataToHTML();
+        })
+
+        //agregar datos de productos en HTML
+        let ListaJyD = document.querySelector('.ListaJyD');
+        function addDataToHTML(){
+            jabonesydesodorantes.forEach(jabonesydesodorantes =>{
+                //crear item de nuevo producto
+                let nuevoProducto = document.createElement('a');
+                nuevoProducto.href = '/templates/JabonesyDesodorante/detalles_jyd.html?id=' + jabonesydesodorantes.id;
+                nuevoProducto.classList.add('item_jyd');
+                nuevoProducto.innerHTML = `
+                <img class="img_jyd" src="${jabonesydesodorantes.image}">
+                <h2 class="name_jyd">${jabonesydesodorantes.name}</h2>
+                <div class="price_jyd">${jabonesydesodorantes.price}</div>
+                <div class="stock">${jabonesydesodorantes.stock}</div>`;
+
+
+                //agregar este elemento en la clase lista_jyd
+                ListaJyD.appendChild(nuevoProducto);
+
+            })
+
+        }
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
