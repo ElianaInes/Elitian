@@ -8,9 +8,7 @@
     <title>{% block title %} {% endblock title %}</title>
     <link rel="stylesheet" type="text/css" href={% static 'css/style.css' %}/>
     <link rel="icon" type="image/x-icon" href={% static 'images/logos/logo-linkc.png' %}/>
-</head>
   </head>
-
   <body>
     <header>{% include "nav.html" %}</header>
 
@@ -19,9 +17,7 @@
     
     {% endblock%}
 
-    <!--Link al archivo script. para que funcione la SECCION 2
-<script src="static/js/scripts.js"></script>
--->
+
     <script src={% static 'js/scripts.js' %}></script>
 
 
@@ -47,6 +43,8 @@
             <a href="{% url 'recicla' %}">Reciclá</a>
             |
             <a href="{% url 'blog' %}">Blog</a>
+            |
+            <a href="{% url 'tienda' %}">Tienda</a>
             |
             <a href="{% url 'contacto' %}">Contacto</a>
           </ul>

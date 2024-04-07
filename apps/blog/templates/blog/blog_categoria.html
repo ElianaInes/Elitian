@@ -18,10 +18,10 @@
         <h4>{{ categoria.descripcion }}</h4>
       </ul>
     </div>
+    <h2 class="titulo-blog">Todos los post de esta categoría</h2>
     <ul>
-      <h2 class="titulo-blog">Todos los post de esta categoría</h2>
       <div class="contenedor-cat">
-        <div class="post-contenido">
+        <div class="post-individual-cat">
           <ul>
             {% for post in posts %} 
               {% if post.imagen_post %}
@@ -41,11 +41,10 @@
         </div>
       </div>
     </ul>
-
-    <ul class="redireccion">
-      <a href="{% url 'blog' %}" class="menu__link"> 
-      <img src="{% static 'images/icons/microblog.svg' %}" class="dropdown__icon_blog"/>Volver al blog</a>
-    <ul>
   </section>
+  <ul class="lista-redireccion">
+    <a href="{% url 'blog' %}" class="redireccion">
+    <img src="{% static 'images/icons/microblog.svg' %}" class="dropdown__icon_blog"/><span class="dropdown__span">Volver al blog<span></a>
+  <ul>
 </main>
 {% endblock %}

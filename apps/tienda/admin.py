@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Categorias, Productos, Resena, Estadistica
-from .models import Carrito, ItemCarrito
+from .models import Categorias, Productos
 
 @admin.register(Categorias)
 class CategoriaAdmin(admin.ModelAdmin):
@@ -13,21 +12,3 @@ class ProductoAdmin(admin.ModelAdmin):
     list_filter = ['categoria', 'activo']
     search_fields = ['nombre', 'codigo']
     prepopulated_fields = {'slug': ('nombre',)}
-
-@admin.register(Carrito)
-class CarritoAdmin(admin.ModelAdmin):
-    list_display = ['usuario']
-
-@admin.register(ItemCarrito)
-class ItemCarritoAdmin(admin.ModelAdmin):
-    list_display = ['producto', 'carrito', 'cantidad']
-
-@admin.register(Resena)
-class ResenaAdmin(admin.ModelAdmin):
-    list_display = ['usuario', 'producto', 'calificacion', ]
-    search_fields = ['usuario__username', 'producto__nombre']
-
-@admin.register(Estadistica)
-class EstadisticaAdmin(admin.ModelAdmin):
-    list_display = ['usuario', 'producto', 'cantidad_vendida', 'total_ventas']
-    search_fields = ['usuario__username', 'producto__nombre']

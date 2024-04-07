@@ -21,13 +21,11 @@
             </div>
         <br>
         <div>
-    
-
-        <ul class="redireccion">
-        <a href="{% url 'blog_categoria' categoria.slug %}" class="menu__link">
-            <img src="{% static 'images/icons/microblog.svg' %}" class="dropdown__icon_blog" />
-            Volver a la categoria: "{{ categoria.nombre }}"</a>
-        </ul>
     </section>
 </main>
+<ul class="lista-redireccion">
+  <a href="{% url 'blog_categoria' categoria.slug %}" class="redireccion">
+    <img src="{% static 'images/icons/microblog.svg' %}" class="dropdown__icon_blog"/>
+    <span class="dropdown__span">Volver a la categoria: "{{ categoria.nombre }}"<span></a>
+</ul>
 {% endblock %}

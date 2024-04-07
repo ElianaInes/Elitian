@@ -32,10 +32,10 @@
         {% endif %}
     {% endfor %}
   </seccion>
-    <ul class="redireccion">
-      <a href="{% url 'tienda' %}" class="menu__link"> <img src="{% static 'images/icons/product.svg' %}" class="dropdown__icon_blog">
-      <span class="dropdown__span">Ir a todas las categorías de la tienda</span></a>
-    </ul>
-  
+  <ul class="lista-redireccion">
+    <a href="{% url 'tienda' %}" class="redireccion"> 
+      <img src="{% static 'images/icons/product.svg' %}" class="dropdown__icon_blog">
+    <span class="dropdown__span">Volver a todas las categorías de la tienda</span></a>
+  </ul>
 </main>
 {% endblock %}

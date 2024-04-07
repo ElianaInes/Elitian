@@ -7,23 +7,8 @@
 
 
   <main class="main-tienda-cat">
-    <seccion>
-      <ul class="redireccion">
-        <a
-          href="{% url 'tienda_categoria' producto.categoria.slug %}"
-          class="menu__link"
-        >
-          <img
-            src="{% static 'images/icons/product.svg' %}"
-            class="dropdown__icon_blog"
-          />
-          <span class="dropdown__span"
-            >Volver a la categoria "{{ producto.categoria.nombre }}"</span
-          >
-        </a>
-      </ul>
-
-      <div class="contenedor-producto">
+    <h2 class="pagos-envios">3 CUOTAS SIN INTERES | ENVIOS GRATIS + $10.000 (SOLO RESISTENCIA) | 20% OFF EFVO-TRANSFERENCIA</h2>
+    <seccion class="contenedor-producto">
 
         <div class="producto-imagen-carrusel">
           {% if producto.imagen %}
@@ -35,9 +20,10 @@
           {% if producto.imagen3 %}
               <img src="{{ producto.imagen3.url }}" alt="{{ producto.nombre }}">
           {% endif %}
+          
           <div class="direcciones-producto">
-            <a href="#" id="btn-prev">&#10094</a>
-            <a href="#" id="btn-next">&#10095</a>
+            <a href="#" id="btn-prev">&#10094;</a>
+            <a href="#" id="btn-next">&#10095;</a>
           </div>
         </div>
 
@@ -46,51 +32,58 @@
             <span>SKU: {{ producto.codigo }}</span> |
             Ofrecido por {{ producto.ofrecido }}
           </div>
-
           <h2 class="producto-titulo">{{ producto.nombre }}</h2>
-          <div class="producto-precio-cat">
+          <div class="producto-detalle-precio">
             <p><span>$ {{ producto.precio }}</span></p>
             <p>$ {{ producto.precio_oferta }}</p>
           </div>
-
-          <div class="producto-descripcion">
-            {% if producto.marca %}
-              <p>Marca: </p> {{ producto.marca }}
-            {% endif %}
-            {% if producto.descripcion %}
-              <p>Descripción: </p> {{ producto.descripcion }}
-            {% endif %}
-            {% if producto.ingredientes %}
-              <p>Ingredientes: </p> {{ producto.ingredientes }}
-            {% endif %}
-            {% if producto.modo_uso %}
-              <p>Modo de uso: </p> {{ producto.modo_uso }}
-            {% endif %}
-            {% if producto.conservacion %}
-              <p>Conservación: </p> {{ producto.conservacion }}
-            {% endif %}
-            {% if producto.cont_peso_neto %}
-              <p>Contenido Neto: </p> {{ producto.cont_peso_neto }}
-            {% endif %}
+          <div class="metodos-de-pagos">
+            
+              <p>Mismo precio en <span>3 cuotas sin interés.</span><br><br>
+               Efectivo/transferencia: <span>20% OFF</span>
+              </p>
+            
+          </div>
+          <div class="formas-de-envios">
+            <div>
+              <p><span>Envíos gratis</span> en compras + $10.000 (válido en Resistencia)</p>
+            </div>
           </div>
         </div>
-      </div>
+        </div>
       
-      <ul class="redireccion">
-        <a
-          href="{% url 'tienda_categoria' producto.categoria.slug %}"
-          class="menu__link"
-        >
-          <img
-            src="{% static 'images/icons/product.svg' %}"
-            class="dropdown__icon_blog"
-          />
-          <span class="dropdown__span"
-            >Volver a la categoria "{{ producto.categoria.nombre }}"</span
-          >
-        </a>
-      </ul>
+        <div class="producto-descripcion">
+          {% if producto.descripcion %}
+            <p>Descripción: </p> {{ producto.descripcion }}
+          {% endif %}
+          {% if producto.ingredientes %}
+            <p>Ingredientes: </p> {{ producto.ingredientes }}
+          {% endif %}
+          {% if producto.modo_uso %}
+            <p>Modo de uso: </p> {{ producto.modo_uso }}
+          {% endif %}
+          {% if producto.conservacion %}
+            <p>Conservación: </p> {{ producto.conservacion }}
+          {% endif %}
+          {% if producto.cont_peso_neto %}
+            <p>Contenido Neto: </p> {{ producto.cont_peso_neto }}
+          {% endif %}
+          {% if producto.marca %}
+            <p>Marca: </p> {{ producto.marca }}
+          {% endif %}
+        </div>
     </seccion>
+    <ul class="lista-redireccion">
+      <a href="{% url 'tienda_categoria' producto.categoria.slug %}" class="redireccion">
+        <img
+          src="{% static 'images/icons/product.svg' %}"
+          class="dropdown__icon_blog"
+        />
+        <span class="dropdown__span"
+          >Volver a la categoria "{{ producto.categoria.nombre }}"</span
+        >
+      </a>
+    </ul>
   </main>
 
   <script>

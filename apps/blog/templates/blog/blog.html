@@ -8,11 +8,11 @@
 <main class="main-blog">
   <section class="seccion-blog">
     <h2 class="titulo-blog">Posteos recientes</h2>
-    <div class="contenedor-post">
+    <div class="contenedor-blog">
       <ul>
         {% for post in posts_recientes %}
           <div class="post-individual">
-            <div class="contenedor-post__img">
+            <div class="contenedor-blog__img">
               {% if post.imagen_post %}
                 <img class="blog-img" src="{{ post.imagen_post.url }}" alt="{{ post.titulo }} Imagen" />
               {% endif %}
