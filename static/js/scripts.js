@@ -90,3 +90,13 @@ function compartirProducto() {
     // Abrir la aplicación de WhatsApp para compartir
     window.location.href = enlaceCompartir;
 }
+
+
+const checkbox = document.querySelector('.checkbox');
+const list = document.querySelector('.list_categorias');
+
+document.addEventListener('click', (event) => {
+  if (!checkbox.contains(event.target) && !list.contains(event.target)) {
+    list.style.display = 'none';
+  }
+});
