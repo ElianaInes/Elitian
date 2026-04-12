@@ -29,6 +29,7 @@ export interface ProductoList {
   tiene_oferta: boolean
   stock: number
   destacado: boolean
+  activo: boolean
   imagen_principal: string | null
 }
 
@@ -80,6 +81,8 @@ export interface ItemOrden {
 
 export interface Orden {
   id: number
+  usuario: number
+  usuario_nombre: string | null
   estado: string
   estado_display: string
   total: string

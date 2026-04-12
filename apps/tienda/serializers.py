@@ -26,7 +26,7 @@ class ProductoListSerializer(serializers.ModelSerializer):
             'id', 'codigo', 'nombre', 'slug', 'marca',
             'categoria', 'categoria_nombre',
             'precio', 'precio_oferta', 'descuento', 'precio_final', 'tiene_oferta',
-            'stock', 'destacado', 'imagen_principal',
+            'stock', 'destacado', 'activo', 'imagen_principal',
         ]
 
     def get_imagen_principal(self, obj):
@@ -127,8 +127,15 @@ class ItemOrdenSerializer(serializers.ModelSerializer):
 class OrdenSerializer(serializers.ModelSerializer):
     items = ItemOrdenSerializer(many=True, read_only=True)
     estado_display = serializers.CharField(source='get_estado_display', read_only=True)
+    usuario_nombre = serializers.SerializerMethodField()
 
     class Meta:
         model = Orden
-        fields = ['id', 'estado', 'estado_display', 'total', 'notas', 'items', 'creado']
+        fields = ['id', 'usuario', 'usuario_nombre', 'estado', 'estado_display', 'total', 'notas', 'items', 'creado']
         read_only_fields = ['total', 'creado']
+
+    def get_usuario_nombre(self, obj):
+        if obj.usuario:
+            nombre = f"{obj.usuario.first_name} {obj.usuario.last_name}".strip()
+            return nombre or obj.usuario.username
+        return None

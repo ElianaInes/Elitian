@@ -136,6 +136,7 @@ export interface AuthResponse {
     email: string
     first_name: string
     last_name: string
+    is_staff: boolean
   }
 }
 
@@ -170,6 +171,20 @@ export async function getMe(token: string): Promise<AuthResponse['user']> {
   return apiFetch('/auth/me/', {}, token)
 }
 
+export async function updateMe(
+  token: string,
+  data: { first_name: string; last_name: string; email: string },
+): Promise<AuthResponse['user']> {
+  return apiFetch('/auth/me/', { method: 'PATCH', body: JSON.stringify(data) }, token)
+}
+
+export async function cambiarPassword(
+  token: string,
+  data: { password_actual: string; password_nueva: string },
+): Promise<void> {
+  return apiFetch('/auth/cambiar-password/', { method: 'POST', body: JSON.stringify(data) }, token)
+}
+
 // ─── Órdenes ─────────────────────────────────────────────────────────────────
 
 export async function crearOrden(token: string, notas?: string): Promise<Orden> {
@@ -187,4 +202,40 @@ export async function getOrdenes(token: string): Promise<Orden[]> {
 
 export async function getOrden(id: number, token: string): Promise<Orden> {
   return apiFetch<Orden>(`/ordenes/${id}/`, {}, token)
+}
+
+// ─── Admin ────────────────────────────────────────────────────────────────────
+
+export interface AdminStats {
+  ordenes_total: number
+  ordenes_pendientes: number
+  ordenes_mes: number
+  ventas_total: number
+  ventas_mes: number
+  productos_total: number
+  productos_sin_stock: number
+  usuarios_total: number
+  estados: { estado: string; cantidad: number }[]
+}
+
+export async function getAdminStats(token: string): Promise<AdminStats> {
+  return apiFetch<AdminStats>('/admin/stats/', {}, token)
+}
+
+export async function getAdminOrdenes(token: string, estado?: string): Promise<Orden[]> {
+  const q = estado ? `?estado=${estado}` : ''
+  return apiFetch<Orden[]>(`/admin/ordenes/${q}`, {}, token)
+}
+
+export async function updateOrdenEstado(token: string, id: number, estado: string): Promise<Orden> {
+  return apiFetch<Orden>(`/admin/ordenes/${id}/estado/`, { method: 'PATCH', body: JSON.stringify({ estado }) }, token)
+}
+
+export async function getAdminProductos(token: string, params?: { search?: string; activo?: string }): Promise<ProductoList[]> {
+  const q = new URLSearchParams(params as Record<string, string>).toString()
+  return apiFetch<ProductoList[]>(`/admin/productos/${q ? `?${q}` : ''}`, {}, token)
+}
+
+export async function toggleProductoActivo(token: string, id: number): Promise<{ id: number; activo: boolean }> {
+  return apiFetch(`/admin/productos/${id}/toggle/`, { method: 'PATCH' }, token)
 }

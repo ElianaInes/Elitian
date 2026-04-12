@@ -1,0 +1,99 @@
+'use client'
+
+import { useEffect } from 'react'
+import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
+import { useAuthStore } from '@/store/auth'
+
+const NAV = [
+  { href: '/admin', label: 'Dashboard', icon: (
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+    </svg>
+  )},
+  { href: '/admin/ordenes', label: 'Pedidos', icon: (
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+    </svg>
+  )},
+  { href: '/admin/productos', label: 'Productos', icon: (
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+    </svg>
+  )},
+]
+
+export default function AdminLayout({ children }: { children: React.ReactNode }) {
+  const { usuario, estaAutenticado } = useAuthStore()
+  const router = useRouter()
+  const pathname = usePathname()
+
+  useEffect(() => {
+    if (!estaAutenticado()) {
+      router.replace('/cuenta/login?next=/admin')
+      return
+    }
+    if (usuario && !usuario.is_staff) {
+      router.replace('/')
+    }
+  }, [estaAutenticado, usuario, router])
+
+  if (!usuario?.is_staff) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="w-10 h-10 border-3 border-green-600 border-t-transparent rounded-full animate-spin" />
+      </div>
+    )
+  }
+
+  return (
+    <div className="min-h-screen bg-stone-50 flex">
+
+      {/* Sidebar */}
+      <aside className="w-60 flex-shrink-0 bg-stone-900 text-white flex flex-col">
+        <div className="px-5 py-6 border-b border-stone-800">
+          <p className="text-xs text-stone-400 uppercase tracking-widest mb-0.5">Panel</p>
+          <p className="font-bold text-white text-lg">Elitian Admin</p>
+        </div>
+
+        <nav className="flex-1 px-3 py-4 space-y-1">
+          {NAV.map((item) => {
+            const activo = pathname === item.href || (item.href !== '/admin' && pathname.startsWith(item.href))
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors ${
+                  activo
+                    ? 'bg-green-600 text-white'
+                    : 'text-stone-400 hover:text-white hover:bg-stone-800'
+                }`}
+              >
+                {item.icon}
+                {item.label}
+              </Link>
+            )
+          })}
+        </nav>
+
+        <div className="px-5 py-4 border-t border-stone-800">
+          <p className="text-xs text-stone-500 truncate mb-3">{usuario.email}</p>
+          <Link
+            href="/"
+            className="flex items-center gap-2 text-xs text-stone-400 hover:text-white transition-colors"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Volver al sitio
+          </Link>
+        </div>
+      </aside>
+
+      {/* Contenido */}
+      <main className="flex-1 overflow-auto">
+        {children}
+      </main>
+    </div>
+  )
+}
