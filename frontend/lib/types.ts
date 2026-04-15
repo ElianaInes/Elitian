@@ -22,6 +22,7 @@ export interface ProductoList {
   marca: string
   categoria: number
   categoria_nombre: string
+  categoria_slug: string
   precio: string
   precio_oferta: string | null
   descuento: number
@@ -85,10 +86,37 @@ export interface Orden {
   usuario_nombre: string | null
   estado: string
   estado_display: string
+  metodo_pago: string
+  metodo_pago_display: string
   total: string
+  descuento_aplicado: string
   notas: string
   items: ItemOrden[]
   creado: string
+}
+
+export interface BlogCategoria {
+  id: number
+  nombre: string
+  slug: string
+  descripcion: string | null
+  imagen_cat: string | null
+}
+
+export interface BlogPost {
+  id: number
+  titulo: string
+  subtitulo: string
+  slug: string
+  categoria: BlogCategoria
+  autor_nombre: string
+  imagen_post: string | null
+  etiqueta: string
+  creado: string
+}
+
+export interface BlogPostDetail extends BlogPost {
+  contenido: string
 }
 
 export interface PaginatedResponse<T> {

@@ -146,4 +146,52 @@
   </section>
 </main>
 
+<!--Aqui comienza la sección de productos destacados. SECCION 5-->
+
+{% if productos_destacados %}
+<section class="seccion-tienda">
+
+  <div class="tienda-encabezado">
+    <h2 class="tienda-titulo">Productos destacados</h2>
+    <div class="contenido-destacado"></div>
+  </div>
+
+  <div class="tienda-grid">
+    {% for producto in productos_destacados %}
+    <figure class="galeria-imagen tienda-card">
+
+      {% if producto.imagen_principal %}
+        <img src="{{ producto.imagen_principal.imagen.url }}" class="galeria-img" alt="{{ producto.nombre }}" loading="lazy">
+      {% else %}
+        <div class="tienda-card-placeholder"></div>
+      {% endif %}
+
+      {% if producto.tiene_oferta %}
+        <span class="tienda-card-badge">-{{ producto.descuento }}%</span>
+      {% endif %}
+
+      <h3 class="categoria tienda-card-nombre">{{ producto.nombre }}</h3>
+
+      <div class="tienda-card-precio">
+        ${{ producto.precio_final }}
+        {% if producto.tiene_oferta %}
+          <span class="tienda-card-precio-tachado">${{ producto.precio }}</span>
+        {% endif %}
+      </div>
+
+      <a href="{{ producto.get_absolute_url }}">
+        <p class="ver-mas-btn">VER MÁS</p>
+      </a>
+
+    </figure>
+    {% endfor %}
+  </div>
+
+  <div class="tienda-ver-todo-contenedor">
+    <a href="{% url 'tienda' %}" class="tienda-ver-todo">Ver toda la tienda →</a>
+  </div>
+
+</section>
+{% endif %}
+
 {% endblock %}

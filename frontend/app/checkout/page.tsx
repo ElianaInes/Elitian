@@ -40,8 +40,7 @@ export default function CheckoutPage() {
     setCargando(true)
     setError('')
     try {
-      const notaCompleta = `Método de pago: ${metodoPago}${notas ? `\n${notas}` : ''}`
-      const orden = await crearOrden(access, notaCompleta)
+      const orden = await crearOrden(access, metodoPago, notas)
       useCarritoStore.setState({ carrito: null })
       router.push(`/checkout/exito?orden=${orden.id}`)
     } catch (e: unknown) {

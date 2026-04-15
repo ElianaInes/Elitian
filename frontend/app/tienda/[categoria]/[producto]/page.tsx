@@ -8,14 +8,16 @@ import GaleriaImagenes from './_components/GaleriaImagenes'
 export const dynamic = 'force-dynamic'
 
 interface Props {
-  params: { categoria: string; producto: string }
+  params: Promise<{ categoria: string; producto: string }>
 }
 
 export default async function ProductoPage({ params }: Props) {
+  const { categoria: categoriaSlug, producto: productoSlug } = await params
+
   const [producto, relacionados, resenas] = await Promise.all([
-    getProducto(params.producto).catch(() => null),
-    getProductosRelacionados(params.producto).catch(() => []),
-    getResenas(params.producto).catch(() => []),
+    getProducto(productoSlug).catch(() => null),
+    getProductosRelacionados(productoSlug).catch(() => []),
+    getResenas(productoSlug).catch(() => []),
   ])
 
   if (!producto) notFound()
@@ -26,7 +28,7 @@ export default async function ProductoPage({ params }: Props) {
       <nav className="text-sm text-stone-500 mb-8">
         <Link href="/tienda" className="hover:text-green-700">Tienda</Link>
         <span className="mx-2">/</span>
-        <Link href={`/tienda/${params.categoria}`} className="hover:text-green-700 capitalize">
+        <Link href={`/tienda/${categoriaSlug}`} className="hover:text-green-700 capitalize">
           {producto.categoria.nombre}
         </Link>
         <span className="mx-2">/</span>
@@ -145,7 +147,7 @@ export default async function ProductoPage({ params }: Props) {
             {relacionados.map((rel) => (
               <Link
                 key={rel.id}
-                href={`/tienda/${params.categoria}/${rel.slug}`}
+                href={`/tienda/${categoriaSlug}/${rel.slug}`}
                 className="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:shadow-md transition-shadow"
               >
                 <div className="relative aspect-square bg-stone-50">

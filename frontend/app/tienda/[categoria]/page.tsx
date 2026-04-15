@@ -7,25 +7,28 @@ import FiltroOrden from './_components/FiltroOrden'
 export const dynamic = 'force-dynamic'
 
 interface Props {
-  params: { categoria: string }
-  searchParams: { page?: string; ordering?: string; search?: string }
+  params: Promise<{ categoria: string }>
+  searchParams: Promise<{ page?: string; ordering?: string; search?: string }>
 }
 
 export default async function CategoriaPage({ params, searchParams }: Props) {
+  const { categoria: categoriaSlug } = await params
+  const { page, ordering, search } = await searchParams
+
   const [categoria, productosData] = await Promise.all([
-    getCategoria(params.categoria).catch(() => null),
+    getCategoria(categoriaSlug).catch(() => null),
     getProductos({
-      categoria: params.categoria,
-      page: searchParams.page ? Number(searchParams.page) : 1,
-      ordering: searchParams.ordering,
-      search: searchParams.search,
+      categoria: categoriaSlug,
+      page: page ? Number(page) : 1,
+      ordering,
+      search,
     }),
   ])
 
   if (!categoria) notFound()
 
   const { results: productos, count, next, previous } = productosData
-  const currentPage = searchParams.page ? Number(searchParams.page) : 1
+  const currentPage = page ? Number(page) : 1
   const totalPages = Math.ceil(count / 12)
 
   return (
@@ -52,7 +55,7 @@ export default async function CategoriaPage({ params, searchParams }: Props) {
             {productos.map((producto) => (
               <Link
                 key={producto.id}
-                href={`/tienda/${params.categoria}/${producto.slug}`}
+                href={`/tienda/${categoriaSlug}/${producto.slug}`}
                 className="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:shadow-md transition-shadow"
               >
                 <div className="relative aspect-square bg-stone-50">

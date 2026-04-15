@@ -189,13 +189,25 @@ class Orden(models.Model):
         ('entregado', 'Entregado'),
         ('cancelado', 'Cancelado'),
     ]
+    METODO_PAGO_CHOICES = [
+        ('transferencia', 'Transferencia bancaria'),
+        ('efectivo', 'Efectivo al retirar'),
+        ('tarjeta', 'Tarjeta de crédito'),
+    ]
+    METODOS_CON_DESCUENTO = {'transferencia', 'efectivo'}
+    DESCUENTO_PORCENTAJE = 20
+
     usuario = models.ForeignKey(
         User, on_delete=models.PROTECT, related_name='ordenes'
     )
     estado = models.CharField(
         max_length=20, choices=ESTADO_CHOICES, default='pendiente'
     )
+    metodo_pago = models.CharField(
+        max_length=20, choices=METODO_PAGO_CHOICES, default='transferencia'
+    )
     total = models.DecimalField(max_digits=12, decimal_places=2)
+    descuento_aplicado = models.DecimalField(max_digits=12, decimal_places=2, default=0)
     creado = models.DateTimeField(auto_now_add=True)
     notas = models.TextField(blank=True)
 

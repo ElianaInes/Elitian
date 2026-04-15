@@ -47,7 +47,7 @@ export default async function TiendaPage() {
             {destacados.map((producto) => (
               <Link
                 key={producto.id}
-                href={`/tienda/${producto.categoria_nombre.toLowerCase()}/${producto.slug}`}
+                href={`/tienda/${producto.categoria_slug}/${producto.slug}`}
                 className="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:shadow-md transition-shadow"
               >
                 <div className="relative aspect-square bg-stone-50">

@@ -19,12 +19,13 @@ class ProductoListSerializer(serializers.ModelSerializer):
     precio_final = serializers.DecimalField(max_digits=10, decimal_places=2, read_only=True)
     tiene_oferta = serializers.BooleanField(read_only=True)
     categoria_nombre = serializers.CharField(source='categoria.nombre', read_only=True)
+    categoria_slug = serializers.CharField(source='categoria.slug', read_only=True)
 
     class Meta:
         model = Productos
         fields = [
             'id', 'codigo', 'nombre', 'slug', 'marca',
-            'categoria', 'categoria_nombre',
+            'categoria', 'categoria_nombre', 'categoria_slug',
             'precio', 'precio_oferta', 'descuento', 'precio_final', 'tiene_oferta',
             'stock', 'destacado', 'activo', 'imagen_principal',
         ]
@@ -127,12 +128,19 @@ class ItemOrdenSerializer(serializers.ModelSerializer):
 class OrdenSerializer(serializers.ModelSerializer):
     items = ItemOrdenSerializer(many=True, read_only=True)
     estado_display = serializers.CharField(source='get_estado_display', read_only=True)
+    metodo_pago_display = serializers.CharField(source='get_metodo_pago_display', read_only=True)
     usuario_nombre = serializers.SerializerMethodField()
 
     class Meta:
         model = Orden
-        fields = ['id', 'usuario', 'usuario_nombre', 'estado', 'estado_display', 'total', 'notas', 'items', 'creado']
-        read_only_fields = ['total', 'creado']
+        fields = [
+            'id', 'usuario', 'usuario_nombre',
+            'estado', 'estado_display',
+            'metodo_pago', 'metodo_pago_display',
+            'total', 'descuento_aplicado',
+            'notas', 'items', 'creado',
+        ]
+        read_only_fields = ['total', 'descuento_aplicado', 'creado']
 
     def get_usuario_nombre(self, obj):
         if obj.usuario:

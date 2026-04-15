@@ -152,6 +152,21 @@ export default function OrdenDetallePage() {
         </div>
       </div>
 
+      {/* Método de pago y descuento */}
+      <div className="bg-white rounded-2xl border border-stone-200 p-6 mb-6">
+        <h2 className="font-semibold text-stone-800 mb-4">Información del pago</h2>
+        <div className="flex items-center justify-between text-sm">
+          <span className="text-stone-500">Método de pago</span>
+          <span className="font-medium text-stone-800">{orden.metodo_pago_display}</span>
+        </div>
+        {Number(orden.descuento_aplicado) > 0 && (
+          <div className="flex items-center justify-between text-sm mt-2">
+            <span className="text-green-600">Descuento aplicado</span>
+            <span className="font-medium text-green-600">- ${orden.descuento_aplicado}</span>
+          </div>
+        )}
+      </div>
+
       {/* Notas */}
       {orden.notas && (
         <div className="bg-white rounded-2xl border border-stone-200 p-6 mb-6">

@@ -195,9 +195,24 @@ class OrdenViewSet(viewsets.ReadOnlyModelViewSet):
                     status=status.HTTP_400_BAD_REQUEST,
                 )
 
+        metodo_pago = request.data.get('metodo_pago', 'transferencia')
+        if metodo_pago not in {c[0] for c in Orden.METODO_PAGO_CHOICES}:
+            metodo_pago = 'transferencia'
+
+        total_base = carrito.total
+        if metodo_pago in Orden.METODOS_CON_DESCUENTO:
+            from decimal import Decimal
+            descuento = round(total_base * Decimal(Orden.DESCUENTO_PORCENTAJE) / 100, 2)
+        else:
+            from decimal import Decimal
+            descuento = Decimal('0')
+        total_final = total_base - descuento
+
         orden = Orden.objects.create(
             usuario=request.user,
-            total=carrito.total,
+            metodo_pago=metodo_pago,
+            total=total_final,
+            descuento_aplicado=descuento,
             notas=request.data.get('notas', ''),
         )
 

@@ -6,6 +6,9 @@ import type {
   Carrito,
   Orden,
   PaginatedResponse,
+  BlogCategoria,
+  BlogPost,
+  BlogPostDetail,
 } from './types'
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000/api/v1'
@@ -187,10 +190,14 @@ export async function cambiarPassword(
 
 // ─── Órdenes ─────────────────────────────────────────────────────────────────
 
-export async function crearOrden(token: string, notas?: string): Promise<Orden> {
+export async function crearOrden(
+  token: string,
+  metodo_pago: string,
+  notas?: string,
+): Promise<Orden> {
   return apiFetch<Orden>(
     '/ordenes/crear/',
-    { method: 'POST', body: JSON.stringify({ notas: notas ?? '' }) },
+    { method: 'POST', body: JSON.stringify({ metodo_pago, notas: notas ?? '' }) },
     token,
   )
 }
@@ -202,6 +209,26 @@ export async function getOrdenes(token: string): Promise<Orden[]> {
 
 export async function getOrden(id: number, token: string): Promise<Orden> {
   return apiFetch<Orden>(`/ordenes/${id}/`, {}, token)
+}
+
+// ─── Blog ─────────────────────────────────────────────────────────────────────
+
+export async function getBlogCategorias(): Promise<BlogCategoria[]> {
+  const data = await apiFetch<PaginatedResponse<BlogCategoria>>('/blog/categorias/')
+  return data.results
+}
+
+export async function getBlogPosts(filtros: { categoria?: string; search?: string; page?: number } = {}): Promise<PaginatedResponse<BlogPost>> {
+  const params = new URLSearchParams()
+  if (filtros.categoria) params.set('categoria', filtros.categoria)
+  if (filtros.search) params.set('search', filtros.search)
+  if (filtros.page) params.set('page', String(filtros.page))
+  const query = params.toString()
+  return apiFetch<PaginatedResponse<BlogPost>>(`/blog/posts/${query ? `?${query}` : ''}`)
+}
+
+export async function getBlogPost(slug: string): Promise<BlogPostDetail> {
+  return apiFetch<BlogPostDetail>(`/blog/posts/${slug}/`)
 }
 
 // ─── Admin ────────────────────────────────────────────────────────────────────
