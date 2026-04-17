@@ -210,6 +210,9 @@ class Orden(models.Model):
     descuento_aplicado = models.DecimalField(max_digits=12, decimal_places=2, default=0)
     creado = models.DateTimeField(auto_now_add=True)
     notas = models.TextField(blank=True)
+    mp_preference_id = models.CharField(max_length=200, blank=True)
+    mp_payment_id = models.CharField(max_length=100, blank=True)
+    mp_estado_pago = models.CharField(max_length=50, blank=True)
 
     def __str__(self):
         return f'Orden #{self.pk} — {self.usuario} [{self.get_estado_display()}]'

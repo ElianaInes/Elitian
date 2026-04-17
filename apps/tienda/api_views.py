@@ -1,9 +1,15 @@
+from decimal import Decimal
+
 from rest_framework import viewsets, status, filters
-from rest_framework.decorators import action
+from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from django.shortcuts import get_object_or_404
 from django.db.models import Q
+from django.conf import settings
+from django.views.decorators.csrf import csrf_exempt
+
+import mercadopago
 
 from .models import Categorias, Productos, Resena, Carrito, ItemCarrito, Orden, ItemOrden
 from .serializers import (
@@ -201,10 +207,8 @@ class OrdenViewSet(viewsets.ReadOnlyModelViewSet):
 
         total_base = carrito.total
         if metodo_pago in Orden.METODOS_CON_DESCUENTO:
-            from decimal import Decimal
             descuento = round(total_base * Decimal(Orden.DESCUENTO_PORCENTAJE) / 100, 2)
         else:
-            from decimal import Decimal
             descuento = Decimal('0')
         total_final = total_base - descuento
 
@@ -231,3 +235,97 @@ class OrdenViewSet(viewsets.ReadOnlyModelViewSet):
 
         serializer = OrdenSerializer(orden)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    @action(detail=True, methods=['post'], permission_classes=[IsAuthenticated])
+    def crear_preferencia_mp(self, request, pk=None):
+        orden = get_object_or_404(Orden, pk=pk, usuario=request.user)
+
+        if orden.metodo_pago != 'tarjeta':
+            return Response(
+                {'detail': 'Solo aplica para pago con tarjeta.'},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        sdk = mercadopago.SDK(settings.MP_ACCESS_TOKEN)
+        site_url = settings.SITE_URL
+
+        items = []
+        for item in orden.items.select_related('producto').all():
+            items.append({
+                'title': item.producto.nombre,
+                'quantity': item.cantidad,
+                'unit_price': float(item.precio_unitario),
+                'currency_id': 'ARS',
+            })
+
+        preference_data = {
+            'items': items,
+            'external_reference': str(orden.id),
+            'back_urls': {
+                'success': f'{site_url}/checkout/mp-retorno?status=approved&orden={orden.id}',
+                'failure': f'{site_url}/checkout/mp-retorno?status=failure&orden={orden.id}',
+                'pending': f'{site_url}/checkout/mp-retorno?status=pending&orden={orden.id}',
+            },
+            'auto_return': 'approved',
+            'notification_url': f'{settings.SITE_URL.replace("3000", "8000")}/api/v1/mp/webhook/',
+        }
+
+        result = sdk.preference().create(preference_data)
+        preference = result.get('response', {})
+
+        if result.get('status') not in (200, 201):
+            return Response(
+                {'detail': 'Error al crear preferencia en MercadoPago.'},
+                status=status.HTTP_502_BAD_GATEWAY,
+            )
+
+        orden.mp_preference_id = preference.get('id', '')
+        orden.save(update_fields=['mp_preference_id'])
+
+        return Response({
+            'init_point': preference.get('init_point'),
+            'sandbox_init_point': preference.get('sandbox_init_point'),
+            'preference_id': preference.get('id'),
+        })
+
+
+@csrf_exempt
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def mp_webhook(request):
+    topic = request.query_params.get('topic') or request.data.get('type')
+    resource_id = (
+        request.query_params.get('id')
+        or request.data.get('data', {}).get('id')
+    )
+
+    if topic not in ('payment', 'merchant_order') or not resource_id:
+        return Response(status=status.HTTP_200_OK)
+
+    sdk = mercadopago.SDK(settings.MP_ACCESS_TOKEN)
+    payment_info = sdk.payment().get(resource_id)
+
+    if payment_info.get('status') != 200:
+        return Response(status=status.HTTP_200_OK)
+
+    response = payment_info.get('response', {})
+    mp_status = response.get('status', '')
+    external_ref = response.get('external_reference', '')
+
+    if not external_ref:
+        return Response(status=status.HTTP_200_OK)
+
+    try:
+        orden = Orden.objects.get(pk=int(external_ref))
+    except (Orden.DoesNotExist, ValueError):
+        return Response(status=status.HTTP_200_OK)
+
+    orden.mp_payment_id = str(resource_id)
+    orden.mp_estado_pago = mp_status
+
+    if mp_status == 'approved' and orden.estado == 'pendiente':
+        orden.estado = 'confirmado'
+
+    orden.save(update_fields=['mp_payment_id', 'mp_estado_pago', 'estado'])
+
+    return Response(status=status.HTTP_200_OK)

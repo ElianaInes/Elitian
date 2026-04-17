@@ -211,6 +211,17 @@ export async function getOrden(id: number, token: string): Promise<Orden> {
   return apiFetch<Orden>(`/ordenes/${id}/`, {}, token)
 }
 
+export async function crearPreferenciaMP(
+  ordenId: number,
+  token: string,
+): Promise<{ init_point: string; sandbox_init_point: string; preference_id: string }> {
+  return apiFetch(
+    `/ordenes/${ordenId}/crear_preferencia_mp/`,
+    { method: 'POST' },
+    token,
+  )
+}
+
 // ─── Blog ─────────────────────────────────────────────────────────────────────
 
 export async function getBlogCategorias(): Promise<BlogCategoria[]> {

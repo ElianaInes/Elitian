@@ -6,12 +6,12 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { useCarritoStore } from '@/store/carrito'
 import { useAuthStore } from '@/store/auth'
-import { crearOrden } from '@/lib/api'
+import { crearOrden, crearPreferenciaMP } from '@/lib/api'
 
 const METODOS_PAGO = [
   { id: 'transferencia', label: 'Transferencia bancaria', desc: '20% OFF — Te enviamos el CBU por WhatsApp', icon: '🏦' },
   { id: 'efectivo', label: 'Efectivo al retirar', desc: '20% OFF — Coordinamos punto de entrega', icon: '💵' },
-  { id: 'tarjeta', label: 'Tarjeta de crédito', desc: '3 cuotas sin interés — Link de pago por WhatsApp', icon: '💳' },
+  { id: 'tarjeta', label: 'Pago online con MercadoPago', desc: 'Tarjeta de crédito, débito o dinero en cuenta MP', icon: '💳' },
 ]
 
 export default function CheckoutPage() {
@@ -42,6 +42,16 @@ export default function CheckoutPage() {
     try {
       const orden = await crearOrden(access, metodoPago, notas)
       useCarritoStore.setState({ carrito: null })
+
+      if (metodoPago === 'tarjeta') {
+        const preferencia = await crearPreferenciaMP(orden.id, access)
+        const isDev = process.env.NODE_ENV === 'development'
+        window.location.href = isDev
+          ? preferencia.sandbox_init_point
+          : preferencia.init_point
+        return
+      }
+
       router.push(`/checkout/exito?orden=${orden.id}`)
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : 'Ocurrió un error. Intentá de nuevo.')

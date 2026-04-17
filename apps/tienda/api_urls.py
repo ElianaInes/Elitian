@@ -9,6 +9,7 @@ router.register('carrito', api_views.CarritoViewSet, basename='carrito')
 router.register('ordenes', api_views.OrdenViewSet, basename='orden')
 
 urlpatterns = router.urls + [
+    path('mp/webhook/', api_views.mp_webhook, name='mp-webhook'),
     path('admin/stats/', admin_views.stats, name='admin-stats'),
     path('admin/ordenes/', admin_views.ordenes_admin, name='admin-ordenes'),
     path('admin/ordenes/<int:pk>/estado/', admin_views.orden_estado, name='admin-orden-estado'),

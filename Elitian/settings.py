@@ -8,6 +8,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
+MP_ACCESS_TOKEN = config('MP_ACCESS_TOKEN', default='')
+SITE_URL = config('SITE_URL', default='http://localhost:3000')
+
 def _parse_hosts(v):
     return [s.strip() for s in v.split(',')]
 
