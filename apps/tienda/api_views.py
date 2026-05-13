@@ -1,3 +1,5 @@
+import hashlib
+import hmac
 from decimal import Decimal
 
 from rest_framework import viewsets, status, filters
@@ -12,6 +14,7 @@ from django.views.decorators.csrf import csrf_exempt
 import mercadopago
 
 from .models import Categorias, Productos, Resena, Carrito, ItemCarrito, Orden, ItemOrden
+from .emails import email_orden_confirmada, email_estado_actualizado
 from .serializers import (
     CategoriaSerializer,
     ProductoListSerializer,
@@ -205,6 +208,12 @@ class OrdenViewSet(viewsets.ReadOnlyModelViewSet):
         if metodo_pago not in {c[0] for c in Orden.METODO_PAGO_CHOICES}:
             metodo_pago = 'transferencia'
 
+        telefono = request.data.get('telefono', '').strip()
+        direccion = request.data.get('direccion', '').strip()
+        ciudad = request.data.get('ciudad', '').strip()
+        provincia = request.data.get('provincia', '').strip()
+        codigo_postal = request.data.get('codigo_postal', '').strip()
+
         total_base = carrito.total
         if metodo_pago in Orden.METODOS_CON_DESCUENTO:
             descuento = round(total_base * Decimal(Orden.DESCUENTO_PORCENTAJE) / 100, 2)
@@ -218,6 +227,11 @@ class OrdenViewSet(viewsets.ReadOnlyModelViewSet):
             total=total_final,
             descuento_aplicado=descuento,
             notas=request.data.get('notas', ''),
+            telefono=telefono,
+            direccion=direccion,
+            ciudad=ciudad,
+            provincia=provincia,
+            codigo_postal=codigo_postal,
         )
 
         for item in carrito.items.select_related('producto').all():
@@ -232,6 +246,7 @@ class OrdenViewSet(viewsets.ReadOnlyModelViewSet):
             item.producto.save(update_fields=['stock'])
 
         carrito.items.all().delete()
+        email_orden_confirmada(orden)
 
         serializer = OrdenSerializer(orden)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -289,10 +304,40 @@ class OrdenViewSet(viewsets.ReadOnlyModelViewSet):
         })
 
 
+def _verificar_firma_mp(request):
+    """Valida la firma HMAC-SHA256 enviada por MercadoPago en x-signature."""
+    secret = settings.MP_WEBHOOK_SECRET
+    if not secret:
+        return True  # sin secret configurado, se omite la validación (dev)
+
+    x_signature = request.headers.get('x-signature', '')
+    x_request_id = request.headers.get('x-request-id', '')
+    data_id = request.data.get('data', {}).get('id', '')
+
+    ts = ''
+    received_hash = ''
+    for part in x_signature.split(','):
+        key, _, val = part.partition('=')
+        if key.strip() == 'ts':
+            ts = val.strip()
+        elif key.strip() == 'v1':
+            received_hash = val.strip()
+
+    if not ts or not received_hash:
+        return False
+
+    manifest = f'id:{data_id};request-id:{x_request_id};ts:{ts};'
+    expected = hmac.new(secret.encode(), manifest.encode(), hashlib.sha256).hexdigest()
+    return hmac.compare_digest(expected, received_hash)
+
+
 @csrf_exempt
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def mp_webhook(request):
+    if not _verificar_firma_mp(request):
+        return Response({'detail': 'Firma inválida.'}, status=status.HTTP_401_UNAUTHORIZED)
+
     topic = request.query_params.get('topic') or request.data.get('type')
     resource_id = (
         request.query_params.get('id')

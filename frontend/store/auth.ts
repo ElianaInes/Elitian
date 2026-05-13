@@ -3,6 +3,14 @@ import { persist } from 'zustand/middleware'
 import { login as apiLogin, registro as apiRegistro, getMe } from '@/lib/api'
 import type { AuthResponse } from '@/lib/api'
 
+async function fetchUsuario(access: string) {
+  try {
+    return await getMe(access)
+  } catch {
+    return null
+  }
+}
+
 interface Usuario {
   id: number
   username: string
@@ -47,11 +55,19 @@ export const useAuthStore = create<AuthStore>()(
       login: async (username, password) => {
         const data = await apiLogin(username, password)
         aplicarAuth(set, data)
+        if (!data.user) {
+          const usuario = await fetchUsuario(data.access)
+          set({ usuario: usuario ?? null })
+        }
       },
 
       registro: async (formData) => {
         const data = await apiRegistro(formData)
         aplicarAuth(set, data)
+        if (!data.user) {
+          const usuario = await fetchUsuario(data.access)
+          set({ usuario: usuario ?? null })
+        }
       },
 
       logout: () => {

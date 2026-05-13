@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -9,6 +10,24 @@ export const dynamic = 'force-dynamic'
 
 interface Props {
   params: Promise<{ categoria: string; producto: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { producto: productoSlug } = await params
+  const producto = await getProducto(productoSlug).catch(() => null)
+  if (!producto) return {}
+  const descripcion = producto.descripcion?.slice(0, 155) ||
+    `${producto.nombre} de ${producto.marca}. Producto natural y ecológico en Elitian.`
+  const imagen = producto.imagenes?.[0]?.imagen
+  return {
+    title: producto.nombre,
+    description: descripcion,
+    openGraph: {
+      title: `${producto.nombre} | Elitian`,
+      description: descripcion,
+      ...(imagen ? { images: [{ url: imagen }] } : {}),
+    },
+  }
 }
 
 export default async function ProductoPage({ params }: Props) {

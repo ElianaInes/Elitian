@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -7,6 +8,22 @@ export const dynamic = 'force-dynamic'
 
 interface Props {
   params: Promise<{ slug: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  const post = await getBlogPost(slug).catch(() => null)
+  if (!post) return {}
+  const descripcion = post.subtitulo?.slice(0, 155) || `${post.titulo} — Blog de Elitian`
+  return {
+    title: post.titulo,
+    description: descripcion,
+    openGraph: {
+      title: `${post.titulo} | Blog Elitian`,
+      description: descripcion,
+      ...(post.imagen_post ? { images: [{ url: post.imagen_post }] } : {}),
+    },
+  }
 }
 
 function formatFecha(iso: string) {

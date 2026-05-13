@@ -125,3 +125,61 @@ export interface PaginatedResponse<T> {
   previous: string | null
   results: T[]
 }
+
+export type IVAOpcion = '0' | '10.5' | '21'
+
+export interface ConfiguracionGlobal {
+  margen_ganancia: string
+  iva: IVAOpcion
+  recargo_tarjeta: string
+  transporte: string
+}
+
+export interface ConfiguracionCategoriaCosto {
+  id: number
+  categoria: number
+  categoria_nombre: string
+  margen_ganancia: string
+  iva: IVAOpcion | ''
+}
+
+export interface CategoriaConCosto {
+  id: number
+  nombre: string
+  slug: string
+  config_costo: ConfiguracionCategoriaCosto | null
+}
+
+export interface CostoProducto {
+  id: number
+  producto: number
+  costo_neto: string
+  descuento_proveedor: string
+  impuesto_interno: string
+  transporte: string | null
+  margen_ganancia: string | null
+  iva: IVAOpcion | ''
+  descuento_promocion: string
+  recargo_tarjeta: string | null
+  // computed
+  margen_efectivo: string
+  iva_efectivo: string
+  transporte_efectivo: string
+  recargo_tarjeta_efectivo: string
+  precio_calculado: string
+  precio_con_tarjeta: string
+  precio_con_descuento: string
+}
+
+export interface PromocionBanco {
+  id: number
+  nombre: string
+  banco: string
+  tipo: 'descuento' | 'cuotas'
+  tipo_display: string
+  valor: string
+  activo: boolean
+  vigencia_desde: string | null
+  vigencia_hasta: string | null
+  descripcion: string
+}

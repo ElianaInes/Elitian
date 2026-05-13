@@ -110,8 +110,14 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="border-t border-stone-800 py-5 px-4 text-center text-xs text-stone-500">
-        © {new Date().getFullYear()} Elitian. Todos los derechos reservados.
+      <div className="border-t border-stone-800 py-5 px-4 text-center text-xs text-stone-500 space-y-1">
+        <p>© {new Date().getFullYear()} Elitian. Todos los derechos reservados.</p>
+        <p>
+          Desarrollado por{' '}
+          <span className="text-stone-400 font-medium">2moreit</span>
+          {' '}en colaboración con{' '}
+          <span className="text-stone-400 font-medium">Elitian</span>
+        </p>
       </div>
     </footer>
   )

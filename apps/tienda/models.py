@@ -1,8 +1,15 @@
+from decimal import Decimal
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 from django.utils.text import slugify
 from django.core.validators import MinValueValidator, MaxValueValidator
+
+IVA_OPCIONES = [
+    ('0', '0% — Exento'),
+    ('10.5', '10.5% — Tasa reducida'),
+    ('21', '21% — Tasa general'),
+]
 
 
 class Categorias(models.Model):
@@ -213,6 +220,12 @@ class Orden(models.Model):
     mp_preference_id = models.CharField(max_length=200, blank=True)
     mp_payment_id = models.CharField(max_length=100, blank=True)
     mp_estado_pago = models.CharField(max_length=50, blank=True)
+    # Datos de envío
+    telefono = models.CharField(max_length=20, blank=True)
+    direccion = models.CharField(max_length=200, blank=True)
+    ciudad = models.CharField(max_length=100, blank=True)
+    provincia = models.CharField(max_length=100, blank=True)
+    codigo_postal = models.CharField(max_length=10, blank=True)
 
     def __str__(self):
         return f'Orden #{self.pk} — {self.usuario} [{self.get_estado_display()}]'
@@ -241,3 +254,203 @@ class ItemOrden(models.Model):
     class Meta:
         verbose_name = 'Ítem de orden'
         verbose_name_plural = 'Ítems de orden'
+
+
+class ConfiguracionGlobal(models.Model):
+    """Singleton — siempre pk=1. Configura defaults globales de costos."""
+    margen_ganancia = models.DecimalField(
+        max_digits=5, decimal_places=2, default=30,
+        validators=[MinValueValidator(0), MaxValueValidator(1000)],
+        help_text='Margen de ganancia global en %'
+    )
+    iva = models.CharField(max_length=5, choices=IVA_OPCIONES, default='21')
+    recargo_tarjeta = models.DecimalField(
+        max_digits=5, decimal_places=2, default=0,
+        validators=[MinValueValidator(0)],
+        help_text='Recargo por pago con tarjeta de crédito en %'
+    )
+    transporte = models.DecimalField(
+        max_digits=10, decimal_places=2, default=0,
+        validators=[MinValueValidator(0)],
+        help_text='Costo de transporte fijo por defecto (en $)'
+    )
+
+    def save(self, *args, **kwargs):
+        self.pk = 1
+        super().save(*args, **kwargs)
+
+    @classmethod
+    def obtener(cls):
+        obj, _ = cls.objects.get_or_create(pk=1)
+        return obj
+
+    def __str__(self):
+        return 'Configuración global de costos'
+
+    class Meta:
+        verbose_name = 'Configuración global'
+        verbose_name_plural = 'Configuración global'
+
+
+class ConfiguracionCategoriaCosto(models.Model):
+    """Margen por categoría — override del global."""
+    categoria = models.OneToOneField(
+        Categorias, on_delete=models.CASCADE, related_name='config_costo'
+    )
+    margen_ganancia = models.DecimalField(
+        max_digits=5, decimal_places=2,
+        validators=[MinValueValidator(0), MaxValueValidator(1000)],
+        help_text='Margen de ganancia para esta categoría en %'
+    )
+    iva = models.CharField(
+        max_length=5, choices=IVA_OPCIONES, blank=True,
+        help_text='IVA específico para esta categoría (vacío = usar global)'
+    )
+
+    def __str__(self):
+        return f'Costo categoría: {self.categoria.nombre}'
+
+    class Meta:
+        verbose_name = 'Config. costo por categoría'
+        verbose_name_plural = 'Config. costos por categoría'
+
+
+class CostoProducto(models.Model):
+    """Estructura de costos detallada por producto."""
+    producto = models.OneToOneField(
+        Productos, on_delete=models.CASCADE, related_name='costo'
+    )
+    costo_neto = models.DecimalField(
+        max_digits=10, decimal_places=2, default=0,
+        validators=[MinValueValidator(0)],
+        help_text='Costo de compra al proveedor sin IVA'
+    )
+    descuento_proveedor = models.DecimalField(
+        max_digits=5, decimal_places=2, default=0,
+        validators=[MinValueValidator(0), MaxValueValidator(100)],
+        help_text='Descuento otorgado por el proveedor en %'
+    )
+    impuesto_interno = models.DecimalField(
+        max_digits=5, decimal_places=2, default=0,
+        validators=[MinValueValidator(0)],
+        help_text='Impuesto interno adicional en %'
+    )
+    transporte = models.DecimalField(
+        max_digits=10, decimal_places=2, null=True, blank=True,
+        validators=[MinValueValidator(0)],
+        help_text='Costo de transporte en $ (vacío = usar global)'
+    )
+    margen_ganancia = models.DecimalField(
+        max_digits=5, decimal_places=2, null=True, blank=True,
+        validators=[MinValueValidator(0), MaxValueValidator(1000)],
+        help_text='Margen de ganancia en % (vacío = usar categoría o global)'
+    )
+    iva = models.CharField(
+        max_length=5, choices=IVA_OPCIONES, blank=True,
+        help_text='IVA de este producto (vacío = usar categoría o global)'
+    )
+    descuento_promocion = models.DecimalField(
+        max_digits=5, decimal_places=2, default=0,
+        validators=[MinValueValidator(0), MaxValueValidator(100)],
+        help_text='Descuento promocional al consumidor final en %'
+    )
+    recargo_tarjeta = models.DecimalField(
+        max_digits=5, decimal_places=2, null=True, blank=True,
+        validators=[MinValueValidator(0)],
+        help_text='Recargo tarjeta de crédito en % (vacío = usar global)'
+    )
+
+    @property
+    def margen_efectivo(self):
+        if self.margen_ganancia is not None:
+            return self.margen_ganancia
+        try:
+            cat_cfg = self.producto.categoria.config_costo
+            return cat_cfg.margen_ganancia
+        except ConfiguracionCategoriaCosto.DoesNotExist:
+            pass
+        return ConfiguracionGlobal.obtener().margen_ganancia
+
+    @property
+    def iva_efectivo(self):
+        if self.iva:
+            return self.iva
+        try:
+            cat_cfg = self.producto.categoria.config_costo
+            if cat_cfg.iva:
+                return cat_cfg.iva
+        except ConfiguracionCategoriaCosto.DoesNotExist:
+            pass
+        return ConfiguracionGlobal.obtener().iva
+
+    @property
+    def transporte_efectivo(self):
+        if self.transporte is not None:
+            return self.transporte
+        return ConfiguracionGlobal.obtener().transporte
+
+    @property
+    def recargo_tarjeta_efectivo(self):
+        if self.recargo_tarjeta is not None:
+            return self.recargo_tarjeta
+        return ConfiguracionGlobal.obtener().recargo_tarjeta
+
+    @property
+    def precio_calculado(self):
+        """Precio de venta sugerido sin descuento promocional ni recargo tarjeta."""
+        base = self.costo_neto
+        if self.descuento_proveedor:
+            base = base * (1 - self.descuento_proveedor / 100)
+        base = base + self.transporte_efectivo
+        if self.impuesto_interno:
+            base = base * (1 + self.impuesto_interno / 100)
+        margen = self.margen_efectivo
+        base = base * (1 + margen / 100)
+        iva_pct = Decimal(self.iva_efectivo)
+        if iva_pct:
+            base = base * (1 + iva_pct / 100)
+        return round(base, 2)
+
+    @property
+    def precio_con_tarjeta(self):
+        return round(self.precio_calculado * (1 + self.recargo_tarjeta_efectivo / 100), 2)
+
+    @property
+    def precio_con_descuento(self):
+        if self.descuento_promocion:
+            return round(self.precio_calculado * (1 - self.descuento_promocion / 100), 2)
+        return self.precio_calculado
+
+    def __str__(self):
+        return f'Costo de {self.producto.nombre}'
+
+    class Meta:
+        verbose_name = 'Costo de producto'
+        verbose_name_plural = 'Costos de productos'
+
+
+class PromocionBanco(models.Model):
+    TIPO_CHOICES = [
+        ('descuento', 'Descuento'),
+        ('cuotas', 'Cuotas sin interés'),
+    ]
+    nombre = models.CharField(max_length=100)
+    banco = models.CharField(max_length=100)
+    tipo = models.CharField(max_length=20, choices=TIPO_CHOICES, default='descuento')
+    valor = models.DecimalField(
+        max_digits=5, decimal_places=2, default=0,
+        validators=[MinValueValidator(0)],
+        help_text='% de descuento o cantidad de cuotas según tipo'
+    )
+    activo = models.BooleanField(default=True)
+    vigencia_desde = models.DateField(null=True, blank=True)
+    vigencia_hasta = models.DateField(null=True, blank=True)
+    descripcion = models.CharField(max_length=300, blank=True)
+
+    def __str__(self):
+        return f'{self.nombre} — {self.banco}'
+
+    class Meta:
+        verbose_name = 'Promoción bancaria'
+        verbose_name_plural = 'Promociones bancarias'
+        ordering = ['-activo', 'banco', 'nombre']

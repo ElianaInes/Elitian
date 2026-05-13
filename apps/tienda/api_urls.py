@@ -14,5 +14,17 @@ urlpatterns = router.urls + [
     path('admin/ordenes/', admin_views.ordenes_admin, name='admin-ordenes'),
     path('admin/ordenes/<int:pk>/estado/', admin_views.orden_estado, name='admin-orden-estado'),
     path('admin/productos/', admin_views.productos_admin, name='admin-productos'),
+    path('admin/productos/crear/', admin_views.crear_producto, name='admin-producto-crear'),
     path('admin/productos/<int:pk>/toggle/', admin_views.producto_toggle, name='admin-producto-toggle'),
+    path('admin/productos/<int:pk>/editar/', admin_views.editar_producto, name='admin-producto-editar'),
+    path('admin/productos/<int:pk>/imagenes/', admin_views.subir_imagen, name='admin-producto-imagen'),
+    path('admin/imagenes/<int:img_pk>/eliminar/', admin_views.eliminar_imagen, name='admin-imagen-eliminar'),
+    path('admin/imagenes/<int:img_pk>/principal/', admin_views.set_imagen_principal, name='admin-imagen-principal'),
+    # Costos
+    path('admin/costos/global/', admin_views.costos_global, name='admin-costos-global'),
+    path('admin/costos/categorias/', admin_views.costos_categorias, name='admin-costos-categorias'),
+    path('admin/costos/categorias/<int:categoria_id>/', admin_views.costos_categoria_detalle, name='admin-costos-categoria'),
+    path('admin/costos/productos/<int:pk>/', admin_views.costos_producto, name='admin-costos-producto'),
+    path('admin/costos/bancos/', admin_views.costos_bancos, name='admin-costos-bancos'),
+    path('admin/costos/bancos/<int:pk>/', admin_views.costo_banco_detalle, name='admin-costos-banco-detalle'),
 ]

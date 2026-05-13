@@ -2,6 +2,7 @@ import type {
   Categoria,
   ProductoList,
   ProductoDetail,
+  ProductoImagen,
   Resena,
   Carrito,
   Orden,
@@ -9,6 +10,11 @@ import type {
   BlogCategoria,
   BlogPost,
   BlogPostDetail,
+  ConfiguracionGlobal,
+  CategoriaConCosto,
+  ConfiguracionCategoriaCosto,
+  CostoProducto,
+  PromocionBanco,
 } from './types'
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000/api/v1'
@@ -190,14 +196,23 @@ export async function cambiarPassword(
 
 // ─── Órdenes ─────────────────────────────────────────────────────────────────
 
+export interface DatosEnvio {
+  telefono: string
+  direccion: string
+  ciudad: string
+  provincia: string
+  codigo_postal: string
+}
+
 export async function crearOrden(
   token: string,
   metodo_pago: string,
   notas?: string,
+  envio?: DatosEnvio,
 ): Promise<Orden> {
   return apiFetch<Orden>(
     '/ordenes/crear/',
-    { method: 'POST', body: JSON.stringify({ metodo_pago, notas: notas ?? '' }) },
+    { method: 'POST', body: JSON.stringify({ metodo_pago, notas: notas ?? '', ...envio }) },
     token,
   )
 }
@@ -276,4 +291,166 @@ export async function getAdminProductos(token: string, params?: { search?: strin
 
 export async function toggleProductoActivo(token: string, id: number): Promise<{ id: number; activo: boolean }> {
   return apiFetch(`/admin/productos/${id}/toggle/`, { method: 'PATCH' }, token)
+}
+
+export async function getProductoAdminDetalle(token: string, id: number): Promise<ProductoDetail> {
+  return apiFetch<ProductoDetail>(`/admin/productos/${id}/editar/`, {}, token)
+}
+
+export async function crearProductoAdmin(
+  token: string,
+  data: Record<string, unknown>,
+): Promise<ProductoList> {
+  return apiFetch<ProductoList>('/admin/productos/crear/', {
+    method: 'POST',
+    body: JSON.stringify(data),
+  }, token)
+}
+
+export async function editarProductoAdmin(
+  token: string,
+  id: number,
+  data: Record<string, unknown>,
+): Promise<ProductoDetail> {
+  return apiFetch<ProductoDetail>(`/admin/productos/${id}/editar/`, {
+    method: 'PATCH',
+    body: JSON.stringify(data),
+  }, token)
+}
+
+export async function subirImagenProducto(
+  token: string,
+  productoId: number,
+  file: File,
+): Promise<ProductoImagen> {
+  const formData = new FormData()
+  formData.append('imagen', file)
+  const res = await fetch(`${BASE_URL}/admin/productos/${productoId}/imagenes/`, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${token}` },
+    body: formData,
+  })
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({ detail: res.statusText }))
+    throw new Error(err.detail ?? 'Error al subir imagen')
+  }
+  return res.json()
+}
+
+export async function eliminarImagenProducto(token: string, imgId: number): Promise<null> {
+  return apiFetch<null>(`/admin/imagenes/${imgId}/eliminar/`, { method: 'DELETE' }, token)
+}
+
+export async function setImagenPrincipal(token: string, imgId: number): Promise<ProductoImagen> {
+  return apiFetch<ProductoImagen>(`/admin/imagenes/${imgId}/principal/`, { method: 'PATCH' }, token)
+}
+
+// ─── Admin Blog ───────────────────────────────────────────────────────────────
+
+export async function getAdminBlogPosts(token: string, search?: string): Promise<BlogPost[]> {
+  const q = search ? `?search=${encodeURIComponent(search)}` : ''
+  return apiFetch<BlogPost[]>(`/admin/blog/posts/${q}`, {}, token)
+}
+
+export async function getAdminBlogPostDetalle(token: string, id: number): Promise<BlogPostDetail> {
+  return apiFetch<BlogPostDetail>(`/admin/blog/posts/${id}/editar/`, {}, token)
+}
+
+export async function getAdminBlogCategorias(token: string): Promise<BlogCategoria[]> {
+  return apiFetch<BlogCategoria[]>('/admin/blog/categorias/', {}, token)
+}
+
+async function fetchBlogMultipart<T>(url: string, method: string, token: string, data: FormData): Promise<T> {
+  const res = await fetch(`${BASE_URL}${url}`, {
+    method,
+    headers: { Authorization: `Bearer ${token}` },
+    body: data,
+  })
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({ detail: res.statusText }))
+    throw new Error(err.detail ?? 'Error en la operación')
+  }
+  if (res.status === 204) return null as T
+  return res.json()
+}
+
+export async function crearBlogPost(token: string, data: FormData): Promise<BlogPost> {
+  return fetchBlogMultipart<BlogPost>('/admin/blog/posts/crear/', 'POST', token, data)
+}
+
+export async function editarBlogPost(token: string, id: number, data: FormData): Promise<BlogPostDetail> {
+  return fetchBlogMultipart<BlogPostDetail>(`/admin/blog/posts/${id}/editar/`, 'PATCH', token, data)
+}
+
+export async function eliminarBlogPost(token: string, id: number): Promise<null> {
+  return apiFetch<null>(`/admin/blog/posts/${id}/eliminar/`, { method: 'DELETE' }, token)
+}
+
+// ── Costos ────────────────────────────────────────────────────────────────────
+
+export async function getCostosGlobal(token: string): Promise<ConfiguracionGlobal> {
+  return apiFetch<ConfiguracionGlobal>('/admin/costos/global/', {}, token)
+}
+
+export async function updateCostosGlobal(token: string, data: Partial<ConfiguracionGlobal>): Promise<ConfiguracionGlobal> {
+  return apiFetch<ConfiguracionGlobal>('/admin/costos/global/', {
+    method: 'PATCH',
+    body: JSON.stringify(data),
+  }, token)
+}
+
+export async function getCostesCategorias(token: string): Promise<CategoriaConCosto[]> {
+  return apiFetch<CategoriaConCosto[]>('/admin/costos/categorias/', {}, token)
+}
+
+export async function saveCostoCategoria(
+  token: string,
+  categoriaId: number,
+  data: { margen_ganancia: string; iva: string }
+): Promise<ConfiguracionCategoriaCosto> {
+  return apiFetch<ConfiguracionCategoriaCosto>(`/admin/costos/categorias/${categoriaId}/`, {
+    method: 'PATCH',
+    body: JSON.stringify(data),
+  }, token)
+}
+
+export async function deleteCostoCategoria(token: string, categoriaId: number): Promise<null> {
+  return apiFetch<null>(`/admin/costos/categorias/${categoriaId}/`, { method: 'DELETE' }, token)
+}
+
+export async function getCostoProducto(token: string, productoId: number): Promise<CostoProducto | null> {
+  return apiFetch<CostoProducto | null>(`/admin/costos/productos/${productoId}/`, {}, token)
+}
+
+export async function saveCostoProducto(
+  token: string,
+  productoId: number,
+  data: Partial<CostoProducto>
+): Promise<CostoProducto> {
+  return apiFetch<CostoProducto>(`/admin/costos/productos/${productoId}/`, {
+    method: 'PATCH',
+    body: JSON.stringify(data),
+  }, token)
+}
+
+export async function getPromocionBancos(token: string): Promise<PromocionBanco[]> {
+  return apiFetch<PromocionBanco[]>('/admin/costos/bancos/', {}, token)
+}
+
+export async function crearPromocionBanco(token: string, data: Omit<PromocionBanco, 'id' | 'tipo_display'>): Promise<PromocionBanco> {
+  return apiFetch<PromocionBanco>('/admin/costos/bancos/', {
+    method: 'POST',
+    body: JSON.stringify(data),
+  }, token)
+}
+
+export async function updatePromocionBanco(token: string, id: number, data: Partial<PromocionBanco>): Promise<PromocionBanco> {
+  return apiFetch<PromocionBanco>(`/admin/costos/bancos/${id}/`, {
+    method: 'PATCH',
+    body: JSON.stringify(data),
+  }, token)
+}
+
+export async function deletePromocionBanco(token: string, id: number): Promise<null> {
+  return apiFetch<null>(`/admin/costos/bancos/${id}/`, { method: 'DELETE' }, token)
 }

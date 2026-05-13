@@ -94,6 +94,14 @@ export default function NavbarClient({ categorias }: Props) {
           {usuarioAbierto && (
             <div className="absolute top-full right-0 pt-2 z-50">
               <div className="bg-white rounded-2xl shadow-xl border border-stone-100 p-2 min-w-45">
+                {usuario?.is_staff && (
+                  <>
+                    <Link href="/admin" className="flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm text-green-700 font-medium hover:bg-green-50 transition-colors">
+                      ⚙️ Panel admin
+                    </Link>
+                    <div className="my-1 border-t border-stone-100" />
+                  </>
+                )}
                 <Link href="/cuenta/ordenes" className="flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm text-stone-600 hover:bg-stone-50 transition-colors">
                   📦 Mis pedidos
                 </Link>
@@ -208,6 +216,11 @@ export default function NavbarClient({ categorias }: Props) {
           {autenticado && (
             <Link href="/cuenta/ordenes" className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-50 transition-colors">
               <span>📦</span> Mis pedidos
+            </Link>
+          )}
+          {usuario?.is_staff && (
+            <Link href="/admin" className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-green-50 text-green-700 font-medium transition-colors">
+              <span>⚙️</span> Panel admin
             </Link>
           )}
         </nav>

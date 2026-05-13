@@ -1,5 +1,9 @@
 from rest_framework import serializers
-from .models import Categorias, Productos, ProductoImagen, Resena, ItemCarrito, Carrito, Orden, ItemOrden
+from .models import (
+    Categorias, Productos, ProductoImagen, Resena,
+    ItemCarrito, Carrito, Orden, ItemOrden,
+    ConfiguracionGlobal, ConfiguracionCategoriaCosto, CostoProducto, PromocionBanco,
+)
 
 
 class CategoriaSerializer(serializers.ModelSerializer):
@@ -125,6 +129,17 @@ class ItemOrdenSerializer(serializers.ModelSerializer):
         fields = ['id', 'producto_nombre', 'cantidad', 'precio_unitario', 'subtotal']
 
 
+class ProductoWriteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Productos
+        fields = [
+            'codigo', 'nombre', 'categoria', 'ofrecido', 'marca',
+            'precio', 'precio_oferta', 'descripcion', 'ingredientes',
+            'modo_uso', 'conservacion', 'cont_peso_neto',
+            'destacado', 'activo', 'stock', 'descuento',
+        ]
+
+
 class OrdenSerializer(serializers.ModelSerializer):
     items = ItemOrdenSerializer(many=True, read_only=True)
     estado_display = serializers.CharField(source='get_estado_display', read_only=True)
@@ -139,6 +154,7 @@ class OrdenSerializer(serializers.ModelSerializer):
             'metodo_pago', 'metodo_pago_display',
             'total', 'descuento_aplicado',
             'notas', 'items', 'creado',
+            'telefono', 'direccion', 'ciudad', 'provincia', 'codigo_postal',
         ]
         read_only_fields = ['total', 'descuento_aplicado', 'creado']
 
@@ -147,3 +163,58 @@ class OrdenSerializer(serializers.ModelSerializer):
             nombre = f"{obj.usuario.first_name} {obj.usuario.last_name}".strip()
             return nombre or obj.usuario.username
         return None
+
+
+class ConfiguracionGlobalSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ConfiguracionGlobal
+        fields = ['margen_ganancia', 'iva', 'recargo_tarjeta', 'transporte']
+
+
+class ConfiguracionCategoriaCostoSerializer(serializers.ModelSerializer):
+    categoria_nombre = serializers.CharField(source='categoria.nombre', read_only=True)
+
+    class Meta:
+        model = ConfiguracionCategoriaCosto
+        fields = ['id', 'categoria', 'categoria_nombre', 'margen_ganancia', 'iva']
+
+
+class CategoriaConCostoSerializer(serializers.ModelSerializer):
+    config_costo = ConfiguracionCategoriaCostoSerializer(read_only=True)
+
+    class Meta:
+        model = Categorias
+        fields = ['id', 'nombre', 'slug', 'config_costo']
+
+
+class CostoProductoSerializer(serializers.ModelSerializer):
+    precio_calculado = serializers.DecimalField(max_digits=10, decimal_places=2, read_only=True)
+    precio_con_tarjeta = serializers.DecimalField(max_digits=10, decimal_places=2, read_only=True)
+    precio_con_descuento = serializers.DecimalField(max_digits=10, decimal_places=2, read_only=True)
+    margen_efectivo = serializers.DecimalField(max_digits=5, decimal_places=2, read_only=True)
+    iva_efectivo = serializers.CharField(read_only=True)
+    transporte_efectivo = serializers.DecimalField(max_digits=10, decimal_places=2, read_only=True)
+    recargo_tarjeta_efectivo = serializers.DecimalField(max_digits=5, decimal_places=2, read_only=True)
+
+    class Meta:
+        model = CostoProducto
+        fields = [
+            'id', 'producto',
+            'costo_neto', 'descuento_proveedor', 'impuesto_interno',
+            'transporte', 'margen_ganancia', 'iva',
+            'descuento_promocion', 'recargo_tarjeta',
+            'margen_efectivo', 'iva_efectivo', 'transporte_efectivo',
+            'recargo_tarjeta_efectivo',
+            'precio_calculado', 'precio_con_tarjeta', 'precio_con_descuento',
+        ]
+
+
+class PromocionBancoSerializer(serializers.ModelSerializer):
+    tipo_display = serializers.CharField(source='get_tipo_display', read_only=True)
+
+    class Meta:
+        model = PromocionBanco
+        fields = [
+            'id', 'nombre', 'banco', 'tipo', 'tipo_display',
+            'valor', 'activo', 'vigencia_desde', 'vigencia_hasta', 'descripcion',
+        ]

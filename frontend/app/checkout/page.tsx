@@ -17,6 +17,11 @@ const METODOS_PAGO = [
 export default function CheckoutPage() {
   const [notas, setNotas] = useState('')
   const [metodoPago, setMetodoPago] = useState('transferencia')
+  const [telefono, setTelefono] = useState('')
+  const [direccion, setDireccion] = useState('')
+  const [ciudad, setCiudad] = useState('')
+  const [provincia, setProvincia] = useState('')
+  const [codigoPostal, setCodigoPostal] = useState('')
   const [cargando, setCargando] = useState(false)
   const [error, setError] = useState('')
   const router = useRouter()
@@ -37,10 +42,16 @@ export default function CheckoutPage() {
       setError('Tu carrito está vacío.')
       return
     }
+    if (!telefono.trim() || !direccion.trim() || !ciudad.trim() || !provincia.trim()) {
+      setError('Completá los datos de envío para continuar.')
+      return
+    }
     setCargando(true)
     setError('')
     try {
-      const orden = await crearOrden(access, metodoPago, notas)
+      const orden = await crearOrden(access, metodoPago, notas, {
+        telefono, direccion, ciudad, provincia, codigo_postal: codigoPostal,
+      })
       useCarritoStore.setState({ carrito: null })
 
       if (metodoPago === 'tarjeta') {
@@ -120,10 +131,70 @@ export default function CheckoutPage() {
             </p>
           </div>
 
-          {/* Método de pago */}
+          {/* Datos de envío */}
           <div className="bg-white rounded-2xl border border-stone-200 p-6">
             <h2 className="font-semibold text-stone-800 mb-4 flex items-center gap-2">
               <span className="w-6 h-6 rounded-full bg-green-700 text-white text-xs flex items-center justify-center font-bold">2</span>
+              Datos de envío
+            </h2>
+            <div className="grid sm:grid-cols-2 gap-3">
+              <div className="sm:col-span-2">
+                <label className="block text-xs text-stone-500 mb-1">Dirección <span className="text-red-400">*</span></label>
+                <input
+                  type="text"
+                  value={direccion}
+                  onChange={(e) => setDireccion(e.target.value)}
+                  placeholder="Calle y número"
+                  className="w-full px-4 py-2.5 rounded-xl border border-stone-300 text-sm text-stone-900 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label className="block text-xs text-stone-500 mb-1">Ciudad <span className="text-red-400">*</span></label>
+                <input
+                  type="text"
+                  value={ciudad}
+                  onChange={(e) => setCiudad(e.target.value)}
+                  placeholder="Resistencia"
+                  className="w-full px-4 py-2.5 rounded-xl border border-stone-300 text-sm text-stone-900 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label className="block text-xs text-stone-500 mb-1">Provincia <span className="text-red-400">*</span></label>
+                <input
+                  type="text"
+                  value={provincia}
+                  onChange={(e) => setProvincia(e.target.value)}
+                  placeholder="Chaco"
+                  className="w-full px-4 py-2.5 rounded-xl border border-stone-300 text-sm text-stone-900 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label className="block text-xs text-stone-500 mb-1">Código postal</label>
+                <input
+                  type="text"
+                  value={codigoPostal}
+                  onChange={(e) => setCodigoPostal(e.target.value)}
+                  placeholder="3500"
+                  className="w-full px-4 py-2.5 rounded-xl border border-stone-300 text-sm text-stone-900 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label className="block text-xs text-stone-500 mb-1">Teléfono <span className="text-red-400">*</span></label>
+                <input
+                  type="tel"
+                  value={telefono}
+                  onChange={(e) => setTelefono(e.target.value)}
+                  placeholder="+54 362 4..."
+                  className="w-full px-4 py-2.5 rounded-xl border border-stone-300 text-sm text-stone-900 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Método de pago */}
+          <div className="bg-white rounded-2xl border border-stone-200 p-6">
+            <h2 className="font-semibold text-stone-800 mb-4 flex items-center gap-2">
+              <span className="w-6 h-6 rounded-full bg-green-700 text-white text-xs flex items-center justify-center font-bold">3</span>
               Método de pago
             </h2>
             <div className="space-y-3">
@@ -163,7 +234,7 @@ export default function CheckoutPage() {
           {/* Notas */}
           <div className="bg-white rounded-2xl border border-stone-200 p-6">
             <h2 className="font-semibold text-stone-800 mb-4 flex items-center gap-2">
-              <span className="w-6 h-6 rounded-full bg-green-700 text-white text-xs flex items-center justify-center font-bold">3</span>
+              <span className="w-6 h-6 rounded-full bg-green-700 text-white text-xs flex items-center justify-center font-bold">4</span>
               Notas adicionales <span className="text-stone-400 font-normal text-sm">(opcional)</span>
             </h2>
             <textarea

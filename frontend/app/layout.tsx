@@ -22,6 +22,11 @@ export const metadata: Metadata = {
     locale: 'es_AR',
     type: 'website',
   },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-icon.png',
+  },
+  manifest: '/manifest.webmanifest',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

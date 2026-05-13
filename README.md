@@ -36,16 +36,27 @@ Construida con **Django REST Framework** en el backend y **Next.js** en el front
 ElitianWeb/
 ├── Elitian/              # Configuración Django (settings, urls, wsgi)
 ├── apps/
-│   ├── tienda/           # App e-commerce (modelos, API, admin views)
+│   ├── tienda/           # App e-commerce (modelos, API, admin views, emails)
 │   └── blog/             # App blog (posts, categorías, suscriptores)
 ├── frontend/             # Aplicación Next.js
 │   ├── app/              # Rutas y páginas (App Router)
-│   ├── components/       # Componentes reutilizables
-│   ├── lib/              # Cliente API y tipos TypeScript
-│   └── store/            # Estado global con Zustand
-├── media/                # Archivos subidos (imágenes)
+│   │   ├── admin/        # Panel de administración (staff only)
+│   │   │   ├── blog/     # CRUD completo de posts del blog
+│   │   │   ├── ordenes/  # Gestión de pedidos
+│   │   │   └── productos/# CRUD completo de productos + imágenes
+│   │   ├── blog/         # Blog público
+│   │   ├── checkout/     # Flujo de compra + retorno MP
+│   │   ├── cuenta/       # Autenticación y perfil
+│   │   └── tienda/       # Catálogo y detalle de productos
+│   ├── components/       # Navbar, Footer, HeroCarousel
+│   ├── lib/              # Cliente API (api.ts) y tipos TypeScript (types.ts)
+│   └── store/            # Estado global con Zustand (auth, carrito)
+├── media/                # Archivos subidos (imágenes de productos y blog)
 ├── static/               # Assets estáticos
+├── logs/                 # Logs rotativos de la aplicación
 ├── manage.py
+├── Dockerfile            # Backend (gunicorn)
+├── docker-compose.yml    # Orquestación completa
 └── .env                  # Variables de entorno backend
 ```
 
@@ -63,23 +74,59 @@ ElitianWeb/
 
 ### Checkout y Pagos
 - Tres métodos de pago: transferencia bancaria, efectivo y MercadoPago
-- Integración completa con **MercadoPago Checkout Pro**: creación de preferencia, redirección al checkout de MP y confirmación automática por webhook
+- Integración completa con **MercadoPago Checkout Pro**: creación de preferencia, redirección al checkout de MP y confirmación automática por webhook con validación HMAC-SHA256
 - Páginas de retorno según estado del pago (aprobado, pendiente, rechazado)
+- Campos de dirección de envío en el checkout (teléfono, dirección, ciudad, provincia, código postal)
 
 ### Blog
-- Posts con editor enriquecido (CKEditor)
-- Categorías y buscador de contenido
-- Sistema de suscripción por email
+- Posts con editor de contenido HTML
+- Categorías y buscador
+- Página de detalle con posts relacionados
 
 ### Autenticación
 - Registro y login con JWT (access + refresh token)
 - Perfil de usuario editable
 - Historial y detalle de pedidos
+- Cambio de contraseña
 
-### Panel de Administración (Next.js)
-- Estadísticas de ventas y pedidos
-- Gestión de órdenes con cambio de estado
-- Gestión de productos (activar/desactivar, buscar)
+### Panel de Administración (Next.js — solo staff)
+- Acceso exclusivo desde el navbar para usuarios `is_staff`
+- **Dashboard** con estadísticas de ventas, pedidos y productos
+- **Gestión de órdenes**: listar, filtrar por estado, cambiar estado con notificación por email automática
+- **Gestión de productos** con CRUD completo:
+  - Crear producto con todos sus campos (precio, stock, oferta, descripción, ingredientes, modo de uso, etc.)
+  - Editar producto via drawer lateral con 3 pestañas: Datos, Imágenes y Costos
+  - Subir, eliminar y establecer imagen principal por producto
+  - Activar / desactivar productos
+  - Badges de stock (sin stock / stock bajo / normal)
+  - Precio y precio oferta de solo lectura cuando hay estructura de costos cargada
+- **Estructura de costos** (`/admin/costos`):
+  - **Global**: margen de ganancia, IVA (0% / 10.5% / 21%), recargo tarjeta de crédito y transporte fijo por defecto
+  - **Por categoría**: margen e IVA específico por categoría que sobrescribe el global
+  - **Por producto** (pestaña Costos en cada producto): costo neto, descuento proveedor, impuesto interno, transporte, margen, IVA, descuento promoción al consumidor y recargo tarjeta — todos con herencia jerárquica (producto → categoría → global)
+  - **Fórmula**: `costo_neto → −descuento_proveedor → +transporte → +impuesto_interno → +margen → +IVA = precio de venta → −descuento_promoción = precio con descuento`
+  - Al guardar la estructura de costos, el precio del producto se actualiza automáticamente
+  - **Promociones bancarias**: descuentos % o cuotas sin interés por banco, con vigencia configurable
+- **Gestión del blog** con CRUD completo:
+  - Crear y editar posts con imagen de portada, categoría y etiqueta
+  - Editor de contenido HTML con vista previa en tiempo real
+  - Eliminar posts
+  - Búsqueda por título
+
+### Notificaciones y Emails
+- Email de confirmación al crear una orden (transferencia/efectivo)
+- Email automático al cambiar el estado de una orden (confirmado, enviado, entregado, cancelado)
+
+### SEO y Performance
+- `generateMetadata` dinámico en páginas de producto y posts del blog
+- Sitemap XML dinámico (`/sitemap.xml`)
+- `robots.txt` configurado
+- PWA manifest
+
+### Seguridad y Operaciones
+- Rate limiting: 60 req/min anónimos, 300 req/min autenticados
+- Logging con rotación de archivos (5 MB, 3 backups) en `/logs/`
+- Docker: Dockerfile backend + Dockerfile frontend + docker-compose con PostgreSQL y healthchecks
 
 ---
 
@@ -103,7 +150,7 @@ cd ElitianWeb
 # Crear y activar entorno virtual
 python -m venv entornos/.venv_elitian
 
-# Windows
+# Windows (bash)
 source entornos/.venv_elitian/Scripts/activate
 # Linux / Mac
 # source entornos/.venv_elitian/bin/activate
@@ -158,7 +205,15 @@ DB_PORT=5432
 
 # MercadoPago
 MP_ACCESS_TOKEN=APP_USR-tu-access-token
+MP_WEBHOOK_SECRET=tu-webhook-secret
 SITE_URL=http://localhost:3000
+
+# Email (opcional en desarrollo — usa consola por defecto)
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_HOST_USER=tu@email.com
+EMAIL_HOST_PASSWORD=tu-app-password
+DEFAULT_FROM_EMAIL=Elitian <tu@email.com>
 ```
 
 > En producción: `DEBUG=False`, `SITE_URL=https://tu-dominio.com` y Access Token productivo de MP.
@@ -168,6 +223,7 @@ SITE_URL=http://localhost:3000
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:8000/api/v1
 NEXT_PUBLIC_MEDIA_URL=http://localhost:8000
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ```
 
 ---
@@ -215,7 +271,7 @@ Base URL: `/api/v1/`
 | GET | `/blog/posts/` | Listar posts (filtros: `categoria`, `search`) |
 | GET | `/blog/posts/{slug}/` | Detalle de post |
 
-### Admin (requiere `is_staff`)
+### Admin — Productos (requiere `is_staff`)
 
 | Método | Endpoint | Descripción |
 |---|---|---|
@@ -223,7 +279,33 @@ Base URL: `/api/v1/`
 | GET | `/admin/ordenes/` | Listar todas las órdenes |
 | PATCH | `/admin/ordenes/{id}/estado/` | Cambiar estado de una orden |
 | GET | `/admin/productos/` | Listar todos los productos |
+| POST | `/admin/productos/crear/` | Crear producto |
+| GET / PATCH | `/admin/productos/{id}/editar/` | Ver o editar producto |
 | PATCH | `/admin/productos/{id}/toggle/` | Activar / desactivar producto |
+| POST | `/admin/productos/{id}/imagenes/` | Subir imagen al producto |
+| DELETE | `/admin/imagenes/{id}/eliminar/` | Eliminar imagen |
+| PATCH | `/admin/imagenes/{id}/principal/` | Establecer imagen principal |
+
+### Admin — Blog (requiere `is_staff`)
+
+| Método | Endpoint | Descripción |
+|---|---|---|
+| GET | `/admin/blog/posts/` | Listar todos los posts |
+| POST | `/admin/blog/posts/crear/` | Crear post (multipart) |
+| GET / PATCH | `/admin/blog/posts/{id}/editar/` | Ver o editar post |
+| DELETE | `/admin/blog/posts/{id}/eliminar/` | Eliminar post |
+| GET | `/admin/blog/categorias/` | Listar categorías del blog |
+
+### Admin — Costos (requiere `is_staff`)
+
+| Método | Endpoint | Descripción |
+|---|---|---|
+| GET / PATCH | `/admin/costos/global/` | Ver o editar configuración global (margen, IVA, tarjeta, transporte) |
+| GET | `/admin/costos/categorias/` | Listar categorías con su config de costo |
+| POST / PATCH / DELETE | `/admin/costos/categorias/{id}/` | Crear, editar o quitar config de costo para una categoría |
+| GET / POST / PATCH | `/admin/costos/productos/{id}/` | Ver o editar estructura de costos de un producto |
+| GET / POST | `/admin/costos/bancos/` | Listar o crear promoción bancaria |
+| PATCH / DELETE | `/admin/costos/bancos/{id}/` | Editar o eliminar promoción bancaria |
 
 ---
 
@@ -237,6 +319,7 @@ Base URL: `/api/v1/`
 5. El usuario completa el pago en la plataforma de MP
 6. MP redirige de vuelta a /checkout/mp-retorno con el estado del pago
 7. MP envía un webhook a /api/v1/mp/webhook/ → la Orden se actualiza a "confirmado"
+8. Se envía email de confirmación al usuario
 ```
 
 ---
@@ -245,8 +328,22 @@ Base URL: `/api/v1/`
 
 ```
 Categorias ──< Productos ──< ProductoImagen
-                    │
-                    └──< Resena (usuario, calificacion, aprobado)
+    │               │
+    │               └──< Resena (usuario, calificacion, aprobado)
+    │               │
+    │               └── CostoProducto
+    │                     ├── costo_neto, descuento_proveedor, impuesto_interno
+    │                     ├── transporte, margen_ganancia, iva (todos opcionales → heredan)
+    │                     ├── descuento_promocion, recargo_tarjeta
+    │                     └── @property: precio_calculado, precio_con_tarjeta, precio_con_descuento
+    │
+    └── ConfiguracionCategoriaCosto (margen_ganancia, iva)
+
+ConfiguracionGlobal [singleton pk=1]
+ ├── margen_ganancia, iva, recargo_tarjeta, transporte
+ └── Herencia: CostoProducto → ConfiguracionCategoriaCosto → ConfiguracionGlobal
+
+PromocionBanco (nombre, banco, tipo: descuento|cuotas, valor, activo, vigencia)
 
 Carrito (usuario) ──< ItemCarrito (producto, cantidad)
 
@@ -254,10 +351,13 @@ Orden (usuario)
  ├── estado: pendiente | confirmado | enviado | entregado | cancelado
  ├── metodo_pago: transferencia | efectivo | tarjeta
  ├── total, descuento_aplicado
+ ├── telefono, direccion, ciudad, provincia, codigo_postal
  ├── mp_preference_id, mp_payment_id, mp_estado_pago
  └── items → ItemOrden (producto, cantidad, precio_unitario)
 
-BlogCategoria ──< BlogPost ──< Suscriptor
+BlogCategoria ──< BlogPost (autor, titulo, contenido HTML, imagen_post, slug, etiqueta)
+
+Suscriptor (email)
 ```
 
 ---
@@ -266,22 +366,23 @@ BlogCategoria ──< BlogPost ──< Suscriptor
 
 | Ruta | Descripción |
 |---|---|
-| `/` | Home con productos destacados |
+| `/` | Home con productos destacados y categorías |
 | `/tienda` | Catálogo con filtros |
 | `/tienda/[categoria]/[producto]` | Detalle de producto |
 | `/blog` | Listado de posts |
 | `/blog/[slug]` | Post individual |
 | `/checkout` | Finalizar compra |
-| `/checkout/exito` | Confirmación para transferencia / efectivo |
 | `/checkout/mp-retorno` | Retorno desde MercadoPago |
 | `/cuenta/login` | Inicio de sesión |
 | `/cuenta/registro` | Registro de usuario |
 | `/cuenta/perfil` | Editar perfil |
 | `/cuenta/ordenes` | Historial de pedidos |
 | `/cuenta/ordenes/[id]` | Detalle de pedido |
-| `/admin` | Panel de administración |
-| `/admin/productos` | Gestión de productos |
-| `/admin/ordenes` | Gestión de órdenes |
+| `/admin` | Dashboard (solo staff) |
+| `/admin/productos` | CRUD de productos + imágenes + costos |
+| `/admin/ordenes` | Gestión de pedidos |
+| `/admin/blog` | CRUD del blog |
+| `/admin/costos` | Estructura de costos global, por categoría y promociones bancarias |
 | `/conocenos` | Página institucional |
 | `/recicla` | Información sobre reciclaje |
 | `/contacto` | Contacto |
