@@ -43,6 +43,13 @@ Thumbs.db
 *.swp
 *.swo
 
+# Claude Code — instrucciones locales, no subir a GitHub
+CLAUDE.md
+AGENTS.md
+frontend/CLAUDE.md
+frontend/AGENTS.md
+.claude/
+
 # Logs
 *.log
 logs/*.log

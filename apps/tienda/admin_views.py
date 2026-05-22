@@ -7,8 +7,11 @@ from django.db.models import Sum, Count
 from django.utils import timezone
 from datetime import timedelta
 
+from django.core.mail import send_mail
+from django.conf import settings as django_settings
+
 from .models import (
-    Productos, Orden, ProductoImagen,
+    Productos, Orden, ProductoImagen, Resena,
     ConfiguracionGlobal, ConfiguracionCategoriaCosto, CostoProducto, PromocionBanco, Categorias,
 )
 from .emails import email_estado_actualizado
@@ -17,6 +20,7 @@ from .serializers import (
     ProductoWriteSerializer, ProductoImagenSerializer,
     ConfiguracionGlobalSerializer, ConfiguracionCategoriaCostoSerializer,
     CategoriaConCostoSerializer, CostoProductoSerializer, PromocionBancoSerializer,
+    ResenaAdminSerializer,
 )
 
 
@@ -315,3 +319,59 @@ def costo_banco_detalle(request, pk):
         serializer.save()
         return Response(serializer.data)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+# ─── Reseñas ──────────────────────────────────────────────────────────────────
+
+@api_view(['GET'])
+@permission_classes([IsAdminUser])
+def admin_resenas(request):
+    aprobado = request.query_params.get('aprobado', '')
+    qs = Resena.objects.select_related('usuario', 'producto__categoria').order_by('-creado')
+    if aprobado == 'true':
+        qs = qs.filter(aprobado=True)
+    elif aprobado == 'false':
+        qs = qs.filter(aprobado=False)
+    return Response(ResenaAdminSerializer(qs, many=True).data)
+
+
+@api_view(['PATCH', 'DELETE'])
+@permission_classes([IsAdminUser])
+def admin_resena_detalle(request, pk):
+    try:
+        resena = Resena.objects.select_related('usuario', 'producto__categoria').get(pk=pk)
+    except Resena.DoesNotExist:
+        return Response({'detail': 'Reseña no encontrada.'}, status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'DELETE':
+        resena.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+    serializer = ResenaAdminSerializer(resena, data=request.data, partial=True)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+# ─── Contacto ─────────────────────────────────────────────────────────────────
+
+@api_view(['POST'])
+@permission_classes([])
+def contacto(request):
+    nombre = request.data.get('nombre', '').strip()
+    email = request.data.get('email', '').strip()
+    mensaje = request.data.get('mensaje', '').strip()
+
+    if not nombre or not email or not mensaje:
+        return Response({'detail': 'Nombre, email y mensaje son requeridos.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    body = f'Mensaje de contacto recibido desde el sitio web.\n\nNombre: {nombre}\nEmail: {email}\n\nMensaje:\n{mensaje}'
+    send_mail(
+        subject=f'Contacto desde Elitian — {nombre}',
+        message=body,
+        from_email=django_settings.DEFAULT_FROM_EMAIL,
+        recipient_list=[django_settings.DEFAULT_FROM_EMAIL],
+        fail_silently=True,
+    )
+    return Response({'detail': 'Mensaje enviado correctamente.'}, status=status.HTTP_200_OK)

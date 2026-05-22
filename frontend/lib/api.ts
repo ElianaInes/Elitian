@@ -4,6 +4,7 @@ import type {
   ProductoDetail,
   ProductoImagen,
   Resena,
+  ResenaAdmin,
   Carrito,
   Orden,
   PaginatedResponse,
@@ -453,4 +454,48 @@ export async function updatePromocionBanco(token: string, id: number, data: Part
 
 export async function deletePromocionBanco(token: string, id: number): Promise<null> {
   return apiFetch<null>(`/admin/costos/bancos/${id}/`, { method: 'DELETE' }, token)
+}
+
+// ─── Reseñas ──────────────────────────────────────────────────────────────────
+
+export async function agregarResena(
+  slug: string,
+  token: string,
+  data: { comentario: string; calificacion: number },
+): Promise<Resena> {
+  return apiFetch<Resena>(
+    `/productos/${slug}/agregar_resena/`,
+    { method: 'POST', body: JSON.stringify(data) },
+    token,
+  )
+}
+
+export async function getAdminResenas(token: string, aprobado?: boolean): Promise<ResenaAdmin[]> {
+  const q = aprobado !== undefined ? `?aprobado=${aprobado}` : ''
+  return apiFetch<ResenaAdmin[]>(`/admin/resenas/${q}`, {}, token)
+}
+
+export async function aprobarResena(token: string, id: number, aprobado: boolean): Promise<ResenaAdmin> {
+  return apiFetch<ResenaAdmin>(
+    `/admin/resenas/${id}/`,
+    { method: 'PATCH', body: JSON.stringify({ aprobado }) },
+    token,
+  )
+}
+
+export async function eliminarResenaAdmin(token: string, id: number): Promise<null> {
+  return apiFetch<null>(`/admin/resenas/${id}/`, { method: 'DELETE' }, token)
+}
+
+// ─── Contacto ─────────────────────────────────────────────────────────────────
+
+export async function enviarContacto(data: {
+  nombre: string
+  email: string
+  mensaje: string
+}): Promise<{ detail: string }> {
+  return apiFetch<{ detail: string }>('/contacto/', {
+    method: 'POST',
+    body: JSON.stringify(data),
+  })
 }

@@ -1,3 +1,5 @@
+import FormularioContacto from './_components/FormularioContacto'
+
 export const metadata = {
   title: 'Contacto | Elitian',
   description: 'Contactanos por WhatsApp, email o redes sociales. Estamos para ayudarte.',
@@ -114,15 +116,8 @@ export default function ContactoPage() {
           </div>
         </section>
 
-        {/* Mensaje final */}
-        <section className="bg-green-50 border border-green-100 rounded-3xl px-8 py-12 text-center">
-          <p className="text-4xl mb-4">💚</p>
-          <h2 className="text-2xl font-semibold text-stone-800 mb-3">¡Gracias por tu tiempo!</h2>
-          <p className="text-stone-600 max-w-md mx-auto leading-relaxed">
-            Cada mensaje que recibimos es una oportunidad de conectarnos con personas que comparten
-            nuestros valores. ¡Esperamos saber de vos!
-          </p>
-        </section>
+        {/* Formulario de contacto */}
+        <FormularioContacto />
 
       </div>
     </>

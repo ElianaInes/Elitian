@@ -57,6 +57,19 @@ export interface Resena {
   creado: string
 }
 
+export interface ResenaAdmin {
+  id: number
+  usuario_nombre: string
+  usuario_email: string
+  producto_nombre: string
+  producto_slug: string
+  producto_categoria_slug: string
+  comentario: string
+  calificacion: number
+  aprobado: boolean
+  creado: string
+}
+
 export interface ItemCarrito {
   id: number
   producto: ProductoList

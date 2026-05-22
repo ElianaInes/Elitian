@@ -95,6 +95,23 @@ class ResenaCreateSerializer(serializers.ModelSerializer):
         return value
 
 
+class ResenaAdminSerializer(serializers.ModelSerializer):
+    usuario_nombre = serializers.CharField(source='usuario.get_full_name', read_only=True)
+    usuario_email = serializers.CharField(source='usuario.email', read_only=True)
+    producto_nombre = serializers.CharField(source='producto.nombre', read_only=True)
+    producto_slug = serializers.CharField(source='producto.slug', read_only=True)
+    producto_categoria_slug = serializers.CharField(source='producto.categoria.slug', read_only=True)
+
+    class Meta:
+        model = Resena
+        fields = [
+            'id', 'usuario_nombre', 'usuario_email',
+            'producto_nombre', 'producto_slug', 'producto_categoria_slug',
+            'comentario', 'calificacion', 'aprobado', 'creado',
+        ]
+        read_only_fields = ['creado']
+
+
 class ItemCarritoSerializer(serializers.ModelSerializer):
     producto = ProductoListSerializer(read_only=True)
     producto_id = serializers.IntegerField(write_only=True)

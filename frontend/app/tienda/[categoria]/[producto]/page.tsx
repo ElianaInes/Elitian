@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation'
 import { getProducto, getProductosRelacionados, getResenas } from '@/lib/api'
 import BotonAgregarCarrito from './_components/BotonAgregarCarrito'
 import GaleriaImagenes from './_components/GaleriaImagenes'
+import FormularioResena from './_components/FormularioResena'
 
 export const dynamic = 'force-dynamic'
 
@@ -130,17 +131,18 @@ export default async function ProductoPage({ params }: Props) {
       </div>
 
       {/* Reseñas */}
-      {resenas.length > 0 && (
-        <section className="mb-16">
-          <h2 className="text-xl font-semibold text-stone-800 mb-6">
-            Reseñas
-            {producto.calificacion_promedio && (
-              <span className="ml-3 text-base font-normal text-stone-500">
-                ★ {producto.calificacion_promedio} ({producto.total_resenas})
-              </span>
-            )}
-          </h2>
-          <div className="space-y-4">
+      <section className="mb-16">
+        <h2 className="text-xl font-semibold text-stone-800 mb-6">
+          Reseñas
+          {producto.calificacion_promedio && (
+            <span className="ml-3 text-base font-normal text-stone-500">
+              ★ {producto.calificacion_promedio} ({producto.total_resenas})
+            </span>
+          )}
+        </h2>
+
+        {resenas.length > 0 ? (
+          <div className="space-y-4 mb-8">
             {resenas.map((resena) => (
               <div key={resena.id} className="bg-stone-50 rounded-xl p-4">
                 <div className="flex items-center justify-between mb-2">
@@ -155,8 +157,12 @@ export default async function ProductoPage({ params }: Props) {
               </div>
             ))}
           </div>
-        </section>
-      )}
+        ) : (
+          <p className="text-stone-400 text-sm mb-8">Todavía no hay reseñas para este producto. ¡Sé el primero!</p>
+        )}
+
+        <FormularioResena productoSlug={productoSlug} />
+      </section>
 
       {/* Relacionados */}
       {relacionados.length > 0 && (
