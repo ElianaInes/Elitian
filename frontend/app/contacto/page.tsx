@@ -16,7 +16,7 @@ const CANALES = [
     titulo: 'WhatsApp',
     desc: 'La forma más rápida de contactarnos. Te respondemos a la brevedad.',
     etiqueta: 'Escribinos',
-    href: 'https://wa.me/+5493624527435',
+    href: 'https://wa.me/+5493624135017',
     externo: true,
   },
   {
@@ -29,7 +29,7 @@ const CANALES = [
     titulo: 'Instagram',
     desc: 'Seguinos para novedades, productos y contenido sobre vida natural.',
     etiqueta: 'Ir al perfil',
-    href: 'https://instagram.com/elitian.ar',
+    href: 'https://instagram.com/tienda.elitian',
     externo: true,
   },
   {

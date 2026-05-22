@@ -171,7 +171,7 @@ export default async function BlogPage() {
             Escribinos por WhatsApp y te avisamos cuando publiquemos nuevos artículos.
           </p>
           <a
-            href="https://wa.me/+5493624527435"
+            href="https://wa.me/+5493624135017"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-[#25D366] hover:bg-[#1da851] text-white font-semibold rounded-xl transition-colors text-sm"

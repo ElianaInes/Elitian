@@ -74,7 +74,7 @@ export default function ExitoPage() {
 
       {/* CTA WhatsApp */}
       <a
-        href="https://wa.me/543624000000"
+        href="https://wa.me/+5493624135017"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-3 px-6 py-3.5 bg-[#25D366] hover:bg-[#1da851] text-white font-semibold rounded-xl transition-colors mb-4 shadow-sm"

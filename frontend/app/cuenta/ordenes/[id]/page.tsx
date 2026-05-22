@@ -182,7 +182,7 @@ export default function OrdenDetallePage() {
           <p className="text-xs text-stone-500 mt-0.5">Te respondemos por WhatsApp a la brevedad.</p>
         </div>
         <a
-          href="https://wa.me/543624000000"
+          href="https://wa.me/+5493624135017"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#25D366] hover:bg-[#1da851] text-white font-semibold text-sm rounded-xl transition-colors flex-shrink-0"
